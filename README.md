@@ -1,9 +1,9 @@
-# Calculus-Notes
-## 20 Days Calculus Notes
+# Calculus II Notes
+## 20 Days Calculus II Notes
 ### A visual snapshot of progress from Day 1 through Day 20.
 ---
 
-## Day 1 Functions
+## Day 1
 
 <img src="./Day%2001/1.png" width="250">
 <img src="./Day%2001/2.png" width="250">
@@ -13,7 +13,7 @@
 
 ---
 
-## Day 2 Functions & Limits
+## Day 2
 
 <img src="./Day%2002/1.png" width="250">
 <img src="./Day%2002/2.png" width="250">
@@ -26,7 +26,7 @@
 
 ---
 
-## Day 3 Limits intro
+## Day 3
 
 <img src="./Day%2003/1.png" width="250">
 <img src="./Day%2003/2.png" width="250">
@@ -37,7 +37,7 @@
 
 ---
 
-## Day 4 One Sided Limits & Infinite Limits
+## Day 4
 
 <img src="./Day%2004/1.png" width="250">
 <img src="./Day%2004/2.png" width="250">
@@ -49,7 +49,7 @@
 
 ---
 
-## Day 5 Limits & Continuity
+## Day 5
 
 <img src="./Day%2005/1.png" width="250">
 <img src="./Day%2005/2.png" width="250">
@@ -61,7 +61,7 @@
 
 ---
 
-## Day 6 Discontinuity & Deriveratives
+## Day 6
 
 <img src="./Day%2006/1.png" width="250">
 <img src="./Day%2006/2.png" width="250">
@@ -72,7 +72,7 @@
 
 ---
 
-## Day 7 Deriveratives and All Rules
+## Day 7
 
 <img src="./Day%2007/1.png" width="250">
 <img src="./Day%2007/2.png" width="250">
@@ -85,7 +85,7 @@
 
 ---
 
-## Day 8 High Order Deriveratives and Implicit Differentiation
+## Day 8
 
 <img src="./Day%2008/1.png" width="250">
 <img src="./Day%2008/2.png" width="250">
