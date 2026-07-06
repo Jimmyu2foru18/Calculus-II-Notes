@@ -15,6 +15,7 @@
 <img src="./Day%2001/8.png" width="250">
 <img src="./Day%2001/9.png" width="250">
 <img src="./Day%2001/10.png" width="250">
+
 ---
 
 ## Day 2
