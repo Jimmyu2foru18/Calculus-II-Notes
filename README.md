@@ -40,6 +40,13 @@
 
 ---
 
+## Quiz 2 Prep
+
+<img src="./Quiz%202%20Prep/1.png" width="250">
+<img src="./Quiz%202%20Prep/2.png" width="250">
+
+---
+
 ## Day 3
 
 <img src="./Day%2003/1.png" width="250">
