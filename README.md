@@ -56,9 +56,7 @@
 <img src="./Day%2003/5.png" width="250">
 <img src="./Day%2003/6.png" width="250">
 <img src="./Day%2003/7.png" width="250">
-<img src="./Day%2003/8.png" width="250">
-<img src="./Day%2003/9.png" width="250">
-<img src="./Day%2003/10.png" width="250">
+
 ---
 
 ## Day 4
