@@ -68,9 +68,6 @@
 <img src="./Day%2004/5.png" width="250">
 <img src="./Day%2004/6.png" width="250">
 <img src="./Day%2004/7.png" width="250">
-<img src="./Day%2004/8.png" width="250">
-<img src="./Day%2004/9.png" width="250">
-<img src="./Day%2004/10.png" width="250">
 
 ---
 
