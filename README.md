@@ -71,6 +71,14 @@
 
 ---
 
+## Quiz 1 Prep
+
+<img src="./Quiz%203%20Prep/1.png" width="250">
+<img src="./Quiz%203%20Prep/2.png" width="250">
+<img src="./Quiz%203%20Prep/3.png" width="250">
+
+---
+
 ## Day 5
 
 <img src="./Day%2005/1.png" width="250">
