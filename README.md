@@ -92,13 +92,10 @@
 <img src="./Test%201%20Review/9.png" width="250">
 <img src="./Test%201%20Review/10.png" width="250">
 <img src="./Test%201%20Review/11.png" width="250">
-<img src="./Test%201%20Review/12.png" width="250">
-<img src="./Test%201%20Review/13.png" width="250">
-<img src="./Test%201%20Review/14.png" width="250">
 
 ---
 
-## Day 5
+## Day 6
 
 <img src="./Day%2005/1.png" width="250">
 <img src="./Day%2005/2.png" width="250">
@@ -113,7 +110,7 @@
 
 ---
 
-## Day 6
+## Day 7
 
 <img src="./Day%2006/1.png" width="250">
 <img src="./Day%2006/2.png" width="250">
@@ -128,7 +125,7 @@
 
 ---
 
-## Day 7
+## Day 8
 
 <img src="./Day%2007/1.png" width="250">
 <img src="./Day%2007/2.png" width="250">
@@ -143,7 +140,7 @@
 
 ---
 
-## Day 8
+## Day 9
 
 <img src="./Day%2008/1.png" width="250">
 <img src="./Day%2008/2.png" width="250">
