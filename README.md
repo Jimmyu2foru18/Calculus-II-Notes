@@ -71,7 +71,7 @@
 
 ---
 
-## Quiz 1 Prep
+## Quiz 3 Prep
 
 <img src="./Quiz%203%20Prep/1.png" width="250">
 <img src="./Quiz%203%20Prep/2.png" width="250">
@@ -155,7 +155,7 @@
 
 ---
 
-## Day 9
+## Day 10
 
 <img src="./Day%2009/1.png" width="250">
 <img src="./Day%2009/2.png" width="250">
@@ -170,14 +170,14 @@
 
 ---
 
-## Day 10
+## Day 11 Midterm
 
 <img src="./Day%2010%20Midterm/Mid1.png" width="250">
 <img src="./Day%2010%20Midterm/Mid2.png" width="250">
 
 ---
 
-## Day 11
+## Day 12
 
 <img src="./Day%2011/1.png" width="250">
 <img src="./Day%2011/2.png" width="250">
@@ -191,7 +191,7 @@
 
 ---
 
-## Day 12
+## Day 13
 
 <img src="./Day%2012/1.png" width="250">
 <img src="./Day%2012/2.png" width="250">
@@ -205,7 +205,7 @@
 
 ---
 
-## Day 13
+## Day 14
 
 <img src="./Day%2013/1.png" width="250">
 <img src="./Day%2013/2.png" width="250">
@@ -219,7 +219,7 @@
 
 ---
 
-## Day 14
+## Day 15
 
 <img src="./Day%2014/1.png" width="250">
 <img src="./Day%2014/2.png" width="250">
@@ -233,7 +233,7 @@
 
 ---
 
-## Day 15
+## Day 16
 
 <img src="./Day%2015/1.png" width="250">
 <img src="./Day%2015/2.png" width="250">
@@ -247,7 +247,7 @@
 
 ---
 
-## Day 16
+## Day 18
 
 <img src="./Day%2016/1.png" width="250">
 <img src="./Day%2016/2.png" width="250">
@@ -261,7 +261,7 @@
 
 ---
 
-## Day 17
+## Day 19
 
 <img src="./Day%2017/1.png" width="250">
 <img src="./Day%2017/2.png" width="250">
@@ -275,7 +275,7 @@
 
 ---
 
-## Day 18
+## Day 20 Final
 
 <img src="./Day%2018/1.png" width="250">
 <img src="./Day%2018/2.png" width="250">
@@ -288,23 +288,3 @@
 <img src="./Day%2018/9.png" width="250">
 
 ---
-
-## Day 19
-
-<img src="./Day%2019/1.png" width="250">
-<img src="./Day%2019/2.png" width="250">
-<img src="./Day%2019/3.png" width="250">
-<img src="./Day%2019/4.png" width="250">
-<img src="./Day%2019/5.png" width="250">
-<img src="./Day%2019/6.png" width="250">
-<img src="./Day%2019/7.png" width="250">
-<img src="./Day%2019/8.png" width="250">
-<img src="./Day%2019/9.png" width="250">
-
----
-
-## Day 20 Final
-
-<img src="./Day%2020%20Final/1.png" width="250">
-<img src="./Day%2020%20Final/2.png" width="250">
-<img src="./Day%2020%20Final/3.png" width="250">
