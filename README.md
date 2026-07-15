@@ -103,10 +103,6 @@
 <img src="./Day%2005/4.png" width="250">
 <img src="./Day%2005/5.png" width="250">
 <img src="./Day%2005/6.png" width="250">
-<img src="./Day%2005/7.png" width="250">
-<img src="./Day%2005/8.png" width="250">
-<img src="./Day%2005/9.png" width="250">
-<img src="./Day%2005/10.png" width="250">
 
 ---
 
