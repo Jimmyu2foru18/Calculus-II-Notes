@@ -148,14 +148,14 @@
 
 ## Test 2 Ex Review
 
-<img src="./Day%2009/1.png" width="250">
-<img src="./Day%2009/2.png" width="250">
-<img src="./Day%2009/3.png" width="250">
-<img src="./Day%2009/4.png" width="250">
-<img src="./Day%2009/5.png" width="250">
-<img src="./Day%2009/6.png" width="250">
-<img src="./Day%2009/7.png" width="250">
-<img src="./Day%2009/8.png" width="250">
+<img src="./Test%202%20Ex%20Review/1.png" width="250">
+<img src="./Test%202%20Ex%20Review/2.png" width="250">
+<img src="./Test%202%20Ex%20Review/3.png" width="250">
+<img src="./Test%202%20Ex%20Review/4.png" width="250">
+<img src="./Test%202%20Ex%20Review/5.png" width="250">
+<img src="./Test%202%20Ex%20Review/6.png" width="250">
+<img src="./Test%202%20Ex%20Review/7.png" width="250">
+<img src="./Test%202%20Ex%20Review/8.png" width="250">
 
 ---
 
