@@ -129,14 +129,22 @@
 <img src="./Day%2008/4.png" width="250">
 <img src="./Day%2008/5.png" width="250">
 <img src="./Day%2008/6.png" width="250">
-<img src="./Day%2008/7.png" width="250">
-<img src="./Day%2008/8.png" width="250">
-<img src="./Day%2008/9.png" width="250">
-<img src="./Day%2008/10.png" width="250">
 
 ---
 
-## Day 9
+## Test 1.1
+
+<img src="./Test%201.1/1.png" width="250">
+<img src="./Test%201.1/1.png" width="250">
+<img src="./Test%201.1/1.png" width="250">
+<img src="./Test%201.1/1.png" width="250">
+<img src="./Test%201.1/1.png" width="250">
+<img src="./Test%201.1/1.png" width="250">
+<img src="./Test%201.1/1.png" width="250">
+
+---
+
+## Test 2 Ex Review
 
 <img src="./Day%2009/1.png" width="250">
 <img src="./Day%2009/2.png" width="250">
@@ -146,8 +154,6 @@
 <img src="./Day%2009/6.png" width="250">
 <img src="./Day%2009/7.png" width="250">
 <img src="./Day%2009/8.png" width="250">
-<img src="./Day%2009/9.png" width="250">
-<img src="./Day%2009/10.png" width="250">
 
 ---
 
