@@ -97,31 +97,16 @@
 
 ## Day 6
 
-<img src="./Day%2005/1.png" width="250">
-<img src="./Day%2005/2.png" width="250">
-<img src="./Day%2005/3.png" width="250">
-<img src="./Day%2005/4.png" width="250">
-<img src="./Day%2005/5.png" width="250">
-<img src="./Day%2005/6.png" width="250">
-
----
-
-## Day 7
-
 <img src="./Day%2006/1.png" width="250">
 <img src="./Day%2006/2.png" width="250">
 <img src="./Day%2006/3.png" width="250">
 <img src="./Day%2006/4.png" width="250">
 <img src="./Day%2006/5.png" width="250">
 <img src="./Day%2006/6.png" width="250">
-<img src="./Day%2006/7.png" width="250">
-<img src="./Day%2006/8.png" width="250">
-<img src="./Day%2006/9.png" width="250">
-<img src="./Day%2006/10.png" width="250">
 
 ---
 
-## Day 8
+## Day 7
 
 <img src="./Day%2007/1.png" width="250">
 <img src="./Day%2007/2.png" width="250">
@@ -136,7 +121,7 @@
 
 ---
 
-## Day 9
+## Day 8
 
 <img src="./Day%2008/1.png" width="250">
 <img src="./Day%2008/2.png" width="250">
@@ -151,7 +136,7 @@
 
 ---
 
-## Day 10
+## Day 9
 
 <img src="./Day%2009/1.png" width="250">
 <img src="./Day%2009/2.png" width="250">
@@ -166,6 +151,21 @@
 
 ---
 
+## Day 10
+
+<img src="./Day%2010/1.png" width="250">
+<img src="./Day%2010/2.png" width="250">
+<img src="./Day%2010/3.png" width="250">
+<img src="./Day%2010/4.png" width="250">
+<img src="./Day%2010/5.png" width="250">
+<img src="./Day%2010/6.png" width="250">
+<img src="./Day%2010/7.png" width="250">
+<img src="./Day%2010/8.png" width="250">
+<img src="./Day%2010/9.png" width="250">
+<img src="./Day%2010/10.png" width="250">
+
+---
+
 ## Day 11 Midterm
 
 <img src="./Day%2010%20Midterm/Mid1.png" width="250">
@@ -174,20 +174,6 @@
 ---
 
 ## Day 12
-
-<img src="./Day%2011/1.png" width="250">
-<img src="./Day%2011/2.png" width="250">
-<img src="./Day%2011/3.png" width="250">
-<img src="./Day%2011/4.png" width="250">
-<img src="./Day%2011/5.png" width="250">
-<img src="./Day%2011/6.png" width="250">
-<img src="./Day%2011/7.png" width="250">
-<img src="./Day%2011/8.png" width="250">
-<img src="./Day%2011/9.png" width="250">
-
----
-
-## Day 13
 
 <img src="./Day%2012/1.png" width="250">
 <img src="./Day%2012/2.png" width="250">
@@ -198,6 +184,20 @@
 <img src="./Day%2012/7.png" width="250">
 <img src="./Day%2012/8.png" width="250">
 <img src="./Day%2012/9.png" width="250">
+
+---
+
+## Day 13
+
+<img src="./Day%2013/1.png" width="250">
+<img src="./Day%2013/2.png" width="250">
+<img src="./Day%2013/3.png" width="250">
+<img src="./Day%2013/4.png" width="250">
+<img src="./Day%2013/5.png" width="250">
+<img src="./Day%2013/6.png" width="250">
+<img src="./Day%2013/7.png" width="250">
+<img src="./Day%2013/8.png" width="250">
+<img src="./Day%2013/9.png" width="250">
 
 ---
 
