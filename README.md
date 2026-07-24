@@ -95,6 +95,10 @@
 
 ---
 
+# Day 5 Test 1
+
+---
+
 ## Day 6
 
 <img src="./Day%2006/1.png" width="250">
@@ -159,6 +163,10 @@
 
 ---
 
+# Day 9 Test 2
+
+---
+
 ## Day 10
 
 <img src="./Day%2010/1.png" width="250">
@@ -170,14 +178,23 @@
 <img src="./Day%2010/7.png" width="250">
 <img src="./Day%2010/8.png" width="250">
 <img src="./Day%2010/9.png" width="250">
-<img src="./Day%2010/10.png" width="250">
 
 ---
 
-## Day 11 Midterm
+## Day 11 
 
-<img src="./Day%2010%20Midterm/Mid1.png" width="250">
-<img src="./Day%2010%20Midterm/Mid2.png" width="250">
+<img src="./Day%2011/1.png" width="250">
+<img src="./Day%2011/2.png" width="250">
+<img src="./Day%2011/3.png" width="250">
+<img src="./Day%2011/4.png" width="250">
+<img src="./Day%2011/5.png" width="250">
+<img src="./Day%2011/6.png" width="250">
+<img src="./Day%2011/7.png" width="250">
+<img src="./Day%2011/8.png" width="250">
+<img src="./Day%2011/9.png" width="250">
+<img src="./Day%2011/10.png" width="250">
+<img src="./Day%2011/11.png" width="250">
+
 
 ---
 
@@ -209,35 +226,22 @@
 
 ---
 
-## Day 14
+## Test 3 Review
 
-<img src="./Day%2013/1.png" width="250">
-<img src="./Day%2013/2.png" width="250">
-<img src="./Day%2013/3.png" width="250">
-<img src="./Day%2013/4.png" width="250">
-<img src="./Day%2013/5.png" width="250">
-<img src="./Day%2013/6.png" width="250">
-<img src="./Day%2013/7.png" width="250">
-<img src="./Day%2013/8.png" width="250">
-<img src="./Day%2013/9.png" width="250">
+---
+
+<img src="./Test%203%20Review/1.png" width="250">
+<img src="./Test%203%20Review/2.png" width="250">
+<img src="./Test%203%20Review/3.png" width="250">
+<img src="./Test%203%20Review/4.png" width="250">
+
+---
+
+## Day 14 Test 3
 
 ---
 
 ## Day 15
-
-<img src="./Day%2014/1.png" width="250">
-<img src="./Day%2014/2.png" width="250">
-<img src="./Day%2014/3.png" width="250">
-<img src="./Day%2014/4.png" width="250">
-<img src="./Day%2014/5.png" width="250">
-<img src="./Day%2014/6.png" width="250">
-<img src="./Day%2014/7.png" width="250">
-<img src="./Day%2014/8.png" width="250">
-<img src="./Day%2014/9.png" width="250">
-
----
-
-## Day 16
 
 <img src="./Day%2015/1.png" width="250">
 <img src="./Day%2015/2.png" width="250">
@@ -251,7 +255,7 @@
 
 ---
 
-## Day 18
+## Day 16
 
 <img src="./Day%2016/1.png" width="250">
 <img src="./Day%2016/2.png" width="250">
@@ -265,7 +269,7 @@
 
 ---
 
-## Day 19
+## Day 17
 
 <img src="./Day%2017/1.png" width="250">
 <img src="./Day%2017/2.png" width="250">
@@ -279,7 +283,7 @@
 
 ---
 
-## Day 20 Final
+## Day 18
 
 <img src="./Day%2018/1.png" width="250">
 <img src="./Day%2018/2.png" width="250">
@@ -290,5 +294,32 @@
 <img src="./Day%2018/7.png" width="250">
 <img src="./Day%2018/8.png" width="250">
 <img src="./Day%2018/9.png" width="250">
+
+---
+
+## Day 19
+
+<img src="./Day%2019/1.png" width="250">
+<img src="./Day%2019/2.png" width="250">
+<img src="./Day%2019/3.png" width="250">
+<img src="./Day%2019/4.png" width="250">
+<img src="./Day%2019/5.png" width="250">
+<img src="./Day%2019/6.png" width="250">
+<img src="./Day%2019/7.png" width="250">
+<img src="./Day%2019/8.png" width="250">
+<img src="./Day%2019/9.png" width="250">
+
+---
+---
+
+## Final Review
+
+<img src="./Final%20Review/1.png" width="250">
+<img src="./Final%20Review/2.png" width="250">
+<img src="./Final%20Review/3.png" width="250">
+
+---
+
+## Day 20 Final
 
 ---
