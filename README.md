@@ -263,10 +263,6 @@
 <img src="./Day%2016/3.png" width="250">
 <img src="./Day%2016/4.png" width="250">
 <img src="./Day%2016/5.png" width="250">
-<img src="./Day%2016/6.png" width="250">
-<img src="./Day%2016/7.png" width="250">
-<img src="./Day%2016/8.png" width="250">
-<img src="./Day%2016/9.png" width="250">
 
 ---
 
