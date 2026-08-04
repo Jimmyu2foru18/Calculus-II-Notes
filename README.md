@@ -214,16 +214,16 @@
 
 ## Day 13
 
-<img src="./Day%2013/1.png" width="250">
-<img src="./Day%2013/2.png" width="250">
-<img src="./Day%2013/3.png" width="250">
-<img src="./Day%2013/4.png" width="250">
-<img src="./Day%2013/5.png" width="250">
-<img src="./Day%2013/6.png" width="250">
-<img src="./Day%2013/7.png" width="250">
-<img src="./Day%2013/8.png" width="250">
-<img src="./Day%2013/9.png" width="250">
-<img src="./Day%2013/10.png" width="250">
+<img src="./Day%2013/1.PNG" width="250">
+<img src="./Day%2013/2.PNG" width="250">
+<img src="./Day%2013/3.PNG" width="250">
+<img src="./Day%2013/4.PNG" width="250">
+<img src="./Day%2013/5.PNG" width="250">
+<img src="./Day%2013/6.PNG" width="250">
+<img src="./Day%2013/7.PNG" width="250">
+<img src="./Day%2013/8.PNG" width="250">
+<img src="./Day%2013/9.PNG" width="250">
+<img src="./Day%2013/10.PNG" width="250">
 
 ---
 
@@ -244,25 +244,25 @@
 
 ## Day 15
 
-<img src="./Day%2015/1.png" width="250">
-<img src="./Day%2015/2.png" width="250">
-<img src="./Day%2015/3.png" width="250">
-<img src="./Day%2015/4.png" width="250">
-<img src="./Day%2015/5.png" width="250">
-<img src="./Day%2015/6.png" width="250">
-<img src="./Day%2015/7.png" width="250">
-<img src="./Day%2015/8.png" width="250">
-<img src="./Day%2015/9.png" width="250">
+<img src="./Day%2015/1.PNG" width="250">
+<img src="./Day%2015/2.PNG" width="250">
+<img src="./Day%2015/3.PNG" width="250">
+<img src="./Day%2015/4.PNG" width="250">
+<img src="./Day%2015/5.PNG" width="250">
+<img src="./Day%2015/6.PNG" width="250">
+<img src="./Day%2015/7.PNG" width="250">
+<img src="./Day%2015/8.PNG" width="250">
+<img src="./Day%2015/9.PNG" width="250">
 
 ---
 
 ## Day 16
 
-<img src="./Day%2016/1.png" width="250">
-<img src="./Day%2016/2.png" width="250">
-<img src="./Day%2016/3.png" width="250">
-<img src="./Day%2016/4.png" width="250">
-<img src="./Day%2016/5.png" width="250">
+<img src="./Day%2016/1.PNG" width="250">
+<img src="./Day%2016/2.PNG" width="250">
+<img src="./Day%2016/3.PNG" width="250">
+<img src="./Day%2016/4.PNG" width="250">
+<img src="./Day%2016/5.PNG" width="250">
 
 ---
 
