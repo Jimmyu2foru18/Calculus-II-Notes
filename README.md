@@ -386,6 +386,38 @@
 
 ---
 
-## Day 20 Final
+## Final Sample 2
+
+<img src="./Final%20Sample%202/1.png" width="250">
+<img src="./Final%20Sample%202/2.png" width="250">
+<img src="./Final%20Sample%202/3.png" width="250">
+<img src="./Final%20Sample%202/4.png" width="250">
+<img src="./Final%20Sample%202/5.png" width="250">
+<img src="./Final%20Sample%202/6.png" width="250">
+<img src="./Final%20Sample%202/7.png" width="250">
+<img src="./Final%20Sample%202/8.png" width="250">
+<img src="./Final%20Sample%202/9.png" width="250">
+<img src="./Final%20Sample%202/10.png" width="250">
+
+
+---
+
+## Final Sample 3
+
+<img src="./Final%20Sample%203/1.png" width="250">
+<img src="./Final%20Sample%203/2.png" width="250">
+<img src="./Final%20Sample%203/3.png" width="250">
+<img src="./Final%20Sample%203/4.png" width="250">
+<img src="./Final%20Sample%203/5.png" width="250">
+<img src="./Final%20Sample%203/6.png" width="250">
+<img src="./Final%20Sample%203/7.png" width="250">
+<img src="./Final%20Sample%203/8.png" width="250">
+<img src="./Final%20Sample%203/9.png" width="250">
+<img src="./Final%20Sample%203/10.png" width="250">
+
+
+---
+
+## Day 20 Final Exam
 
 ---
