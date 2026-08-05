@@ -27,7 +27,12 @@
 
 ## Quiz 1
 
-<img src="./Quiz%201/1.png" width="250">
+<img src="./Quiz%2001/1.png" width="250">
+<img src="./Quiz%2001/2.png" width="250">
+<img src="./Quiz%2001/3.png" width="250">
+<img src="./Quiz%2001/4.png" width="250">
+<img src="./Quiz%2001/5.png" width="250">
+<img src="./Quiz%2001/6.png" width="250">
 
 ---
 
@@ -53,11 +58,13 @@
 
 ---
 
-
 ## Quiz 2
 
-<img src="./Quiz%202/1.png" width="250">
-<img src="./Quiz%202/2.png" width="250">
+<img src="./Quiz%2002/1.png" width="250">
+<img src="./Quiz%2002/2.png" width="250">
+<img src="./Quiz%2002/3.png" width="250">
+<img src="./Quiz%2002/4.png" width="250">
+<img src="./Quiz%2002/5.png" width="250">
 
 ---
 
@@ -95,9 +102,12 @@
 
 ## Quiz 3
 
-<img src="./Quiz%203/1.png" width="250">
-<img src="./Quiz%203/2.png" width="250">
-<img src="./Quiz%203/3.png" width="250">
+<img src="./Quiz%2003/1.png" width="250">
+<img src="./Quiz%2003/2.png" width="250">
+<img src="./Quiz%2003/3.png" width="250">
+<img src="./Quiz%2003/4.png" width="250">
+<img src="./Quiz%2003/5.png" width="250">
+<img src="./Quiz%2003/6.png" width="250">
 
 ---
 
@@ -203,7 +213,7 @@
 
 ---
 
-## Day 11 
+## Day 11
 
 <img src="./Day%2011/1.png" width="250">
 <img src="./Day%2011/2.png" width="250">
@@ -216,7 +226,6 @@
 <img src="./Day%2011/9.png" width="250">
 <img src="./Day%2011/10.png" width="250">
 <img src="./Day%2011/11.png" width="250">
-
 
 ---
 
@@ -246,17 +255,6 @@
 <img src="./Day%2013/8.PNG" width="250">
 <img src="./Day%2013/9.PNG" width="250">
 <img src="./Day%2013/10.PNG" width="250">
-
----
-
-## Test 3 Review
-
----
-
-<img src="./Test%203%20Review/1.png" width="250">
-<img src="./Test%203%20Review/2.png" width="250">
-<img src="./Test%203%20Review/3.png" width="250">
-<img src="./Test%203%20Review/4.png" width="250">
 
 ---
 
@@ -318,37 +316,73 @@
 
 ## Final Review 1
 
-<img src="./Final Review 1/1.png" width="250">
-
+<img src="./Final%20Review%201/1.png" width="250">
+<img src="./Final%20Review%201/2.png" width="250">
+<img src="./Final%20Review%201/3.png" width="250">
+<img src="./Final%20Review%201/4.png" width="250">
+<img src="./Final%20Review%201/5.png" width="250">
+<img src="./Final%20Review%201/6.png" width="250">
+<img src="./Final%20Review%201/7.png" width="250">
+<img src="./Final%20Review%201/8.png" width="250">
+<img src="./Final%20Review%201/9.png" width="250">
 
 ---
 
 ## Final Review 2
 
-<img src="./Final Review 2/1.png" width="250">
-
+<img src="./Final%20Review%202/1.png" width="250">
+<img src="./Final%20Review%202/2.png" width="250">
+<img src="./Final%20Review%202/3.png" width="250">
+<img src="./Final%20Review%202/4.png" width="250">
+<img src="./Final%20Review%202/5.png" width="250">
+<img src="./Final%20Review%202/6.png" width="250">
+<img src="./Final%20Review%202/7.png" width="250">
+<img src="./Final%20Review%202/8.png" width="250">
+<img src="./Final%20Review%202/9.png" width="250">
+<img src="./Final%20Review%202/10.png" width="250">
+<img src="./Final%20Review%202/11.png" width="250">
+<img src="./Final%20Review%202/12.png" width="250">
 
 ---
 
 ## Final Review 3
 
-<img src="./Final Review 3/1.png" width="250">
-
+<img src="./Final%20Review%203/1.png" width="250">
+<img src="./Final%20Review%203/2.png" width="250">
+<img src="./Final%20Review%203/3.png" width="250">
+<img src="./Final%20Review%203/4.png" width="250">
+<img src="./Final%20Review%203/5.png" width="250">
 
 ---
 
 ## Final Review 4
 
-<img src="./Final Review 4/1.png" width="250">
-
+<img src="./Final%20Review%204/1.png" width="250">
+<img src="./Final%20Review%204/2.png" width="250">
+<img src="./Final%20Review%204/3.png" width="250">
+<img src="./Final%20Review%204/4.png" width="250">
+<img src="./Final%20Review%204/5.png" width="250">
+<img src="./Final%20Review%204/6.png" width="250">
+<img src="./Final%20Review%204/7.png" width="250">
+<img src="./Final%20Review%204/8.png" width="250">
+<img src="./Final%20Review%204/9.png" width="250">
 
 ---
 
 ## Final Sample 1
 
-<img src="./Final Sample 1/1.png" width="250">
-<img src="./Final Sample 1/2.png" width="250">
-<img src="./Final Sample 1/3.png" width="250">
+<img src="./Final%20Sample%201/1.png" width="250">
+<img src="./Final%20Sample%201/2.png" width="250">
+<img src="./Final%20Sample%201/3.png" width="250">
+<img src="./Final%20Sample%201/4.png" width="250">
+<img src="./Final%20Sample%201/5.png" width="250">
+<img src="./Final%20Sample%201/6.png" width="250">
+<img src="./Final%20Sample%201/7.png" width="250">
+<img src="./Final%20Sample%201/8.png" width="250">
+<img src="./Final%20Sample%201/9.png" width="250">
+<img src="./Final%20Sample%201/10.png" width="250">
+<img src="./Final%20Sample%201/11.png" width="250">
+<img src="./Final%20Sample%201/12.png" width="250">
 
 ---
 
