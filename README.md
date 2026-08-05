@@ -309,8 +309,6 @@
 <img src="./Day%2018/5.png" width="250">
 <img src="./Day%2018/6.png" width="250">
 <img src="./Day%2018/7.png" width="250">
-<img src="./Day%2018/8.png" width="250">
-<img src="./Day%2018/9.png" width="250">
 
 ---
 
