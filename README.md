@@ -25,6 +25,12 @@
 
 ---
 
+## Quiz 1
+
+<img src="./Quiz%201/1.png" width="250">
+
+---
+
 ## Day 2
 
 <img src="./Day%2002/1.png" width="250">
@@ -44,6 +50,14 @@
 
 <img src="./Quiz%202%20Prep/1.png" width="250">
 <img src="./Quiz%202%20Prep/2.png" width="250">
+
+---
+
+
+## Quiz 2
+
+<img src="./Quiz%202/1.png" width="250">
+<img src="./Quiz%202/2.png" width="250">
 
 ---
 
@@ -76,6 +90,14 @@
 <img src="./Quiz%203%20Prep/1.png" width="250">
 <img src="./Quiz%203%20Prep/2.png" width="250">
 <img src="./Quiz%203%20Prep/3.png" width="250">
+
+---
+
+## Quiz 3
+
+<img src="./Quiz%203/1.png" width="250">
+<img src="./Quiz%203/2.png" width="250">
+<img src="./Quiz%203/3.png" width="250">
 
 ---
 
@@ -294,26 +316,39 @@
 
 ---
 
-## Day 19
+## Final Review 1
 
-<img src="./Day%2019/1.png" width="250">
-<img src="./Day%2019/2.png" width="250">
-<img src="./Day%2019/3.png" width="250">
-<img src="./Day%2019/4.png" width="250">
-<img src="./Day%2019/5.png" width="250">
-<img src="./Day%2019/6.png" width="250">
-<img src="./Day%2019/7.png" width="250">
-<img src="./Day%2019/8.png" width="250">
-<img src="./Day%2019/9.png" width="250">
+<img src="./Final Review 1/1.png" width="250">
+
 
 ---
+
+## Final Review 2
+
+<img src="./Final Review 2/1.png" width="250">
+
+
 ---
 
-## Final Review
+## Final Review 3
 
-<img src="./Final%20Review/1.png" width="250">
-<img src="./Final%20Review/2.png" width="250">
-<img src="./Final%20Review/3.png" width="250">
+<img src="./Final Review 3/1.png" width="250">
+
+
+---
+
+## Final Review 4
+
+<img src="./Final Review 4/1.png" width="250">
+
+
+---
+
+## Final Sample 1
+
+<img src="./Final Sample 1/1.png" width="250">
+<img src="./Final Sample 1/2.png" width="250">
+<img src="./Final Sample 1/3.png" width="250">
 
 ---
 
