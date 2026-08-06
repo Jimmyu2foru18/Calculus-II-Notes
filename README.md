@@ -393,8 +393,6 @@
 <img src="./Final%20Sample%202/9.png" width="250">
 <img src="./Final%20Sample%202/10.png" width="250">
 <img src="./Final%20Sample%202/11.png" width="250">
-<img src="./Final%20Sample%202/12.png" width="250">
-
 
 ---
 
