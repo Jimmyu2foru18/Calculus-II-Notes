@@ -1,5 +1,5 @@
 {
-  "Day 01": [
+  "review-and-course-overview": [
     "Day 01/1.png",
     "Day 01/2.png",
     "Day 01/3.png",
@@ -11,7 +11,7 @@
     "Day 01/9.png",
     "Day 01/10.png"
   ],
-  "Day 02": [
+  "fundamental-theorem-of-calculus": [
     "Day 02/1.png",
     "Day 02/2.png",
     "Day 02/3.png",
@@ -23,7 +23,7 @@
     "Day 02/9.png",
     "Day 02/10.png"
   ],
-  "Day 03": [
+  "integration-substitution-and-area": [
     "Day 03/1.png",
     "Day 03/2.png",
     "Day 03/3.png",
@@ -32,7 +32,7 @@
     "Day 03/6.png",
     "Day 03/7.png"
   ],
-  "Day 04": [
+  "arc-length-and-advanced-integration": [
     "Day 04/1.png",
     "Day 04/2.png",
     "Day 04/3.png",
@@ -41,7 +41,7 @@
     "Day 04/6.png",
     "Day 04/7.png"
   ],
-  "Day 06": [
+  "volumes-by-shells-and-motion": [
     "Day 06/1.png",
     "Day 06/2.png",
     "Day 06/3.png",
@@ -49,7 +49,7 @@
     "Day 06/5.png",
     "Day 06/6.png"
   ],
-  "Day 07": [
+  "integration-by-parts-and-trig": [
     "Day 07/1.png",
     "Day 07/2.png",
     "Day 07/3.png",
@@ -61,7 +61,7 @@
     "Day 07/9.png",
     "Day 07/10.png"
   ],
-  "Day 08": [
+  "integration-techniques-review": [
     "Day 08/1.png",
     "Day 08/2.png",
     "Day 08/3.png",
@@ -69,7 +69,7 @@
     "Day 08/5.png",
     "Day 08/6.png"
   ],
-  "Day 10": [
+  "partial-fractions-and-improper": [
     "Day 10/1.png",
     "Day 10/2.png",
     "Day 10/3.png",
@@ -80,7 +80,7 @@
     "Day 10/8.png",
     "Day 10/9.png"
   ],
-  "Day 11": [
+  "sequences-series-and-lhopital": [
     "Day 11/1.png",
     "Day 11/2.png",
     "Day 11/3.png",
@@ -93,7 +93,7 @@
     "Day 11/10.png",
     "Day 11/11.png"
   ],
-  "Day 12": [
+  "series-convergence-tests": [
     "Day 12/1.png",
     "Day 12/2.png",
     "Day 12/3.png",
@@ -104,7 +104,7 @@
     "Day 12/8.png",
     "Day 12/9.png"
   ],
-  "Day 13": [
+  "advanced-series-tests": [
     "Day 13/1.PNG",
     "Day 13/2.PNG",
     "Day 13/3.PNG",
@@ -116,7 +116,7 @@
     "Day 13/9.PNG",
     "Day 13/10.PNG"
   ],
-  "Day 15": [
+  "power-series-and-convergence": [
     "Day 15/1.PNG",
     "Day 15/2.PNG",
     "Day 15/3.PNG",
@@ -127,21 +127,21 @@
     "Day 15/8.PNG",
     "Day 15/9.PNG"
   ],
-  "Day 16": [
+  "taylor-and-maclaurin-series": [
     "Day 16/1.PNG",
     "Day 16/2.PNG",
     "Day 16/3.PNG",
     "Day 16/4.PNG",
     "Day 16/5.PNG"
   ],
-  "Day 17": [
+  "conic-sections-and-polar": [
     "Day 17/1.png",
     "Day 17/2.png",
     "Day 17/3.png",
     "Day 17/4.png",
     "Day 17/5.png"
   ],
-  "Day 18": [
+  "parametric-equations-and-polar-areas": [
     "Day 18/1.png",
     "Day 18/2.png",
     "Day 18/3.png",
@@ -150,7 +150,7 @@
     "Day 18/6.png",
     "Day 18/7.png"
   ],
-  "Final Review 1": [
+  "integration-techniques-and-series": [
     "Final Review 1/1.png",
     "Final Review 1/2.png",
     "Final Review 1/3.png",
@@ -161,7 +161,7 @@
     "Final Review 1/8.png",
     "Final Review 1/9.png"
   ],
-  "Final Review 2": [
+  "advanced-integration-trig-and-sub": [
     "Final Review 2/1.png",
     "Final Review 2/2.png",
     "Final Review 2/3.png",
@@ -175,14 +175,14 @@
     "Final Review 2/11.png",
     "Final Review 2/12.png"
   ],
-  "Final Review 3": [
+  "series-convergence-and-power-series": [
     "Final Review 3/1.png",
     "Final Review 3/2.png",
     "Final Review 3/3.png",
     "Final Review 3/4.png",
     "Final Review 3/5.png"
   ],
-  "Final Review 4": [
+  "parametric-polar-and-series-apps": [
     "Final Review 4/1.png",
     "Final Review 4/2.png",
     "Final Review 4/3.png",
@@ -193,7 +193,7 @@
     "Final Review 4/8.png",
     "Final Review 4/9.png"
   ],
-  "Final Sample 1": [
+  "comprehensive-sample-exam-1": [
     "Final Sample 1/1.png",
     "Final Sample 1/2.png",
     "Final Sample 1/3.png",
@@ -207,7 +207,7 @@
     "Final Sample 1/11.png",
     "Final Sample 1/12.png"
   ],
-  "Final Sample 2": [
+  "comprehensive-sample-exam-2": [
     "Final Sample 2/1.png",
     "Final Sample 2/2.png",
     "Final Sample 2/3.png",
@@ -220,7 +220,7 @@
     "Final Sample 2/10.png",
     "Final Sample 2/11.png"
   ],
-  "Final Sample 3": [
+  "comprehensive-sample-exam-3": [
     "Final Sample 3/1.png",
     "Final Sample 3/2.png",
     "Final Sample 3/3.png",
@@ -234,7 +234,7 @@
     "Final Sample 3/11.png",
     "Final Sample 3/12.png"
   ],
-  "Quiz 01": [
+  "substitution-and-basic-integration": [
     "Quiz 01/1.png",
     "Quiz 01/2.png",
     "Quiz 01/3.png",
@@ -242,14 +242,14 @@
     "Quiz 01/5.png",
     "Quiz 01/6.png"
   ],
-  "Quiz 02": [
+  "substitution-series-and-riemann": [
     "Quiz 02/1.png",
     "Quiz 02/2.png",
     "Quiz 02/3.png",
     "Quiz 02/4.png",
     "Quiz 02/5.png"
   ],
-  "Quiz 03": [
+  "ftc-and-applications": [
     "Quiz 03/1.png",
     "Quiz 03/2.png",
     "Quiz 03/3.png",
@@ -257,15 +257,15 @@
     "Quiz 03/5.png",
     "Quiz 03/6.png"
   ],
-  "Quiz 1 Prep": [
+  "quiz-1-preparation": [
     "Quiz 1 Prep/1.png",
     "Quiz 1 Prep/2.png"
   ],
-  "Quiz 2 Prep": [
+  "quiz-2-preparation": [
     "Quiz 2 Prep/1.png",
     "Quiz 2 Prep/2.png"
   ],
-  "Quiz 3 Prep": [
+  "quiz-3-preparation": [
     "Quiz 3 Prep/1.png",
     "Quiz 3 Prep/2.png",
     "Quiz 3 Prep/3.png"

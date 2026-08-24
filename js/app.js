@@ -11,44 +11,44 @@
     };
 
     const DAYS = [
-        { id: 'day-01', num: '01', title: 'Day 01', file: 'days/day-01.html', folder: 'Day 01', category: 'days' },
-        { id: 'day-02', num: '02', title: 'Day 02', file: 'days/day-02.html', folder: 'Day 02', category: 'days' },
-        { id: 'day-03', num: '03', title: 'Day 03', file: 'days/day-03.html', folder: 'Day 03', category: 'days' },
-        { id: 'day-04', num: '04', title: 'Day 04', file: 'days/day-04.html', folder: 'Day 04', category: 'days' },
-        { id: 'day-06', num: '06', title: 'Day 06', file: 'days/day-06.html', folder: 'Day 06', category: 'days' },
-        { id: 'day-07', num: '07', title: 'Day 07', file: 'days/day-07.html', folder: 'Day 07', category: 'days' },
-        { id: 'day-08', num: '08', title: 'Day 08', file: 'days/day-08.html', folder: 'Day 08', category: 'days' },
-        { id: 'day-10', num: '10', title: 'Day 10', file: 'days/day-10.html', folder: 'Day 10', category: 'days' },
-        { id: 'day-11', num: '11', title: 'Day 11', file: 'days/day-11.html', folder: 'Day 11', category: 'days' },
-        { id: 'day-12', num: '12', title: 'Day 12', file: 'days/day-12.html', folder: 'Day 12', category: 'days' },
-        { id: 'day-13', num: '13', title: 'Day 13', file: 'days/day-13.html', folder: 'Day 13', category: 'days' },
-        { id: 'day-15', num: '15', title: 'Day 15', file: 'days/day-15.html', folder: 'Day 15', category: 'days' },
-        { id: 'day-16', num: '16', title: 'Day 16', file: 'days/day-16.html', folder: 'Day 16', category: 'days' },
-        { id: 'day-17', num: '17', title: 'Day 17', file: 'days/day-17.html', folder: 'Day 17', category: 'days' },
-        { id: 'day-18', num: '18', title: 'Day 18', file: 'days/day-18.html', folder: 'Day 18', category: 'days' }
+        { id: 'day-01', num: '01', title: 'review-and-course-overview', file: 'days/day-01.html', folder: 'review-and-course-overview', category: 'days' },
+        { id: 'day-02', num: '02', title: 'fundamental-theorem-of-calculus', file: 'days/day-02.html', folder: 'fundamental-theorem-of-calculus', category: 'days' },
+        { id: 'day-03', num: '03', title: 'integration-substitution-and-area', file: 'days/day-03.html', folder: 'integration-substitution-and-area', category: 'days' },
+        { id: 'day-04', num: '04', title: 'arc-length-and-advanced-integration', file: 'days/day-04.html', folder: 'arc-length-and-advanced-integration', category: 'days' },
+        { id: 'day-06', num: '06', title: 'volumes-by-shells-and-motion', file: 'days/day-06.html', folder: 'volumes-by-shells-and-motion', category: 'days' },
+        { id: 'day-07', num: '07', title: 'integration-by-parts-and-trig', file: 'days/day-07.html', folder: 'integration-by-parts-and-trig', category: 'days' },
+        { id: 'day-08', num: '08', title: 'integration-techniques-review', file: 'days/day-08.html', folder: 'integration-techniques-review', category: 'days' },
+        { id: 'day-10', num: '10', title: 'partial-fractions-and-improper', file: 'days/day-10.html', folder: 'partial-fractions-and-improper', category: 'days' },
+        { id: 'day-11', num: '11', title: 'sequences-series-and-lhopital', file: 'days/day-11.html', folder: 'sequences-series-and-lhopital', category: 'days' },
+        { id: 'day-12', num: '12', title: 'series-convergence-tests', file: 'days/day-12.html', folder: 'series-convergence-tests', category: 'days' },
+        { id: 'day-13', num: '13', title: 'advanced-series-tests', file: 'days/day-13.html', folder: 'advanced-series-tests', category: 'days' },
+        { id: 'day-15', num: '15', title: 'power-series-and-convergence', file: 'days/day-15.html', folder: 'power-series-and-convergence', category: 'days' },
+        { id: 'day-16', num: '16', title: 'taylor-and-maclaurin-series', file: 'days/day-16.html', folder: 'taylor-and-maclaurin-series', category: 'days' },
+        { id: 'day-17', num: '17', title: 'conic-sections-and-polar', file: 'days/day-17.html', folder: 'conic-sections-and-polar', category: 'days' },
+        { id: 'day-18', num: '18', title: 'parametric-equations-and-polar-areas', file: 'days/day-18.html', folder: 'parametric-equations-and-polar-areas', category: 'days' }
     ];
 
     const QUIZZES = [
-        { id: 'quiz-01', num: '01', title: 'Quiz 01', file: 'quiz-reviews/quiz-01.html', folder: 'Quiz 01', category: 'quizzes' },
-        { id: 'quiz-02', num: '02', title: 'Quiz 02', file: 'quiz-reviews/quiz-02.html', folder: 'Quiz 02', category: 'quizzes' },
-        { id: 'quiz-03', num: '03', title: 'Quiz 03', file: 'quiz-reviews/quiz-03.html', folder: 'Quiz 03', category: 'quizzes' },
-        { id: 'quiz-1-prep', num: '1P', title: 'Quiz 1 Prep', file: 'quiz-reviews/quiz-1-prep.html', folder: 'Quiz 1 Prep', category: 'quizzes' },
-        { id: 'quiz-2-prep', num: '2P', title: 'Quiz 2 Prep', file: 'quiz-reviews/quiz-2-prep.html', folder: 'Quiz 2 Prep', category: 'quizzes' },
-        { id: 'quiz-3-prep', num: '3P', title: 'Quiz 3 Prep', file: 'quiz-reviews/quiz-3-prep.html', folder: 'Quiz 3 Prep', category: 'quizzes' },
-        { id: 'quiz-practice', num: 'PR', title: 'Quiz Practice', file: 'quiz-reviews/quiz-practice.html', folder: 'Quiz Practice', category: 'quizzes' }
+        { id: 'quiz-01', num: '01', title: 'substitution-and-basic-integration', file: 'quiz-reviews/quiz-01.html', folder: 'substitution-and-basic-integration', category: 'quizzes' },
+        { id: 'quiz-02', num: '02', title: 'substitution-series-and-riemann', file: 'quiz-reviews/quiz-02.html', folder: 'substitution-series-and-riemann', category: 'quizzes' },
+        { id: 'quiz-03', num: '03', title: 'ftc-and-applications', file: 'quiz-reviews/quiz-03.html', folder: 'ftc-and-applications', category: 'quizzes' },
+        { id: 'quiz-1-prep', num: '1P', title: 'quiz-1-preparation', file: 'quiz-reviews/quiz-1-prep.html', folder: 'quiz-1-preparation', category: 'quizzes' },
+        { id: 'quiz-2-prep', num: '2P', title: 'quiz-2-preparation', file: 'quiz-reviews/quiz-2-prep.html', folder: 'quiz-2-preparation', category: 'quizzes' },
+        { id: 'quiz-3-prep', num: '3P', title: 'quiz-3-preparation', file: 'quiz-reviews/quiz-3-prep.html', folder: 'quiz-3-preparation', category: 'quizzes' },
+        { id: 'quiz-practice', num: 'PR', title: 'quiz-practice', file: 'quiz-reviews/quiz-practice.html', folder: 'quiz-practice', category: 'quizzes' }
     ];
 
     const FINAL_REVIEWS = [
-        { id: 'final-review-1', num: 'R1', title: 'Final Review 1', file: 'final-reviews/final-review-1.html', folder: 'Final Review 1', category: 'final' },
-        { id: 'final-review-2', num: 'R2', title: 'Final Review 2', file: 'final-reviews/final-review-2.html', folder: 'Final Review 2', category: 'final' },
-        { id: 'final-review-3', num: 'R3', title: 'Final Review 3', file: 'final-reviews/final-review-3.html', folder: 'Final Review 3', category: 'final' },
-        { id: 'final-review-4', num: 'R4', title: 'Final Review 4', file: 'final-reviews/final-review-4.html', folder: 'Final Review 4', category: 'final' }
+        { id: 'final-review-1', num: 'R1', title: 'integration-techniques-and-series', file: 'final-reviews/final-review-1.html', folder: 'integration-techniques-and-series', category: 'final' },
+        { id: 'final-review-2', num: 'R2', title: 'advanced-integration-trig-and-sub', file: 'final-reviews/final-review-2.html', folder: 'advanced-integration-trig-and-sub', category: 'final' },
+        { id: 'final-review-3', num: 'R3', title: 'series-convergence-and-power-series', file: 'final-reviews/final-review-3.html', folder: 'series-convergence-and-power-series', category: 'final' },
+        { id: 'final-review-4', num: 'R4', title: 'parametric-polar-and-series-apps', file: 'final-reviews/final-review-4.html', folder: 'parametric-polar-and-series-apps', category: 'final' }
     ];
 
     const FINAL_SAMPLES = [
-        { id: 'final-sample-1', num: 'S1', title: 'Final Sample 1', file: 'final-samples/final-sample-1.html', folder: 'Final Sample 1', category: 'final' },
-        { id: 'final-sample-2', num: 'S2', title: 'Final Sample 2', file: 'final-samples/final-sample-2.html', folder: 'Final Sample 2', category: 'final' },
-        { id: 'final-sample-3', num: 'S3', title: 'Final Sample 3', file: 'final-samples/final-sample-3.html', folder: 'Final Sample 3', category: 'final' }
+        { id: 'final-sample-1', num: 'S1', title: 'comprehensive-sample-exam-1', file: 'final-samples/final-sample-1.html', folder: 'comprehensive-sample-exam-1', category: 'final' },
+        { id: 'final-sample-2', num: 'S2', title: 'comprehensive-sample-exam-2', file: 'final-samples/final-sample-2.html', folder: 'comprehensive-sample-exam-2', category: 'final' },
+        { id: 'final-sample-3', num: 'S3', title: 'comprehensive-sample-exam-3', file: 'final-samples/final-sample-3.html', folder: 'comprehensive-sample-exam-3', category: 'final' }
     ];
 
     const ALL_SECTIONS = [...DAYS, ...QUIZZES, ...FINAL_REVIEWS, ...FINAL_SAMPLES];
