@@ -10,17 +10,23 @@
         storagePrefix: 'calc2_notes_'
     };
 
-    const DAYS = [];
-    for (let i = 1; i <= 18; i++) {
-        DAYS.push({
-            id: `day-${i}`,
-            num: String(i).padStart(2, '0'),
-            title: `Day ${String(i).padStart(2, '0')}`,
-            file: `days/day-${String(i).padStart(2, '0')}.html`,
-            folder: `Day ${String(i).padStart(2, '0')}`,
-            category: 'days'
-        });
-    }
+    const DAYS = [
+        { id: 'day-01', num: '01', title: 'Day 01', file: 'days/day-01.html', folder: 'Day 01', category: 'days' },
+        { id: 'day-02', num: '02', title: 'Day 02', file: 'days/day-02.html', folder: 'Day 02', category: 'days' },
+        { id: 'day-03', num: '03', title: 'Day 03', file: 'days/day-03.html', folder: 'Day 03', category: 'days' },
+        { id: 'day-04', num: '04', title: 'Day 04', file: 'days/day-04.html', folder: 'Day 04', category: 'days' },
+        { id: 'day-06', num: '06', title: 'Day 06', file: 'days/day-06.html', folder: 'Day 06', category: 'days' },
+        { id: 'day-07', num: '07', title: 'Day 07', file: 'days/day-07.html', folder: 'Day 07', category: 'days' },
+        { id: 'day-08', num: '08', title: 'Day 08', file: 'days/day-08.html', folder: 'Day 08', category: 'days' },
+        { id: 'day-10', num: '10', title: 'Day 10', file: 'days/day-10.html', folder: 'Day 10', category: 'days' },
+        { id: 'day-11', num: '11', title: 'Day 11', file: 'days/day-11.html', folder: 'Day 11', category: 'days' },
+        { id: 'day-12', num: '12', title: 'Day 12', file: 'days/day-12.html', folder: 'Day 12', category: 'days' },
+        { id: 'day-13', num: '13', title: 'Day 13', file: 'days/day-13.html', folder: 'Day 13', category: 'days' },
+        { id: 'day-15', num: '15', title: 'Day 15', file: 'days/day-15.html', folder: 'Day 15', category: 'days' },
+        { id: 'day-16', num: '16', title: 'Day 16', file: 'days/day-16.html', folder: 'Day 16', category: 'days' },
+        { id: 'day-17', num: '17', title: 'Day 17', file: 'days/day-17.html', folder: 'Day 17', category: 'days' },
+        { id: 'day-18', num: '18', title: 'Day 18', file: 'days/day-18.html', folder: 'Day 18', category: 'days' }
+    ];
 
     const QUIZZES = [
         { id: 'quiz-01', num: '01', title: 'Quiz 01', file: 'quiz-reviews/quiz-01.html', folder: 'Quiz 01', category: 'quizzes' },
@@ -46,16 +52,6 @@
     ];
 
     const ALL_SECTIONS = [...DAYS, ...QUIZZES, ...FINAL_REVIEWS, ...FINAL_SAMPLES];
-    const CATEGORY_MAP = {
-        'days': { sections: DAYS, view: 'days', label: 'Day', hub: 'days/index.html' },
-        'quizzes': { sections: QUIZZES, view: 'quiz-reviews', label: 'Quiz', hub: 'quiz-reviews/index.html' },
-        'final': { sections: [...FINAL_REVIEWS, ...FINAL_SAMPLES], view: 'final-reviews', label: 'Review', hub: 'final-reviews/index.html' }
-    };
-
-    let manifest = {};
-    let currentSection = null;
-    let currentImageIndex = 0;
-    let currentImages = [];
 
     function initMathJax() {
         if (typeof window.MathJax === 'undefined') return;
@@ -306,15 +302,15 @@ Notes are saved per chapter and persist across sessions.">${escapeHtml(currentNo
         const searchInput = document.getElementById('search-input');
         if (!searchInput) return;
 
-        const sections = document.querySelectorAll('.section-card');
+        const chapters = document.querySelectorAll('.chapter');
         const tocLinks = document.querySelectorAll('.toc a');
 
         searchInput.addEventListener('input', debounce(function(e) {
             const query = e.target.value.toLowerCase().trim();
 
-            sections.forEach(section => {
-                const text = section.textContent.toLowerCase();
-                section.style.display = text.includes(query) || query === '' ? 'block' : 'none';
+            chapters.forEach(chapter => {
+                const text = chapter.textContent.toLowerCase();
+                chapter.style.display = text.includes(query) || query === '' ? 'block' : 'none';
             });
 
             tocLinks.forEach(link => {
@@ -522,7 +518,6 @@ Notes are saved per chapter and persist across sessions.">${escapeHtml(currentNo
         FINAL_REVIEWS,
         FINAL_SAMPLES,
         ALL_SECTIONS,
-        CATEGORY_MAP,
         NoteEngine,
         getSection: (id) => ALL_SECTIONS.find(s => s.id === id || (s.file && s.file.endsWith(id))),
         getCurrentSection: () => {

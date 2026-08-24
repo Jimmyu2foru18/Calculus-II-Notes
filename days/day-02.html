@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 02 — Calculus II Notes</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script>
+window.MathJax = {
+    tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        tags: 'ams'
+    },
+    svg: { fontCache: 'global' },
+    options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+        ignoreHtmlClass: 'no-mathjax'
+    }
+};
+</script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+<header>
+    <h1>Calculus II Notes</h1>
+    <p class="subtitle">Integration, Series, and Advanced Calculus</p>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../days/index.html">Days</a>
+        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
+        <a href="../final-reviews/index.html">Final Reviews</a>
+        <a href="../final-samples/index.html">Final Samples</a>
+        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+</header>
+
+<div class="container">
+    <main>
+        <p><a href="../days/index.html" class="nav-btn">← Back to Days</a></p>
+        <div class="chapter">
+            <h2>Day 02 — Fundamental Theorem of Calculus</h2>
+            <p class="lead">Introduction to definite integrals, Riemann sums, the Fundamental Theorem of Calculus, and the area between curves.</p>
+        </div>
+
+        <div class="video-section">
+            <h4>Core Lecture</h4>
+            <div class="video-container">
+                #
+            </div>
+        </div>
+
+        <section class="topic-section" id="area-problem">
+            <h2>The Area Problem and Definite Integrals</h2>
+
+            <div class="notes">
+                <h4>Motivation — Finding Area Under a Curve</h4>
+                <p>How do we find the exact area under a curve $y = f(x)$ from $x = a$ to $x = b$?</p>
+                <p><strong>Example:</strong> For $f(x) = 4 - x^2$ on $[-2, 2]$, the area is:</p>
+                $$\text{Area} = \int_{-2}^{2} (4 - x^2) \, dx = \left[4x - \frac{x^3}{3}\right]_{-2}^{2} = \frac{32}{3}$$
+            </div>
+
+            <div class="visual-aid">
+                <h4>Figure 2.1 — Area Under $y = 4 - x^2$</h4>
+                <svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:440px;">
+                    <rect x="0" y="0" width="420" height="260" fill="#fafafa"/>
+                    <line x1="30" y1="230" x2="400" y2="230" stroke="#000" stroke-width="1"/>
+                    <line x1="210" y1="20" x2="210" y2="240" stroke="#000" stroke-width="1"/>
+                    <text x="405" y="234" font-size="12" fill="#000">x</text>
+                    <text x="214" y="18" font-size="12" fill="#000">y</text>
+                    <path d="M 110,230 Q 210,20 310,230" fill="#e8eef3" stroke="#1a3a5c" stroke-width="2.5"/>
+                    <line x1="110" y1="230" x2="110" y2="248" stroke="#000" stroke-width="1"/>
+                    <line x1="310" y1="230" x2="310" y2="248" stroke="#000" stroke-width="1"/>
+                    <text x="105" y="262" font-size="11" fill="#000">-2</text>
+                    <text x="305" y="262" font-size="11" fill="#000">2</text>
+                    <text x="140" y="60" font-size="11" fill="#1a3a5c">y = 4 - x²</text>
+                </svg>
+                <p>The area under the parabola $y = 4 - x^2$ from $x = -2$ to $x = 2$ is $\frac{32}{3}$ square units.</p>
+            </div>
+
+            <h3>Approximating with Rectangles</h3>
+            <div class="notes">
+                <h4>Riemann Sums</h4>
+                <p>We can approximate the area using rectangles. For $n$ rectangles of equal width $\Delta x = \frac{b-a}{n}$:</p>
+                $$\text{Area} \approx \sum_{i=1}^{n} f(x_i^*) \Delta x$$
+                <p>where $x_i^*$ is a sample point in each subinterval.</p>
+            </div>
+
+            <div class="visual-aid">
+                <h4>Figure 2.2 — Left vs. Right Riemann Sums</h4>
+                <svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:440px;">
+                    <rect x="0" y="0" width="420" height="260" fill="#fafafa"/>
+                    <line x1="30" y1="230" x2="400" y2="230" stroke="#000" stroke-width="1"/>
+                    <line x1="210" y1="20" x2="210" y2="240" stroke="#000" stroke-width="1"/>
+                    <text x="405" y="234" font-size="12" fill="#000">x</text>
+                    <text x="214" y="18" font-size="12" fill="#000">y</text>
+                    <path d="M 60,180 Q 150,160 210,120 T 360,60" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                    <rect x="60" y="180" width="75" height="50" fill="#e8eef3" stroke="#1a3a5c" stroke-width="1"/>
+                    <rect x="135" y="160" width="75" height="70" fill="#e8eef3" stroke="#1a3a5c" stroke-width="1"/>
+                    <rect x="210" y="120" width="75" height="110" fill="#e8eef3" stroke="#1a3a5c" stroke-width="1"/>
+                    <rect x="285" y="80" width="75" height="150" fill="#b08800" fill-opacity="0.3" stroke="#b08800" stroke-width="1"/>
+                    <text x="90" y="205" font-size="10" fill="#1a3a5c">f(x₀)</text>
+                    <text x="165" y="185" font-size="10" fill="#1a3a5c">f(x₁)</text>
+                    <text x="240" y="145" font-size="10" fill="#1a3a5c">f(x₂)</text>
+                    <text x="315" y="105" font-size="10" fill="#b08800">f(x₃)</text>
+                    <text x="180" y="250" font-size="11" fill="#1a3a5c">Left Riemann Sum</text>
+                </svg>
+                <p><strong>Left Riemann Sum:</strong> Uses the left endpoint of each subinterval. For decreasing functions, this overestimates the area.</p>
+            </div>
+
+            <div class="visual-aid">
+                <h4>Figure 2.3 — Right Riemann Sum</h4>
+                <svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:440px;">
+                    <rect x="0" y="0" width="420" height="260" fill="#fafafa"/>
+                    <line x1="30" y1="230" x2="400" y2="230" stroke="#000" stroke-width="1"/>
+                    <line x1="210" y1="20" x2="210" y2="240" stroke="#000" stroke-width="1"/>
+                    <text x="405" y="234" font-size="12" fill="#000">x</text>
+                    <text x="214" y="18" font-size="12" fill="#000">y</text>
+                    <path d="M 60,180 Q 150,160 210,120 T 360,60" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                    <rect x="60" y="160" width="75" height="70" fill="#b08800" fill-opacity="0.3" stroke="#b08800" stroke-width="1"/>
+                    <rect x="135" y="120" width="75" height="110" fill="#b08800" fill-opacity="0.3" stroke="#b08800" stroke-width="1"/>
+                    <rect x="210" y="80" width="75" height="150" fill="#b08800" fill-opacity="0.3" stroke="#b08800" stroke-width="1"/>
+                    <rect x="285" y="60" width="75" height="170" fill="#e8eef3" stroke="#1a3a5c" stroke-width="1"/>
+                    <text x="90" y="185" font-size="10" fill="#b08800">f(x₁)</text>
+                    <text x="165" y="145" font-size="10" fill="#b08800">f(x₂)</text>
+                    <text x="240" y="105" font-size="10" fill="#b08800">f(x₃)</text>
+                    <text x="315" y="85" font-size="10" fill="#1a3a5c">f(x₄)</text>
+                    <text x="180" y="250" font-size="11" fill="#b08800">Right Riemann Sum</text>
+                </svg>
+                <p><strong>Right Riemann Sum:</strong> Uses the right endpoint of each subinterval. For decreasing functions, this underestimates the area.</p>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section class="topic-section" id="definite-integral">
+            <h2>The Definite Integral</h2>
+
+            <div class="notes">
+                <h4>Definition — Definite Integral</h4>
+                <p>The <strong>definite integral</strong> of $f(x)$ from $a$ to $b$ is the limit of Riemann sums as $n \to \infty$:</p>
+                $$\int_a^b f(x) \, dx = \lim_{n \to \infty} \sum_{i=1}^{n} f(x_i^*) \Delta x$$
+                <p>where $\Delta x = \frac{b-a}{n}$ and $x_i^*$ is a sample point in the $i$-th subinterval.</p>
+            </div>
+
+            <h3>Properties of Definite Integrals</h3>
+            <div class="notes">
+                <p><strong>1. Additive Interval Property:</strong> $\displaystyle\int_a^b f(x) \, dx = \int_a^c f(x) \, dx + \int_c^b f(x) \, dx$</p>
+                <p><strong>2. Reversing Limits:</strong> $\displaystyle\int_a^b f(x) \, dx = -\int_b^a f(x) \, dx$</p>
+                <p><strong>3. Zero Length Interval:</strong> $\displaystyle\int_a^a f(x) \, dx = 0$</p>
+            </div>
+
+            <h3>Worked Example — Computing a Definite Integral</h3>
+            <div class="example">
+                <h4>Example 2.1 — Exact Computation</h4>
+                <p><strong>Compute:</strong> $\displaystyle\int_0^2 (4 - x^2) \, dx$ using the definition.</p>
+                <p>We partition $[0, 2]$ into $n$ subintervals of width $\Delta x = \frac{2}{n}$:</p>
+                $$\int_0^2 (4 - x^2) \, dx = \lim_{n \to \infty} \sum_{i=1}^{n} \left(4 - \left(\frac{2i}{n}\right)^2\right) \cdot \frac{2}{n}$$
+                <p>Using summation formulas $\sum i = \frac{n(n+1)}{2}$ and $\sum i^2 = \frac{n(n+1)(2n+1)}{6}$:</p>
+                $$= \lim_{n \to \infty} \left[\frac{8}{n} \cdot n - \frac{8}{n^3} \cdot \frac{n(n+1)(2n+1)}{6}\right] = \lim_{n \to \infty} \left[8 - \frac{8(2n^2+3n+1)}{6n^2}\right] = 8 - \frac{16}{6} = \frac{16}{3}$$
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section class="topic-section" id="ftc">
+            <h2>Fundamental Theorem of Calculus</h2>
+
+            <div class="notes">
+                <h4>Part I — The Connection</h4>
+                <p>If $f$ is continuous on $[a, b]$ and $F(x) = \int_a^x f(t) \, dt$, then:</p>
+                $$F'(x) = f(x)$$
+                <p>The derivative of the integral function is the original function.</p>
+            </div>
+
+            <div class="notes">
+                <h4>Part II — Evaluation Formula</h4>
+                <p>If $f$ is continuous on $[a, b]$ and $F$ is any anti-derivative of $f$, then:</p>
+                $$\int_a^b f(x) \, dx = F(b) - F(a)$$
+                <p>This allows us to evaluate definite integrals using anti-derivatives.</p>
+            </div>
+
+            <div class="example">
+                <h4>Example 2.2 — Using FTC Part II</h4>
+                <p><strong>Evaluate:</strong> $\displaystyle\int_0^2 (4x - 3) \, dx$</p>
+                <p>Find an anti-derivative: $F(x) = 2x^2 - 3x$</p>
+                $$\int_0^2 (4x - 3) \, dx = [2x^2 - 3x]_0^2 = (2(4) - 3(2)) - (0 - 0) = 8 - 6 = 2$$
+            </div>
+
+            <div class="example">
+                <h4>Example 2.3 — Exponential Function</h4>
+                <p><strong>Evaluate:</strong> $\displaystyle\int_0^1 e^{2x} \, dx$</p>
+                <p>Let $u = 2x$, $du = 2 \, dx$:</p>
+                $$\int_0^1 e^{2x} \, dx = \left[\frac{1}{2}e^{2x}\right]_0^1 = \frac{1}{2}(e^2 - e^0) = \frac{e^2 - 1}{2}$$
+            </div>
+
+            <div class="example">
+                <h4>Example 2.4 — Chain Rule with FTC</h4>
+                <p><strong>Evaluate:</strong> $\displaystyle\int_0^{\pi} \sin(3x) \, dx$</p>
+                <p>Let $u = 3x$, $du = 3 \, dx$:</p>
+                $$\int_0^{\pi} \sin(3x) \, dx = \left[-\frac{1}{3}\cos(3x)\right]_0^{\pi} = -\frac{1}{3}(\cos(3\pi) - \cos(0)) = -\frac{1}{3}(-1 - 1) = \frac{2}{3}$$
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section class="topic-section" id="variable-limits">
+            <h2>Differentiation of Integrals with Variable Limits</h2>
+
+            <div class="notes">
+                <h4>Leibniz Integral Rule</h4>
+                <p>If $F(x) = \int_{a(x)}^{b(x)} f(t) \, dt$, then:</p>
+                $$\frac{d}{dx} \int_{a(x)}^{b(x)} f(t) \, dt = f(b(x)) \cdot b'(x) - f(a(x)) \cdot a'(x)$$
+                <p>This extends the Fundamental Theorem when the limits of integration are functions of $x$.</p>
+            </div>
+
+            <div class="example">
+                <h4>Example 2.5 — Variable Upper Limit</h4>
+                <p><strong>Differentiate:</strong> $F(x) = \int_0^{x^2} \sqrt{t+1} \, dt$</p>
+                <p>Using the Leibniz rule with $a(x) = 0$, $b(x) = x^2$:</p>
+                $$F'(x) = \sqrt{x^2+1} \cdot (2x) - \sqrt{0+1} \cdot 0 = 2x\sqrt{x^2+1}$$
+            </div>
+
+            <div class="example">
+                <h4>Example 2.6 — Both Limits Variable</h4>
+                <p><strong>Differentiate:</strong> $G(x) = \int_{x}^{x^2} e^t \, dt$</p>
+                <p>Using the Leibniz rule:</p>
+                $$G'(x) = e^{x^2} \cdot (2x) - e^x \cdot (1) = 2xe^{x^2} - e^x$$
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section class="topic-section" id="area-between-curves">
+            <h2>Area Between Curves</h2>
+
+            <div class="notes">
+                <h4>Key Concept</h4>
+                <p>If $f(x) \geq g(x)$ on $[a, b]$, the area between the curves is:</p>
+                $$A = \int_a^b [f(x) - g(x)] \, dx$$
+                <p>The integrand is always <strong>top function minus bottom function</strong>.</p>
+            </div>
+
+            <div class="visual-aid">
+                <h4>Figure 2.4 — Area Between Two Curves</h4>
+                <svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:440px;">
+                    <rect x="0" y="0" width="420" height="260" fill="#fafafa"/>
+                    <line x1="30" y1="230" x2="400" y2="230" stroke="#000" stroke-width="1"/>
+                    <line x1="210" y1="20" x2="210" y2="240" stroke="#000" stroke-width="1"/>
+                    <text x="405" y="234" font-size="12" fill="#000">x</text>
+                    <text x="214" y="18" font-size="12" fill="#000">y</text>
+                    <path d="M 80,180 Q 180,160 260,120 T 380,60" fill="none" stroke="#1a3a5c" stroke-width="2.5"/>
+                    <path d="M 80,200 Q 180,180 260,160 T 380,120" fill="none" stroke="#b08800" stroke-width="2.5"/>
+                    <rect x="100" y="70" width="260" height="160" fill="#e8eef3" opacity="0.5"/>
+                    <line x1="100" y1="230" x2="100" y2="70" stroke="#666" stroke-width="1" stroke-dasharray="4,3"/>
+                    <line x1="360" y1="230" x2="360" y2="60" stroke="#666" stroke-width="1" stroke-dasharray="4,3"/>
+                    <text x="95" y="250" font-size="11" fill="#666">a</text>
+                    <text x="355" y="250" font-size="11" fill="#666">b</text>
+                    <text x="220" y="110" font-size="11" fill="#1a3a5c">f(x)</text>
+                    <text x="340" y="140" font-size="11" fill="#b08800">g(x)</text>
+                </svg>
+                <p>The shaded region between curves $f(x)$ and $g(x)$ from $x=a$ to $x=b$ represents the area $\int_a^b [f(x) - g(x)] \, dx$.</p>
+            </div>
+
+            <h3>Worked Examples</h3>
+            <div class="example">
+                <h4>Example 2.7 — Basic Area Between Curves</h4>
+                <p><strong>Find the area between:</strong> $f(x) = x^2 + 1$ and $g(x) = 2x + 1$ from $x=0$ to $x=2$</p>
+                <p>First, find intersection points: $x^2 + 1 = 2x + 1 \Rightarrow x^2 - 2x = 0 \Rightarrow x(x-2) = 0$, so $x = 0, 2$.</p>
+                $$A = \int_0^2 [(x^2+1) - (2x+1)] \, dx = \int_0^2 (x^2 - 2x) \, dx = \left[\frac{x^3}{3} - x^2\right]_0^2 = \frac{8}{3} - 4 = -\frac{4}{3}$$
+                <p>Since area must be positive, we take the absolute value: $A = \frac{4}{3}$.</p>
+            </div>
+
+            <div class="example">
+                <h4>Example 2.8 — Area with Trigonometric Functions</h4>
+                <p><strong>Find the area between:</strong> $f(x) = \sin x$ and $g(x) = \cos x$ from $x = 0$ to $x = \frac{\pi}{2}$</p>
+                <p>On $[0, \frac{\pi}{4}]$, $\cos x \geq \sin x$. On $[\frac{\pi}{4}, \frac{\pi}{2}]$, $\sin x \geq \cos x$.</p>
+                $$A = \int_0^{\pi/4} (\cos x - \sin x) \, dx + \int_{\pi/4}^{\pi/2} (\sin x - \cos x) \, dx$$
+                $$= [\sin x + \cos x]_0^{\pi/4} + [-\cos x - \sin x]_{\pi/4}^{\pi/2} = 2\sqrt{2} - 2 \approx 0.828$$
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section class="topic-section" id="riemann-practice">
+            <h2>Practice Problems — Riemann Sums</h2>
+
+            <div class="questions">
+                <h4>Exercises</h4>
+                <details>
+                    <summary>Problem 1 — Right Riemann Sum with $n=3$</summary>
+                    <p><strong>Approximate:</strong> $\displaystyle\int_1^4 (x^2 + 1) \, dx$ using the Right Riemann Sum with $n=3$.</p>
+                    <p><strong>Given:</strong> $\Delta x = \frac{4-1}{3} = 1$, $x_i = 1 + i(1)$</p>
+                    <p><strong>Solution:</strong></p>
+                    <ul>
+                        <li>$x_1 = 2$: $f(2) = 2^2 + 1 = 5$</li>
+                        <li>$x_2 = 3$: $f(3) = 3^2 + 1 = 10$</li>
+                        <li>$x_3 = 4$: $f(4) = 4^2 + 1 = 17$</li>
+                    </ul>
+                    <p>Right Riemann Sum $= \Delta x[f(x_1) + f(x_2) + f(x_3)] = 1(5 + 10 + 17) = 32$</p>
+                </details>
+                <details>
+                    <summary>Problem 2 — Right Riemann Sum with Large $n$</summary>
+                    <p><strong>Approximate:</strong> $\displaystyle\int_1^{11} (x^2 + 1) \, dx$ using the Right Riemann Sum with $n=100$.</p>
+                    <p><strong>Solution:</strong> $\Delta x = \frac{10}{100} = 0.1$, $x_i = 1 + 0.1i$</p>
+                    <p>Using summation formulas: $\sum_{i=1}^{100} (1 + 0.1i)^2 + 1 = \frac{100(101)(201)}{6} \cdot 0.01 + \text{adjustments}$</p>
+                    <p>The exact value is $\int_1^{11} (x^2+1)dx = [\frac{x^3}{3} + x]_1^{11} = \frac{1331}{3} + 11 - (\frac{1}{3} + 1) = \frac{1341}{3} \approx 447$</p>
+                </details>
+                <details>
+                    <summary>Problem 3 — Key Summation Formulas</summary>
+                    <p><strong>Recall:</strong></p>
+                    <ul>
+                        <li>$\sum_{i=1}^n c = cn$ (constant summed $n$ times)</li>
+                        <li>$\sum_{i=1}^n i = \frac{n(n+1)}{2}$</li>
+                        <li>$\sum_{i=1}^n i^2 = \frac{n(n+1)(2n+1)}{6}$</li>
+                        <li>$\sum_{i=1}^n i^3 = \left[\frac{n(n+1)}{2}\right]^2$</li>
+                    </ul>
+                </details>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section class="topic-section" id="ftc-practice">
+            <h2>Practice Problems — Fundamental Theorem</h2>
+
+            <div class="questions">
+                <h4>Exercises</h4>
+                <details>
+                    <summary>Problem 1 — Basic FTC</summary>
+                    <p><strong>Evaluate:</strong> $\displaystyle\int_0^3 (4x - 3) \, dx$</p>
+                    <p><strong>Answer:</strong> $[2x^2 - 3x]_0^3 = 2(9) - 9 = 9$</p>
+                </details>
+                <details>
+                    <summary>Problem 2 — Exponential Integral</summary>
+                    <p><strong>Evaluate:</strong> $\displaystyle\int_0^2 e^{5x} \, dx$</p>
+                    <p><strong>Answer:</strong> Let $u = 5x$, $du = 5dx$. Then $[\frac{1}{5}e^{5x}]_0^2 = \frac{1}{5}(e^{10} - 1)$</p>
+                </details>
+                <details>
+                    <summary>Problem 3 — Chain Rule Application</summary>
+                    <p><strong>Evaluate:</strong> $\displaystyle\int_0^{\pi} \sin(5x) \, dx$</p>
+                    <p><strong>Answer:</strong> Let $u = 5x$, $du = 5dx$. Then $[-\frac{1}{5}\cos(5x)]_0^{\pi} = -\frac{1}{5}(\cos(5\pi) - \cos(0)) = \frac{2}{5}$</p>
+                </details>
+            </div>
+
+            <div class="strategies">
+                <h4>Study Tips</h4>
+                <p><strong>1.</strong> <em>Verify continuity first:</em> The FTC requires $f$ to be continuous on $[a,b]$. Check for discontinuities before applying.</p>
+                <p><strong>2.</strong> <em>Always add the constant for indefinite integrals:</em> $\int f(x)dx = F(x) + C$.</p>
+                <p><strong>3.</strong> <em>Use the additive property to break up integrals:</em> $\int_a^c f(x)dx = \int_a^b f(x)dx + \int_b^c f(x)dx$ when $a < b < c$.</p>
+                <p><strong>4.</strong> <em>Reversing limits changes sign:</em> $\int_a^b f(x)dx = -\int_b^a f(x)dx$.</p>
+            </div>
+        </section>
+
+        <nav class="chapter-nav" aria-label="Section navigation">
+            <span class="nav-indicator">Day 02 of 18</span>
+            <a href="day-01.html" class="nav-btn prev">← Day 01 — Review</a>
+            <a href="day-03.html" class="nav-btn next">Day 03 — Integration Techniques →</a>
+        </nav>
+
+    </main>
+</div>
+
+<button class="note-btn note-sidebar-toggle" type="button">Notes</button>
+
+<script src="../js/app.js"></script>
+<script>
+window.Calculus = {
+    DAYS: [
+        {id:'day-1',num:'01',title:'Day 01',file:'days/day-01.html',folder:'Day 01',category:'days'},
+        {id:'day-2',num:'02',title:'Day 02',file:'days/day-02.html',folder:'Day 02',category:'days'}
+    ],
+    QUIZZES: [],
+    FINAL_REVIEWS: [],
+    FINAL_SAMPLES: [],
+    ALL_SECTIONS: [
+        {id:'day-1',num:'01',title:'Day 01',file:'days/day-01.html',folder:'Day 01',category:'days'},
+        {id:'day-2',num:'02',title:'Day 02',file:'days/day-02.html',folder:'Day 02',category:'days'}
+    ]
+};
+window.CurrentSectionId = "day-2";
+</script>
+</body>
+</html>

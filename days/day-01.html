@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 01 — Calculus II Notes</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script>
+window.MathJax = {
+    tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        tags: 'ams'
+    },
+    svg: { fontCache: 'global' },
+    options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+        ignoreHtmlClass: 'no-mathjax'
+    }
+};
+</script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+<header>
+    <h1>Calculus II Notes</h1>
+    <p class="subtitle">Integration, Series, and Advanced Calculus</p>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../days/index.html">Days</a>
+        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
+        <a href="../final-reviews/index.html">Final Reviews</a>
+        <a href="../final-samples/index.html">Final Samples</a>
+        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+</header>
+
+<div class="container">
+    <main>
+        <p><a href="../days/index.html" class="nav-btn">← Back to Days</a></p>
+        <div class="chapter">
+            <h2>Day 01 — Review and Course Overview</h2>
+            <p class="lead">A review of Calculus I concepts including derivatives and anti-derivatives, followed by an overview of the Calculus II curriculum covering integration techniques, applications, sequences, series, and parametric equations.</p>
+        </div>
+
+        <div class="video-section">
+            <h4>Core Lecture</h4>
+            <div class="video-container">
+                #
+            </div>
+        </div>
+
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-container">
+                    #
+                </div>
+                <div class="video-card-caption">
+                    <h5>Supplemental Video 1</h5>
+                    <p>Additional explanation and examples</p>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-container">
+                    #
+                </div>
+                <div class="video-card-caption">
+                    <h5>Supplemental Video 2</h5>
+                    <p>Further clarification on key concepts</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="topic-section" id="derivative-review">
+            <h2>Calculus I Review: Derivatives</h2>
+
+            <div class="notes">
+                <h4>Key Concept — The Derivative</h4>
+                <p>The derivative of a function measures the instantaneous rate of change. Geometrically, it represents the <strong>slope of the tangent line</strong> at any point on the curve.</p>
+                $$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$
+                <p><strong>Example:</strong> For $f(x) = x^2$, the derivative is $f'(x) = 2x$.</p>
+            </div>
+
+            <div class="visual-aid">
+                <h4>Figure 1.1 — Derivative as Slope of Tangent Line</h4>
+                <svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:440px;">
+                    <rect x="0" y="0" width="420" height="260" fill="#fafafa"/>
+                    <line x1="30" y1="230" x2="400" y2="230" stroke="#000" stroke-width="1"/>
+                    <line x1="210" y1="20" x2="210" y2="240" stroke="#000" stroke-width="1"/>
+                    <text x="405" y="234" font-size="12" fill="#000">x</text>
+                    <text x="214" y="18" font-size="12" fill="#000">y</text>
+                    <path d="M 60,180 Q 150,160 210,120 T 360,60" fill="none" stroke="#1a3a5c" stroke-width="2.5"/>
+                    <line x1="140" y1="160" x2="280" y2="100" stroke="#b08800" stroke-width="1.5"/>
+                    <polygon points="270,95 278,103 272,108" fill="#b08800"/>
+                    <text x="285" y="98" font-size="11" fill="#b08800">Tangent</text>
+                    <circle cx="210" cy="120" r="4" fill="#22863a"/>
+                    <text x="220" y="115" font-size="11" fill="#22863a">Point of tangency</text>
+                </svg>
+                <p>The derivative $f'(x)$ gives the slope of the tangent line to the curve $y = f(x)$ at any point $x$.</p>
+            </div>
+
+            <h3>Derivative Rules</h3>
+            <div class="notes">
+                <h4>Basic Differentiation Rules</h4>
+                <p><strong>Power Rule:</strong> $\frac{d}{dx}[x^n] = nx^{n-1}$</p>
+                <p><strong>Constant Rule:</strong> $\frac{d}{dx}[c] = 0$</p>
+                <p><strong>Sum/Difference Rule:</strong> $\frac{d}{dx}[f(x) \pm g(x)] = f'(x) \pm g'(x)$</p>
+                <p><strong>Exponential:</strong> $\frac{d}{dx}[e^x] = e^x$</p>
+                <p><strong>Logarithmic:</strong> $\frac{d}{dx}[\ln x] = \frac{1}{x}$</p>
+            </div>
+
+            <h3>Worked Examples</h3>
+            <div class="example">
+                <h4>Example 1.1 — Power and Constant Rules</h4>
+                <p><strong>Find $f'(x)$ for $f(x) = 7x^3 - 2x + 5$:</strong></p>
+                $$f'(x) = 7(3x^2) - 2(1) + 0 = 21x^2 - 2$$
+            </div>
+
+            <div class="example">
+                <h4>Example 1.2 — Chain Rule</h4>
+                <p><strong>Find $f'(x)$ for $f(x) = e^{x^2+1}$:</strong></p>
+                $$f'(x) = e^{x^2+1} \cdot (2x + 0) = 2xe^{x^2+1}$$
+                <p><em>The Chain Rule is applied separately to each composite term.</em></p>
+            </div>
+
+            <div class="example">
+                <h4>Example 1.3 — Product Rule</h4>
+                <p><strong>Find $f'(x)$ for $f(x) = e^x \sin(x^2)$:</strong></p>
+                $$f'(x) = e^x \cdot \sin(x^2) + e^x \cdot \cos(x^2) \cdot 2x$$
+                <p>Using the Product Rule: $(fg)' = f'g + fg'$</p>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section class="topic-section" id="antiderivative-review">
+            <h2>Calculus I Review: Anti-derivatives</h2>
+
+            <div class="notes">
+                <h4>Key Concept — Anti-derivatives</h4>
+                <p>An <strong>anti-derivative</strong> of $f(x)$ is a function $F(x)$ such that $F'(x) = f(x)$. The <strong>indefinite integral</strong> represents the family of all anti-derivatives:</p>
+                $$\int f(x) \, dx = F(x) + C$$
+                <p>where $C$ is the constant of integration.</p>
+            </div>
+
+            <h3>Basic Integration Rules</h3>
+            <div class="notes">
+                <h4>Fundamental Integration Formulas</h4>
+                <p>$\int x^n \, dx = \frac{x^{n+1}}{n+1} + C, \quad n \neq -1$</p>
+                <p>$\int e^x \, dx = e^x + C$</p>
+                <p>$\int \frac{1}{x} \, dx = \ln|x| + C$</p>
+                <p>$\int \sin x \, dx = -\cos x + C$</p>
+                <p>$\int \cos x \, dx = \sin x + C$</p>
+                <p>$\int \sec^2 x \, dx = \tan x + C$</p>
+                <p>$\int \csc^2 x \, dx = -\cot x + C$</p>
+                <p>$\int \sec x \tan x \, dx = \sec x + C$</p>
+                <p>$\int \csc x \cot x \, dx = -\csc x + C$</p>
+                <p>$\int \frac{1}{\sqrt{1-x^2}} \, dx = \arcsin x + C$</p>
+                <p>$\int \frac{1}{1+x^2} \, dx = \arctan x + C$</p>
+            </div>
+
+            <h3>Worked Examples</h3>
+            <div class="example">
+                <h4>Example 1.4 — Polynomial Integration</h4>
+                <p><strong>Find:</strong> $\displaystyle\int (x^2 - 5 + 7x^{-1} + 8x^{-2}) \, dx$</p>
+                $$\int (x^2 - 5 + 7x^{-1} + 8x^{-2}) \, dx = \frac{x^3}{3} - 5x + 7\ln|x| - 8x^{-1} + C$$
+            </div>
+
+            <div class="example">
+                <h4>Example 1.5 — Expanding and Integrating</h4>
+                <p><strong>Find:</strong> $\displaystyle\int (x+1)^2 \, dx$</p>
+                $$\int (x^2 + 2x + 1) \, dx = \frac{x^3}{3} + x^2 + x + C$$
+            </div>
+
+            <div class="example">
+                <h4>Example 1.6 — Trigonometric Integration</h4>
+                <p><strong>Find:</strong> $\displaystyle\int \left(4(1+x^2)^{-1} + \sec^2 x\right) dx$</p>
+                $$\int \frac{4}{1+x^2} \, dx + \int \sec^2 x \, dx = 4\arctan x + \tan x + C$$
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section class="topic-section" id="course-overview">
+            <h2>Calculus II Course Overview</h2>
+
+            <div class="notes">
+                <h4>Topics Covered in Calculus II</h4>
+                <p>Calculus II builds on the foundation of Calculus I and covers four major areas:</p>
+            </div>
+
+            <h3>1. Techniques of Integration</h3>
+            <div class="notes">
+                <ul>
+                    <li><strong>u-Substitution:</strong> Change variables to simplify integrals</li>
+                    <li><strong>Integration by Parts:</strong> $\int u \, dv = uv - \int v \, du$ for products</li>
+                    <li><strong>Trigonometric Substitution:</strong> Use identities to replace variables with trigonometric expressions</li>
+                    <li><strong>Partial Fraction Decomposition:</strong> Break down rational functions into simpler fractions</li>
+                </ul>
+            </div>
+
+            <h3>2. Applications of Integrals</h3>
+            <div class="notes">
+                <ul>
+                    <li><strong>Area Between Curves:</strong> $A = \int_a^b [f(x) - g(x)] \, dx$</li>
+                    <li><strong>Volumes of Solids of Revolution:</strong> Disk and shell methods</li>
+                    <li><strong>Arc Length:</strong> $L = \int_a^b \sqrt{1 + [f'(x)]^2} \, dx$</li>
+                    <li><strong>Work:</strong> Total work done by variable force over displacement</li>
+                </ul>
+            </div>
+
+            <div class="visual-aid">
+                <h4>Figure 1.2 — Area Between Curves</h4>
+                <svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:440px;">
+                    <rect x="0" y="0" width="420" height="260" fill="#fafafa"/>
+                    <line x1="30" y1="230" x2="400" y2="230" stroke="#000" stroke-width="1"/>
+                    <line x1="210" y1="20" x2="210" y2="240" stroke="#000" stroke-width="1"/>
+                    <text x="405" y="234" font-size="12" fill="#000">x</text>
+                    <text x="214" y="18" font-size="12" fill="#000">y</text>
+                    <path d="M 60,200 Q 150,180 210,150 T 360,80" fill="none" stroke="#1a3a5c" stroke-width="2.5"/>
+                    <path d="M 60,220 Q 150,200 210,180 T 360,140" fill="none" stroke="#b08800" stroke-width="2.5"/>
+                    <rect x="100" y="82" width="200" height="148" fill="#e8eef3" opacity="0.5"/>
+                    <line x1="100" y1="230" x2="100" y2="82" stroke="#666" stroke-width="1" stroke-dasharray="4,3"/>
+                    <line x1="300" y1="230" x2="300" y2="60" stroke="#666" stroke-width="1" stroke-dasharray="4,3"/>
+                    <text x="170" y="165" font-size="11" fill="#1a3a5c">f(x)</text>
+                    <text x="310" y="175" font-size="11" fill="#b08800">g(x)</text>
+                    <text x="120" y="250" font-size="10" fill="#666">a</text>
+                    <text x="290" y="250" font-size="10" fill="#666">b</text>
+                    <text x="180" y="200" font-size="10" fill="#666">Area = ∫[f(x) - g(x)] dx</text>
+                </svg>
+                <p>The area between two curves $f(x)$ and $g(x)$ from $x=a$ to $x=b$ is given by the integral of the upper curve minus the lower curve.</p>
+            </div>
+
+            <h3>3. Sequences and Series</h3>
+            <div class="notes">
+                <ul>
+                    <li><strong>Sequences:</strong> Ordered lists of numbers that may converge to a finite limit</li>
+                    <li><strong>Series:</strong> The infinite summation of terms of a sequence</li>
+                    <li><strong>Convergence Tests:</strong> Divergence Test, Integral Test, p-Series Test, Comparison Tests</li>
+                    <li><strong>L'Hôpital's Rule:</strong> Evaluate indeterminate forms</li>
+                </ul>
+            </div>
+
+            <div class="visual-aid">
+                <h4>Figure 1.3 — Convergent vs. Divergent Series</h4>
+                <svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:440px;">
+                    <rect x="0" y="0" width="420" height="200" fill="#fafafa"/>
+                    <line x1="30" y1="170" x2="400" y2="170" stroke="#000" stroke-width="1"/>
+                    <line x1="210" y1="20" x2="210" y2="190" stroke="#000" stroke-width="1"/>
+                    <text x="405" y="174" font-size="12" fill="#000">n</text>
+                    <text x="214" y="18" font-size="12" fill="#000">aₙ</text>
+                    <line x1="210" y1="50" x2="400" y2="50" stroke="#22863a" stroke-width="1" stroke-dasharray="5,3"/>
+                    <text x="370" y="45" font-size="11" fill="#22863a">L</text>
+                    <circle cx="100" cy="80" r="3" fill="#1a3a5c"/>
+                    <circle cx="150" cy="65" r="3" fill="#1a3a5c"/>
+                    <circle cx="200" cy="55" r="3" fill="#1a3a5c"/>
+                    <circle cx="250" cy="52" r="3" fill="#1a3a5c"/>
+                    <circle cx="300" cy="51" r="3" fill="#1a3a5c"/>
+                    <circle cx="350" cy="50.5" r="3" fill="#1a3a5c"/>
+                    <path d="M 100,80 Q 150,65 200,55 T 350,50" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                    <text x="120" y="120" font-size="11" fill="#1a3a5c">Convergent Sequence</text>
+                    <circle cx="100" cy="150" r="3" fill="#b08800"/>
+                    <circle cx="150" cy="140" r="3" fill="#b08800"/>
+                    <circle cx="200" cy="130" r="3" fill="#b08800"/>
+                    <path d="M 100,150 Q 150,140 200,130" fill="none" stroke="#b08800" stroke-width="2"/>
+                    <text x="120" y="185" font-size="11" fill="#b08800">Divergent Sequence</text>
+                </svg>
+                <p>A convergent sequence approaches a finite limit $L$ as $n \to \infty$. A divergent sequence does not approach any finite limit.</p>
+            </div>
+
+            <h3>4. Parametric Equations and Polar Coordinates</h3>
+            <div class="notes">
+                <ul>
+                    <li><strong>Parametrization:</strong> Express $x$ and $y$ as functions of parameter $t$</li>
+                    <li><strong>Derivatives:</strong> $\frac{dy}{dx} = \frac{dy/dt}{dx/dt}$</li>
+                    <li><strong>Arc Length:</strong> $L = \int_a^b \sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2} \, dt$</li>
+                    <li><strong>Area:</strong> $A = \int_a^b y \, dx$ for parametric curves</li>
+                </ul>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section class="topic-section" id="integration-review">
+            <h2>Integration by Substitution</h2>
+
+            <div class="notes">
+                <h4>The Substitution Method</h4>
+                <p>Integration by substitution reverses the chain rule. If $u = g(x)$, then $du = g'(x) \, dx$, and:</p>
+                $$\int f(g(x)) \cdot g'(x) \, dx = \int f(u) \, du$$
+                <p>The goal is to transform the integral into an easier form by choosing an appropriate substitution.</p>
+            </div>
+
+            <h3>Worked Examples</h3>
+            <div class="example">
+                <h4>Example 1.7 — Basic Substitution</h4>
+                <p><strong>Evaluate:</strong> $\displaystyle\int e^{7x} \, dx$</p>
+                <p>Let $u = 7x$, then $du = 7 \, dx$, so $dx = \frac{du}{7}$:</p>
+                $$\int e^{7x} \, dx = \int e^u \cdot \frac{du}{7} = \frac{1}{7}e^u + C = \frac{1}{7}e^{7x} + C$$
+            </div>
+
+            <div class="example">
+                <h4>Example 1.8 — Polynomial Substitution</h4>
+                <p><strong>Evaluate:</strong> $\displaystyle\int (x+1)^3 \cdot 4x^3 \, dx$</p>
+                <p>Let $u = x+1$, then $du = dx$ and $x = u-1$:</p>
+                $$\int (u-1)u^3 \, du = \int (u^4 - u^3) \, du = \frac{u^5}{5} - \frac{u^4}{4} + C = \frac{(x+1)^5}{5} - \frac{(x+1)^4}{4} + C$$
+            </div>
+
+            <div class="example">
+                <h4>Example 1.9 — Rational Function Substitution</h4>
+                <p><strong>Evaluate:</strong> $\displaystyle\int \frac{x^3}{1+x^4} \, dx$</p>
+                <p>Let $u = 1+x^4$, then $du = 4x^3 \, dx$, so $x^3 \, dx = \frac{du}{4}$:</p>
+                $$\int \frac{x^3}{1+x^4} \, dx = \int \frac{1}{u} \cdot \frac{du}{4} = \frac{1}{4}\ln|u| + C = \frac{1}{4}\ln|1+x^4| + C$$
+            </div>
+
+            <div class="example">
+                <h4>Example 1.10 — Arctangent Substitution</h4>
+                <p><strong>Evaluate:</strong> $\displaystyle\int \frac{dx}{1+x^2}$</p>
+                <p>Let $u = x^2$, then $du = 2x \, dx$:</p>
+                $$\int \frac{dx}{1+x^2} = \arctan x + C$$
+            </div>
+
+            <div class="example">
+                <h4>Example 1.11 — Sine Substitution</h4>
+                <p><strong>Evaluate:</strong> $\displaystyle\int \sin(5x) \, dx$</p>
+                <p>Let $u = 5x$, then $du = 5 \, dx$:</p>
+                $$\int \sin(5x) \, dx = \int \sin(u) \cdot \frac{du}{5} = -\frac{1}{5}\cos(u) + C = -\frac{1}{5}\cos(5x) + C$$
+            </div>
+
+            <div class="example">
+                <h4>Example 1.12 — Power Substitution</h4>
+                <p><strong>Evaluate:</strong> $\displaystyle\int \frac{x^2}{\sqrt{x^5+1}} \, dx$</p>
+                <p>Let $u = x^5+1$, then $du = 5x^4 \, dx$:</p>
+                $$\int x^2 \cdot u^{-1/2} \, dx = \frac{1}{5}\int u^{-1/2} \, du = \frac{2}{5}u^{1/2} + C = \frac{2\sqrt{x^5+1}}{5} + C$$
+            </div>
+
+            <div class="example">
+                <h4>Example 1.13 — Inverse Trigonometric Substitution</h4>
+                <p><strong>Evaluate:</strong> $\displaystyle\int \frac{x^2}{\sqrt{1-x^4}} \, dx$</p>
+                <p>Let $u = x^2$, then $du = 2x \, dx$:</p>
+                $$\int \frac{x}{\sqrt{1-u^2}} \, du = \frac{1}{2}\arcsin(u) + C = \frac{1}{2}\arcsin(x^2) + C$$
+            </div>
+
+            <div class="example">
+                <h4>Example 1.14 — Composite Function Substitution</h4>
+                <p><strong>Evaluate:</strong> $\displaystyle\int \cos(\sec x) \cdot \sec x \tan x \, dx$</p>
+                <p>Let $u = \sec x$, then $du = \sec x \tan x \, dx$:</p>
+                $$\int \cos(\sec x) \cdot \sec x \tan x \, dx = \int \cos(u) \, du = \sin(u) + C = \sin(\sec x) + C$$
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section class="topic-section" id="practice">
+            <h2>Practice Problems</h2>
+
+            <div class="questions">
+                <h4>Exercises — Integration by Substitution</h4>
+                <details>
+                    <summary>Problem 1 — Basic Substitution</summary>
+                    <p><strong>Evaluate:</strong> $\displaystyle\int e^{7x} \, dx$</p>
+                    <p><strong>Answer:</strong> Let $u = 7x$, $du = 7 \, dx$. Then $\int e^{7x} \, dx = \frac{1}{7}e^{7x} + C$.</p>
+                </details>
+                <details>
+                    <summary>Problem 2 — Polynomial Substitution</summary>
+                    <p><strong>Evaluate:</strong> $\displaystyle\int (x+1)^3 \cdot 4x^3 \, dx$</p>
+                    <p><strong>Answer:</strong> Let $u = x+1$, then $x = u-1$. Expand and integrate: $\frac{(x+1)^5}{5} - \frac{(x+1)^4}{4} + C$.</p>
+                </details>
+                <details>
+                    <summary>Problem 3 — Logarithmic Substitution</summary>
+                    <p><strong>Evaluate:</strong> $\displaystyle\int \frac{x^3}{1+x^4} \, dx$</p>
+                    <p><strong>Answer:</strong> Let $u = 1+x^4$, $du = 4x^3 \, dx$. Then $\frac{1}{4}\ln|1+x^4| + C$.</p>
+                </details>
+                <details>
+                    <summary>Problem 4 — Arctangent Form</summary>
+                    <p><strong>Evaluate:</strong> $\displaystyle\int \frac{dx}{1+x^2}$</p>
+                    <p><strong>Answer:</strong> $\arctan x + C$.</p>
+                </details>
+                <details>
+                    <summary>Problem 5 — Sine Substitution</summary>
+                    <p><strong>Evaluate:</strong> $\displaystyle\int \sin(5x) \, dx$</p>
+                    <p><strong>Answer:</strong> Let $u = 5x$, $du = 5 \, dx$. Then $-\frac{1}{5}\cos(5x) + C$.</p>
+                </details>
+                <details>
+                    <summary>Problem 6 — Power Function Substitution</summary>
+                    <p><strong>Evaluate:</strong> $\displaystyle\int \frac{x^2}{\sqrt{x^5+1}} \, dx$</p>
+                    <p><strong>Answer:</strong> Let $u = x^5+1$, $du = 5x^4 \, dx$. Then $\frac{2\sqrt{x^5+1}}{5} + C$.</p>
+                </details>
+            </div>
+
+            <div class="strategies">
+                <h4>Study Tips</h4>
+                <p><strong>1.</strong> <em>Choose $u$ wisely:</em> Pick $u$ to be the inner function whose derivative appears elsewhere in the integrand.</p>
+                <p><strong>2.</strong> <em>Check your substitution:</em> After substituting, every part of the integral should be in terms of $u$ and $du$. If $x$ or $dx$ remains, the substitution is incomplete.</p>
+                <p><strong>3.</strong> <em>Don't forget the constant:</em> Always add $+C$ for indefinite integrals.</p>
+                <p><strong>4.</strong> <em>Practice the pattern:</em> Most substitution problems follow the pattern $\int f(g(x))g'(x)\,dx = \int f(u)\,du$.</p>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section class="topic-section" id="derivative-rules">
+            <h2>Quick Reference: Derivative Rules</h2>
+
+            <div class="notes">
+                <h4>Essential Differentiation Formulas</h4>
+                <p><strong>1.</strong> $\frac{d}{dx}[c] = 0$</p>
+                <p><strong>2.</strong> $\frac{d}{dx}[x^n] = nx^{n-1}$</p>
+                <p><strong>3.</strong> $\frac{d}{dx}[e^x] = e^x$</p>
+                <p><strong>4.</strong> $\frac{d}{dx}[\ln x] = \frac{1}{x}$</p>
+                <p><strong>5.</strong> $\frac{d}{dx}[\sin x] = \cos x$</p>
+                <p><strong>6.</strong> $\frac{d}{dx}[\cos x] = -\sin x$</p>
+                <p><strong>7.</strong> $\frac{d}{dx}[\tan x] = \sec^2 x$</p>
+                <p><strong>8.</strong> $\frac{d}{dx}[\cot x] = -\csc^2 x$</p>
+                <p><strong>9.</strong> $\frac{d}{dx}[\sec x] = \sec x \tan x$</p>
+                <p><strong>10.</strong> $\frac{d}{dx}[\csc x] = -\csc x \cot x$</p>
+                <p><strong>11.</strong> $\frac{d}{dx}[\arcsin x] = \frac{1}{\sqrt{1-x^2}}$</p>
+                <p><strong>12.</strong> $\frac{d}{dx}[\arctan x] = \frac{1}{1+x^2}$</p>
+                <p><strong>13.</strong> $\frac{d}{dx}[\text{arcsec } x] = \frac{1}{|x|\sqrt{x^2-1}}$</p>
+            </div>
+
+            <div class="visual-aid">
+                <h4>Figure 1.4 — Common Function Graphs</h4>
+                <svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:440px;">
+                    <rect x="0" y="0" width="420" height="200" fill="#fafafa"/>
+                    <line x1="30" y1="170" x2="400" y2="170" stroke="#000" stroke-width="1"/>
+                    <line x1="210" y1="20" x2="210" y2="190" stroke="#000" stroke-width="1"/>
+                    <text x="405" y="174" font-size="12" fill="#000">x</text>
+                    <text x="214" y="18" font-size="12" fill="#000">y</text>
+                    <path d="M 60,150 Q 120,140 180,100 T 300,50" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                    <text x="120" y="135" font-size="11" fill="#1a3a5c">f(x) = x²</text>
+                    <path d="M 60,170 Q 150,150 210,120 T 360,40" fill="none" stroke="#b08800" stroke-width="2"/>
+                    <text x="260" y="60" font-size="11" fill="#b08800">f(x) = eˣ</text>
+                    <path d="M 60,190 Q 120,170 180,140 T 300,100" fill="none" stroke="#22863a" stroke-width="2"/>
+                    <text x="120" y="175" font-size="11" fill="#22863a">f(x) = ln(x)</text>
+                </svg>
+                <p>Common function graphs: polynomial $f(x) = x^2$, exponential $f(x) = e^x$, and logarithmic $f(x) = \ln x$.</p>
+            </div>
+        </section>
+
+        <nav class="chapter-nav" aria-label="Section navigation">
+            <span class="nav-indicator">Day 01 of 18</span>
+            <a href="day-02.html" class="nav-btn next">Day 02 — Fundamental Theorem of Calculus →</a>
+        </nav>
+
+    </main>
+</div>
+
+<button class="note-btn note-sidebar-toggle" type="button">Notes</button>
+
+<script src="../js/app.js"></script>
+<script>
+window.Calculus = {
+    DAYS: [
+        {id:'day-1',num:'01',title:'Day 01',file:'days/day-01.html',folder:'Day 01',category:'days'},
+        {id:'day-2',num:'02',title:'Day 02',file:'days/day-02.html',folder:'Day 02',category:'days'}
+    ],
+    QUIZZES: [],
+    FINAL_REVIEWS: [],
+    FINAL_SAMPLES: [],
+    ALL_SECTIONS: [
+        {id:'day-1',num:'01',title:'Day 01',file:'days/day-01.html',folder:'Day 01',category:'days'},
+        {id:'day-2',num:'02',title:'Day 02',file:'days/day-02.html',folder:'Day 02',category:'days'}
+    ]
+};
+window.CurrentSectionId = "day-1";
+</script>
+</body>
+</html>

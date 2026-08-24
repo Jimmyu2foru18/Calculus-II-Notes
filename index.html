@@ -5,123 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculus II Notes</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true,
+            tags: 'ams'
+        },
+        svg: { fontCache: 'global' },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            ignoreHtmlClass: 'no-mathjax'
+        }
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Calculus II Notes</h1>
-            <p class="subtitle">Study guide and review materials</p>
-            <nav>
-                <a href="#" class="nav-link active" data-view="home">Home</a>
-                <a href="#" class="nav-link" data-view="days">Days</a>
-                <a href="#" class="nav-link" data-view="quizzes">Quizzes</a>
-                <a href="#" class="nav-link" data-view="tests">Tests</a>
-                <a href="#" class="nav-link" data-view="final">Final Review</a>
-            </nav>
-        </div>
+        <h1>Calculus II Notes</h1>
+        <p class="subtitle">Integration, Series, and Advanced Calculus</p>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="days/index.html">Days</a>
+            <a href="quiz-reviews/index.html">Quiz Reviews</a>
+            <a href="final-reviews/index.html">Final Reviews</a>
+            <a href="final-samples/index.html">Final Samples</a>
+            <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+        </nav>
     </header>
 
-    <main class="container">
-        <!-- Search -->
-        <div class="search-bar">
-            <input type="text" id="search-input" placeholder="Search days, quizzes, tests..." autocomplete="off">
-            <button id="search-clear" class="search-clear">&times;</button>
-        </div>
-
-        <!-- Home View -->
-        <div id="view-home" class="view active">
-            <div class="hero">
-                <h2>Course Index</h2>
-                <p>Select a category to browse study materials, or use the search bar to find a specific topic.</p>
+    <div class="container">
+        <main>
+            <div class="chapter">
+                <h2>Welcome to Calculus II</h2>
+                <p class="lead">A comprehensive collection of lecture notes, quiz reviews, and exam preparation materials for Calculus II. Built entirely from course notes — no fluff, no guesswork.</p>
             </div>
 
-            <div class="categories">
-                <div class="category-card" data-filter="days">
-                    <div class="category-icon">01</div>
-                    <h3>Day Notes</h3>
-                    <p>Daily lecture notes from Day 1 through Day 18</p>
-                    <span class="count">18 sections</span>
-                </div>
-
-                <div class="category-card" data-filter="quizzes">
-                    <div class="category-icon">Q</div>
-                    <h3>Quizzes</h3>
-                    <p>Quiz practice and preparation materials</p>
-                    <span class="count">7 sections</span>
-                </div>
-
-                <div class="category-card" data-filter="tests">
-                    <div class="category-icon">T</div>
-                    <h3>Tests</h3>
-                    <p>Test reviews and exam practice</p>
-                    <span class="count">4 sections</span>
-                </div>
-
-                <div class="category-card" data-filter="final">
-                    <div class="category-icon">F</div>
-                    <h3>Final Review</h3>
-                    <p>Comprehensive final exam preparation</p>
-                    <span class="count">7 sections</span>
-                </div>
+            <div class="section-heading">Course Content</div>
+            <div class="toc">
+                <ul>
+                    <li><a href="days/index.html"><span class="chapter-num">01–18</span> Daily Lecture Notes</a></li>
+                    <li><a href="quiz-reviews/index.html"><span class="chapter-num">Q1–Q3</span> Quiz Reviews</a></li>
+                    <li><a href="final-reviews/index.html"><span class="chapter-num">R1–R4</span> Final Reviews</a></li>
+                    <li><a href="final-samples/index.html"><span class="chapter-num">S1–S3</span> Final Samples</a></li>
+                </ul>
             </div>
 
-            <div id="search-results" class="search-results" style="display: none;">
-                <h3>Search Results</h3>
-                <div id="search-results-list"></div>
-            </div>
-        </div>
+            <div class="section-heading">Platform Features</div>
+            <ul>
+                <li><strong>Note-Taking:</strong> Built-in persistent notepad on every page with auto-save and export.</li>
+                <li><strong>Image Galleries:</strong> Browse lecture notes page by page with keyboard navigation.</li>
+                <li><strong>Review Materials:</strong> Dedicated quiz reviews and final exam preparation sheets.</li>
+                <li><strong>Responsive:</strong> Optimized for desktop, tablet, and mobile reading.</li>
+            </ul>
 
-        <!-- Days View -->
-        <div id="view-days" class="view">
-            <h2>Day Notes</h2>
-            <p class="view-description">Daily lecture notes and examples</p>
-            <div class="section-grid" id="days-grid"></div>
-        </div>
-
-        <!-- Quizzes View -->
-        <div id="view-quizzes" class="view">
-            <h2>Quizzes</h2>
-            <p class="view-description">Quiz practice and preparation</p>
-            <div class="section-grid" id="quizzes-grid"></div>
-        </div>
-
-        <!-- Tests View -->
-        <div id="view-tests" class="view">
-            <h2>Tests</h2>
-            <p class="view-description">Test reviews and exam practice</p>
-            <div class="section-grid" id="tests-grid"></div>
-        </div>
-
-        <!-- Final Review View -->
-        <div id="view-final" class="view">
-            <h2>Final Review</h2>
-            <p class="view-description">Comprehensive final exam preparation materials</p>
-            <div class="section-grid" id="final-grid"></div>
-        </div>
-
-        <!-- Gallery View -->
-        <div id="view-gallery" class="view">
-            <button class="back-btn" id="gallery-back">&larr; Back</button>
-            <div class="gallery-header">
-                <h2 id="gallery-title">Section Title</h2>
-                <p id="gallery-meta">Page 1 of 10</p>
-            </div>
-            <div class="gallery-container">
-                <button class="gallery-nav gallery-prev" id="gallery-prev">&larr;</button>
-                <div class="image-frame">
-                    <img id="gallery-image" src="" alt="Notes page">
-                </div>
-                <button class="gallery-nav gallery-next" id="gallery-next">&rarr;</button>
-            </div>
-            <div class="gallery-thumbnails" id="gallery-thumbnails"></div>
-        </div>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>Calculus II Study Notes &mdash; Built for studying</p>
-        </div>
-    </footer>
+            <p><a href="days/index.html" class="nav-btn next">Browse Days</a> <a href="quiz-reviews/index.html" class="nav-btn">Quiz Reviews</a></p>
+        </main>
+    </div>
 
     <script src="js/app.js"></script>
 </body>
