@@ -3,66 +3,298 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arc Length and Advanced Integration — Calculus II Notes</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <title>Day 04 - Arc Length and Advanced Integration | Calculus II Notes</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>
-    window.MathJax = {
-        tex: {
-            inlineMath: [['$', '$'], ['\(', '\)']],
-            displayMath: [['$$', '$$'], ['\[', '\]']],
-            processEscapes: true,
-            tags: 'ams'
-        },
-        svg: { fontCache: 'global' },
-        options: {
-            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            ignoreHtmlClass: 'no-mathjax'
-        }
-    };
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
     </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Georgia', serif; line-height: 1.8; color: #1a1a1a; background: #fafafa; max-width: 900px; margin: 0 auto; padding: 20px; }
+        header { background: #1a237e; color: white; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
+        header h1 { font-size: 1.8em; }
+        nav { background: #e8eaf6; padding: 12px; border-radius: 8px; margin-bottom: 25px; }
+        nav a { color: #1a237e; text-decoration: none; margin-right: 20px; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        .problem { background: white; border: 1px solid #ddd; border-radius: 8px; padding: 25px; margin-bottom: 25px; }
+        .problem-title { font-size: 1.3em; color: #1a237e; border-bottom: 2px solid #1a237e; padding-bottom: 8px; margin-bottom: 15px; }
+        .step { margin: 15px 0; padding: 10px; background: #f5f5f5; border-left: 4px solid #1a237e; }
+        .final-answer { background: #e8f5e9; border: 2px solid #2e7d32; padding: 15px; margin-top: 20px; border-radius: 8px; }
+        .final-answer-title { color: #2e7d32; font-weight: bold; margin-bottom: 8px; }
+        h2 { color: #1a237e; margin-top: 30px; }
+        h3 { color: #283593; margin-top: 20px; }
+        .formula-box { background: #fff3e0; border: 1px solid #ff9800; padding: 12px; margin: 10px 0; border-radius: 6px; }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Calculus II Notes</h1>
-        <p class="subtitle">Arc Length and Advanced Integration</p>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="../days/index.html">Days</a>
-            <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-            <a href="../final-reviews/index.html">Final Reviews</a>
-            <a href="../final-samples/index.html">Final Samples</a>
-            <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-        </nav>
+        <h1>Day 04: Arc Length and Advanced Integration</h1>
+        <p>Calculus II - Complete Step-by-Step Solutions</p>
     </header>
 
-    <div class="container">
-        <main>
-            <div class="chapter">
-                <h2>Arc Length and Advanced Integration</h2>
-                <p class="lead">Browse through the day 04 pages. Use the arrow buttons or keyboard arrows to navigate.</p>
-            </div>
+    <nav>
+        <a href="day-03.html">&larr; Day 03</a>
+        <a href="day-04.html">Day 04</a>
+        <a href="day-05.html">Day 05 &rarr;</a>
+        <a href="quiz-01.html">Quiz 01</a>
+        <a href="quiz-02.html">Quiz 02</a>
+        <a href="quiz-03.html">Quiz 03</a>
+    </nav>
 
-            <div class="gallery-container">
-                <button class="gallery-nav gallery-prev" id="gallery-prev" >&larr;</button>
-                <div class="image-frame">
-                    <img src="../arc-length-and-advanced-integration/1.png" alt="Page 1" class="gallery-image" style="display: block;"><img src="../arc-length-and-advanced-integration/2.png" alt="Page 2" class="gallery-image" style="display: none;"><img src="../arc-length-and-advanced-integration/3.png" alt="Page 3" class="gallery-image" style="display: none;"><img src="../arc-length-and-advanced-integration/4.png" alt="Page 4" class="gallery-image" style="display: none;"><img src="../arc-length-and-advanced-integration/5.png" alt="Page 5" class="gallery-image" style="display: none;"><img src="../arc-length-and-advanced-integration/6.png" alt="Page 6" class="gallery-image" style="display: none;"><img src="../arc-length-and-advanced-integration/7.png" alt="Page 7" class="gallery-image" style="display: none;">
-                </div>
-                <button class="gallery-nav gallery-next" id="gallery-next" >&rarr;</button>
-            </div>
+    <h2>Arc Length</h2>
+    <p>The arc length of a curve \( y = f(x) \) from \( x = a \) to \( x = b \) is given by:<br>
+    $$ L = \int_a^b \sqrt{1 + [f'(x)]^2}\,dx $$</p>
+    <p>For a parametric curve \( x = x(t), y = y(t) \), \( t \in [\alpha, \beta] \):<br>
+    $$ L = \int_\alpha^\beta \sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2}\,dt $$</p>
 
-            <div class="gallery-thumbnails" id="gallery-thumbnails">
-                <div class="thumbnail active" data-index="0"><img src="../arc-length-and-advanced-integration/1.png" alt="Page 1"></div><div class="thumbnail " data-index="1"><img src="../arc-length-and-advanced-integration/2.png" alt="Page 2"></div><div class="thumbnail " data-index="2"><img src="../arc-length-and-advanced-integration/3.png" alt="Page 3"></div><div class="thumbnail " data-index="3"><img src="../arc-length-and-advanced-integration/4.png" alt="Page 4"></div><div class="thumbnail " data-index="4"><img src="../arc-length-and-advanced-integration/5.png" alt="Page 5"></div><div class="thumbnail " data-index="5"><img src="../arc-length-and-advanced-integration/6.png" alt="Page 6"></div><div class="thumbnail " data-index="6"><img src="../arc-length-and-advanced-integration/7.png" alt="Page 7"></div>
-            </div>
+    <div class="problem">
+        <div class="problem-title">Problem 1: Definite Integral by Definition</div>
+        <p><strong>Task:</strong> Evaluate \( \int_0^2 (x^2+1)\,dx \) using the definition of the Riemann integral</p>
 
-            <div class="chapter-nav">
-                <a href="../days/day-03.html" class="nav-btn prev" id="prev-section" >&larr; Previous</a>
-                <span class="nav-indicator" id="section-indicator">04 / 29</span>
-                <a href="../days/day-06.html" class="nav-btn next" id="next-section" >Next &rarr;</a>
-            </div>
-        </main>
+        <div class="step">
+            <strong>Step 1:</strong> Set up parameters: \( a = 0, b = 2, \Delta x = \frac{2}{n} \)<br>
+            \( x_i = 0 + i \cdot \frac{2}{n} = \frac{2i}{n} \)<br>
+            <strong>Step 2:</strong> Evaluate \( f(x_i) = x_i^2 + 1 = \frac{4i^2}{n^2} + 1 \)<br>
+            <strong>Step 3:</strong> Form the Riemann sum:<br>
+            \begin{aligned}
+            \sum_{i=1}^n f(x_i)\Delta x &= \sum_{i=1}^n \left(\frac{4i^2}{n^2} + 1\right) \cdot \frac{2}{n} \\
+            &= \frac{2}{n}\sum_{i=1}^n \left(\frac{4i^2}{n^2} + 1\right) \\
+            &= \frac{2}{n}\left(\frac{4}{n^2}\sum_{i=1}^n i^2 + \sum_{i=1}^n 1\right)
+            \end{aligned}
+        </div>
+        <div class="step">
+            <strong>Step 4:</strong> Use summation formulas \( \sum_{i=1}^n i^2 = \frac{n(n+1)(2n+1)}{6} \) and \( \sum_{i=1}^n 1 = n \):<br>
+            \begin{aligned}
+            &= \frac{2}{n}\left(\frac{4}{n^2} \cdot \frac{n(n+1)(2n+1)}{6} + n\right) \\
+            &= \frac{2}{n}\left(\frac{2(n+1)(2n+1)}{3n} + n\right) \\
+            &= \frac{4(n+1)(2n+1)}{3n^2} + 2
+            \end{aligned}
+        </div>
+        <div class="step">
+            <strong>Step 5:</strong> Take the limit as \( n \to \infty \):<br>
+            \begin{aligned}
+            \lim_{n\to\infty} \frac{4(n+1)(2n+1)}{3n^2} + 2 &= \frac{4}{3} \lim_{n\to\infty} \frac{2n^2+3n+1}{n^2} + 2 \\
+            &= \frac{4}{3} \cdot 2 + 2 = \frac{8}{3} + 2 = \frac{14}{3}
+            \end{aligned}
+        </div>
+        <div class="final-answer">
+            $$ \int_0^2 (x^2+1)\,dx = \frac{14}{3} $$
+        </div>
     </div>
 
-    <script src="../js/app.js"></script>
+    <div class="problem">
+        <div class="problem-title">Problem 2: Arc Length of a Parabola</div>
+        <p><strong>Task:</strong> Find the arc length of \( y = x^2 \) from \( x = 0 \) to \( x = 2 \)</p>
+
+        <div class="step">
+            <strong>Step 1:</strong> Compute the derivative: \( f'(x) = 2x \)<br>
+            <strong>Step 2:</strong> Set up the arc length integral:<br>
+            \begin{aligned}
+            L &= \int_0^2 \sqrt{1 + (2x)^2}\,dx \\
+            &= \int_0^2 \sqrt{1 + 4x^2}\,dx
+            \end{aligned}
+        </div>
+        <div class="step">
+            <strong>Step 3:</strong> Use trigonometric substitution \( 2x = \tan(\theta) \), so \( x = \frac{1}{2}\tan(\theta) \), \( dx = \frac{1}{2}\sec^2(\theta)\,d\theta \)<br>
+            When \( x = 0 \), \( \theta = 0 \). When \( x = 2 \), \( \theta = \tan^{-1}(4) \).<br>
+            \begin{aligned}
+            L &= \int_0^{\tan^{-1}(4)} \sqrt{1 + \tan^2(\theta)} \cdot \frac{1}{2}\sec^2(\theta)\,d\theta \\
+            &= \frac{1}{2}\int_0^{\tan^{-1}(4)} \sec^3(\theta)\,d\theta
+            \end{aligned}
+        </div>
+        <div class="step">
+            <strong>Step 4:</strong> The integral \( \int \sec^3(\theta)\,d\theta \) has the standard result:<br>
+            \( \int \sec^3(\theta)\,d\theta = \frac{1}{2}\sec(\theta)\tan(\theta) + \frac{1}{2}\ln|\sec(\theta)+\tan(\theta)| + C \)<br>
+            <strong>Step 5:</strong> Evaluate from \( 0 \) to \( \tan^{-1}(4) \):<br>
+            \begin{aligned}
+            L &= \frac{1}{2} \cdot \frac{1}{2}\left[\sec(\theta)\tan(\theta) + \ln|\sec(\theta)+\tan(\theta)|\right]_0^{\tan^{-1}(4)} \\
+            &= \frac{1}{4}\left[\sec(\tan^{-1}(4)) \cdot 4 + \ln|\sec(\tan^{-1}(4))+4| - (1\cdot 0 + \ln|1+0|)\right]
+            \end{aligned}
+        </div>
+        <div class="step">
+            <strong>Step 6:</strong> For \( \theta = \tan^{-1}(4) \), we have a right triangle with opposite = 4, adjacent = 1, hypotenuse = \( \sqrt{17} \):<br>
+            \( \sec(\tan^{-1}(4)) = \frac{\sqrt{17}}{1} = \sqrt{17} \)<br>
+            \begin{aligned}
+            L &= \frac{1}{4}\left[4\sqrt{17} + \ln(\sqrt{17}+4)\right] \\
+            &= \sqrt{17} + \frac{1}{4}\ln(\sqrt{17}+4)
+            \end{aligned}
+        </div>
+        <div class="final-answer">
+            $$ L = \sqrt{17} + \frac{1}{4}\ln(\sqrt{17}+4) $$
+        </div>
+    </div>
+
+    <div class="problem">
+        <div class="problem-title">Problem 3: Arc Length of a Straight Line</div>
+        <p><strong>Task:</strong> Find the arc length of \( y = 3x + 2 \) from \( x = 0 \) to \( x = 1 \)</p>
+
+        <div class="step">
+            <strong>Step 1:</strong> Compute the derivative: \( f'(x) = 3 \)<br>
+            <strong>Step 2:</strong> Set up the arc length integral:<br>
+            \begin{aligned}
+            L &= \int_0^1 \sqrt{1 + 3^2}\,dx \\
+            &= \int_0^1 \sqrt{10}\,dx \\
+            &= \sqrt{10} \cdot [x]_0^1 \\
+            &= \sqrt{10}
+            \end{aligned}
+        </div>
+        <div class="final-answer">
+            $$ L = \sqrt{10} \approx 3.162 $$
+        </div>
+        <p><em>Note:</em> This makes sense because the arc length of a straight line segment from \((0,2)\) to \((1,5)\) is \( \sqrt{(1-0)^2 + (5-2)^2} = \sqrt{1+9} = \sqrt{10} \).</p>
+    </div>
+
+    <div class="problem">
+        <div class="problem-title">Problem 4: Arc Length using u-Substitution</div>
+        <p><strong>Task:</strong> Find the arc length of \( y = \frac{x^3}{3} \) from \( x = 0 \) to \( x = 1 \)</p>
+
+        <div class="step">
+            <strong>Step 1:</strong> Compute the derivative: \( f'(x) = x^2 \)<br>
+            <strong>Step 2:</strong> Set up the arc length integral:<br>
+            \begin{aligned}
+            L &= \int_0^1 \sqrt{1 + (x^2)^2}\,dx \\
+            &= \int_0^1 \sqrt{1 + x^4}\,dx
+            \end{aligned}
+            <strong>Step 3:</strong> This integral does not have an elementary anti-derivative. It is typically expressed in terms of elliptic integrals or evaluated numerically:<br>
+            \( L = \int_0^1 \sqrt{1+x^4}\,dx \approx 1.089 \)
+        </div>
+        <div class="final-answer">
+            $$ L = \int_0^1 \sqrt{1+x^4}\,dx \approx 1.089 $$
+        </div>
+    </div>
+
+    <div class="problem">
+        <div class="problem-title">Problem 5: Advanced Integration - Volume Calculation</div>
+        <p><strong>Task:</strong> Find the volume of the solid formed by revolving the region bounded by \( y = x^2 \) and \( y = 14 \) about the x-axis</p>
+
+        <div class="step">
+            <strong>Step 1:</strong> Find intersection points: \( x^2 = 14 \implies x = \pm\sqrt{14} \)<br>
+            <strong>Step 2:</strong> Using the washer method, outer radius \( R = 14 \), inner radius \( r = x^2 \):<br>
+            \begin{aligned}
+            V &= \pi\int_{-\sqrt{14}}^{\sqrt{14}} (14^2 - (x^2)^2)\,dx \\
+            &= \pi\int_{-\sqrt{14}}^{\sqrt{14}} (196 - x^4)\,dx \\
+            &= 2\pi\int_0^{\sqrt{14}} (196 - x^4)\,dx \quad \text{(by symmetry)} \\
+            &= 2\pi\left[196x - \frac{x^5}{5}\right]_0^{\sqrt{14}}
+            \end{aligned}
+        </div>
+        <div class="step">
+            <strong>Step 3:</strong> Evaluate:<br>
+            \begin{aligned}
+            V &= 2\pi\left(196\sqrt{14} - \frac{(\sqrt{14})^5}{5}\right) \\
+            &= 2\pi\left(196\sqrt{14} - \frac{14^{5/2}}{5}\right) \\
+            &= 2\pi\left(196\sqrt{14} - \frac{14^2\sqrt{14}}{5}\right) \\
+            &= 2\pi\left(196\sqrt{14} - \frac{196\sqrt{14}}{5}\right) \\
+            &= 2\pi \cdot \frac{4 \cdot 196\sqrt{14}}{5} \\
+            &= \frac{1568\pi\sqrt{14}}{5}
+            \end{aligned}
+        </div>
+        <div class="final-answer">
+            $$ V = \frac{1568\pi\sqrt{14}}{5} $$
+        </div>
+    </div>
+
+    <div class="problem">
+        <div class="problem-title">Problem 6: Test Review - Riemann Sum Approximation</div>
+        <p><strong>Task:</strong> Approximate \( \int_{-1}^2 (x-1)\,dx \) using \( n = 4 \) rectangles with the Left-Hand Rule</p>
+
+        <div class="step">
+            <strong>Step 1:</strong> Compute \( \Delta x = \frac{2-(-1)}{4} = \frac{3}{4} \)<br>
+            <strong>Step 2:</strong> Find left endpoints: \( x_0 = -1, x_1 = -1/4, x_2 = 1/2, x_3 = 5/4 \)<br>
+            <strong>Step 3:</strong> Evaluate \( f(x) = x-1 \) at each point:<br>
+            \begin{aligned}
+            f(-1) &= -2 \\
+            f(-1/4) &= -5/4 \\
+            f(1/2) &= -1/2 \\
+            f(5/4) &= 1/4
+            \end{aligned}
+        </div>
+        <div class="step">
+            <strong>Step 4:</strong> Compute the Riemann sum:<br>
+            \begin{aligned}
+            L_4 &= \frac{3}{4}\left(-2 - \frac{5}{4} - \frac{1}{2} + \frac{1}{4}\right) \\
+            &= \frac{3}{4}\left(-\frac{8}{4} - \frac{5}{4} - \frac{2}{4} + \frac{1}{4}\right) \\
+            &= \frac{3}{4} \cdot \left(-\frac{14}{4}\right) = -\frac{42}{16} = -\frac{21}{8}
+            \end{aligned}
+        </div>
+        <div class="final-answer">
+            $$ L_4 = -\frac{21}{8} = -2.625 $$
+        </div>
+    </div>
+
+    <div class="problem">
+        <div class="problem-title">Problem 7: FTC with Differentiation Under the Integral Sign</div>
+        <p><strong>Task:</strong> Evaluate the following derivatives involving integrals:</p>
+
+        <h3>Part a)</h3>
+        <p><strong>Find</strong> \( \frac{d}{dx}\int_0^{x^3} e^{t^2}\,dt \)</p>
+        <div class="step">
+            \begin{aligned}
+            \frac{d}{dx}\int_0^{x^3} e^{t^2}\,dt &= e^{(x^3)^2} \cdot \frac{d}{dx}(x^3) \\
+            &= e^{x^6} \cdot 3x^2 \\
+            &= 3x^2e^{x^6}
+            \end{aligned}
+        </div>
+        <div class="final-answer">
+            $$ \frac{d}{dx}\int_0^{x^3} e^{t^2}\,dt = 3x^2e^{x^6} $$
+        </div>
+
+        <h3>Part b)</h3>
+        <p><strong>Find</strong> \( \frac{d}{dx}\int_x^{x^2} \sin(t)\,dt \)</p>
+        <div class="step">
+            \begin{aligned}
+            \frac{d}{dx}\int_x^{x^2} \sin(t)\,dt &= \sin(x^2) \cdot 2x - \sin(x) \cdot 1 \\
+            &= 2x\sin(x^2) - \sin(x)
+            \end{aligned}
+        </div>
+        <div class="final-answer">
+            $$ \frac{d}{dx}\int_x^{x^2} \sin(t)\,dt = 2x\sin(x^2) - \sin(x) $$
+        </div>
+
+        <h3>Part c)</h3>
+        <p><strong>Find</strong> \( \frac{d}{dx}\int_0^{x^3} e^{t^2}\,dt \) using chain rule (if upper limit is \( x^2 \))</p>
+        <div class="step">
+            If upper limit is \( x^2 \):<br>
+            \begin{aligned}
+            \frac{d}{dx}\int_0^{x^2} e^{t^2}\,dt &= e^{(x^2)^2} \cdot 2x \\
+            &= 2xe^{x^4}
+            \end{aligned}
+        </div>
+        <div class="final-answer">
+            $$ \frac{d}{dx}\int_0^{x^2} e^{t^2}\,dt = 2xe^{x^4} $$
+        </div>
+    </div>
+
+    <div class="problem">
+        <div class="problem-title">Problem 8: Arc Length of Linear Function</div>
+        <p><strong>Task:</strong> Find the arc length of \( y = 3x + 2 \) from \( (0,2) \) to \( (1,5) \)</p>
+
+        <div class="step">
+            <strong>Step 1:</strong> Compute \( f'(x) = 3 \)<br>
+            <strong>Step 2:</strong> Set up the arc length integral:<br>
+            \begin{aligned}
+            L &= \int_0^1 \sqrt{1 + 3^2}\,dx \\
+            &= \int_0^1 \sqrt{10}\,dx \\
+            &= \sqrt{10} \cdot [x]_0^1 \\
+            &= \sqrt{10}
+            \end{aligned}
+        </div>
+        <div class="final-answer">
+            $$ L = \sqrt{10} \approx 3.1623 $$
+        </div>
+    </div>
+
+    <footer style="text-align: center; margin-top: 40px; padding: 20px; color: #666; border-top: 1px solid #ddd;">
+        <p><a href="day-03.html">&larr; Day 03</a> &nbsp;|&nbsp; <a href="day-05.html">Day 05 &rarr;</a></p>
+    </footer>
 </body>
 </html>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Substitution, Series, and Riemann Sums — Calculus II Notes</title>
+    <title>Quiz 02 - Substitution, Series, and Riemann | Calculus II Notes</title>
     <link rel="stylesheet" href="../css/styles.css">
     <script>
     window.MathJax = {
         tex: {
-            inlineMath: [['$', '$'], ['\(', '\)']],
-            displayMath: [['$$', '$$'], ['\[', '\]']],
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
             processEscapes: true,
             tags: 'ams'
         },
@@ -23,46 +23,71 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Calculus II Notes</h1>
-        <p class="subtitle">Substitution, Series, and Riemann Sums</p>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="../days/index.html">Days</a>
-            <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-            <a href="../final-reviews/index.html">Final Reviews</a>
-            <a href="../final-samples/index.html">Final Samples</a>
-            <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-        </nav>
-    </header>
+<header>
+    <h1>Calculus II Notes</h1>
+    <p class="subtitle">Substitution, Series, and Riemann</p>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../days/index.html">Days</a>
+        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
+        <a href="../final-reviews/index.html">Final Reviews</a>
+        <a href="../final-samples/index.html">Final Samples</a>
+        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+</header>
+<div class="container">
+    <main>
+        <p class="lead">Use this sheet to test your understanding before moving forward. Try each problem without looking at your notes, then check the formulas below.</p>
 
-    <div class="container">
-        <main>
-            <div class="chapter">
-                <h2>Substitution, Series, and Riemann Sums</h2>
-                <p class="lead">Browse through the quiz 02 pages. Use the arrow buttons or keyboard arrows to navigate.</p>
-            </div>
+        <h2>Key Formulas at a Glance</h2>
+        <ul>
+            <li>$\sum_{k=1}^n k = \frac{n(n+1)}{2}$</li>
+            <li>$\sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6}$</li>
+            <li>$\sum_{k=1}^n k^3 = \left[\frac{n(n+1)}{2}\right]^2$</li>
+            <li>Riemann Sum: $L_n = \sum_{i=0}^{n-1} f(x_i)\Delta x$</li>
+            <li>Riemann Sum: $R_n = \sum_{i=1}^{n} f(x_i)\Delta x$</li>
+            <li>$\Delta x = \frac{b-a}{n}$</li>
+            <li>$x_i = a + i\Delta x$</li>
+        </ul>
 
-            <div class="gallery-container">
-                <button class="gallery-nav gallery-prev" id="gallery-prev" >&larr;</button>
-                <div class="image-frame">
-                    <img src="../substitution-series-and-riemann/1.png" alt="Page 1" class="gallery-image" style="display: block;"><img src="../substitution-series-and-riemann/2.png" alt="Page 2" class="gallery-image" style="display: none;"><img src="../substitution-series-and-riemann/3.png" alt="Page 3" class="gallery-image" style="display: none;"><img src="../substitution-series-and-riemann/4.png" alt="Page 4" class="gallery-image" style="display: none;"><img src="../substitution-series-and-riemann/5.png" alt="Page 5" class="gallery-image" style="display: none;">
-                </div>
-                <button class="gallery-nav gallery-next" id="gallery-next" >&rarr;</button>
-            </div>
+        <h2>Worked Examples</h2>
 
-            <div class="gallery-thumbnails" id="gallery-thumbnails">
-                <div class="thumbnail active" data-index="0"><img src="../substitution-series-and-riemann/1.png" alt="Page 1"></div><div class="thumbnail " data-index="1"><img src="../substitution-series-and-riemann/2.png" alt="Page 2"></div><div class="thumbnail " data-index="2"><img src="../substitution-series-and-riemann/3.png" alt="Page 3"></div><div class="thumbnail " data-index="3"><img src="../substitution-series-and-riemann/4.png" alt="Page 4"></div><div class="thumbnail " data-index="4"><img src="../substitution-series-and-riemann/5.png" alt="Page 5"></div>
-            </div>
+        <h3>Example 1: Trig Substitution</h3>
+        <p><strong>Evaluate:</strong> $\int \sin(x)\cos^2(x)\,dx$</p>
+        <p>Let $u = \cos(x)$, $du = -\sin(x)\,dx$, so $\sin(x)\,dx = -du$</p>
+        $$= \int u^2(-du)$$
+        $$= -\frac{u^3}{3} + C$$
+        $$= -\frac{\cos^3(x)}{3} + C$$
 
-            <div class="chapter-nav">
-                <a href="../quiz-reviews/quiz-01.html" class="nav-btn prev" id="prev-section" >&larr; Previous</a>
-                <span class="nav-indicator" id="section-indicator">02 / 29</span>
-                <a href="../quiz-reviews/quiz-03.html" class="nav-btn next" id="next-section" >Next &rarr;</a>
-            </div>
-        </main>
-    </div>
+        <h3>Example 2: Exponential with Trig</h3>
+        <p><strong>Evaluate:</strong> $\int \sec^2(x)e^{\tan(x)}\,dx$</p>
+        <p>Let $u = \tan(x)$, $du = \sec^2(x)\,dx$</p>
+        $$= \int e^u\,du$$
+        $$= e^u + C$$
+        $$= e^{\tan(x)} + C$$
 
-    <script src="../js/app.js"></script>
+        <h3>Example 3: Summation</h3>
+        <p><strong>Task:</strong> Evaluate $\sum_{k=1}^{1000} (2k^2-3k)$</p>
+        $$= 2\sum_{k=1}^{1000} k^2 - 3\sum_{k=1}^{1000} k$$
+        $$= 2\cdot\frac{1000(1001)(2001)}{6} - 3\cdot\frac{1000(1001)}{2}$$
+        $$= 2\cdot 333833500 - 3\cdot 500500$$
+        $$= 667667000 - 1501500$$
+        $$= 666165500$$
+
+        <h3>Example 4: Riemann Sums</h3>
+        <p><strong>Task:</strong> Approximate $\int_1^6 (x+1)\,dx$ with $n=5$</p>
+        <p>$\Delta x = \frac{6-1}{5} = 1$</p>
+        <p>Left Sum: $L_5 = 1\cdot(2+3+4+5+6) = 20$</p>
+        <p>Right Sum: $R_5 = 1\cdot(3+4+5+6+7) = 25$</p>
+
+        <h2>Practice Problems</h2>
+        <ol>
+            <li>$\int \cos^4(x)\sin(x)\,dx$</li>
+            <li>$\sum_{k=1}^{500} (3k^2-2k)$</li>
+            <li>Approximate $\int_0^4 x^2\,dx$ with $n=4$ using left endpoints</li>
+        </ol>
+    </main>
+</div>
+<script src="../js/app.js"></script>
 </body>
 </html>

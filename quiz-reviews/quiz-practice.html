@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Practice — Calculus II Notes</title>
+    <title>Quiz Practice | Calculus II Notes</title>
     <link rel="stylesheet" href="../css/styles.css">
     <script>
     window.MathJax = {
         tex: {
-            inlineMath: [['$', '$'], ['\(', '\)']],
-            displayMath: [['$$', '$$'], ['\[', '\]']],
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
             processEscapes: true,
             tags: 'ams'
         },
@@ -23,46 +23,50 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Calculus II Notes</h1>
-        <p class="subtitle">Quiz Practice</p>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="../days/index.html">Days</a>
-            <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-            <a href="../final-reviews/index.html">Final Reviews</a>
-            <a href="../final-samples/index.html">Final Samples</a>
-            <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-        </nav>
-    </header>
+<header>
+    <h1>Calculus II Notes</h1>
+    <p class="subtitle">Quiz Practice</p>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../days/index.html">Days</a>
+        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
+        <a href="../final-reviews/index.html">Final Reviews</a>
+        <a href="../final-samples/index.html">Final Samples</a>
+        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+</header>
+<div class="container">
+    <main>
+        <p class="lead">Use this practice sheet to test your understanding. Try each problem without looking at your notes, then check the worked solutions.</p>
 
-    <div class="container">
-        <main>
-            <div class="chapter">
-                <h2>Quiz Practice</h2>
-                <p class="lead">Browse through the quiz practice pages. Use the arrow buttons or keyboard arrows to navigate.</p>
-            </div>
+        <h2>Practice Problems</h2>
 
-            <div class="gallery-container">
-                <button class="gallery-nav gallery-prev" id="gallery-prev" >&larr;</button>
-                <div class="image-frame">
-                    
-                </div>
-                <button class="gallery-nav gallery-next" id="gallery-next" >&rarr;</button>
-            </div>
+        <h3>Problem 1: u-Substitution</h3>
+        <p><strong>Evaluate:</strong> $\int x e^{x^2}\,dx$</p>
+        <p>Let $u = x^2$, $du = 2x\,dx$, so $x\,dx = \frac{du}{2}$</p>
+        $$= \int e^u \cdot \frac{du}{2}$$
+        $$= \frac{1}{2}e^u + C$$
+        $$= \frac{1}{2}e^{x^2} + C$$
 
-            <div class="gallery-thumbnails" id="gallery-thumbnails">
-                
-            </div>
+        <h3>Problem 2: Trig Integral</h3>
+        <p><strong>Evaluate:</strong> $\int_0^{\pi} \sin^2(x)\,dx$</p>
+        <p>Use the identity $\sin^2(x) = \frac{1-\cos(2x)}{2}$</p>
+        $$= \int_0^{\pi} \frac{1-\cos(2x)}{2}\,dx$$
+        $$= \frac{1}{2}\left[x - \frac{\sin(2x)}{2}\right]_0^{\pi}$$
+        $$= \frac{1}{2}(\pi - 0)$$
+        $$= \frac{\pi}{2}$$
 
-            <div class="chapter-nav">
-                <a href="../quiz-reviews/quiz-3-prep.html" class="nav-btn prev" id="prev-section" >&larr; Previous</a>
-                <span class="nav-indicator" id="section-indicator">PR / 29</span>
-                <a href="../final-reviews/final-review-1.html" class="nav-btn next" id="next-section" >Next &rarr;</a>
-            </div>
-        </main>
-    </div>
-
-    <script src="../js/app.js"></script>
+        <h3>Problem 3: Area Between Curves</h3>
+        <p><strong>Task:</strong> Find the area between $y = x^2$ and $y = x+2$</p>
+        <p>Intersection points: $x^2 = x+2 \implies x^2-x-2 = 0 \implies (x+1)(x-2) = 0$</p>
+        <p>So $x = -1$ and $x = 2$</p>
+        $$A = \int_{-1}^2 [(x+2) - x^2]\,dx$$
+        $$= \left[\frac{x^2}{2} + 2x - \frac{x^3}{3}\right]_{-1}^2$$
+        $$= \left(2 + 4 - \frac{8}{3}\right) - \left(\frac{1}{2} - 2 + \frac{1}{3}\right)$$
+        $$= \frac{10}{3} - \left(-\frac{7}{6}\right)$$
+        $$= \frac{27}{6} = \frac{9}{2}$$
+    </main>
+</div>
+<script src="../js/app.js"></script>
 </body>
 </html>

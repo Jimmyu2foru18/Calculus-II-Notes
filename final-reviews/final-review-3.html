@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Series Convergence and Power Series — Calculus II Notes</title>
+    <title>Final Review 3 - Series Convergence and Power Series | Calculus II Notes</title>
     <link rel="stylesheet" href="../css/styles.css">
     <script>
     window.MathJax = {
         tex: {
-            inlineMath: [['$', '$'], ['\(', '\)']],
-            displayMath: [['$$', '$$'], ['\[', '\]']],
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
             processEscapes: true,
             tags: 'ams'
         },
@@ -23,46 +23,63 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Calculus II Notes</h1>
-        <p class="subtitle">Series Convergence and Power Series</p>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="../days/index.html">Days</a>
-            <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-            <a href="../final-reviews/index.html">Final Reviews</a>
-            <a href="../final-samples/index.html">Final Samples</a>
-            <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-        </nav>
-    </header>
+<header>
+    <h1>Calculus II Notes</h1>
+    <p class="subtitle">Series Convergence and Power Series</p>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../days/index.html">Days</a>
+        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
+        <a href="../final-reviews/index.html">Final Reviews</a>
+        <a href="../final-samples/index.html">Final Samples</a>
+        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+</header>
+<div class="container">
+    <main>
+        <p class="lead">Use this review sheet to test your understanding. Try each problem without looking at your notes, then check the formulas and worked examples below.</p>
 
-    <div class="container">
-        <main>
-            <div class="chapter">
-                <h2>Series Convergence and Power Series</h2>
-                <p class="lead">Browse through the final review 3 pages. Use the arrow buttons or keyboard arrows to navigate.</p>
-            </div>
+        <h2>Key Formulas at a Glance</h2>
+        <ul>
+            <li>Ratio Test: $\rho = \lim_{n\to\infty} \left|\frac{a_{n+1}}{a_n}\right|$</li>
+            <li>Root Test: $\rho = \lim_{n\to\infty} \sqrt[n]{|a_n|}$</li>
+            <li>p-Series: $\sum \frac{1}{n^p}$ converges if $p > 1$</li>
+            <li>Geometric Series: $\sum ar^n = \frac{a}{1-r}$ for $|r| < 1$</li>
+            <li>Alternating Series: $\sum (-1)^{n+1}a_n$ converges if $a_n$ decreasing and $\lim a_n = 0$</li>
+        </ul>
 
-            <div class="gallery-container">
-                <button class="gallery-nav gallery-prev" id="gallery-prev" >&larr;</button>
-                <div class="image-frame">
-                    <img src="../series-convergence-and-power-series/1.png" alt="Page 1" class="gallery-image" style="display: block;"><img src="../series-convergence-and-power-series/2.png" alt="Page 2" class="gallery-image" style="display: none;"><img src="../series-convergence-and-power-series/3.png" alt="Page 3" class="gallery-image" style="display: none;"><img src="../series-convergence-and-power-series/4.png" alt="Page 4" class="gallery-image" style="display: none;"><img src="../series-convergence-and-power-series/5.png" alt="Page 5" class="gallery-image" style="display: none;">
-                </div>
-                <button class="gallery-nav gallery-next" id="gallery-next" >&rarr;</button>
-            </div>
+        <h2>Worked Examples</h2>
 
-            <div class="gallery-thumbnails" id="gallery-thumbnails">
-                <div class="thumbnail active" data-index="0"><img src="../series-convergence-and-power-series/1.png" alt="Page 1"></div><div class="thumbnail " data-index="1"><img src="../series-convergence-and-power-series/2.png" alt="Page 2"></div><div class="thumbnail " data-index="2"><img src="../series-convergence-and-power-series/3.png" alt="Page 3"></div><div class="thumbnail " data-index="3"><img src="../series-convergence-and-power-series/4.png" alt="Page 4"></div><div class="thumbnail " data-index="4"><img src="../series-convergence-and-power-series/5.png" alt="Page 5"></div>
-            </div>
+        <h3>Example 1: Ratio Test</h3>
+        <p><strong>Task:</strong> Test $\sum_{n=1}^{\infty} \frac{n!}{n^2}$</p>
+        $$\rho = \lim_{n\to\infty} \frac{(n+1)!/(n+1)^2}{n!/n^2}$$
+        $$= \lim_{n\to\infty} \frac{(n+1)n!}{(n+1)^2} \cdot \frac{n^2}{n!}$$
+        $$= \lim_{n\to\infty} \frac{n^2}{n+1} = \infty$$
+        <p>Since $\rho = \infty > 1$, the series diverges.</p>
 
-            <div class="chapter-nav">
-                <a href="../final-reviews/final-review-2.html" class="nav-btn prev" id="prev-section" >&larr; Previous</a>
-                <span class="nav-indicator" id="section-indicator">R3 / 29</span>
-                <a href="../final-reviews/final-review-4.html" class="nav-btn next" id="next-section" >Next &rarr;</a>
-            </div>
-        </main>
-    </div>
+        <h3>Example 2: Power Series Interval of Convergence</h3>
+        <p><strong>Task:</strong> Find the interval of convergence for $\sum_{n=0}^{\infty} \frac{x^n}{n!}$</p>
+        $$\rho = \lim_{n\to\infty} \frac{|x|^{n+1}/(n+1)!}{|x|^n/n!}$$
+        $$= \lim_{n\to\infty} \frac{|x|}{n+1} = 0$$
+        <p>Since $\rho = 0 < 1$ for all $x$, the series converges for all $x$.</p>
+        <p>Interval of Convergence: $(-\infty, \infty)$</p>
+        <p>Radius of Convergence: $R = \infty$</p>
 
-    <script src="../js/app.js"></script>
+        <h3>Example 3: Alternating Series Test</h3>
+        <p><strong>Task:</strong> Test $\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n}$</p>
+        <p>$a_n = \frac{1}{n} > 0$ (TRUE)</p>
+        <p>$a_n$ is decreasing (TRUE)</p>
+        <p>$\lim_{n\to\infty} a_n = 0$ (TRUE)</p>
+        <p>All conditions satisfied. The series converges by the Alternating Series Test.</p>
+
+        <h2>Practice Problems</h2>
+        <ol>
+            <li>Test $\sum_{n=1}^{\infty} \frac{5^n}{n!}$ for convergence</li>
+            <li>Find the interval of convergence for $\sum_{n=1}^{\infty} \frac{x^n}{n}$</li>
+            <li>Test $\sum_{n=1}^{\infty} \frac{(-1)^n}{\sqrt{n}}$ for convergence</li>
+        </ol>
+    </main>
+</div>
+<script src="../js/app.js"></script>
 </body>
 </html>

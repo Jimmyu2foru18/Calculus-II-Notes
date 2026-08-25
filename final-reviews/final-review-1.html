@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Integration Techniques and Series — Calculus II Notes</title>
+    <title>Final Review 1 - Integration Techniques and Series | Calculus II Notes</title>
     <link rel="stylesheet" href="../css/styles.css">
     <script>
     window.MathJax = {
         tex: {
-            inlineMath: [['$', '$'], ['\(', '\)']],
-            displayMath: [['$$', '$$'], ['\[', '\]']],
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
             processEscapes: true,
             tags: 'ams'
         },
@@ -23,46 +23,64 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Calculus II Notes</h1>
-        <p class="subtitle">Integration Techniques and Series</p>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="../days/index.html">Days</a>
-            <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-            <a href="../final-reviews/index.html">Final Reviews</a>
-            <a href="../final-samples/index.html">Final Samples</a>
-            <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-        </nav>
-    </header>
+<header>
+    <h1>Calculus II Notes</h1>
+    <p class="subtitle">Integration Techniques and Series</p>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../days/index.html">Days</a>
+        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
+        <a href="../final-reviews/index.html">Final Reviews</a>
+        <a href="../final-samples/index.html">Final Samples</a>
+        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+</header>
+<div class="container">
+    <main>
+        <p class="lead">Use this review sheet to test your understanding. Try each problem without looking at your notes, then check the formulas and worked examples below.</p>
 
-    <div class="container">
-        <main>
-            <div class="chapter">
-                <h2>Integration Techniques and Series</h2>
-                <p class="lead">Browse through the final review 1 pages. Use the arrow buttons or keyboard arrows to navigate.</p>
-            </div>
+        <h2>Key Formulas at a Glance</h2>
+        <ul>
+            <li>Integration by Parts: $\int u\,dv = uv - \int v\,du$</li>
+            <li>u-Substitution: $\int f(g(x))g'(x)\,dx = \int f(u)\,du$</li>
+            <li>Partial Fractions: $\frac{1}{(x-a)(x-b)} = \frac{A}{x-a} + \frac{B}{x-b}$</li>
+            <li>Geometric Series: $\sum_{n=0}^{\infty} ar^n = \frac{a}{1-r}$ for $|r| < 1$</li>
+            <li>p-Series: $\sum_{n=1}^{\infty} \frac{1}{n^p}$ converges if $p > 1$</li>
+        </ul>
 
-            <div class="gallery-container">
-                <button class="gallery-nav gallery-prev" id="gallery-prev" >&larr;</button>
-                <div class="image-frame">
-                    <img src="../integration-techniques-and-series/1.png" alt="Page 1" class="gallery-image" style="display: block;"><img src="../integration-techniques-and-series/2.png" alt="Page 2" class="gallery-image" style="display: none;"><img src="../integration-techniques-and-series/3.png" alt="Page 3" class="gallery-image" style="display: none;"><img src="../integration-techniques-and-series/4.png" alt="Page 4" class="gallery-image" style="display: none;"><img src="../integration-techniques-and-series/5.png" alt="Page 5" class="gallery-image" style="display: none;"><img src="../integration-techniques-and-series/6.png" alt="Page 6" class="gallery-image" style="display: none;"><img src="../integration-techniques-and-series/7.png" alt="Page 7" class="gallery-image" style="display: none;"><img src="../integration-techniques-and-series/8.png" alt="Page 8" class="gallery-image" style="display: none;"><img src="../integration-techniques-and-series/9.png" alt="Page 9" class="gallery-image" style="display: none;">
-                </div>
-                <button class="gallery-nav gallery-next" id="gallery-next" >&rarr;</button>
-            </div>
+        <h2>Worked Examples</h2>
 
-            <div class="gallery-thumbnails" id="gallery-thumbnails">
-                <div class="thumbnail active" data-index="0"><img src="../integration-techniques-and-series/1.png" alt="Page 1"></div><div class="thumbnail " data-index="1"><img src="../integration-techniques-and-series/2.png" alt="Page 2"></div><div class="thumbnail " data-index="2"><img src="../integration-techniques-and-series/3.png" alt="Page 3"></div><div class="thumbnail " data-index="3"><img src="../integration-techniques-and-series/4.png" alt="Page 4"></div><div class="thumbnail " data-index="4"><img src="../integration-techniques-and-series/5.png" alt="Page 5"></div><div class="thumbnail " data-index="5"><img src="../integration-techniques-and-series/6.png" alt="Page 6"></div><div class="thumbnail " data-index="6"><img src="../integration-techniques-and-series/7.png" alt="Page 7"></div><div class="thumbnail " data-index="7"><img src="../integration-techniques-and-series/8.png" alt="Page 8"></div><div class="thumbnail " data-index="8"><img src="../integration-techniques-and-series/9.png" alt="Page 9"></div>
-            </div>
+        <h3>Example 1: Integration by Parts</h3>
+        <p><strong>Evaluate:</strong> $\int x\ln(x)\,dx$</p>
+        <p>Let $u = \ln(x)$, $dv = x\,dx$</p>
+        <p>$du = \frac{1}{x}\,dx$, $v = \frac{x^2}{2}$</p>
+        $$= \frac{x^2}{2}\ln(x) - \int \frac{x^2}{2}\cdot\frac{1}{x}\,dx$$
+        $$= \frac{x^2}{2}\ln(x) - \frac{1}{2}\int x\,dx$$
+        $$= \frac{x^2}{2}\ln(x) - \frac{x^2}{4} + C$$
 
-            <div class="chapter-nav">
-                <a href="../quiz-reviews/quiz-practice.html" class="nav-btn prev" id="prev-section" >&larr; Previous</a>
-                <span class="nav-indicator" id="section-indicator">R1 / 29</span>
-                <a href="../final-reviews/final-review-2.html" class="nav-btn next" id="next-section" >Next &rarr;</a>
-            </div>
-        </main>
-    </div>
+        <h3>Example 2: Partial Fractions</h3>
+        <p><strong>Evaluate:</strong> $\int \frac{1}{x^2-1}\,dx$</p>
+        $$\frac{1}{x^2-1} = \frac{1}{(x-1)(x+1)} = \frac{1/2}{x-1} - \frac{1/2}{x+1}$$
+        $$= \frac{1}{2}\ln|x-1| - \frac{1}{2}\ln|x+1| + C$$
+        $$= \frac{1}{2}\ln\left|\frac{x-1}{x+1}\right| + C$$
 
-    <script src="../js/app.js"></script>
+        <h3>Example 3: Power Series</h3>
+        <p><strong>Task:</strong> Find the interval of convergence for $\sum_{n=0}^{\infty} x^n$</p>
+        <p>Apply the Ratio Test:</p>
+        $$\rho = \lim_{n\to\infty} \frac{|x|^{n+1}}{|x|^n} = |x|$$
+        <p>Converges when $|x| < 1$</p>
+        <p>At $x = 1$: $\sum 1$ diverges</p>
+        <p>At $x = -1$: $\sum (-1)^n$ diverges</p>
+        <p>Interval of Convergence: $(-1, 1)$</p>
+
+        <h2>Practice Problems</h2>
+        <ol>
+            <li>$\int x^2 e^x\,dx$</li>
+            <li>$\int \frac{3x+5}{x^2-4}\,dx$</li>
+            <li>Test $\sum_{n=1}^{\infty} \frac{n!}{n^2}$ for convergence</li>
+        </ol>
+    </main>
+</div>
+<script src="../js/app.js"></script>
 </body>
 </html>

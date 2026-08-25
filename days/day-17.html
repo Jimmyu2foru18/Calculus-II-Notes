@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conic Sections and Polar Coordinates — Calculus II Notes</title>
+    <title>Day 17 - Conic Sections and Polar | Calculus II Notes</title>
     <link rel="stylesheet" href="../css/styles.css">
     <script>
     window.MathJax = {
         tex: {
-            inlineMath: [['$', '$'], ['\(', '\)']],
-            displayMath: [['$$', '$$'], ['\[', '\]']],
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
             processEscapes: true,
             tags: 'ams'
         },
@@ -23,46 +23,82 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Calculus II Notes</h1>
-        <p class="subtitle">Conic Sections and Polar Coordinates</p>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="../days/index.html">Days</a>
-            <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-            <a href="../final-reviews/index.html">Final Reviews</a>
-            <a href="../final-samples/index.html">Final Samples</a>
-            <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-        </nav>
-    </header>
+<header>
+    <h1>Calculus II Notes</h1>
+    <p class="subtitle">Conic Sections and Polar</p>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../days/index.html">Days</a>
+        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
+        <a href="../final-reviews/index.html">Final Reviews</a>
+        <a href="../final-samples/index.html">Final Samples</a>
+        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+</header>
+<div class="container">
+    <main>
+        <a href="day-16.html" class="back-button">&larr; Back</a>
+        <p class="lead">Browse through the Conic Sections and Polar pages. Use the arrow buttons or keyboard arrows to navigate.</p>
+        <section id="content">
+            <h2>Conic Sections and Polar Coordinates</h2>
 
-    <div class="container">
-        <main>
-            <div class="chapter">
-                <h2>Conic Sections and Polar Coordinates</h2>
-                <p class="lead">Browse through the day 17 pages. Use the arrow buttons or keyboard arrows to navigate.</p>
-            </div>
-
-            <div class="gallery-container">
-                <button class="gallery-nav gallery-prev" id="gallery-prev" >&larr;</button>
-                <div class="image-frame">
-                    <img src="../conic-sections-and-polar/1.png" alt="Page 1" class="gallery-image" style="display: block;"><img src="../conic-sections-and-polar/2.png" alt="Page 2" class="gallery-image" style="display: none;"><img src="../conic-sections-and-polar/3.png" alt="Page 3" class="gallery-image" style="display: none;"><img src="../conic-sections-and-polar/4.png" alt="Page 4" class="gallery-image" style="display: none;"><img src="../conic-sections-and-polar/5.png" alt="Page 5" class="gallery-image" style="display: none;">
+            <h3>Problem 1: Polar Coordinates Conversion</h3>
+            <p><strong>Task:</strong> Convert the rectangular equation x^2 + y^2 = 4x to polar form.</p>
+            <details class="question">
+                <summary><strong>Click to see the solution</strong></summary>
+                <div class="solution">
+                    <h4>Step 1: Use polar coordinate substitutions</h4>
+                    <p>x = r*cos(theta), y = r*sin(theta), x^2 + y^2 = r^2</p>
+                    <h4>Step 2: Substitute</h4>
+                    <p>r^2 = 4r*cos(theta)</p>
+                    <h4>Step 3: Simplify</h4>
+                    <p>r = 4*cos(theta) (for r != 0)</p>
+                    <h4>Final Answer:</h4>
+                    <p>The polar form is r = 4*cos(theta). This is a circle of radius 2 centered at (2, 0).</p>
                 </div>
-                <button class="gallery-nav gallery-next" id="gallery-next" >&rarr;</button>
-            </div>
+            </details>
 
-            <div class="gallery-thumbnails" id="gallery-thumbnails">
-                <div class="thumbnail active" data-index="0"><img src="../conic-sections-and-polar/1.png" alt="Page 1"></div><div class="thumbnail " data-index="1"><img src="../conic-sections-and-polar/2.png" alt="Page 2"></div><div class="thumbnail " data-index="2"><img src="../conic-sections-and-polar/3.png" alt="Page 3"></div><div class="thumbnail " data-index="3"><img src="../conic-sections-and-polar/4.png" alt="Page 4"></div><div class="thumbnail " data-index="4"><img src="../conic-sections-and-polar/5.png" alt="Page 5"></div>
-            </div>
+            <h3>Problem 2: Graphing Polar Curves</h3>
+            <p><strong>Task:</strong> Describe and sketch the graph of r = 2*cos(3*theta).</p>
+            <details class="question">
+                <summary><strong>Click to see the solution</strong></summary>
+                <div class="solution">
+                    <h4>Step 1: Identify the type of curve</h4>
+                    <p>r = a*cos(n*theta) with a = 2 and n = 3 is a rose curve.</p>
+                    <h4>Step 2: Determine the number of petals</h4>
+                    <p>Since n = 3 is odd, the rose has n = 3 petals.</p>
+                    <h4>Step 3: Find key points</h4>
+                    <p>theta = 0: r = 2*cos(0) = 2</p>
+                    <p>theta = pi/6: r = 2*cos(pi/2) = 0</p>
+                    <p>theta = pi/3: r = 2*cos(pi) = -2</p>
+                    <p>theta = pi/2: r = 2*cos(3*pi/2) = 0</p>
+                    <h4>Final Answer:</h4>
+                    <p>A 3-petaled rose with petals of length 2, centered at the origin.</p>
+                </div>
+            </details>
 
-            <div class="chapter-nav">
-                <a href="../days/day-16.html" class="nav-btn prev" id="prev-section" >&larr; Previous</a>
-                <span class="nav-indicator" id="section-indicator">17 / 29</span>
-                <a href="../days/day-18.html" class="nav-btn next" id="next-section" >Next &rarr;</a>
-            </div>
-        </main>
-    </div>
-
-    <script src="../js/app.js"></script>
+            <h3>Problem 3: Area in Polar Coordinates</h3>
+            <p><strong>Task:</strong> Find the area enclosed by the curve r = 2*sin(theta).</p>
+            <details class="question">
+                <summary><strong>Click to see the solution</strong></summary>
+                <div class="solution">
+                    <h4>Step 1: Identify the curve</h4>
+                    <p>r = 2*sin(theta) is a circle of radius 1 centered at (0, 1).</p>
+                    <h4>Step 2: Set up the area integral</h4>
+                    <p>A = (1/2) * integral from 0 to pi of (2*sin(theta))^2 d(theta)</p>
+                    <p>= (1/2) * integral from 0 to pi of 4*sin^2(theta) d(theta)</p>
+                    <p>= 2 * integral from 0 to pi of (1 - cos(2*theta))/2 d(theta)</p>
+                    <p>= integral from 0 to pi of (1 - cos(2*theta)) d(theta)</p>
+                    <h4>Step 3: Evaluate</h4>
+                    <p>= [theta - (1/2)*sin(2*theta)] from 0 to pi</p>
+                    <p>= (pi - 0) - (0 - 0) = pi</p>
+                    <h4>Final Answer:</h4>
+                    <p>The area is pi.</p>
+                </div>
+            </details>
+        </section>
+    </main>
+</div>
+<script src="../js/app.js"></script>
 </body>
 </html>

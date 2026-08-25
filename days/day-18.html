@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parametric Equations and Polar Areas — Calculus II Notes</title>
+    <title>Day 18 - Parametric Equations and Polar Areas | Calculus II Notes</title>
     <link rel="stylesheet" href="../css/styles.css">
     <script>
     window.MathJax = {
         tex: {
-            inlineMath: [['$', '$'], ['\(', '\)']],
-            displayMath: [['$$', '$$'], ['\[', '\]']],
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
             processEscapes: true,
             tags: 'ams'
         },
@@ -23,46 +23,87 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Calculus II Notes</h1>
-        <p class="subtitle">Parametric Equations and Polar Areas</p>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="../days/index.html">Days</a>
-            <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-            <a href="../final-reviews/index.html">Final Reviews</a>
-            <a href="../final-samples/index.html">Final Samples</a>
-            <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-        </nav>
-    </header>
+<header>
+    <h1>Calculus II Notes</h1>
+    <p class="subtitle">Parametric Equations and Polar Areas</p>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../days/index.html">Days</a>
+        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
+        <a href="../final-reviews/index.html">Final Reviews</a>
+        <a href="../final-samples/index.html">Final Samples</a>
+        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+</header>
+<div class="container">
+    <main>
+        <a href="day-17.html" class="back-button">&larr; Back</a>
+        <p class="lead">Browse through the Parametric Equations and Polar Areas pages. Use the arrow buttons or keyboard arrows to navigate.</p>
+        <section id="content">
+            <h2>Parametric Equations and Polar Areas</h2>
 
-    <div class="container">
-        <main>
-            <div class="chapter">
-                <h2>Parametric Equations and Polar Areas</h2>
-                <p class="lead">Browse through the day 18 pages. Use the arrow buttons or keyboard arrows to navigate.</p>
-            </div>
-
-            <div class="gallery-container">
-                <button class="gallery-nav gallery-prev" id="gallery-prev" >&larr;</button>
-                <div class="image-frame">
-                    <img src="../parametric-equations-and-polar-areas/1.png" alt="Page 1" class="gallery-image" style="display: block;"><img src="../parametric-equations-and-polar-areas/2.png" alt="Page 2" class="gallery-image" style="display: none;"><img src="../parametric-equations-and-polar-areas/3.png" alt="Page 3" class="gallery-image" style="display: none;"><img src="../parametric-equations-and-polar-areas/4.png" alt="Page 4" class="gallery-image" style="display: none;"><img src="../parametric-equations-and-polar-areas/5.png" alt="Page 5" class="gallery-image" style="display: none;"><img src="../parametric-equations-and-polar-areas/6.png" alt="Page 6" class="gallery-image" style="display: none;"><img src="../parametric-equations-and-polar-areas/7.png" alt="Page 7" class="gallery-image" style="display: none;">
+            <h3>Problem 1: Parametric Equations</h3>
+            <p><strong>Task:</strong> Find the parametric equations for the parabola y = x^2 + 3x - 4.</p>
+            <details class="question">
+                <summary><strong>Click to see the solution</strong></summary>
+                <div class="solution">
+                    <h4>Step 1: Choose a parameter</h4>
+                    <p>Let x = t.</p>
+                    <h4>Step 2: Express y in terms of t</h4>
+                    <p>y = t^2 + 3t - 4</p>
+                    <h4>Final Answer:</h4>
+                    <p>x(t) = t, y(t) = t^2 + 3t - 4</p>
                 </div>
-                <button class="gallery-nav gallery-next" id="gallery-next" >&rarr;</button>
-            </div>
+            </details>
 
-            <div class="gallery-thumbnails" id="gallery-thumbnails">
-                <div class="thumbnail active" data-index="0"><img src="../parametric-equations-and-polar-areas/1.png" alt="Page 1"></div><div class="thumbnail " data-index="1"><img src="../parametric-equations-and-polar-areas/2.png" alt="Page 2"></div><div class="thumbnail " data-index="2"><img src="../parametric-equations-and-polar-areas/3.png" alt="Page 3"></div><div class="thumbnail " data-index="3"><img src="../parametric-equations-and-polar-areas/4.png" alt="Page 4"></div><div class="thumbnail " data-index="4"><img src="../parametric-equations-and-polar-areas/5.png" alt="Page 5"></div><div class="thumbnail " data-index="5"><img src="../parametric-equations-and-polar-areas/6.png" alt="Page 6"></div><div class="thumbnail " data-index="6"><img src="../parametric-equations-and-polar-areas/7.png" alt="Page 7"></div>
-            </div>
+            <h3>Problem 2: Arc Length of a Parametric Curve</h3>
+            <p><strong>Task:</strong> Find the arc length of the curve x = t, y = t^2 from t = 0 to t = 1.</p>
+            <details class="question">
+                <summary><strong>Click to see the solution</strong></summary>
+                <div class="solution">
+                    <h4>Step 1: Use the arc length formula</h4>
+                    <p>L = integral from a to b of sqrt((dx/dt)^2 + (dy/dt)^2) dt</p>
+                    <h4>Step 2: Compute derivatives</h4>
+                    <p>dx/dt = 1, dy/dt = 2t</p>
+                    <h4>Step 3: Set up the integral</h4>
+                    <p>L = integral from 0 to 1 of sqrt(1 + (2t)^2) dt</p>
+                    <p>= integral from 0 to 1 of sqrt(1 + 4t^2) dt</p>
+                    <h4>Step 4: Use trigonometric substitution</h4>
+                    <p>Let 2t = tan(theta), then dt = (1/2)*sec^2(theta) d(theta)</p>
+                    <p>When t = 0, theta = 0. When t = 1, theta = arctan(2).</p>
+                    <p>sqrt(1 + 4t^2) = sqrt(1 + tan^2(theta)) = sec(theta)</p>
+                    <p>L = integral from 0 to arctan(2) of sec(theta) * (1/2)*sec^2(theta) d(theta)</p>
+                    <p>= (1/2) * integral from 0 to arctan(2) of sec^3(theta) d(theta)</p>
+                    <p>This requires integration by parts, giving:</p>
+                    <p>L = (1/2)[sec(theta)*tan(theta) + ln|sec(theta) + tan(theta)|] from 0 to arctan(2)</p>
+                    <h4>Final Answer:</h4>
+                    <p>L = (1/2)[2*sqrt(5) + ln(2 + sqrt(5))]</p>
+                </div>
+            </details>
 
-            <div class="chapter-nav">
-                <a href="../days/day-17.html" class="nav-btn prev" id="prev-section" >&larr; Previous</a>
-                <span class="nav-indicator" id="section-indicator">18 / 29</span>
-                <a href="../quiz-reviews/quiz-01.html" class="nav-btn next" id="next-section" >Next &rarr;</a>
-            </div>
-        </main>
-    </div>
-
-    <script src="../js/app.js"></script>
+            <h3>Problem 3: Area in Polar Coordinates</h3>
+            <p><strong>Task:</strong> Find the area inside the cardioid r = 1 + cos(theta).</p>
+            <details class="question">
+                <summary><strong>Click to see the solution</strong></summary>
+                <div class="solution">
+                    <h4>Step 1: Set up the area integral</h4>
+                    <p>A = (1/2) * integral from 0 to 2*pi of (1 + cos(theta))^2 d(theta)</p>
+                    <h4>Step 2: Expand the integrand</h4>
+                    <p>(1 + cos(theta))^2 = 1 + 2*cos(theta) + cos^2(theta)</p>
+                    <p>= 1 + 2*cos(theta) + (1 + cos(2*theta))/2</p>
+                    <p>= 3/2 + 2*cos(theta) + (1/2)*cos(2*theta)</p>
+                    <h4>Step 3: Integrate</h4>
+                    <p>A = (1/2) * integral from 0 to 2*pi of [3/2 + 2*cos(theta) + (1/2)*cos(2*theta)] d(theta)</p>
+                    <p>= (1/2) * [3*theta/2 + 2*sin(theta) + (1/4)*sin(2*theta)] from 0 to 2*pi</p>
+                    <p>= (1/2) * [(3*pi) + 0 + 0 - 0]</p>
+                    <p>= (1/2) * 3*pi = 3*pi/2</p>
+                    <h4>Final Answer:</h4>
+                    <p>The area is 3*pi/2.</p>
+                </div>
+            </details>
+        </section>
+    </main>
+</div>
+<script src="../js/app.js"></script>
 </body>
 </html>

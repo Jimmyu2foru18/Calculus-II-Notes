@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parametric, Polar, and Series Applications — Calculus II Notes</title>
+    <title>Final Review 4 - Parametric, Polar, and Series Apps | Calculus II Notes</title>
     <link rel="stylesheet" href="../css/styles.css">
     <script>
     window.MathJax = {
         tex: {
-            inlineMath: [['$', '$'], ['\(', '\)']],
-            displayMath: [['$$', '$$'], ['\[', '\]']],
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
             processEscapes: true,
             tags: 'ams'
         },
@@ -23,46 +23,66 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Calculus II Notes</h1>
-        <p class="subtitle">Parametric, Polar, and Series Applications</p>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="../days/index.html">Days</a>
-            <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-            <a href="../final-reviews/index.html">Final Reviews</a>
-            <a href="../final-samples/index.html">Final Samples</a>
-            <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-        </nav>
-    </header>
+<header>
+    <h1>Calculus II Notes</h1>
+    <p class="subtitle">Parametric, Polar, and Series Apps</p>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../days/index.html">Days</a>
+        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
+        <a href="../final-reviews/index.html">Final Reviews</a>
+        <a href="../final-samples/index.html">Final Samples</a>
+        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+</header>
+<div class="container">
+    <main>
+        <p class="lead">Use this review sheet to test your understanding. Try each problem without looking at your notes, then check the formulas and worked examples below.</p>
 
-    <div class="container">
-        <main>
-            <div class="chapter">
-                <h2>Parametric, Polar, and Series Applications</h2>
-                <p class="lead">Browse through the final review 4 pages. Use the arrow buttons or keyboard arrows to navigate.</p>
-            </div>
+        <h2>Key Formulas at a Glance</h2>
+        <ul>
+            <li>Polar to Rectangular: $x = r\cos(\theta)$, $y = r\sin(\theta)$</li>
+            <li>Rectangular to Polar: $r = \sqrt{x^2+y^2}$, $\theta = \tan^{-1}(y/x)$</li>
+            <li>Polar Area: $A = \frac{1}{2}\int_{\alpha}^{\beta} [r(\theta)]^2\,d\theta$</li>
+            <li>Parametric arc length: $L = \int_a^b \sqrt{[x'(t)]^2 + [y'(t)]^2}\,dt$</li>
+            <li>Taylor series: $f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n$</li>
+        </ul>
 
-            <div class="gallery-container">
-                <button class="gallery-nav gallery-prev" id="gallery-prev" >&larr;</button>
-                <div class="image-frame">
-                    <img src="../parametric-polar-and-series-apps/1.png" alt="Page 1" class="gallery-image" style="display: block;"><img src="../parametric-polar-and-series-apps/2.png" alt="Page 2" class="gallery-image" style="display: none;"><img src="../parametric-polar-and-series-apps/3.png" alt="Page 3" class="gallery-image" style="display: none;"><img src="../parametric-polar-and-series-apps/4.png" alt="Page 4" class="gallery-image" style="display: none;"><img src="../parametric-polar-and-series-apps/5.png" alt="Page 5" class="gallery-image" style="display: none;"><img src="../parametric-polar-and-series-apps/6.png" alt="Page 6" class="gallery-image" style="display: none;"><img src="../parametric-polar-and-series-apps/7.png" alt="Page 7" class="gallery-image" style="display: none;"><img src="../parametric-polar-and-series-apps/8.png" alt="Page 8" class="gallery-image" style="display: none;"><img src="../parametric-polar-and-series-apps/9.png" alt="Page 9" class="gallery-image" style="display: none;">
-                </div>
-                <button class="gallery-nav gallery-next" id="gallery-next" >&rarr;</button>
-            </div>
+        <h2>Worked Examples</h2>
 
-            <div class="gallery-thumbnails" id="gallery-thumbnails">
-                <div class="thumbnail active" data-index="0"><img src="../parametric-polar-and-series-apps/1.png" alt="Page 1"></div><div class="thumbnail " data-index="1"><img src="../parametric-polar-and-series-apps/2.png" alt="Page 2"></div><div class="thumbnail " data-index="2"><img src="../parametric-polar-and-series-apps/3.png" alt="Page 3"></div><div class="thumbnail " data-index="3"><img src="../parametric-polar-and-series-apps/4.png" alt="Page 4"></div><div class="thumbnail " data-index="4"><img src="../parametric-polar-and-series-apps/5.png" alt="Page 5"></div><div class="thumbnail " data-index="5"><img src="../parametric-polar-and-series-apps/6.png" alt="Page 6"></div><div class="thumbnail " data-index="6"><img src="../parametric-polar-and-series-apps/7.png" alt="Page 7"></div><div class="thumbnail " data-index="7"><img src="../parametric-polar-and-series-apps/8.png" alt="Page 8"></div><div class="thumbnail " data-index="8"><img src="../parametric-polar-and-series-apps/9.png" alt="Page 9"></div>
-            </div>
+        <h3>Example 1: Polar Coordinates</h3>
+        <p><strong>Task:</strong> Convert $r = 4\cos(\theta)$ to rectangular form</p>
+        <p>Multiply by $r$: $r^2 = 4r\cos(\theta)$</p>
+        <p>Substitute: $x^2 + y^2 = 4x$</p>
+        <p>Complete the square: $(x-2)^2 + y^2 = 4$</p>
+        <p>This is a circle of radius 2 centered at $(2, 0)$.</p>
 
-            <div class="chapter-nav">
-                <a href="../final-reviews/final-review-3.html" class="nav-btn prev" id="prev-section" >&larr; Previous</a>
-                <span class="nav-indicator" id="section-indicator">R4 / 29</span>
-                <a href="../final-samples/final-sample-1.html" class="nav-btn next" id="next-section" >Next &rarr;</a>
-            </div>
-        </main>
-    </div>
+        <h3>Example 2: Area in Polar Coordinates</h3>
+        <p><strong>Task:</strong> Find the area enclosed by $r = 1 + \sin(\theta)$</p>
+        $$A = \frac{1}{2}\int_0^{2\pi} (1+\sin(\theta))^2\,d\theta$$
+        <p>Expand: $(1+\sin(\theta))^2 = 1 + 2\sin(\theta) + \sin^2(\theta)$</p>
+        <p>$$= 1 + 2\sin(\theta) + \frac{1-\cos(2\theta)}{2}$$</p>
+        <p>$$= \frac{3}{2} + 2\sin(\theta) - \frac{1}{2}\cos(2\theta)$$</p>
+        $$A = \frac{1}{2}\left[\frac{3\theta}{2} - 2\cos(\theta) - \frac{\sin(2\theta)}{4}\right]_0^{2\pi}$$
+        <p>$$= \frac{1}{2}(3\pi) = \frac{3\pi}{2}$$</p>
 
-    <script src="../js/app.js"></script>
+        <h3>Example 3: Parametric Arc Length</h3>
+        <p><strong>Task:</strong> Find the arc length of $x = t$, $y = t^2$ from $t=0$ to $t=1$</p>
+        <p>$\frac{dx}{dt} = 1$, $\frac{dy}{dt} = 2t$</p>
+        $$L = \int_0^1 \sqrt{1 + 4t^2}\,dt$$
+        <p>Let $2t = \tan(\theta)$, $dt = \frac{1}{2}\sec^2(\theta)\,d\theta$</p>
+        $$L = \frac{1}{2}\int_0^{\arctan(2)} \sec^3(\theta)\,d\theta$$
+        <p>$$= \frac{1}{2}\left[\frac{1}{2}\sec(\theta)\tan(\theta) + \frac{1}{2}\ln|\sec(\theta)+\tan(\theta)|\right]_0^{\arctan(2)}$$</p>
+        <p>$$= \frac{1}{4}\left[2\sqrt{5} + \ln(2+\sqrt{5})\right]$$</p>
+
+        <h2>Practice Problems</h2>
+        <ol>
+            <li>Convert $x^2 + y^2 = 6y$ to polar form</li>
+            <li>Find the area enclosed by $r = 2\sin(2\theta)$</li>
+            <li>Find the Maclaurin series for $f(x) = e^{-x}$</li>
+        </ol>
+    </main>
+</div>
+<script src="../js/app.js"></script>
 </body>
 </html>

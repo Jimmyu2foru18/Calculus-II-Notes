@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Series Convergence Tests — Calculus II Notes</title>
+    <title>Day 12 - Series Convergence Tests | Calculus II Notes</title>
     <link rel="stylesheet" href="../css/styles.css">
     <script>
     window.MathJax = {
         tex: {
-            inlineMath: [['$', '$'], ['\(', '\)']],
-            displayMath: [['$$', '$$'], ['\[', '\]']],
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
             processEscapes: true,
             tags: 'ams'
         },
@@ -23,46 +23,90 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Calculus II Notes</h1>
-        <p class="subtitle">Series Convergence Tests</p>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="../days/index.html">Days</a>
-            <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-            <a href="../final-reviews/index.html">Final Reviews</a>
-            <a href="../final-samples/index.html">Final Samples</a>
-            <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-        </nav>
-    </header>
+<header>
+    <h1>Calculus II Notes</h1>
+    <p class="subtitle">Series Convergence Tests</p>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../days/index.html">Days</a>
+        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
+        <a href="../final-reviews/index.html">Final Reviews</a>
+        <a href="../final-samples/index.html">Final Samples</a>
+        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+</header>
+<div class="container">
+    <main>
+        <a href="day-11.html" class="back-button">&larr; Back</a>
+        <p class="lead">Browse through the Series Convergence Tests pages. Use the arrow buttons or keyboard arrows to navigate.</p>
+        <section id="content">
+            <h2>Series Convergence Tests</h2>
 
-    <div class="container">
-        <main>
-            <div class="chapter">
-                <h2>Series Convergence Tests</h2>
-                <p class="lead">Browse through the day 12 pages. Use the arrow buttons or keyboard arrows to navigate.</p>
-            </div>
-
-            <div class="gallery-container">
-                <button class="gallery-nav gallery-prev" id="gallery-prev" >&larr;</button>
-                <div class="image-frame">
-                    <img src="../series-convergence-tests/1.png" alt="Page 1" class="gallery-image" style="display: block;"><img src="../series-convergence-tests/2.png" alt="Page 2" class="gallery-image" style="display: none;"><img src="../series-convergence-tests/3.png" alt="Page 3" class="gallery-image" style="display: none;"><img src="../series-convergence-tests/4.png" alt="Page 4" class="gallery-image" style="display: none;"><img src="../series-convergence-tests/5.png" alt="Page 5" class="gallery-image" style="display: none;"><img src="../series-convergence-tests/6.png" alt="Page 6" class="gallery-image" style="display: none;"><img src="../series-convergence-tests/7.png" alt="Page 7" class="gallery-image" style="display: none;"><img src="../series-convergence-tests/8.png" alt="Page 8" class="gallery-image" style="display: none;"><img src="../series-convergence-tests/9.png" alt="Page 9" class="gallery-image" style="display: none;">
+            <h3>Problem 1: Divergence Test</h3>
+            <p><strong>Task:</strong> Test the series sum from n=1 to infinity of 1/(n+1) for convergence.</p>
+            <details class="question">
+                <summary><strong>Click to see the solution</strong></summary>
+                <div class="solution">
+                    <h4>Step 1: Apply the Divergence Test</h4>
+                    <p>Compute lim(n->infinity) a_n = lim(n->infinity) 1/(n+1) = 0</p>
+                    <h4>Step 2: Conclusion</h4>
+                    <p>Since the limit is 0, the Divergence Test is inconclusive.</p>
+                    <p>This is a harmonic series shifted by 1, which diverges.</p>
+                    <h4>Final Answer:</h4>
+                    <p>The series diverges (by comparison to the harmonic series).</p>
                 </div>
-                <button class="gallery-nav gallery-next" id="gallery-next" >&rarr;</button>
-            </div>
+            </details>
 
-            <div class="gallery-thumbnails" id="gallery-thumbnails">
-                <div class="thumbnail active" data-index="0"><img src="../series-convergence-tests/1.png" alt="Page 1"></div><div class="thumbnail " data-index="1"><img src="../series-convergence-tests/2.png" alt="Page 2"></div><div class="thumbnail " data-index="2"><img src="../series-convergence-tests/3.png" alt="Page 3"></div><div class="thumbnail " data-index="3"><img src="../series-convergence-tests/4.png" alt="Page 4"></div><div class="thumbnail " data-index="4"><img src="../series-convergence-tests/5.png" alt="Page 5"></div><div class="thumbnail " data-index="5"><img src="../series-convergence-tests/6.png" alt="Page 6"></div><div class="thumbnail " data-index="6"><img src="../series-convergence-tests/7.png" alt="Page 7"></div><div class="thumbnail " data-index="7"><img src="../series-convergence-tests/8.png" alt="Page 8"></div><div class="thumbnail " data-index="8"><img src="../series-convergence-tests/9.png" alt="Page 9"></div>
-            </div>
+            <h3>Problem 2: Integral Test</h3>
+            <p><strong>Task:</strong> Test the series sum from n=1 to infinity of 1/(n*ln(n)) for convergence.</p>
+            <details class="question">
+                <summary><strong>Click to see the solution</strong></summary>
+                <div class="solution">
+                    <h4>Step 1: Check conditions</h4>
+                    <p>f(x) = 1/(x*ln(x)) is positive, continuous, and decreasing for x > 1.</p>
+                    <h4>Step 2: Apply the Integral Test</h4>
+                    <p>integral from 2 to infinity of 1/(x*ln(x)) dx</p>
+                    <p>Let u = ln(x), du = 1/x dx</p>
+                    <p>= integral from ln(2) to infinity of 1/u du = lim(b->infinity) [ln(u)] from ln(2) to b</p>
+                    <p>= lim(b->infinity) (ln(b) - ln(ln(2))) = infinity</p>
+                    <h4>Final Answer:</h4>
+                    <p>The series diverges by the Integral Test.</p>
+                </div>
+            </details>
 
-            <div class="chapter-nav">
-                <a href="../days/day-11.html" class="nav-btn prev" id="prev-section" >&larr; Previous</a>
-                <span class="nav-indicator" id="section-indicator">12 / 29</span>
-                <a href="../days/day-13.html" class="nav-btn next" id="next-section" >Next &rarr;</a>
-            </div>
-        </main>
-    </div>
+            <h3>Problem 3: p-Series Test</h3>
+            <p><strong>Task:</strong> Determine if sum from n=1 to infinity of 1/n^(3/2) converges.</p>
+            <details class="question">
+                <summary><strong>Click to see the solution</strong></summary>
+                <div class="solution">
+                    <h4>Step 1: Identify as a p-series</h4>
+                    <p>This is a p-series with p = 3/2.</p>
+                    <h4>Step 2: Apply the p-Series Test</h4>
+                    <p>Since p = 3/2 > 1, the series converges.</p>
+                    <h4>Final Answer:</h4>
+                    <p>The series converges (p = 3/2 > 1).</p>
+                </div>
+            </details>
 
-    <script src="../js/app.js"></script>
+            <h3>Problem 4: Limit Comparison Test</h3>
+            <p><strong>Task:</strong> Test the series sum from n=1 to infinity of (n+1)/(n^2+5) for convergence.</p>
+            <details class="question">
+                <summary><strong>Click to see the solution</strong></summary>
+                <div class="solution">
+                    <h4>Step 1: Choose a comparison series</h4>
+                    <p>For large n, (n+1)/(n^2+5) ~ n/n^2 = 1/n. Compare with sum of 1/n.</p>
+                    <h4>Step 2: Compute the limit</h4>
+                    <p>lim(n->infinity) [((n+1)/(n^2+5)) / (1/n)] = lim(n->infinity) n(n+1)/(n^2+5)</p>
+                    <p>= lim(n->infinity) (n^2+n)/(n^2+5) = 1</p>
+                    <h4>Step 3: Conclusion</h4>
+                    <p>Since 0 < L = 1 < infinity, both series behave the same way. Since sum of 1/n diverges, the given series also diverges.</p>
+                    <h4>Final Answer:</h4>
+                    <p>The series diverges by the Limit Comparison Test.</p>
+                </div>
+            </details>
+        </section>
+    </main>
+</div>
+<script src="../js/app.js"></script>
 </body>
 </html>

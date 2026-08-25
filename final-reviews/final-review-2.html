@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Integration: Trig and Substitution — Calculus II Notes</title>
+    <title>Final Review 2 - Advanced Integration: Trig and Substitution | Calculus II Notes</title>
     <link rel="stylesheet" href="../css/styles.css">
     <script>
     window.MathJax = {
         tex: {
-            inlineMath: [['$', '$'], ['\(', '\)']],
-            displayMath: [['$$', '$$'], ['\[', '\]']],
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
             processEscapes: true,
             tags: 'ams'
         },
@@ -23,46 +23,62 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Calculus II Notes</h1>
-        <p class="subtitle">Advanced Integration: Trig and Substitution</p>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="../days/index.html">Days</a>
-            <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-            <a href="../final-reviews/index.html">Final Reviews</a>
-            <a href="../final-samples/index.html">Final Samples</a>
-            <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-        </nav>
-    </header>
+<header>
+    <h1>Calculus II Notes</h1>
+    <p class="subtitle">Advanced Integration: Trig and Substitution</p>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../days/index.html">Days</a>
+        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
+        <a href="../final-reviews/index.html">Final Reviews</a>
+        <a href="../final-samples/index.html">Final Samples</a>
+        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+</header>
+<div class="container">
+    <main>
+        <p class="lead">Use this review sheet to test your understanding. Try each problem without looking at your notes, then check the formulas and worked examples below.</p>
 
-    <div class="container">
-        <main>
-            <div class="chapter">
-                <h2>Advanced Integration: Trig and Substitution</h2>
-                <p class="lead">Browse through the final review 2 pages. Use the arrow buttons or keyboard arrows to navigate.</p>
-            </div>
+        <h2>Key Formulas at a Glance</h2>
+        <ul>
+            <li>$\sqrt{a^2-x^2}$: use $x = a\sin(\theta)$</li>
+            <li>$\sqrt{a^2+x^2}$: use $x = a\tan(\theta)$</li>
+            <li>$\sqrt{x^2-a^2}$: use $x = a\sec(\theta)$</li>
+            <li>$\sin^2(x) = \frac{1-\cos(2x)}{2}$</li>
+            <li>$\cos^2(x) = \frac{1+\cos(2x)}{2}$</li>
+            <li>$\int \tan(\theta)\,d\theta = \ln|\sec(\theta)| + C$</li>
+            <li>$\int \sec(\theta)\,d\theta = \ln|\sec(\theta)+\tan(\theta)| + C$</li>
+        </ul>
 
-            <div class="gallery-container">
-                <button class="gallery-nav gallery-prev" id="gallery-prev" >&larr;</button>
-                <div class="image-frame">
-                    <img src="../advanced-integration-trig-and-sub/1.png" alt="Page 1" class="gallery-image" style="display: block;"><img src="../advanced-integration-trig-and-sub/2.png" alt="Page 2" class="gallery-image" style="display: none;"><img src="../advanced-integration-trig-and-sub/3.png" alt="Page 3" class="gallery-image" style="display: none;"><img src="../advanced-integration-trig-and-sub/4.png" alt="Page 4" class="gallery-image" style="display: none;"><img src="../advanced-integration-trig-and-sub/5.png" alt="Page 5" class="gallery-image" style="display: none;"><img src="../advanced-integration-trig-and-sub/6.png" alt="Page 6" class="gallery-image" style="display: none;"><img src="../advanced-integration-trig-and-sub/7.png" alt="Page 7" class="gallery-image" style="display: none;"><img src="../advanced-integration-trig-and-sub/8.png" alt="Page 8" class="gallery-image" style="display: none;"><img src="../advanced-integration-trig-and-sub/9.png" alt="Page 9" class="gallery-image" style="display: none;"><img src="../advanced-integration-trig-and-sub/10.png" alt="Page 10" class="gallery-image" style="display: none;"><img src="../advanced-integration-trig-and-sub/11.png" alt="Page 11" class="gallery-image" style="display: none;"><img src="../advanced-integration-trig-and-sub/12.png" alt="Page 12" class="gallery-image" style="display: none;">
-                </div>
-                <button class="gallery-nav gallery-next" id="gallery-next" >&rarr;</button>
-            </div>
+        <h2>Worked Examples</h2>
 
-            <div class="gallery-thumbnails" id="gallery-thumbnails">
-                <div class="thumbnail active" data-index="0"><img src="../advanced-integration-trig-and-sub/1.png" alt="Page 1"></div><div class="thumbnail " data-index="1"><img src="../advanced-integration-trig-and-sub/2.png" alt="Page 2"></div><div class="thumbnail " data-index="2"><img src="../advanced-integration-trig-and-sub/3.png" alt="Page 3"></div><div class="thumbnail " data-index="3"><img src="../advanced-integration-trig-and-sub/4.png" alt="Page 4"></div><div class="thumbnail " data-index="4"><img src="../advanced-integration-trig-and-sub/5.png" alt="Page 5"></div><div class="thumbnail " data-index="5"><img src="../advanced-integration-trig-and-sub/6.png" alt="Page 6"></div><div class="thumbnail " data-index="6"><img src="../advanced-integration-trig-and-sub/7.png" alt="Page 7"></div><div class="thumbnail " data-index="7"><img src="../advanced-integration-trig-and-sub/8.png" alt="Page 8"></div><div class="thumbnail " data-index="8"><img src="../advanced-integration-trig-and-sub/9.png" alt="Page 9"></div><div class="thumbnail " data-index="9"><img src="../advanced-integration-trig-and-sub/10.png" alt="Page 10"></div><div class="thumbnail " data-index="10"><img src="../advanced-integration-trig-and-sub/11.png" alt="Page 11"></div><div class="thumbnail " data-index="11"><img src="../advanced-integration-trig-and-sub/12.png" alt="Page 12"></div>
-            </div>
+        <h3>Example 1: Basic Trig Substitution</h3>
+        <p><strong>Evaluate:</strong> $\int \frac{dx}{\sqrt{4-x^2}}$</p>
+        <p>Let $x = 2\sin(\theta)$, $dx = 2\cos(\theta)\,d\theta$</p>
+        <p>$\sqrt{4-x^2} = \sqrt{4-4\sin^2(\theta)} = 2\cos(\theta)$</p>
+        $$= \int \frac{2\cos(\theta)\,d\theta}{2\cos(\theta)}$$
+        $$= \int d\theta = \theta + C$$
+        $$= \sin^{-1}\left(\frac{x}{2}\right) + C$$
 
-            <div class="chapter-nav">
-                <a href="../final-reviews/final-review-1.html" class="nav-btn prev" id="prev-section" >&larr; Previous</a>
-                <span class="nav-indicator" id="section-indicator">R2 / 29</span>
-                <a href="../final-reviews/final-review-3.html" class="nav-btn next" id="next-section" >Next &rarr;</a>
-            </div>
-        </main>
-    </div>
+        <h3>Example 2: Complex Trig Substitution</h3>
+        <p><strong>Evaluate:</strong> $\int \frac{x^3\,dx}{\sqrt{4-x^2}}$</p>
+        <p>Let $x = 2\sin(\theta)$, $dx = 2\cos(\theta)\,d\theta$</p>
+        <p>$x^3 = 8\sin^3(\theta)$, $\sqrt{4-x^2} = 2\cos(\theta)$</p>
+        $$= \int \frac{8\sin^3(\theta) \cdot 2\cos(\theta)\,d\theta}{2\cos(\theta)}$$
+        $$= 8\int \sin^3(\theta)\,d\theta$$
+        <p>Use $\sin^2(\theta) = 1-\cos^2(\theta)$ and $u = \cos(\theta)$:</p>
+        $$= 8\int (1-u^2)(-du) = 8\left(\frac{u^3}{3} - u\right) + C$$
+        <p>Back-substitute: $\cos(\theta) = \frac{\sqrt{4-x^2}}{2}$</p>
+        $$= \frac{(4-x^2)^{3/2}}{3} - 4\sqrt{4-x^2} + C$$
 
-    <script src="../js/app.js"></script>
+        <h2>Practice Problems</h2>
+        <ol>
+            <li>$\int \frac{dx}{\sqrt{9+4x^2}}$</li>
+            <li>$\int \sin^3(3x)\,dx$</li>
+            <li>$\int \cos^4(x)\sin^2(x)\,dx$</li>
+        </ol>
+    </main>
+</div>
+<script src="../js/app.js"></script>
 </body>
 </html>

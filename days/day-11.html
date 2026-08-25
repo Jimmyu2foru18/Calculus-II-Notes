@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sequences, Series, and L'Hôpital's Rule — Calculus II Notes</title>
+    <title>Day 11 - Sequences, Series, and L'Hopital | Calculus II Notes</title>
     <link rel="stylesheet" href="../css/styles.css">
     <script>
     window.MathJax = {
         tex: {
-            inlineMath: [['$', '$'], ['\(', '\)']],
-            displayMath: [['$$', '$$'], ['\[', '\]']],
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
             processEscapes: true,
             tags: 'ams'
         },
@@ -23,46 +23,76 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Calculus II Notes</h1>
-        <p class="subtitle">Sequences, Series, and L'Hôpital's Rule</p>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="../days/index.html">Days</a>
-            <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-            <a href="../final-reviews/index.html">Final Reviews</a>
-            <a href="../final-samples/index.html">Final Samples</a>
-            <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-        </nav>
-    </header>
-
-    <div class="container">
-        <main>
-            <div class="chapter">
-                <h2>Sequences, Series, and L'Hôpital's Rule</h2>
-                <p class="lead">Browse through the day 11 pages. Use the arrow buttons or keyboard arrows to navigate.</p>
-            </div>
-
-            <div class="gallery-container">
-                <button class="gallery-nav gallery-prev" id="gallery-prev" >&larr;</button>
-                <div class="image-frame">
-                    <img src="../sequences-series-and-lhopital/1.png" alt="Page 1" class="gallery-image" style="display: block;"><img src="../sequences-series-and-lhopital/2.png" alt="Page 2" class="gallery-image" style="display: none;"><img src="../sequences-series-and-lhopital/3.png" alt="Page 3" class="gallery-image" style="display: none;"><img src="../sequences-series-and-lhopital/4.png" alt="Page 4" class="gallery-image" style="display: none;"><img src="../sequences-series-and-lhopital/5.png" alt="Page 5" class="gallery-image" style="display: none;"><img src="../sequences-series-and-lhopital/6.png" alt="Page 6" class="gallery-image" style="display: none;"><img src="../sequences-series-and-lhopital/7.png" alt="Page 7" class="gallery-image" style="display: none;"><img src="../sequences-series-and-lhopital/8.png" alt="Page 8" class="gallery-image" style="display: none;"><img src="../sequences-series-and-lhopital/9.png" alt="Page 9" class="gallery-image" style="display: none;"><img src="../sequences-series-and-lhopital/10.png" alt="Page 10" class="gallery-image" style="display: none;"><img src="../sequences-series-and-lhopital/11.png" alt="Page 11" class="gallery-image" style="display: none;">
+<header>
+    <h1>Calculus II Notes</h1>
+    <p class="subtitle">Sequences, Series, and L'Hopital</p>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../days/index.html">Days</a>
+        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
+        <a href="../final-reviews/index.html">Final Reviews</a>
+        <a href="../final-samples/index.html">Final Samples</a>
+        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+</header>
+<div class="container">
+    <main>
+        <a href="day-10.html" class="back-button">&larr; Back</a>
+        <p class="lead">Browse through the Sequences, Series, and L'Hopital pages. Use the arrow buttons or keyboard arrows to navigate.</p>
+        <section id="content">
+            <h2>Sequences, Series, and L'Hopital's Rule</h2>
+            
+            <h3>Problem 1: Improper Integral with p = 3/4</h3>
+            <p><strong>Task:</strong> Determine if integral from 0 to 1 of 1/(x^(3/4)) dx converges or diverges.</p>
+            <details class="question">
+                <summary><strong>Click to see the solution</strong></summary>
+                <div class="solution">
+                    <h4>Step 1: Identify the type</h4>
+                    <p>This is an improper integral of Type II (infinite discontinuity at x = 0).</p>
+                    <h4>Step 2: Set up as a limit</h4>
+                    <p>integral from 0 to 1 of x^(-3/4) dx = lim(a->0+) integral from a to 1 of x^(-3/4) dx</p>
+                    <h4>Step 3: Integrate</h4>
+                    <p>= lim(a->0+) [x^(1/4)/(1/4)] from a to 1</p>
+                    <p>= lim(a->0+) [4x^(1/4)] from a to 1</p>
+                    <h4>Step 4: Evaluate the limit</h4>
+                    <p>= 4(1) - 4(0) = 4</p>
+                    <h4>Final Answer:</h4>
+                    <p>The integral converges to 4.</p>
                 </div>
-                <button class="gallery-nav gallery-next" id="gallery-next" >&rarr;</button>
-            </div>
+            </details>
 
-            <div class="gallery-thumbnails" id="gallery-thumbnails">
-                <div class="thumbnail active" data-index="0"><img src="../sequences-series-and-lhopital/1.png" alt="Page 1"></div><div class="thumbnail " data-index="1"><img src="../sequences-series-and-lhopital/2.png" alt="Page 2"></div><div class="thumbnail " data-index="2"><img src="../sequences-series-and-lhopital/3.png" alt="Page 3"></div><div class="thumbnail " data-index="3"><img src="../sequences-series-and-lhopital/4.png" alt="Page 4"></div><div class="thumbnail " data-index="4"><img src="../sequences-series-and-lhopital/5.png" alt="Page 5"></div><div class="thumbnail " data-index="5"><img src="../sequences-series-and-lhopital/6.png" alt="Page 6"></div><div class="thumbnail " data-index="6"><img src="../sequences-series-and-lhopital/7.png" alt="Page 7"></div><div class="thumbnail " data-index="7"><img src="../sequences-series-and-lhopital/8.png" alt="Page 8"></div><div class="thumbnail " data-index="8"><img src="../sequences-series-and-lhopital/9.png" alt="Page 9"></div><div class="thumbnail " data-index="9"><img src="../sequences-series-and-lhopital/10.png" alt="Page 10"></div><div class="thumbnail " data-index="10"><img src="../sequences-series-and-lhopital/11.png" alt="Page 11"></div>
-            </div>
+            <h3>Problem 2: L'Hopital's Rule</h3>
+            <p><strong>Task:</strong> Evaluate lim(x->0+) x*ln(x)</p>
+            <details class="question">
+                <summary><strong>Click to see the solution</strong></summary>
+                <div class="solution">
+                    <h4>Step 1: Identify the indeterminate form</h4>
+                    <p>As x -> 0+, ln(x) -> -infinity, so we have 0 * (-infinity).</p>
+                    <h4>Step 2: Rewrite as a quotient</h4>
+                    <p>x*ln(x) = ln(x)/(1/x)</p>
+                    <h4>Step 3: Apply L'Hopital's Rule</h4>
+                    <p>lim(x->0+) ln(x)/(1/x) = lim(x->0+) (1/x)/(-1/x^2) = lim(x->0+) (-x) = 0</p>
+                    <h4>Final Answer:</h4>
+                    <p>lim(x->0+) x*ln(x) = 0</p>
+                </div>
+            </details>
 
-            <div class="chapter-nav">
-                <a href="../days/day-10.html" class="nav-btn prev" id="prev-section" >&larr; Previous</a>
-                <span class="nav-indicator" id="section-indicator">11 / 29</span>
-                <a href="../days/day-12.html" class="nav-btn next" id="next-section" >Next &rarr;</a>
-            </div>
-        </main>
-    </div>
-
-    <script src="../js/app.js"></script>
+            <h3>Problem 3: Sequences and Limits</h3>
+            <p><strong>Task:</strong> Find the limit of the sequence a_n = (2n + 7)/(3n + 5)</p>
+            <details class="question">
+                <summary><strong>Click to see the solution</strong></summary>
+                <div class="solution">
+                    <h4>Step 1: Divide numerator and denominator by n</h4>
+                    <p>a_n = (2 + 7/n)/(3 + 5/n)</p>
+                    <h4>Step 2: Take the limit as n -> infinity</h4>
+                    <p>lim(n->infinity) a_n = (2 + 0)/(3 + 0) = 2/3</p>
+                    <h4>Final Answer:</h4>
+                    <p>lim(n->infinity) (2n+7)/(3n+5) = 2/3</p>
+                </div>
+            </details>
+        </section>
+    </main>
+</div>
+<script src="../js/app.js"></script>
 </body>
 </html>
