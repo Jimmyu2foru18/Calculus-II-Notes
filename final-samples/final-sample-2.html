@@ -43,27 +43,36 @@
 
         <h3>Problem 1: Partial Fractions</h3>
         <p><strong>Evaluate:</strong> $\int \frac{3x+5}{x^2-4}\,dx$</p>
-        <p>Decompose: $\frac{3x+5}{(x-2)(x+2)} = \frac{A}{x-2} + \frac{B}{x+2}$</p>
-        <p>$3x+5 = A(x+2) + B(x-2)$</p>
-        <p>Set $x = 2$: $11 = 4B \implies B = \frac{11}{4}$</p>
-        <p>Set $x = -2$: $-1 = -4A \implies A = \frac{1}{4}$</p>
-        $$= \int\left(\frac{1/4}{x-2} + \frac{11/4}{x+2}\right)dx$$
-        $$= \frac{1}{4}\ln|x-2| + \frac{11}{4}\ln|x+2| + C$$
+        <details class="question">
+            <summary>Click to see the solution</summary>
+            <p>Decompose: $\frac{3x+5}{(x-2)(x+2)} = \frac{A}{x-2} + \frac{B}{x+2}$</p>
+            <p>$3x+5 = A(x+2) + B(x-2)$</p>
+            <p>Set $x = 2$: $11 = 4B \implies B = \frac{11}{4}$</p>
+            <p>Set $x = -2$: $-1 = -4A \implies A = \frac{1}{4}$</p>
+            $$= \int\left(\frac{1/4}{x-2} + \frac{11/4}{x+2}\right)dx$$
+            $$= \frac{1}{4}\ln|x-2| + \frac{11}{4}\ln|x+2| + C$$
+        </details>
 
         <h3>Problem 2: Taylor Series</h3>
         <p><strong>Task:</strong> Find the Maclaurin series for $f(x) = \frac{1}{1-x}$</p>
-        <p>This is a geometric series with first term $a = 1$ and ratio $r = x$:</p>
-        $$\frac{1}{1-x} = \sum_{n=0}^{\infty} x^n = 1 + x + x^2 + x^3 + \cdots$$
-        <p>Converges for $|x| < 1$</p>
+        <details class="question">
+            <summary>Click to see the solution</summary>
+            <p>This is a geometric series with first term $a = 1$ and ratio $r = x$:</p>
+            $$\frac{1}{1-x} = \sum_{n=0}^{\infty} x^n = 1 + x + x^2 + x^3 + \cdots$$
+            <p>Converges for $|x| < 1$</p>
+        </details>
 
         <h3>Problem 3: Polar Area</h3>
         <p><strong>Task:</strong> Find the area enclosed by the cardioid $r = 1 + \cos(\theta)$</p>
-        $$A = \frac{1}{2}\int_0^{2\pi} (1+\cos(\theta))^2\,d\theta$$
-        <p>Expand: $(1+\cos(\theta))^2 = 1 + 2\cos(\theta) + \cos^2(\theta)$</p>
-        <p>$$= 1 + 2\cos(\theta) + \frac{1+\cos(2\theta)}{2}$$</p>
-        <p>$$= \frac{3}{2} + 2\cos(\theta) + \frac{1}{2}\cos(2\theta)$$</p>
-        $$A = \frac{1}{2}\left[\frac{3\theta}{2} + 2\sin(\theta) + \frac{\sin(2\theta)}{4}\right]_0^{2\pi}$$
-        <p>$$= \frac{1}{2}(3\pi) = \frac{3\pi}{2}$$</p>
+        <details class="question">
+            <summary>Click to see the solution</summary>
+            $$A = \frac{1}{2}\int_0^{2\pi} (1+\cos(\theta))^2\,d\theta$$
+            <p>Expand: $(1+\cos(\theta))^2 = 1 + 2\cos(\theta) + \cos^2(\theta)$</p>
+            <p>$$= 1 + 2\cos(\theta) + \frac{1+\cos(2\theta)}{2}$$</p>
+            <p>$$= \frac{3}{2} + 2\cos(\theta) + \frac{1}{2}\cos(2\theta)$$</p>
+            $$A = \frac{1}{2}\left[\frac{3\theta}{2} + 2\sin(\theta) + \frac{\sin(2\theta)}{4}\right]_0^{2\pi}$$
+            <p>$$= \frac{1}{2}(3\pi) = \frac{3\pi}{2}$$</p>
+        </details>
     </main>
 </div>
 <script src="../js/app.js"></script>

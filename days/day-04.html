@@ -61,96 +61,111 @@
         <div class="problem-title">Problem 1: Definite Integral by Definition</div>
         <p><strong>Task:</strong> Evaluate \( \int_0^2 (x^2+1)\,dx \) using the definition of the Riemann integral</p>
 
-        <div class="step">
-            <strong>Step 1:</strong> Set up parameters: \( a = 0, b = 2, \Delta x = \frac{2}{n} \)<br>
-            \( x_i = 0 + i \cdot \frac{2}{n} = \frac{2i}{n} \)<br>
-            <strong>Step 2:</strong> Evaluate \( f(x_i) = x_i^2 + 1 = \frac{4i^2}{n^2} + 1 \)<br>
-            <strong>Step 3:</strong> Form the Riemann sum:<br>
-            \begin{aligned}
-            \sum_{i=1}^n f(x_i)\Delta x &= \sum_{i=1}^n \left(\frac{4i^2}{n^2} + 1\right) \cdot \frac{2}{n} \\
-            &= \frac{2}{n}\sum_{i=1}^n \left(\frac{4i^2}{n^2} + 1\right) \\
-            &= \frac{2}{n}\left(\frac{4}{n^2}\sum_{i=1}^n i^2 + \sum_{i=1}^n 1\right)
-            \end{aligned}
-        </div>
-        <div class="step">
-            <strong>Step 4:</strong> Use summation formulas \( \sum_{i=1}^n i^2 = \frac{n(n+1)(2n+1)}{6} \) and \( \sum_{i=1}^n 1 = n \):<br>
-            \begin{aligned}
-            &= \frac{2}{n}\left(\frac{4}{n^2} \cdot \frac{n(n+1)(2n+1)}{6} + n\right) \\
-            &= \frac{2}{n}\left(\frac{2(n+1)(2n+1)}{3n} + n\right) \\
-            &= \frac{4(n+1)(2n+1)}{3n^2} + 2
-            \end{aligned}
-        </div>
-        <div class="step">
-            <strong>Step 5:</strong> Take the limit as \( n \to \infty \):<br>
-            \begin{aligned}
-            \lim_{n\to\infty} \frac{4(n+1)(2n+1)}{3n^2} + 2 &= \frac{4}{3} \lim_{n\to\infty} \frac{2n^2+3n+1}{n^2} + 2 \\
-            &= \frac{4}{3} \cdot 2 + 2 = \frac{8}{3} + 2 = \frac{14}{3}
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            $$ \int_0^2 (x^2+1)\,dx = \frac{14}{3} $$
-        </div>
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Set up parameters: \( a = 0, b = 2, \Delta x = \frac{2}{n} \)<br>
+                    \( x_i = 0 + i \cdot \frac{2}{n} = \frac{2i}{n} \)<br>
+                    <strong>Step 2:</strong> Evaluate \( f(x_i) = x_i^2 + 1 = \frac{4i^2}{n^2} + 1 \)<br>
+                    <strong>Step 3:</strong> Form the Riemann sum:<br>
+                    \begin{aligned}
+                    \sum_{i=1}^n f(x_i)\Delta x &= \sum_{i=1}^n \left(\frac{4i^2}{n^2} + 1\right) \cdot \frac{2}{n} \\
+                    &= \frac{2}{n}\sum_{i=1}^n \left(\frac{4i^2}{n^2} + 1\right) \\
+                    &= \frac{2}{n}\left(\frac{4}{n^2}\sum_{i=1}^n i^2 + \sum_{i=1}^n 1\right)
+                    \end{aligned}
+                </div>
+                <div class="step">
+                    <strong>Step 4:</strong> Use summation formulas \( \sum_{i=1}^n i^2 = \frac{n(n+1)(2n+1)}{6} \) and \( \sum_{i=1}^n 1 = n \):<br>
+                    \begin{aligned}
+                    &= \frac{2}{n}\left(\frac{4}{n^2} \cdot \frac{n(n+1)(2n+1)}{6} + n\right) \\
+                    &= \frac{2}{n}\left(\frac{2(n+1)(2n+1)}{3n} + n\right) \\
+                    &= \frac{4(n+1)(2n+1)}{3n^2} + 2
+                    \end{aligned}
+                </div>
+                <div class="step">
+                    <strong>Step 5:</strong> Take the limit as \( n \to \infty \):<br>
+                    \begin{aligned}
+                    \lim_{n\to\infty} \frac{4(n+1)(2n+1)}{3n^2} + 2 &= \frac{4}{3} \lim_{n\to\infty} \frac{2n^2+3n+1}{n^2} + 2 \\
+                    &= \frac{4}{3} \cdot 2 + 2 = \frac{8}{3} + 2 = \frac{14}{3}
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    $$ \int_0^2 (x^2+1)\,dx = \frac{14}{3} $$
+                </div>
+            </div>
+        </details>
     </div>
 
     <div class="problem">
         <div class="problem-title">Problem 2: Arc Length of a Parabola</div>
         <p><strong>Task:</strong> Find the arc length of \( y = x^2 \) from \( x = 0 \) to \( x = 2 \)</p>
 
-        <div class="step">
-            <strong>Step 1:</strong> Compute the derivative: \( f'(x) = 2x \)<br>
-            <strong>Step 2:</strong> Set up the arc length integral:<br>
-            \begin{aligned}
-            L &= \int_0^2 \sqrt{1 + (2x)^2}\,dx \\
-            &= \int_0^2 \sqrt{1 + 4x^2}\,dx
-            \end{aligned}
-        </div>
-        <div class="step">
-            <strong>Step 3:</strong> Use trigonometric substitution \( 2x = \tan(\theta) \), so \( x = \frac{1}{2}\tan(\theta) \), \( dx = \frac{1}{2}\sec^2(\theta)\,d\theta \)<br>
-            When \( x = 0 \), \( \theta = 0 \). When \( x = 2 \), \( \theta = \tan^{-1}(4) \).<br>
-            \begin{aligned}
-            L &= \int_0^{\tan^{-1}(4)} \sqrt{1 + \tan^2(\theta)} \cdot \frac{1}{2}\sec^2(\theta)\,d\theta \\
-            &= \frac{1}{2}\int_0^{\tan^{-1}(4)} \sec^3(\theta)\,d\theta
-            \end{aligned}
-        </div>
-        <div class="step">
-            <strong>Step 4:</strong> The integral \( \int \sec^3(\theta)\,d\theta \) has the standard result:<br>
-            \( \int \sec^3(\theta)\,d\theta = \frac{1}{2}\sec(\theta)\tan(\theta) + \frac{1}{2}\ln|\sec(\theta)+\tan(\theta)| + C \)<br>
-            <strong>Step 5:</strong> Evaluate from \( 0 \) to \( \tan^{-1}(4) \):<br>
-            \begin{aligned}
-            L &= \frac{1}{2} \cdot \frac{1}{2}\left[\sec(\theta)\tan(\theta) + \ln|\sec(\theta)+\tan(\theta)|\right]_0^{\tan^{-1}(4)} \\
-            &= \frac{1}{4}\left[\sec(\tan^{-1}(4)) \cdot 4 + \ln|\sec(\tan^{-1}(4))+4| - (1\cdot 0 + \ln|1+0|)\right]
-            \end{aligned}
-        </div>
-        <div class="step">
-            <strong>Step 6:</strong> For \( \theta = \tan^{-1}(4) \), we have a right triangle with opposite = 4, adjacent = 1, hypotenuse = \( \sqrt{17} \):<br>
-            \( \sec(\tan^{-1}(4)) = \frac{\sqrt{17}}{1} = \sqrt{17} \)<br>
-            \begin{aligned}
-            L &= \frac{1}{4}\left[4\sqrt{17} + \ln(\sqrt{17}+4)\right] \\
-            &= \sqrt{17} + \frac{1}{4}\ln(\sqrt{17}+4)
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            $$ L = \sqrt{17} + \frac{1}{4}\ln(\sqrt{17}+4) $$
-        </div>
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Compute the derivative: \( f'(x) = 2x \)<br>
+                    <strong>Step 2:</strong> Set up the arc length integral:<br>
+                    \begin{aligned}
+                    L &= \int_0^2 \sqrt{1 + (2x)^2}\,dx \\
+                    &= \int_0^2 \sqrt{1 + 4x^2}\,dx
+                    \end{aligned}
+                </div>
+                <div class="step">
+                    <strong>Step 3:</strong> Use trigonometric substitution \( 2x = \tan(\theta) \), so \( x = \frac{1}{2}\tan(\theta) \), \( dx = \frac{1}{2}\sec^2(\theta)\,d\theta \)<br>
+                    When \( x = 0 \), \( \theta = 0 \). When \( x = 2 \), \( \theta = \tan^{-1}(4) \).<br>
+                    \begin{aligned}
+                    L &= \int_0^{\tan^{-1}(4)} \sqrt{1 + \tan^2(\theta)} \cdot \frac{1}{2}\sec^2(\theta)\,d\theta \\
+                    &= \frac{1}{2}\int_0^{\tan^{-1}(4)} \sec^3(\theta)\,d\theta
+                    \end{aligned}
+                </div>
+                <div class="step">
+                    <strong>Step 4:</strong> The integral \( \int \sec^3(\theta)\,d\theta \) has the standard result:<br>
+                    \( \int \sec^3(\theta)\,d\theta = \frac{1}{2}\sec(\theta)\tan(\theta) + \frac{1}{2}\ln|\sec(\theta)+\tan(\theta)| + C \)<br>
+                    <strong>Step 5:</strong> Evaluate from \( 0 \) to \( \tan^{-1}(4) \):<br>
+                    \begin{aligned}
+                    L &= \frac{1}{2} \cdot \frac{1}{2}\left[\sec(\theta)\tan(\theta) + \ln|\sec(\theta)+\tan(\theta)|\right]_0^{\tan^{-1}(4)} \\
+                    &= \frac{1}{4}\left[\sec(\tan^{-1}(4)) \cdot 4 + \ln|\sec(\tan^{-1}(4))+4| - (1\cdot 0 + \ln|1+0|)\right]
+                    \end{aligned}
+                </div>
+                <div class="step">
+                    <strong>Step 6:</strong> For \( \theta = \tan^{-1}(4) \), we have a right triangle with opposite = 4, adjacent = 1, hypotenuse = \( \sqrt{17} \):<br>
+                    \( \sec(\tan^{-1}(4)) = \frac{\sqrt{17}}{1} = \sqrt{17} \)<br>
+                    \begin{aligned}
+                    L &= \frac{1}{4}\left[4\sqrt{17} + \ln(\sqrt{17}+4)\right] \\
+                    &= \sqrt{17} + \frac{1}{4}\ln(\sqrt{17}+4)
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    $$ L = \sqrt{17} + \frac{1}{4}\ln(\sqrt{17}+4) $$
+                </div>
+            </div>
+        </details>
     </div>
 
     <div class="problem">
         <div class="problem-title">Problem 3: Arc Length of a Straight Line</div>
         <p><strong>Task:</strong> Find the arc length of \( y = 3x + 2 \) from \( x = 0 \) to \( x = 1 \)</p>
 
-        <div class="step">
-            <strong>Step 1:</strong> Compute the derivative: \( f'(x) = 3 \)<br>
-            <strong>Step 2:</strong> Set up the arc length integral:<br>
-            \begin{aligned}
-            L &= \int_0^1 \sqrt{1 + 3^2}\,dx \\
-            &= \int_0^1 \sqrt{10}\,dx \\
-            &= \sqrt{10} \cdot [x]_0^1 \\
-            &= \sqrt{10}
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            $$ L = \sqrt{10} \approx 3.162 $$
-        </div>
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Compute the derivative: \( f'(x) = 3 \)<br>
+                    <strong>Step 2:</strong> Set up the arc length integral:<br>
+                    \begin{aligned}
+                    L &= \int_0^1 \sqrt{1 + 3^2}\,dx \\
+                    &= \int_0^1 \sqrt{10}\,dx \\
+                    &= \sqrt{10} \cdot [x]_0^1 \\
+                    &= \sqrt{10}
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    $$ L = \sqrt{10} \approx 3.162 $$
+                </div>
+            </div>
+        </details>
         <p><em>Note:</em> This makes sense because the arc length of a straight line segment from \((0,2)\) to \((1,5)\) is \( \sqrt{(1-0)^2 + (5-2)^2} = \sqrt{1+9} = \sqrt{10} \).</p>
     </div>
 
@@ -158,77 +173,92 @@
         <div class="problem-title">Problem 4: Arc Length using u-Substitution</div>
         <p><strong>Task:</strong> Find the arc length of \( y = \frac{x^3}{3} \) from \( x = 0 \) to \( x = 1 \)</p>
 
-        <div class="step">
-            <strong>Step 1:</strong> Compute the derivative: \( f'(x) = x^2 \)<br>
-            <strong>Step 2:</strong> Set up the arc length integral:<br>
-            \begin{aligned}
-            L &= \int_0^1 \sqrt{1 + (x^2)^2}\,dx \\
-            &= \int_0^1 \sqrt{1 + x^4}\,dx
-            \end{aligned}
-            <strong>Step 3:</strong> This integral does not have an elementary anti-derivative. It is typically expressed in terms of elliptic integrals or evaluated numerically:<br>
-            \( L = \int_0^1 \sqrt{1+x^4}\,dx \approx 1.089 \)
-        </div>
-        <div class="final-answer">
-            $$ L = \int_0^1 \sqrt{1+x^4}\,dx \approx 1.089 $$
-        </div>
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Compute the derivative: \( f'(x) = x^2 \)<br>
+                    <strong>Step 2:</strong> Set up the arc length integral:<br>
+                    \begin{aligned}
+                    L &= \int_0^1 \sqrt{1 + (x^2)^2}\,dx \\
+                    &= \int_0^1 \sqrt{1 + x^4}\,dx
+                    \end{aligned}
+                    <strong>Step 3:</strong> This integral does not have an elementary anti-derivative. It is typically expressed in terms of elliptic integrals or evaluated numerically:<br>
+                    \( L = \int_0^1 \sqrt{1+x^4}\,dx \approx 1.089 \)
+                </div>
+                <div class="final-answer">
+                    $$ L = \int_0^1 \sqrt{1+x^4}\,dx \approx 1.089 $$
+                </div>
+            </div>
+        </details>
     </div>
 
     <div class="problem">
         <div class="problem-title">Problem 5: Advanced Integration - Volume Calculation</div>
         <p><strong>Task:</strong> Find the volume of the solid formed by revolving the region bounded by \( y = x^2 \) and \( y = 14 \) about the x-axis</p>
 
-        <div class="step">
-            <strong>Step 1:</strong> Find intersection points: \( x^2 = 14 \implies x = \pm\sqrt{14} \)<br>
-            <strong>Step 2:</strong> Using the washer method, outer radius \( R = 14 \), inner radius \( r = x^2 \):<br>
-            \begin{aligned}
-            V &= \pi\int_{-\sqrt{14}}^{\sqrt{14}} (14^2 - (x^2)^2)\,dx \\
-            &= \pi\int_{-\sqrt{14}}^{\sqrt{14}} (196 - x^4)\,dx \\
-            &= 2\pi\int_0^{\sqrt{14}} (196 - x^4)\,dx \quad \text{(by symmetry)} \\
-            &= 2\pi\left[196x - \frac{x^5}{5}\right]_0^{\sqrt{14}}
-            \end{aligned}
-        </div>
-        <div class="step">
-            <strong>Step 3:</strong> Evaluate:<br>
-            \begin{aligned}
-            V &= 2\pi\left(196\sqrt{14} - \frac{(\sqrt{14})^5}{5}\right) \\
-            &= 2\pi\left(196\sqrt{14} - \frac{14^{5/2}}{5}\right) \\
-            &= 2\pi\left(196\sqrt{14} - \frac{14^2\sqrt{14}}{5}\right) \\
-            &= 2\pi\left(196\sqrt{14} - \frac{196\sqrt{14}}{5}\right) \\
-            &= 2\pi \cdot \frac{4 \cdot 196\sqrt{14}}{5} \\
-            &= \frac{1568\pi\sqrt{14}}{5}
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            $$ V = \frac{1568\pi\sqrt{14}}{5} $$
-        </div>
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Find intersection points: \( x^2 = 14 \implies x = \pm\sqrt{14} \)<br>
+                    <strong>Step 2:</strong> Using the washer method, outer radius \( R = 14 \), inner radius \( r = x^2 \):<br>
+                    \begin{aligned}
+                    V &= \pi\int_{-\sqrt{14}}^{\sqrt{14}} (14^2 - (x^2)^2)\,dx \\
+                    &= \pi\int_{-\sqrt{14}}^{\sqrt{14}} (196 - x^4)\,dx \\
+                    &= 2\pi\int_0^{\sqrt{14}} (196 - x^4)\,dx \quad \text{(by symmetry)} \\
+                    &= 2\pi\left[196x - \frac{x^5}{5}\right]_0^{\sqrt{14}}
+                    \end{aligned}
+                </div>
+                <div class="step">
+                    <strong>Step 3:</strong> Evaluate:<br>
+                    \begin{aligned}
+                    V &= 2\pi\left(196\sqrt{14} - \frac{(\sqrt{14})^5}{5}\right) \\
+                    &= 2\pi\left(196\sqrt{14} - \frac{14^{5/2}}{5}\right) \\
+                    &= 2\pi\left(196\sqrt{14} - \frac{14^2\sqrt{14}}{5}\right) \\
+                    &= 2\pi\left(196\sqrt{14} - \frac{196\sqrt{14}}{5}\right) \\
+                    &= 2\pi \cdot \frac{4 \cdot 196\sqrt{14}}{5} \\
+                    &= \frac{1568\pi\sqrt{14}}{5}
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    $$ V = \frac{1568\pi\sqrt{14}}{5} $$
+                </div>
+            </div>
+        </details>
     </div>
 
     <div class="problem">
         <div class="problem-title">Problem 6: Test Review - Riemann Sum Approximation</div>
         <p><strong>Task:</strong> Approximate \( \int_{-1}^2 (x-1)\,dx \) using \( n = 4 \) rectangles with the Left-Hand Rule</p>
 
-        <div class="step">
-            <strong>Step 1:</strong> Compute \( \Delta x = \frac{2-(-1)}{4} = \frac{3}{4} \)<br>
-            <strong>Step 2:</strong> Find left endpoints: \( x_0 = -1, x_1 = -1/4, x_2 = 1/2, x_3 = 5/4 \)<br>
-            <strong>Step 3:</strong> Evaluate \( f(x) = x-1 \) at each point:<br>
-            \begin{aligned}
-            f(-1) &= -2 \\
-            f(-1/4) &= -5/4 \\
-            f(1/2) &= -1/2 \\
-            f(5/4) &= 1/4
-            \end{aligned}
-        </div>
-        <div class="step">
-            <strong>Step 4:</strong> Compute the Riemann sum:<br>
-            \begin{aligned}
-            L_4 &= \frac{3}{4}\left(-2 - \frac{5}{4} - \frac{1}{2} + \frac{1}{4}\right) \\
-            &= \frac{3}{4}\left(-\frac{8}{4} - \frac{5}{4} - \frac{2}{4} + \frac{1}{4}\right) \\
-            &= \frac{3}{4} \cdot \left(-\frac{14}{4}\right) = -\frac{42}{16} = -\frac{21}{8}
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            $$ L_4 = -\frac{21}{8} = -2.625 $$
-        </div>
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Compute \( \Delta x = \frac{2-(-1)}{4} = \frac{3}{4} \)<br>
+                    <strong>Step 2:</strong> Find left endpoints: \( x_0 = -1, x_1 = -1/4, x_2 = 1/2, x_3 = 5/4 \)<br>
+                    <strong>Step 3:</strong> Evaluate \( f(x) = x-1 \) at each point:<br>
+                    \begin{aligned}
+                    f(-1) &= -2 \\
+                    f(-1/4) &= -5/4 \\
+                    f(1/2) &= -1/2 \\
+                    f(5/4) &= 1/4
+                    \end{aligned}
+                </div>
+                <div class="step">
+                    <strong>Step 4:</strong> Compute the Riemann sum:<br>
+                    \begin{aligned}
+                    L_4 &= \frac{3}{4}\left(-2 - \frac{5}{4} - \frac{1}{2} + \frac{1}{4}\right) \\
+                    &= \frac{3}{4}\left(-\frac{8}{4} - \frac{5}{4} - \frac{2}{4} + \frac{1}{4}\right) \\
+                    &= \frac{3}{4} \cdot \left(-\frac{14}{4}\right) = -\frac{42}{16} = -\frac{21}{8}
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    $$ L_4 = -\frac{21}{8} = -2.625 $$
+                </div>
+            </div>
+        </details>
     </div>
 
     <div class="problem">
@@ -237,60 +267,80 @@
 
         <h3>Part a)</h3>
         <p><strong>Find</strong> \( \frac{d}{dx}\int_0^{x^3} e^{t^2}\,dt \)</p>
-        <div class="step">
-            \begin{aligned}
-            \frac{d}{dx}\int_0^{x^3} e^{t^2}\,dt &= e^{(x^3)^2} \cdot \frac{d}{dx}(x^3) \\
-            &= e^{x^6} \cdot 3x^2 \\
-            &= 3x^2e^{x^6}
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            $$ \frac{d}{dx}\int_0^{x^3} e^{t^2}\,dt = 3x^2e^{x^6} $$
-        </div>
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    \begin{aligned}
+                    \frac{d}{dx}\int_0^{x^3} e^{t^2}\,dt &= e^{(x^3)^2} \cdot \frac{d}{dx}(x^3) \\
+                    &= e^{x^6} \cdot 3x^2 \\
+                    &= 3x^2e^{x^6}
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    $$ \frac{d}{dx}\int_0^{x^3} e^{t^2}\,dt = 3x^2e^{x^6} $$
+                </div>
+            </div>
+        </details>
 
         <h3>Part b)</h3>
         <p><strong>Find</strong> \( \frac{d}{dx}\int_x^{x^2} \sin(t)\,dt \)</p>
-        <div class="step">
-            \begin{aligned}
-            \frac{d}{dx}\int_x^{x^2} \sin(t)\,dt &= \sin(x^2) \cdot 2x - \sin(x) \cdot 1 \\
-            &= 2x\sin(x^2) - \sin(x)
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            $$ \frac{d}{dx}\int_x^{x^2} \sin(t)\,dt = 2x\sin(x^2) - \sin(x) $$
-        </div>
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    \begin{aligned}
+                    \frac{d}{dx}\int_x^{x^2} \sin(t)\,dt &= \sin(x^2) \cdot 2x - \sin(x) \cdot 1 \\
+                    &= 2x\sin(x^2) - \sin(x)
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    $$ \frac{d}{dx}\int_x^{x^2} \sin(t)\,dt = 2x\sin(x^2) - \sin(x) $$
+                </div>
+            </div>
+        </details>
 
         <h3>Part c)</h3>
         <p><strong>Find</strong> \( \frac{d}{dx}\int_0^{x^3} e^{t^2}\,dt \) using chain rule (if upper limit is \( x^2 \))</p>
-        <div class="step">
-            If upper limit is \( x^2 \):<br>
-            \begin{aligned}
-            \frac{d}{dx}\int_0^{x^2} e^{t^2}\,dt &= e^{(x^2)^2} \cdot 2x \\
-            &= 2xe^{x^4}
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            $$ \frac{d}{dx}\int_0^{x^2} e^{t^2}\,dt = 2xe^{x^4} $$
-        </div>
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    If upper limit is \( x^2 \):<br>
+                    \begin{aligned}
+                    \frac{d}{dx}\int_0^{x^2} e^{t^2}\,dt &= e^{(x^2)^2} \cdot 2x \\
+                    &= 2xe^{x^4}
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    $$ \frac{d}{dx}\int_0^{x^2} e^{t^2}\,dt = 2xe^{x^4} $$
+                </div>
+            </div>
+        </details>
     </div>
 
     <div class="problem">
         <div class="problem-title">Problem 8: Arc Length of Linear Function</div>
         <p><strong>Task:</strong> Find the arc length of \( y = 3x + 2 \) from \( (0,2) \) to \( (1,5) \)</p>
 
-        <div class="step">
-            <strong>Step 1:</strong> Compute \( f'(x) = 3 \)<br>
-            <strong>Step 2:</strong> Set up the arc length integral:<br>
-            \begin{aligned}
-            L &= \int_0^1 \sqrt{1 + 3^2}\,dx \\
-            &= \int_0^1 \sqrt{10}\,dx \\
-            &= \sqrt{10} \cdot [x]_0^1 \\
-            &= \sqrt{10}
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            $$ L = \sqrt{10} \approx 3.1623 $$
-        </div>
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Compute \( f'(x) = 3 \)<br>
+                    <strong>Step 2:</strong> Set up the arc length integral:<br>
+                    \begin{aligned}
+                    L &= \int_0^1 \sqrt{1 + 3^2}\,dx \\
+                    &= \int_0^1 \sqrt{10}\,dx \\
+                    &= \sqrt{10} \cdot [x]_0^1 \\
+                    &= \sqrt{10}
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    $$ L = \sqrt{10} \approx 3.1623 $$
+                </div>
+            </div>
+        </details>
     </div>
 
     <footer style="text-align: center; margin-top: 40px; padding: 20px; color: #666; border-top: 1px solid #ddd;">

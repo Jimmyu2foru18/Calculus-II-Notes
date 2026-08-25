@@ -43,30 +43,39 @@
 
         <h3>Problem 1: Trig Substitution</h3>
         <p><strong>Evaluate:</strong> $\int \frac{x^3}{\sqrt{4-x^2}}\,dx$</p>
-        <p>Let $x = 2\sin(\theta)$, $dx = 2\cos(\theta)\,d\theta$</p>
-        <p>$x^3 = 8\sin^3(\theta)$, $\sqrt{4-x^2} = 2\cos(\theta)$</p>
-        $$= \int \frac{8\sin^3(\theta) \cdot 2\cos(\theta)\,d\theta}{2\cos(\theta)}$$
-        $$= 8\int \sin^3(\theta)\,d\theta$$
-        <p>Use $\sin^2(\theta) = 1-\cos^2(\theta)$ and $u = \cos(\theta)$:</p>
-        $$= 8\int (1-u^2)(-du) = -8\left(u - \frac{u^3}{3}\right) + C$$
-        <p>Back-substitute: $\cos(\theta) = \frac{\sqrt{4-x^2}}{2}$</p>
-        $$= -4\sqrt{4-x^2} + \frac{(4-x^2)^{3/2}}{3} + C$$
+        <details class="question">
+            <summary>Click to see the solution</summary>
+            <p>Let $x = 2\sin(\theta)$, $dx = 2\cos(\theta)\,d\theta$</p>
+            <p>$x^3 = 8\sin^3(\theta)$, $\sqrt{4-x^2} = 2\cos(\theta)$</p>
+            $$= \int \frac{8\sin^3(\theta) \cdot 2\cos(\theta)\,d\theta}{2\cos(\theta)}$$
+            $$= 8\int \sin^3(\theta)\,d\theta$$
+            <p>Use $\sin^2(\theta) = 1-\cos^2(\theta)$ and $u = \cos(\theta)$:</p>
+            $$= 8\int (1-u^2)(-du) = -8\left(u - \frac{u^3}{3}\right) + C$$
+            <p>Back-substitute: $\cos(\theta) = \frac{\sqrt{4-x^2}}{2}$</p>
+            $$= -4\sqrt{4-x^2} + \frac{(4-x^2)^{3/2}}{3} + C$$
+        </details>
 
         <h3>Problem 2: Series Convergence with Ratio Test</h3>
         <p><strong>Task:</strong> Test $\sum_{n=1}^{\infty} \frac{n^2}{3^n}$ for convergence</p>
-        $$\rho = \lim_{n\to\infty} \frac{(n+1)^2/3^{n+1}}{n^2/3^n}$$
-        $$= \lim_{n\to\infty} \frac{(n+1)^2}{3n^2}$$
-        $$= \lim_{n\to\infty} \frac{1}{3}\left(1 + \frac{1}{n}\right)^2$$
-        $$= \frac{1}{3}$$
-        <p>Since $\rho = \frac{1}{3} < 1$, the series converges by the Ratio Test.</p>
+        <details class="question">
+            <summary>Click to see the solution</summary>
+            $$\rho = \lim_{n\to\infty} \frac{(n+1)^2/3^{n+1}}{n^2/3^n}$$
+            $$= \lim_{n\to\infty} \frac{(n+1)^2}{3n^2}$$
+            $$= \lim_{n\to\infty} \frac{1}{3}\left(1 + \frac{1}{n}\right)^2$$
+            $$= \frac{1}{3}$$
+            <p>Since $\rho = \frac{1}{3} < 1$, the series converges by the Ratio Test.</p>
+        </details>
 
         <h3>Problem 3: Parametric Curves</h3>
         <p><strong>Task:</strong> Find the slope of the tangent line to the curve $x = \cos(t)$, $y = \sin(t)$ at $t = \pi/4$</p>
-        <p>$\frac{dx}{dt} = -\sin(t)$, $\frac{dy}{dt} = \cos(t)$</p>
-        <p>Slope: $\frac{dy}{dx} = \frac{dy/dt}{dx/dt} = \frac{\cos(t)}{-\sin(t)} = -\cot(t)$</p>
-        <p>At $t = \pi/4$:</p>
-        $$m = -\cot\left(\frac{\pi}{4}\right) = -1$$
-        <p>The tangent line has slope $-1$.</p>
+        <details class="question">
+            <summary>Click to see the solution</summary>
+            <p>$\frac{dx}{dt} = -\sin(t)$, $\frac{dy}{dt} = \cos(t)$</p>
+            <p>Slope: $\frac{dy}{dx} = \frac{dy/dt}{dx/dt} = \frac{\cos(t)}{-\sin(t)} = -\cot(t)$</p>
+            <p>At $t = \pi/4$:</p>
+            $$m = -\cot\left(\frac{\pi}{4}\right) = -1$$
+            <p>The tangent line has slope $-1$.</p>
+        </details>
     </main>
 </div>
 <script src="../js/app.js"></script>

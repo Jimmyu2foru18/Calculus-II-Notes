@@ -43,33 +43,42 @@
 
         <h3>Problem 1: Integration by Parts</h3>
         <p><strong>Evaluate:</strong> $\int x^2 e^x\,dx$</p>
-        <p>First integration by parts: $u = x^2$, $dv = e^x dx$</p>
-        <p>$du = 2x\,dx$, $v = e^x$</p>
-        $$= x^2 e^x - 2\int x e^x\,dx$$
-        <p>Second integration by parts: $u = x$, $dv = e^x dx$</p>
-        <p>$du = dx$, $v = e^x$</p>
-        $$\int x e^x\,dx = x e^x - \int e^x\,dx = x e^x - e^x$$
-        <p>Substitute back:</p>
-        $$= x^2 e^x - 2(x e^x - e^x) + C$$
-        $$= (x^2 - 2x + 2)e^x + C$$
+        <details class="question">
+            <summary>Click to see the solution</summary>
+            <p>First integration by parts: $u = x^2$, $dv = e^x dx$</p>
+            <p>$du = 2x\,dx$, $v = e^x$</p>
+            $$= x^2 e^x - 2\int x e^x\,dx$$
+            <p>Second integration by parts: $u = x$, $dv = e^x dx$</p>
+            <p>$du = dx$, $v = e^x$</p>
+            $$\int x e^x\,dx = x e^x - \int e^x\,dx = x e^x - e^x$$
+            <p>Substitute back:</p>
+            $$= x^2 e^x - 2(x e^x - e^x) + C$$
+            $$= (x^2 - 2x + 2)e^x + C$$
+        </details>
 
         <h3>Problem 2: Series Convergence</h3>
         <p><strong>Task:</strong> Test $\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n}$ for convergence</p>
-        <p>This is the alternating harmonic series.</p>
-        <p>$a_n = \frac{1}{n} > 0$</p>
-        <p>$a_n$ is decreasing</p>
-        <p>$\lim_{n\to\infty} a_n = 0$</p>
-        <p>All conditions of the Alternating Series Test are satisfied.</p>
-        <p>The series converges.</p>
+        <details class="question">
+            <summary>Click to see the solution</summary>
+            <p>This is the alternating harmonic series.</p>
+            <p>$a_n = \frac{1}{n} > 0$</p>
+            <p>$a_n$ is decreasing</p>
+            <p>$\lim_{n\to\infty} a_n = 0$</p>
+            <p>All conditions of the Alternating Series Test are satisfied.</p>
+            <p>The series converges.</p>
+        </details>
 
         <h3>Problem 3: Volume by Shells</h3>
         <p><strong>Task:</strong> Find the volume when the region bounded by $y = x^2$ and $y = 4$ is revolved about the y-axis.</p>
-        <p>Intersection: $x^2 = 4 \implies x = 2$</p>
-        $$V = 2\pi \int_0^2 x(4-x^2)\,dx$$
-        $$= 2\pi \int_0^2 (4x - x^3)\,dx$$
-        $$= 2\pi \left[2x^2 - \frac{x^4}{4}\right]_0^2$$
-        $$= 2\pi(8 - 4)$$
-        $$= 8\pi$$
+        <details class="question">
+            <summary>Click to see the solution</summary>
+            <p>Intersection: $x^2 = 4 \implies x = 2$</p>
+            $$V = 2\pi \int_0^2 x(4-x^2)\,dx$$
+            $$= 2\pi \int_0^2 (4x - x^3)\,dx$$
+            $$= 2\pi \left[2x^2 - \frac{x^4}{4}\right]_0^2$$
+            $$= 2\pi(8 - 4)$$
+            $$= 8\pi$$
+        </details>
     </main>
 </div>
 <script src="../js/app.js"></script>

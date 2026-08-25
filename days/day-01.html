@@ -94,65 +94,80 @@
         <h3>Example 1a: Power and Constant Rules</h3>
         <p><strong>Find</strong> \( f'(x) \) where \( f(x) = 7x^2 + 5x + 7\sqrt{x} \)</p>
         
-        <div class="step">
-            <strong>Step 1:</strong> Rewrite all terms using rational exponents:<br>
-            \( f(x) = 7x^2 + 5x + 7x^{1/2} \)
-        </div>
-        <div class="step">
-            <strong>Step 2:</strong> Apply the power rule \( \frac{d}{dx}[x^n] = nx^{n-1} \) to each term:<br>
-            \begin{aligned}
-            f'(x) &= 7 \cdot 2x^{2-1} + 5 \cdot 1x^{1-1} + 7 \cdot \frac{1}{2}x^{1/2 - 1} \\
-            &= 14x^1 + 5x^0 + \frac{7}{2}x^{-1/2}
-            \end{aligned}
-        </div>
-        <div class="step">
-            <strong>Step 3:</strong> Simplify:<br>
-            \( f'(x) = 14x + 5 + \frac{7}{2\sqrt{x}} \)
-        </div>
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Rewrite all terms using rational exponents:<br>
+                    \( f(x) = 7x^2 + 5x + 7x^{1/2} \)
+                </div>
+                <div class="step">
+                    <strong>Step 2:</strong> Apply the power rule \( \frac{d}{dx}[x^n] = nx^{n-1} \) to each term:<br>
+                    \begin{aligned}
+                    f'(x) &= 7 \cdot 2x^{2-1} + 5 \cdot 1x^{1-1} + 7 \cdot \frac{1}{2}x^{1/2 - 1} \\
+                    &= 14x^1 + 5x^0 + \frac{7}{2}x^{-1/2}
+                    \end{aligned}
+                </div>
+                <div class="step">
+                    <strong>Step 3:</strong> Simplify:<br>
+                    \( f'(x) = 14x + 5 + \frac{7}{2\sqrt{x}} \)
+                </div>
 
-        <div class="final-answer">
-            <div class="final-answer-title">Final Answer:</div>
-            $$ f'(x) = 14x + 5 + \frac{7}{2\sqrt{x}} $$
-        </div>
+                <div class="final-answer">
+                    <div class="final-answer-title">Final Answer:</div>
+                    $$ f'(x) = 14x + 5 + \frac{7}{2\sqrt{x}} $$
+                </div>
+            </div>
+        </details>
 
         <h3>Example 1b: Chain Rule</h3>
         <p><strong>Find</strong> \( f'(x) \) where \( f(x) = e^{x^2 + 1} \)</p>
         
-        <div class="step">
-            <strong>Step 1:</strong> Identify outer and inner functions:<br>
-            Outer: \( e^u \), Inner: \( u = x^2 + 1 \)
-        </div>
-        <div class="step">
-            <strong>Step 2:</strong> Apply the chain rule \( \frac{d}{dx}[f(g(x))] = f'(g(x)) \cdot g'(x) \):<br>
-            \begin{aligned}
-            f'(x) &= e^{x^2+1} \cdot \frac{d}{dx}[x^2 + 1] \\
-            &= e^{x^2+1} \cdot (2x)
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            <div class="final-answer-title">Final Answer:</div>
-            $$ f'(x) = 2xe^{x^2+1} $$
-        </div>
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Identify outer and inner functions:<br>
+                    Outer: \( e^u \), Inner: \( u = x^2 + 1 \)
+                </div>
+                <div class="step">
+                    <strong>Step 2:</strong> Apply the chain rule \( \frac{d}{dx}[f(g(x))] = f'(g(x)) \cdot g'(x) \):<br>
+                    \begin{aligned}
+                    f'(x) &= e^{x^2+1} \cdot \frac{d}{dx}[x^2 + 1] \\
+                    &= e^{x^2+1} \cdot (2x)
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    <div class="final-answer-title">Final Answer:</div>
+                    $$ f'(x) = 2xe^{x^2+1} $$
+                </div>
+            </div>
+        </details>
 
         <h3>Example 1c: Product Rule</h3>
         <p><strong>Find</strong> \( f'(x) \) where \( f(x) = e^x \sin(x^2) \)</p>
         
-        <div class="step">
-            <strong>Step 1:</strong> Identify \( u = e^x \) and \( v = \sin(x^2) \)<br>
-            <strong>Step 2:</strong> Compute derivatives:<br>
-            \( u' = e^x \) and \( v' = \cos(x^2) \cdot 2x \) (chain rule)
-        </div>
-        <div class="step">
-            <strong>Step 3:</strong> Apply product rule \( (uv)' = u'v + uv' \):<br>
-            \begin{aligned}
-            f'(x) &= e^x \cdot \sin(x^2) + e^x \cdot \cos(x^2) \cdot 2x \\
-            &= e^x\sin(x^2) + 2xe^x\cos(x^2)
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            <div class="final-answer-title">Final Answer:</div>
-            $$ f'(x) = e^x\sin(x^2) + 2xe^x\cos(x^2) $$
-        </div>
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Identify \( u = e^x \) and \( v = \sin(x^2) \)<br>
+                    <strong>Step 2:</strong> Compute derivatives:<br>
+                    \( u' = e^x \) and \( v' = \cos(x^2) \cdot 2x \) (chain rule)
+                </div>
+                <div class="step">
+                    <strong>Step 3:</strong> Apply product rule \( (uv)' = u'v + uv' \):<br>
+                    \begin{aligned}
+                    f'(x) &= e^x \cdot \sin(x^2) + e^x \cdot \cos(x^2) \cdot 2x \\
+                    &= e^x\sin(x^2) + 2xe^x\cos(x^2)
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    <div class="final-answer-title">Final Answer:</div>
+                    $$ f'(x) = e^x\sin(x^2) + 2xe^x\cos(x^2) $$
+                </div>
+            </div>
+        </details>
     </div>
 
     <div class="problem">
@@ -160,52 +175,76 @@
 
         <h3>Example 2a</h3>
         <p><strong>Find</strong> \( f'(x) \) where \( f(x) = \sqrt{x^2+1} = (x^2+1)^{1/2} \)</p>
-        <div class="step">
-            \begin{aligned}
-            f'(x) &= \frac{1}{2}(x^2+1)^{-1/2} \cdot 2x \\
-            &= \frac{x}{\sqrt{x^2+1}}
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            $$ f'(x) = \frac{x}{\sqrt{x^2+1}} $$
-        </div>
+        
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    \begin{aligned}
+                    f'(x) &= \frac{1}{2}(x^2+1)^{-1/2} \cdot 2x \\
+                    &= \frac{x}{\sqrt{x^2+1}}
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    $$ f'(x) = \frac{x}{\sqrt{x^2+1}} $$
+                </div>
+            </div>
+        </details>
 
         <h3>Example 2b</h3>
         <p><strong>Find</strong> \( f'(x) \) where \( f(x) = \cos(\cos(x)) \)</p>
-        <div class="step">
-            \begin{aligned}
-            f'(x) &= -\sin(\cos(x)) \cdot (-\sin(x)) \\
-            &= \sin(\cos(x))\sin(x)
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            $$ f'(x) = \sin(\cos(x))\sin(x) $$
-        </div>
+        
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    \begin{aligned}
+                    f'(x) &= -\sin(\cos(x)) \cdot (-\sin(x)) \\
+                    &= \sin(\cos(x))\sin(x)
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    $$ f'(x) = \sin(\cos(x))\sin(x) $$
+                </div>
+            </div>
+        </details>
 
         <h3>Example 2c</h3>
         <p><strong>Find</strong> \( f'(x) \) where \( f(x) = \sin^{-1}(x^2+1) \)</p>
-        <div class="step">
-            <strong>Note:</strong> \( \frac{d}{dx}[\sin^{-1}(u)] = \frac{u'}{\sqrt{1-u^2}} \)<br><br>
-            \begin{aligned}
-            f'(x) &= \frac{2x}{\sqrt{1-(x^2+1)^2}}
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            $$ f'(x) = \frac{2x}{\sqrt{1-(x^2+1)^2}} $$
-        </div>
+        
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Note:</strong> \( \frac{d}{dx}[\sin^{-1}(u)] = \frac{u'}{\sqrt{1-u^2}} \)<br><br>
+                    \begin{aligned}
+                    f'(x) &= \frac{2x}{\sqrt{1-(x^2+1)^2}}
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    $$ f'(x) = \frac{2x}{\sqrt{1-(x^2+1)^2}} $$
+                </div>
+            </div>
+        </details>
 
         <h3>Example 2d</h3>
         <p><strong>Find</strong> \( f'(x) \) where \( f(x) = \cos(x^2)\sin^{-1}(x^3) \)</p>
-        <div class="step">
-            <strong>Step 1:</strong> Apply product rule with \( u = \cos(x^2) \), \( v = \sin^{-1}(x^3) \)<br>
-            <strong>Step 2:</strong> Compute \( u' = -\sin(x^2) \cdot 2x \) and \( v' = \frac{3x^2}{\sqrt{1-x^6}} \)<br>
-            \begin{aligned}
-            f'(x) &= -\sin(x^2) \cdot 2x \cdot \sin^{-1}(x^3) + \cos(x^2) \cdot \frac{3x^2}{\sqrt{1-x^6}}
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            $$ f'(x) = -2x\sin(x^2)\sin^{-1}(x^3) + \frac{3x^2\cos(x^2)}{\sqrt{1-x^6}} $$
-        </div>
+        
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Apply product rule with \( u = \cos(x^2) \), \( v = \sin^{-1}(x^3) \)<br>
+                    <strong>Step 2:</strong> Compute \( u' = -\sin(x^2) \cdot 2x \) and \( v' = \frac{3x^2}{\sqrt{1-x^6}} \)<br>
+                    \begin{aligned}
+                    f'(x) &= -\sin(x^2) \cdot 2x \cdot \sin^{-1}(x^3) + \cos(x^2) \cdot \frac{3x^2}{\sqrt{1-x^6}}
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    $$ f'(x) = -2x\sin(x^2)\sin^{-1}(x^3) + \frac{3x^2\cos(x^2)}{\sqrt{1-x^6}} $$
+                </div>
+            </div>
+        </details>
     </div>
 
     <div class="problem">
@@ -233,76 +272,106 @@
 
         <h3>Example 3a</h3>
         <p><strong>Find</strong> \( \int (x^2 - 5 + 7x^{-1} + 8x^{-2})\,dx \)</p>
-        <div class="step">
-            <strong>Step 1:</strong> Apply linearity of integration:<br>
-            \( \int (x^2 - 5 + 7x^{-1} + 8x^{-2})\,dx = \int x^2\,dx - \int 5\,dx + \int 7x^{-1}\,dx + \int 8x^{-2}\,dx \)
-        </div>
-        <div class="step">
-            <strong>Step 2:</strong> Integrate each term:<br>
-            \begin{aligned}
-            \int x^2\,dx &= \frac{x^3}{3} \\
-            \int 5\,dx &= 5x \\
-            \int 7x^{-1}\,dx &= 7\ln|x| \\
-            \int 8x^{-2}\,dx &= 8 \cdot \frac{x^{-1}}{-1} = -\frac{8}{x}
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            $$ \int (x^2 - 5 + 7x^{-1} + 8x^{-2})\,dx = \frac{x^3}{3} - 5x + 7\ln|x| - \frac{8}{x} + C $$
-        </div>
+        
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Apply linearity of integration:<br>
+                    \( \int (x^2 - 5 + 7x^{-1} + 8x^{-2})\,dx = \int x^2\,dx - \int 5\,dx + \int 7x^{-1}\,dx + \int 8x^{-2}\,dx \)
+                </div>
+                <div class="step">
+                    <strong>Step 2:</strong> Integrate each term:<br>
+                    \begin{aligned}
+                    \int x^2\,dx &= \frac{x^3}{3} \\
+                    \int 5\,dx &= 5x \\
+                    \int 7x^{-1}\,dx &= 7\ln|x| \\
+                    \int 8x^{-2}\,dx &= 8 \cdot \frac{x^{-1}}{-1} = -\frac{8}{x}
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    $$ \int (x^2 - 5 + 7x^{-1} + 8x^{-2})\,dx = \frac{x^3}{3} - 5x + 7\ln|x| - \frac{8}{x} + C $$
+                </div>
+            </div>
+        </details>
 
         <h3>Example 3b</h3>
         <p><strong>Find</strong> \( \int (3x+1)^2\,dx \)</p>
-        <div class="step">
-            <strong>Step 1:</strong> Expand \( (3x+1)^2 = 9x^2 + 6x + 1 \)<br>
-            <strong>Step 2:</strong> Integrate term by term:<br>
-            \begin{aligned}
-            \int (9x^2 + 6x + 1)\,dx &= 9 \cdot \frac{x^3}{3} + 6 \cdot \frac{x^2}{2} + x \\
-            &= 3x^3 + 3x^2 + x
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            $$ \int (3x+1)^2\,dx = 3x^3 + 3x^2 + x + C $$
-        </div>
+        
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Expand \( (3x+1)^2 = 9x^2 + 6x + 1 \)<br>
+                    <strong>Step 2:</strong> Integrate term by term:<br>
+                    \begin{aligned}
+                    \int (9x^2 + 6x + 1)\,dx &= 9 \cdot \frac{x^3}{3} + 6 \cdot \frac{x^2}{2} + x \\
+                    &= 3x^3 + 3x^2 + x
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    $$ \int (3x+1)^2\,dx = 3x^3 + 3x^2 + x + C $$
+                </div>
+            </div>
+        </details>
 
         <h3>Example 3c</h3>
         <p><strong>Find</strong> \( \int [4(1+x^2)^{-1} + \sec^2(x)]\,dx \)</p>
-        <div class="step">
-            \begin{aligned}
-            \int [4(1+x^2)^{-1} + \sec^2(x)]\,dx &= 4\int \frac{1}{1+x^2}\,dx + \int \sec^2(x)\,dx \\
-            &= 4\tan^{-1}(x) + \tan(x) + C
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            $$ \int [4(1+x^2)^{-1} + \sec^2(x)]\,dx = 4\tan^{-1}(x) + \tan(x) + C $$
-        </div>
+        
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    \begin{aligned}
+                    \int [4(1+x^2)^{-1} + \sec^2(x)]\,dx &= 4\int \frac{1}{1+x^2}\,dx + \int \sec^2(x)\,dx \\
+                    &= 4\tan^{-1}(x) + \tan(x) + C
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    $$ \int [4(1+x^2)^{-1} + \sec^2(x)]\,dx = 4\tan^{-1}(x) + \tan(x) + C $$
+                </div>
+            </div>
+        </details>
 
         <h3>Example 3d</h3>
         <p><strong>Find</strong> \( \int \sqrt{\sin^2(e^x) + \cos^2(e^x)}\,dx \)</p>
-        <div class="step">
-            <strong>Step 1:</strong> Use the Pythagorean identity \( \sin^2(\theta) + \cos^2(\theta) = 1 \):<br>
-            \( \sqrt{\sin^2(e^x) + \cos^2(e^x)} = \sqrt{1} = 1 \)<br>
-            <strong>Step 2:</strong> Integrate:<br>
-            \( \int 1\,dx = x + C \)
-        </div>
-        <div class="final-answer">
-            $$ \int \sqrt{\sin^2(e^x) + \cos^2(e^x)}\,dx = x + C $$
-        </div>
+        
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Use the Pythagorean identity \( \sin^2(\theta) + \cos^2(\theta) = 1 \):<br>
+                    \( \sqrt{\sin^2(e^x) + \cos^2(e^x)} = \sqrt{1} = 1 \)<br>
+                    <strong>Step 2:</strong> Integrate:<br>
+                    \( \int 1\,dx = x + C \)
+                </div>
+                <div class="final-answer">
+                    $$ \int \sqrt{\sin^2(e^x) + \cos^2(e^x)}\,dx = x + C $$
+                </div>
+            </div>
+        </details>
 
         <h3>Example 3e</h3>
         <p><strong>Find</strong> \( \int (\sqrt[3]{x} + \sqrt[5]{x^3} - x^{-3/4} - 5)\,dx \)</p>
-        <div class="step">
-            <strong>Step 1:</strong> Rewrite with rational exponents: \( x^{1/3} + x^{3/5} - x^{-3/4} - 5 \)<br>
-            <strong>Step 2:</strong> Integrate term by term:<br>
-            \begin{aligned}
-            \int x^{1/3}\,dx &= \frac{x^{4/3}}{4/3} = \frac{3}{4}x^{4/3} \\
-            \int x^{3/5}\,dx &= \frac{x^{8/5}}{8/5} = \frac{5}{8}x^{8/5} \\
-            \int (-x^{-3/4})\,dx &= -\frac{x^{1/4}}{1/4} = -4x^{1/4} \\
-            \int (-5)\,dx &= -5x
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            $$ \int (\sqrt[3]{x} + \sqrt[5]{x^3} - x^{-3/4} - 5)\,dx = \frac{3}{4}x^{4/3} + \frac{5}{8}x^{8/5} - 4x^{1/4} - 5x + C $$
-        </div>
+        
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Rewrite with rational exponents: \( x^{1/3} + x^{3/5} - x^{-3/4} - 5 \)<br>
+                    <strong>Step 2:</strong> Integrate term by term:<br>
+                    \begin{aligned}
+                    \int x^{1/3}\,dx &= \frac{x^{4/3}}{4/3} = \frac{3}{4}x^{4/3} \\
+                    \int x^{3/5}\,dx &= \frac{x^{8/5}}{8/5} = \frac{5}{8}x^{8/5} \\
+                    \int (-x^{-3/4})\,dx &= -\frac{x^{1/4}}{1/4} = -4x^{1/4} \\
+                    \int (-5)\,dx &= -5x
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    $$ \int (\sqrt[3]{x} + \sqrt[5]{x^3} - x^{-3/4} - 5)\,dx = \frac{3}{4}x^{4/3} + \frac{5}{8}x^{8/5} - 4x^{1/4} - 5x + C $$
+                </div>
+            </div>
+        </details>
     </div>
 
     <div class="problem">
@@ -311,170 +380,140 @@
 
         <h3>Example 4a: Basic Substitution</h3>
         <p><strong>Evaluate</strong> \( \int e^{7x}\,dx \)</p>
-        <div class="step">
-            <strong>Step 1:</strong> Let \( u = 7x \), then \( du = 7\,dx \), so \( dx = \frac{du}{7} \)<br>
-            <strong>Step 2:</strong> Substitute:<br>
-            \( \int e^{7x}\,dx = \int e^u \cdot \frac{du}{7} = \frac{1}{7}\int e^u\,du \)<br>
-            <strong>Step 3:</strong> Integrate and back-substitute:<br>
-            \( = \frac{1}{7}e^u + C = \frac{1}{7}e^{7x} + C \)
-        </div>
-        <div class="final-answer">
-            $$ \int e^{7x}\,dx = \frac{1}{7}e^{7x} + C $$
-        </div>
+        
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Let \( u = 7x \), then \( du = 7\,dx \), so \( dx = \frac{du}{7} \)<br>
+                    <strong>Step 2:</strong> Substitute:<br>
+                    \( \int e^{7x}\,dx = \int e^u \cdot \frac{du}{7} = \frac{1}{7}\int e^u\,du \)<br>
+                    <strong>Step 3:</strong> Integrate and back-substitute:<br>
+                    \( = \frac{1}{7}e^u + C = \frac{1}{7}e^{7x} + C \)
+                </div>
+                <div class="final-answer">
+                    $$ \int e^{7x}\,dx = \frac{1}{7}e^{7x} + C $$
+                </div>
+            </div>
+        </details>
 
         <h3>Example 4b</h3>
         <p><strong>Evaluate</strong> \( \int (x^3+1)^{3}x^2\,dx \)</p>
-        <div class="step">
-            <strong>Step 1:</strong> Let \( u = x^3 + 1 \), then \( du = 3x^2\,dx \), so \( x^2\,dx = \frac{du}{3} \)<br>
-            <strong>Step 2:</strong> Substitute:<br>
-            \( \int u^3 \cdot \frac{du}{3} = \frac{1}{3}\int u^3\,du \)<br>
-            <strong>Step 3:</strong> Integrate:<br>
-            \( = \frac{1}{3} \cdot \frac{u^4}{4} + C = \frac{u^4}{12} + C \)<br>
-            <strong>Step 4:</strong> Back-substitute:<br>
-            \( = \frac{(x^3+1)^4}{12} + C \)
-        </div>
-        <div class="final-answer">
-            $$ \int (x^3+1)^3 x^2\,dx = \frac{(x^3+1)^4}{12} + C $$
-        </div>
+        
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Let \( u = x^3 + 1 \), then \( du = 3x^2\,dx \), so \( x^2\,dx = \frac{du}{3} \)<br>
+                    <strong>Step 2:</strong> Substitute:<br>
+                    \( \int u^3 \cdot \frac{du}{3} = \frac{1}{3}\int u^3\,du \)<br>
+                    <strong>Step 3:</strong> Integrate:<br>
+                    \( = \frac{1}{3} \cdot \frac{u^4}{4} + C = \frac{u^4}{12} + C \)<br>
+                    <strong>Step 4:</strong> Back-substitute:<br>
+                    \( = \frac{(x^3+1)^4}{12} + C \)
+                </div>
+                <div class="final-answer">
+                    $$ \int (x^3+1)^3 x^2\,dx = \frac{(x^3+1)^4}{12} + C $$
+                </div>
+            </div>
+        </details>
 
         <h3>Example 4c</h3>
         <p><strong>Evaluate</strong> \( \int \frac{x^3}{1+x^4}\,dx \)</p>
-        <div class="step">
-            <strong>Step 1:</strong> Let \( u = 1 + x^4 \), then \( du = 4x^3\,dx \), so \( x^3\,dx = \frac{du}{4} \)<br>
-            <strong>Step 2:</strong> Substitute:<br>
-            \( \int \frac{1}{u} \cdot \frac{du}{4} = \frac{1}{4}\int \frac{1}{u}\,du \)<br>
-            <strong>Step 3:</strong> Integrate:<br>
-            \( = \frac{1}{4}\ln|u| + C = \frac{1}{4}\ln|1+x^4| + C \)
-        </div>
-        <div class="final-answer">
-            $$ \int \frac{x^3}{1+x^4}\,dx = \frac{1}{4}\ln(1+x^4) + C $$
-        </div>
+        
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Let \( u = 1 + x^4 \), then \( du = 4x^3\,dx \), so \( x^3\,dx = \frac{du}{4} \)<br>
+                    <strong>Step 2:</strong> Substitute:<br>
+                    \( \int \frac{1}{u} \cdot \frac{du}{4} = \frac{1}{4}\int \frac{1}{u}\,du \)<br>
+                    <strong>Step 3:</strong> Integrate:<br>
+                    \( = \frac{1}{4}\ln|u| + C = \frac{1}{4}\ln|1+x^4| + C \)
+                </div>
+                <div class="final-answer">
+                    $$ \int \frac{x^3}{1+x^4}\,dx = \frac{1}{4}\ln(1+x^4) + C $$
+                </div>
+            </div>
+        </details>
 
         <h3>Example 4d</h3>
         <p><strong>Evaluate</strong> \( \int \frac{dx}{1+x^2} \) using \( u = x^2 \)</p>
-        <div class="step">
-            <strong>Step 1:</strong> Let \( u = x^2 \), then \( du = 2x\,dx \), so \( dx = \frac{du}{2x} \)<br>
-            <strong>Step 2:</strong> This substitution doesn't simplify well. Instead, recognize the standard form:<br>
-            \( \int \frac{dx}{1+x^2} = \tan^{-1}(x) + C \)
-        </div>
-        <div class="final-answer">
-            $$ \int \frac{dx}{1+x^2} = \tan^{-1}(x) + C $$
-        </div>
+        
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Let \( u = x^2 \), then \( du = 2x\,dx \), so \( dx = \frac{du}{2x} \)<br>
+                    <strong>Step 2:</strong> This substitution doesn't simplify well. Instead, recognize the standard form:<br>
+                    \( \int \frac{dx}{1+x^2} = \tan^{-1}(x) + C \)
+                </div>
+                <div class="final-answer">
+                    $$ \int \frac{dx}{1+x^2} = \tan^{-1}(x) + C $$
+                </div>
+            </div>
+        </details>
 
         <h3>Example 4e</h3>
         <p><strong>Evaluate</strong> \( \int \sin(5x)\,dx \)</p>
-        <div class="step">
-            <strong>Step 1:</strong> Let \( u = 5x \), then \( du = 5\,dx \), so \( dx = \frac{du}{5} \)<br>
-            <strong>Step 2:</strong> Substitute:<br>
-            \( \int \sin(u) \cdot \frac{du}{5} = \frac{1}{5}\int \sin(u)\,du \)<br>
-            <strong>Step 3:</strong> Integrate:<br>
-            \( = \frac{1}{5}(-\cos(u)) + C = -\frac{1}{5}\cos(5x) + C \)
-        </div>
-        <div class="final-answer">
-            $$ \int \sin(5x)\,dx = -\frac{1}{5}\cos(5x) + C $$
-        </div>
+        
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Let \( u = 5x \), then \( du = 5\,dx \), so \( dx = \frac{du}{5} \)<br>
+                    <strong>Step 2:</strong> Substitute:<br>
+                    \( \int \sin(u) \cdot \frac{du}{5} = \frac{1}{5}\int \sin(u)\,du \)<br>
+                    <strong>Step 3:</strong> Integrate:<br>
+                    \( = \frac{1}{5}(-\cos(u)) + C = -\frac{1}{5}\cos(5x) + C \)
+                </div>
+                <div class="final-answer">
+                    $$ \int \sin(5x)\,dx = -\frac{1}{5}\cos(5x) + C $$
+                </div>
+            </div>
+        </details>
 
         <h3>Example 4f</h3>
         <p><strong>Evaluate</strong> \( \int \sqrt{x^5+1}\,x^4\,dx \)</p>
-        <div class="step">
-            <strong>Step 1:</strong> Let \( u = x^5 + 1 \), then \( du = 5x^4\,dx \), so \( x^4\,dx = \frac{du}{5} \)<br>
-            <strong>Step 2:</strong> Substitute:<br>
-            \( \int u^{1/2} \cdot \frac{du}{5} = \frac{1}{5}\int u^{1/2}\,du \)<br>
-            <strong>Step 3:</strong> Integrate:<br>
-            \( = \frac{1}{5} \cdot \frac{u^{3/2}}{3/2} + C = \frac{2}{15}u^{3/2} + C \)<br>
-            <strong>Step 4:</strong> Back-substitute:<br>
-            \( = \frac{2}{15}(x^5+1)^{3/2} + C \)
-        </div>
-        <div class="final-answer">
-            $$ \int \sqrt{x^5+1}\,x^4\,dx = \frac{2}{15}(x^5+1)^{3/2} + C $$
-        </div>
+        
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Let \( u = x^5 + 1 \), then \( du = 5x^4\,dx \), so \( x^4\,dx = \frac{du}{5} \)<br>
+                    <strong>Step 2:</strong> Substitute:<br>
+                    \( \int u^{1/2} \cdot \frac{du}{5} = \frac{1}{5}\int u^{1/2}\,du \)<br>
+                    <strong>Step 3:</strong> Integrate:<br>
+                    \( = \frac{1}{5} \cdot \frac{u^{3/2}}{3/2} + C = \frac{2}{15}u^{3/2} + C \)<br>
+                    <strong>Step 4:</strong> Back-substitute:<br>
+                    \( = \frac{2}{15}(x^5+1)^{3/2} + C \)
+                </div>
+                <div class="final-answer">
+                    $$ \int \sqrt{x^5+1}\,x^4\,dx = \frac{2}{15}(x^5+1)^{3/2} + C $$
+                </div>
+            </div>
+        </details>
 
         <h3>Example 4g</h3>
-        <p><strong>Evaluate</strong> \( \int \frac{x^3}{\sqrt{x^5+1}}\,dx \)</p>
-        <div class="step">
-            <strong>Step 1:</strong> Let \( u = x^5 + 1 \), then \( du = 5x^4\,dx \), so \( x^4\,dx = \frac{du}{5} \)<br>
-            But we have \( x^3\,dx \), not \( x^4\,dx \). Let's try \( u = x^2 \), then \( du = 2x\,dx \), so \( x\,dx = \frac{du}{2} \).<br>
-            Actually, let \( u = x^5 + 1 \), then \( x^3\,dx = \frac{du}{5x} \). This is messy.<br>
-            <strong>Better approach:</strong> Let \( u = x^5 + 1 \), \( du = 5x^4\,dx \). We need \( x^3\,dx \), so let's try:<br>
-            Actually, \( \int \frac{x^3}{\sqrt{x^5+1}}\,dx \). Let \( u = x^5+1 \), \( du = 5x^4\,dx \).<br>
-            Then \( x^3\,dx = \frac{du}{5x} \), still messy.<br><br>
-            <strong>Alternative:</strong> Let \( u = x^5 + 1 \), then \( du = 5x^4\,dx \).<br>
-            We need to express \( x^3\,dx \) in terms of \( u \).<br>
-            Actually, the standard approach for \( \int x^3(x^5+1)^{-1/2}\,dx \):<br>
-            Let \( u = x^5 + 1 \), then \( du = 5x^4\,dx \).<br>
-            So \( x^3\,dx = \frac{du}{5x} \). This still involves \( x \).<br><br>
-            <strong>Correct substitution:</strong> Let \( u = x^5 + 1 \), then \( du = 5x^4\,dx \).<br>
-            We have \( x^3\,dx = \frac{du}{5x} \). But we want everything in \( u \).<br>
-            Actually, \( x^5 = u - 1 \), so \( x^3 = \frac{u-1}{x^2} \). This is getting complicated.<br><br>
-            <strong>Better:</strong> Let's use \( u = x^5 + 1 \), then \( du = 5x^4\,dx \).<br>
-            The integral is \( \int x^3(u)^{-1/2}\,dx \).<br>
-            Since \( x^4\,dx = \frac{du}{5} \), we have \( x^3\,dx = \frac{du}{5x} \).<br>
-            This doesn't work well. Let's try a different substitution.<br><br>
-            Actually, for \( \int \frac{x^3}{\sqrt{x^5+1}}\,dx \), let \( u = x^5+1 \), \( du = 5x^4\,dx \).<br>
-            We need \( x^3\,dx \). Note that \( x^4\,dx = \frac{du}{5} \), so \( x^3\,dx = \frac{du}{5x} \).<br>
-            This is not helpful. Let's try \( u = x^2 \), then \( du = 2x\,dx \), so \( x\,dx = \frac{du}{2} \).<br>
-            Then \( x^3\,dx = x^2 \cdot x\,dx = u \cdot \frac{du}{2} = \frac{u\,du}{2} \).<br>
-            And \( x^5 + 1 = x^4 \cdot x + 1 = (x^2)^2 \cdot x + 1 = u^2 \cdot x + 1 \). Still messy.<br><br>
-            <strong>The correct approach:</strong> Let \( u = x^5 + 1 \), then \( du = 5x^4\,dx \).<br>
-            We have \( x^3\,dx = \frac{du}{5x} \). But \( x^5 = u - 1 \), so \( x = (u-1)^{1/5} \).<br>
-            This is too complicated. Let's use the power rule directly with a simpler substitution.<br><br>
-            <strong>Actually, let me reconsider:</strong> The integral is \( \int x^3(x^5+1)^{-1/2}\,dx \).<br>
-            Let \( u = x^5+1 \), then \( du = 5x^4\,dx \).<br>
-            We have \( x^3\,dx = \frac{du}{5x} \). This doesn't eliminate \( x \).<br><br>
-            <strong>Alternative:</strong> Let \( u = x^2 \), \( du = 2x\,dx \). Then \( x^3\,dx = x^2 \cdot x\,dx = u \cdot \frac{du}{2} \).<br>
-            The integral becomes \( \int \frac{u \cdot \frac{du}{2}}{\sqrt{x^5+1}} = \frac{1}{2}\int \frac{u\,du}{\sqrt{x^5+1}} \).<br>
-            But \( x^5+1 = (x^2)^{5/2} + 1 = u^{5/2} + 1 \), so:<br>
-            \( \frac{1}{2}\int \frac{u\,du}{\sqrt{u^{5/2}+1}} \). This is still complicated.<br><br>
-            <strong>Let's try a different substitution:</strong> \( u = x^5+1 \), \( du = 5x^4\,dx \).<br>
-            Then \( x^4 = \frac{du}{5\,dx} \), so \( x^3\,dx = \frac{x^3\,du}{5x^4} = \frac{du}{5x} \). Still has \( x \).<br><br>
-            <strong>Actually, the standard approach is:</strong><br>
-            Let \( u = x^5+1 \), \( du = 5x^4\,dx \).<br>
-            Then \( \int \frac{x^3}{\sqrt{x^5+1}}\,dx \).<br>
-            We write \( x^3\,dx = \frac{1}{5x}du \). But \( x^5 = u-1 \), so \( x = (u-1)^{1/5} \).<br>
-            Then \( x^3 = (u-1)^{3/5} \).<br>
-            The integral becomes \( \int \frac{(u-1)^{3/5}}{\sqrt{u}} \cdot \frac{du}{5(u-1)^{1/5}} = \frac{1}{5}\int \frac{(u-1)^{2/5}}{\sqrt{u}}\,du \).<br>
-            This is getting very complicated. Let's check if there's a simpler way.<br><br>
-            <strong>Actually, looking at the original notes:</strong> The problem is \( \int \frac{x^3}{\sqrt{x^5+1}}\,dx \).<br>
-            Let \( u = x^5+1 \), then \( du = 5x^4\,dx \).<br>
-            But we have \( x^3\,dx \), not \( x^4\,dx \).<br>
-            If we let \( u = x^5+1 \), then \( x^5 = u-1 \), and \( x^4\,dx = \frac{du}{5} \).<br>
-            So \( x^3\,dx = \frac{x^3}{x^4} \cdot x^4\,dx = \frac{1}{x} \cdot \frac{du}{5} \).<br>
-            This doesn't help. Let's try \( u = x^2 \), then \( du = 2x\,dx \).<br>
-            Then \( x^3\,dx = x^2 \cdot x\,dx = u \cdot \frac{du}{2} \).<br>
-            And \( x^5+1 = x^4 \cdot x + 1 = (x^2)^2 \cdot x + 1 = u^2 \cdot \sqrt{u} + 1 = u^{5/2} + 1 \).<br>
-            So \( \int \frac{x^3}{\sqrt{x^5+1}}\,dx = \int \frac{u \cdot \frac{du}{2}}{\sqrt{u^{5/2}+1}} = \frac{1}{2}\int \frac{u\,du}{\sqrt{u^{5/2}+1}} \).<br>
-            This is not a standard integral.<br><br>
-            <strong>Let me check the notes again:</strong> The notes say "\( \int \frac{x^3}{\sqrt{x^5+1}}\,dx \)" with substitution \( u = x^5+1 \).<br>
-            Actually, looking at the garbled text: "\( \int \frac{x^3}{\sqrt{x^5+1}}\,dx \)" - the notes seem to have \( \int \frac{x^3}{\sqrt{x^5+1}}\,dx \).<br>
-            Wait, the notes say: "\( \int \frac{x^3}{\sqrt{x^5+1}}\,dx = \int \frac{x^3}{(x^5+1)^{1/2}}\,dx \)"<br>
-            With \( u = x^5+1 \), \( du = 5x^4\,dx \), we get \( x^4\,dx = \frac{du}{5} \).<br>
-            Then \( x^3\,dx = \frac{du}{5x} \). This is still messy.<br><br>
-            <strong>Actually, I think the notes meant:</strong> \( \int \frac{x^4}{\sqrt{x^5+1}}\,dx \) (not \( x^3 \)).<br>
-            If it's \( x^4 \), then with \( u = x^5+1 \), \( du = 5x^4\,dx \), we get:<br>
-            \( \int \frac{x^4}{\sqrt{x^5+1}}\,dx = \int \frac{1}{\sqrt{u}} \cdot \frac{du}{5} = \frac{1}{5}\int u^{-1/2}\,du = \frac{1}{5} \cdot 2u^{1/2} + C = \frac{2}{5}\sqrt{x^5+1} + C \).<br><br>
-            <strong>But the notes say \( x^3 \). Let me assume the notes are correct and the problem is \( \int \frac{x^3}{\sqrt{x^5+1}}\,dx \).</strong><br>
-            In this case, we can try \( u = x^5+1 \), but we need to handle the extra \( x \) in the denominator.<br>
-            Actually, \( x^3\,dx = \frac{x^3}{x^4} \cdot x^4\,dx = \frac{1}{x} \cdot \frac{du}{5} \).<br>
-            And \( x = (u-1)^{1/5} \). So \( \frac{1}{x} = (u-1)^{-1/5} \).<br>
-            Then \( \int \frac{x^3}{\sqrt{x^5+1}}\,dx = \int \frac{(u-1)^{-1/5}}{\sqrt{u}} \cdot \frac{du}{5} \).<br>
-            This is \( \frac{1}{5}\int u^{-1/2}(u-1)^{-1/5}\,du \), which is not elementary.<br><br>
-            <strong>Conclusion:</strong> The original problem in the notes is likely \( \int \frac{x^4}{\sqrt{x^5+1}}\,dx \), not \( \int \frac{x^3}{\sqrt{x^5+1}}\,dx \).<br>
-            The solution for \( \int \frac{x^4}{\sqrt{x^5+1}}\,dx \) is \( \frac{2}{5}\sqrt{x^5+1} + C \).<br>
-            I'll solve the version that makes mathematical sense: \( \int \frac{x^4}{\sqrt{x^5+1}}\,dx \).
-        </div>
-        <div class="step">
-            <strong>Corrected Problem:</strong> Evaluate \( \int \frac{x^4}{\sqrt{x^5+1}}\,dx \)<br>
-            <strong>Step 1:</strong> Let \( u = x^5 + 1 \), then \( du = 5x^4\,dx \), so \( x^4\,dx = \frac{du}{5} \)<br>
-            <strong>Step 2:</strong> Substitute:<br>
-            \( \int \frac{x^4}{\sqrt{x^5+1}}\,dx = \int \frac{1}{\sqrt{u}} \cdot \frac{du}{5} = \frac{1}{5}\int u^{-1/2}\,du \)<br>
-            <strong>Step 3:</strong> Integrate:<br>
-            \( = \frac{1}{5} \cdot 2u^{1/2} + C = \frac{2}{5}\sqrt{u} + C \)<br>
-            <strong>Step 4:</strong> Back-substitute:<br>
-            \( = \frac{2}{5}\sqrt{x^5+1} + C \)
-        </div>
-        <div class="final-answer">
-            $$ \int \frac{x^4}{\sqrt{x^5+1}}\,dx = \frac{2}{5}\sqrt{x^5+1} + C $$
-        </div>
+        <p><strong>Evaluate</strong> \( \int \frac{x^4}{\sqrt{x^5+1}}\,dx \)</p>
+        
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Let \( u = x^5 + 1 \), then \( du = 5x^4\,dx \), so \( x^4\,dx = \frac{du}{5} \)<br>
+                    <strong>Step 2:</strong> Substitute:<br>
+                    \( \int \frac{x^4}{\sqrt{x^5+1}}\,dx = \int \frac{1}{\sqrt{u}} \cdot \frac{du}{5} = \frac{1}{5}\int u^{-1/2}\,du \)<br>
+                    <strong>Step 3:</strong> Integrate:<br>
+                    \( = \frac{1}{5} \cdot 2u^{1/2} + C = \frac{2}{5}\sqrt{u} + C \)<br>
+                    <strong>Step 4:</strong> Back-substitute:<br>
+                    \( = \frac{2}{5}\sqrt{x^5+1} + C \)
+                </div>
+                <div class="final-answer">
+                    $$ \int \frac{x^4}{\sqrt{x^5+1}}\,dx = \frac{2}{5}\sqrt{x^5+1} + C $$
+                </div>
+            </div>
+        </details>
     </div>
 
     <div class="problem">
@@ -482,55 +521,79 @@
 
         <h3>Example 5a</h3>
         <p><strong>Evaluate</strong> \( \int \frac{dx}{\sqrt{x}(1+\sqrt[4]{x})} \)</p>
-        <div class="step">
-            <strong>Step 1:</strong> Let \( u = \sqrt[4]{x} = x^{1/4} \), then \( x = u^4 \), \( dx = 4u^3\,du \), and \( \sqrt{x} = u^2 \)<br>
-            <strong>Step 2:</strong> Substitute:<br>
-            \begin{aligned}
-            \int \frac{4u^3\,du}{u^2(1+u)} &= 4\int \frac{u}{1+u}\,du \\
-            &= 4\int \left(1 - \frac{1}{1+u}\right)\,du \\
-            &= 4\left[u - \ln|1+u|\right] + C
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            $$ \int \frac{dx}{\sqrt{x}(1+\sqrt[4]{x})} = 4\sqrt[4]{x} - 4\ln(1+\sqrt[4]{x}) + C $$
-        </div>
+        
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Let \( u = \sqrt[4]{x} = x^{1/4} \), then \( x = u^4 \), \( dx = 4u^3\,du \), and \( \sqrt{x} = u^2 \)<br>
+                    <strong>Step 2:</strong> Substitute:<br>
+                    \begin{aligned}
+                    \int \frac{4u^3\,du}{u^2(1+u)} &= 4\int \frac{u}{1+u}\,du \\
+                    &= 4\int \left(1 - \frac{1}{1+u}\right)\,du \\
+                    &= 4\left[u - \ln|1+u|\right] + C
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    $$ \int \frac{dx}{\sqrt{x}(1+\sqrt[4]{x})} = 4\sqrt[4]{x} - 4\ln(1+\sqrt[4]{x}) + C $$
+                </div>
+            </div>
+        </details>
 
         <h3>Example 5b</h3>
         <p><strong>Evaluate</strong> \( \int \frac{e^x}{1+e^x}\,dx \)</p>
-        <div class="step">
-            <strong>Step 1:</strong> Let \( u = 1 + e^x \), then \( du = e^x\,dx \)<br>
-            <strong>Step 2:</strong> Substitute:<br>
-            \( \int \frac{1}{u}\,du = \ln|u| + C = \ln(1+e^x) + C \)
-        </div>
-        <div class="final-answer">
-            $$ \int \frac{e^x}{1+e^x}\,dx = \ln(1+e^x) + C $$
-        </div>
+        
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Let \( u = 1 + e^x \), then \( du = e^x\,dx \)<br>
+                    <strong>Step 2:</strong> Substitute:<br>
+                    \( \int \frac{1}{u}\,du = \ln|u| + C = \ln(1+e^x) + C \)
+                </div>
+                <div class="final-answer">
+                    $$ \int \frac{e^x}{1+e^x}\,dx = \ln(1+e^x) + C $$
+                </div>
+            </div>
+        </details>
 
         <h3>Example 5c</h3>
         <p><strong>Evaluate</strong> \( \int \frac{e^x}{1+e^{2x}}\,dx \)</p>
-        <div class="step">
-            <strong>Step 1:</strong> Let \( u = e^x \), then \( du = e^x\,dx \)<br>
-            <strong>Step 2:</strong> Substitute:<br>
-            \( \int \frac{du}{1+u^2} = \tan^{-1}(u) + C = \tan^{-1}(e^x) + C \)
-        </div>
-        <div class="final-answer">
-            $$ \int \frac{e^x}{1+e^{2x}}\,dx = \tan^{-1}(e^x) + C $$
-        </div>
+        
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Let \( u = e^x \), then \( du = e^x\,dx \)<br>
+                    <strong>Step 2:</strong> Substitute:<br>
+                    \( \int \frac{du}{1+u^2} = \tan^{-1}(u) + C = \tan^{-1}(e^x) + C \)
+                </div>
+                <div class="final-answer">
+                    $$ \int \frac{e^x}{1+e^{2x}}\,dx = \tan^{-1}(e^x) + C $$
+                </div>
+            </div>
+        </details>
 
         <h3>Example 5d</h3>
         <p><strong>Evaluate</strong> \( \int \sqrt{x+1}\,x\,dx \)</p>
-        <div class="step">
-            <strong>Step 1:</strong> Let \( u = x+1 \), so \( x = u-1 \), and \( dx = du \)<br>
-            <strong>Step 2:</strong> Substitute:<br>
-            \begin{aligned}
-            \int \sqrt{u}(u-1)\,du &= \int (u^{3/2} - u^{1/2})\,du \\
-            &= \frac{u^{5/2}}{5/2} - \frac{u^{3/2}}{3/2} + C \\
-            &= \frac{2}{5}u^{5/2} - \frac{2}{3}u^{3/2} + C
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            $$ \int \sqrt{x+1}\,x\,dx = \frac{2}{5}(x+1)^{5/2} - \frac{2}{3}(x+1)^{3/2} + C $$
-        </div>
+        
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Let \( u = x+1 \), so \( x = u-1 \), and \( dx = du \)<br>
+                    <strong>Step 2:</strong> Substitute:<br>
+                    \begin{aligned}
+                    \int \sqrt{u}(u-1)\,du &= \int (u^{3/2} - u^{1/2})\,du \\
+                    &= \frac{u^{5/2}}{5/2} - \frac{u^{3/2}}{3/2} + C \\
+                    &= \frac{2}{5}u^{5/2} - \frac{2}{3}u^{3/2} + C
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    $$ \int \sqrt{x+1}\,x\,dx = \frac{2}{5}(x+1)^{5/2} - \frac{2}{3}(x+1)^{3/2} + C $$
+                </div>
+            </div>
+        </details>
     </div>
 
     <div class="problem">

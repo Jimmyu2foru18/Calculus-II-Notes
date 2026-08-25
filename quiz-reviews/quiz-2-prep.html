@@ -57,13 +57,98 @@
             <li>$\sqrt{a^2+x^2}$: use $x = a\tan(\theta)$</li>
         </ul>
 
-        <h2>Practice Checklist</h2>
-        <ul>
-            <li>Practice trig substitution problems</li>
-            <li>Review summation formulas</li>
-            <li>Calculate left and right Riemann sums</li>
-            <li>Work through series basic problems</li>
-        </ul>
+        <h2>Practice Problems</h2>
+
+        <p><strong>Problem 1:</strong> Evaluate $\int \sqrt{9-x^2}\,dx$ using trigonometric substitution.</p>
+
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Let $x = 3\sin(\theta)$, so $dx = 3\cos(\theta)\,d\theta$ and $\sqrt{9-x^2} = 3\cos(\theta)$.
+                </div>
+                <div class="step">
+                    <strong>Step 2:</strong> Rewrite the integral:<br>
+                    $\int 3\cos(\theta) \cdot 3\cos(\theta)\,d\theta = \int 9\cos^2(\theta)\,d\theta$
+                </div>
+                <div class="step">
+                    <strong>Step 3:</strong> Use $\cos^2(\theta) = \frac{1+\cos(2\theta)}{2}$:<br>
+                    $9\int \frac{1+\cos(2\theta)}{2}\,d\theta = \frac{9}{2}\left(\theta + \frac{\sin(2\theta)}{2}\right) + C$
+                </div>
+                <div class="final-answer">
+                    <div class="final-answer-title">Final Answer:</div>
+                    $$\frac{9}{2}\arcsin\left(\frac{x}{3}\right) + \frac{x}{2}\sqrt{9-x^2} + C$$
+                </div>
+            </div>
+        </details>
+
+        <p><strong>Problem 2:</strong> Evaluate $\int_0^2 (x^2+1)\,dx$ using a left Riemann sum with $n=4$ subintervals.</p>
+
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Compute $\Delta x = \frac{2-0}{4} = \frac{1}{2}$.
+                </div>
+                <div class="step">
+                    <strong>Step 2:</strong> The left endpoints are $x_0 = 0$, $x_1 = 0.5$, $x_2 = 1$, $x_3 = 1.5$.
+                </div>
+                <div class="step">
+                    <strong>Step 3:</strong> Evaluate $f(x)$ at each left endpoint:<br>
+                    $f(0)=1$, $f(0.5)=1.25$, $f(1)=2$, $f(1.5)=3.25$
+                </div>
+                <div class="step">
+                    <strong>Step 4:</strong> Compute the sum:<br>
+                    $L_4 = \frac{1}{2}(1 + 1.25 + 2 + 3.25) = \frac{1}{2}(7.5) = 3.75$
+                </div>
+                <div class="final-answer">
+                    <div class="final-answer-title">Final Answer:</div>
+                    $$3.75$$
+                </div>
+            </div>
+        </details>
+
+        <p><strong>Problem 3:</strong> Find $\sum_{k=1}^{10} k^2$ using a summation formula.</p>
+
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Use the formula $\sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6}$ with $n=10$.
+                </div>
+                <div class="step">
+                    <strong>Step 2:</strong> Substitute:<br>
+                    $\frac{10(11)(21)}{6} = \frac{2310}{6}$
+                </div>
+                <div class="final-answer">
+                    <div class="final-answer-title">Final Answer:</div>
+                    $$385$$
+                </div>
+            </div>
+        </details>
+
+        <p><strong>Problem 4:</strong> Evaluate $\int x\cos(x^2)\,dx$ using u-substitution.</p>
+
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Let $u = x^2$, then $du = 2x\,dx$, so $x\,dx = \frac{1}{2}\,du$.
+                </div>
+                <div class="step">
+                    <strong>Step 2:</strong> Rewrite the integral:<br>
+                    $\int \cos(u) \cdot \frac{1}{2}\,du = \frac{1}{2}\int \cos(u)\,du$
+                </div>
+                <div class="step">
+                    <strong>Step 3:</strong> Integrate:<br>
+                    $\frac{1}{2}\sin(u) + C$
+                </div>
+                <div class="final-answer">
+                    <div class="final-answer-title">Final Answer:</div>
+                    $$\frac{1}{2}\sin(x^2) + C$$
+                </div>
+            </div>
+        </details>
     </main>
 </div>
 <script src="../js/app.js"></script>

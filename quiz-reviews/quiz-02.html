@@ -54,31 +54,43 @@
 
         <h3>Example 1: Trig Substitution</h3>
         <p><strong>Evaluate:</strong> $\int \sin(x)\cos^2(x)\,dx$</p>
+        <details class="question">
+        <summary>Click to see the solution</summary>
         <p>Let $u = \cos(x)$, $du = -\sin(x)\,dx$, so $\sin(x)\,dx = -du$</p>
         $$= \int u^2(-du)$$
         $$= -\frac{u^3}{3} + C$$
         $$= -\frac{\cos^3(x)}{3} + C$$
+        </details>
 
         <h3>Example 2: Exponential with Trig</h3>
         <p><strong>Evaluate:</strong> $\int \sec^2(x)e^{\tan(x)}\,dx$</p>
+        <details class="question">
+        <summary>Click to see the solution</summary>
         <p>Let $u = \tan(x)$, $du = \sec^2(x)\,dx$</p>
         $$= \int e^u\,du$$
         $$= e^u + C$$
         $$= e^{\tan(x)} + C$$
+        </details>
 
         <h3>Example 3: Summation</h3>
         <p><strong>Task:</strong> Evaluate $\sum_{k=1}^{1000} (2k^2-3k)$</p>
+        <details class="question">
+        <summary>Click to see the solution</summary>
         $$= 2\sum_{k=1}^{1000} k^2 - 3\sum_{k=1}^{1000} k$$
         $$= 2\cdot\frac{1000(1001)(2001)}{6} - 3\cdot\frac{1000(1001)}{2}$$
         $$= 2\cdot 333833500 - 3\cdot 500500$$
         $$= 667667000 - 1501500$$
         $$= 666165500$$
+        </details>
 
         <h3>Example 4: Riemann Sums</h3>
         <p><strong>Task:</strong> Approximate $\int_1^6 (x+1)\,dx$ with $n=5$</p>
+        <details class="question">
+        <summary>Click to see the solution</summary>
         <p>$\Delta x = \frac{6-1}{5} = 1$</p>
         <p>Left Sum: $L_5 = 1\cdot(2+3+4+5+6) = 20$</p>
         <p>Right Sum: $R_5 = 1\cdot(3+4+5+6+7) = 25$</p>
+        </details>
 
         <h2>Practice Problems</h2>
         <ol>

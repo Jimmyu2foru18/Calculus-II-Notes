@@ -34,6 +34,9 @@
         h2 { color: #1a237e; margin-top: 30px; }
         h3 { color: #283593; margin-top: 20px; }
         .formula-box { background: #fff3e0; border: 1px solid #ff9800; padding: 12px; margin: 10px 0; border-radius: 6px; }
+        details.question { margin-top: 15px; }
+        details.question summary { cursor: pointer; font-weight: bold; color: #1a237e; }
+        .solution { margin-top: 10px; }
     </style>
 </head>
 <body>
@@ -59,210 +62,243 @@
     <div class="problem">
         <div class="problem-title">Problem 1: Basic u-Substitution</div>
         <p><strong>Evaluate</strong> \( \int \frac{2x}{\sqrt{x^2+1}}\,dx \)</p>
-        <div class="step">
-            <strong>Step 1:</strong> Choose \( u = x^2 + 1 \), then \( du = 2x\,dx \)<br>
-            <strong>Step 2:</strong> Substitute into the integral:<br>
-            \begin{aligned}
-            \int \frac{2x}{\sqrt{x^2+1}}\,dx &= \int \frac{1}{\sqrt{u}}\,du \\
-            &= \int u^{-1/2}\,du
-            \end{aligned}
-        </div>
-        <div class="step">
-            <strong>Step 3:</strong> Integrate using the power rule:<br>
-            \( \int u^{-1/2}\,du = \frac{u^{1/2}}{1/2} + C = 2\sqrt{u} + C \)<br>
-            <strong>Step 4:</strong> Back-substitute \( u = x^2 + 1 \):<br>
-            \( = 2\sqrt{x^2+1} + C \)
-        </div>
-        <div class="final-answer">
-            $$ \int \frac{2x}{\sqrt{x^2+1}}\,dx = 2\sqrt{x^2+1} + C $$
-        </div>
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Choose \( u = x^2 + 1 \), then \( du = 2x\,dx \)<br>
+                    <strong>Step 2:</strong> Substitute into the integral:<br>
+                    \begin{aligned}
+                    \int \frac{2x}{\sqrt{x^2+1}}\,dx &= \int \frac{1}{\sqrt{u}}\,du \\
+                    &= \int u^{-1/2}\,du
+                    \end{aligned}
+                </div>
+                <div class="step">
+                    <strong>Step 3:</strong> Integrate using the power rule:<br>
+                    \( \int u^{-1/2}\,du = \frac{u^{1/2}}{1/2} + C = 2\sqrt{u} + C \)<br>
+                    <strong>Step 4:</strong> Back-substitute \( u = x^2 + 1 \):<br>
+                    \( = 2\sqrt{x^2+1} + C \)
+                </div>
+                <div class="final-answer">
+                    $$ \int \frac{2x}{\sqrt{x^2+1}}\,dx = 2\sqrt{x^2+1} + C $$
+                </div>
+            </div>
+        </details>
     </div>
 
     <div class="problem">
         <div class="problem-title">Problem 2: Area Between Curves - Intersection Points</div>
         <p><strong>Task:</strong> Find the area of the region bounded by \( y = x \) and \( y = x^3 \)</p>
-
-        <div class="step">
-            <strong>Step 1:</strong> Find intersection points by solving \( x = x^3 \):<br>
-            \begin{aligned}
-            x &= x^3 \\
-            x - x^3 &= 0 \\
-            x(1-x^2) &= 0 \\
-            x(1-x)(1+x) &= 0
-            \end{aligned}
-            So \( x = 0, 1, -1 \)
-        </div>
-        <div class="step">
-            <strong>Step 2:</strong> Determine which function is on top on each interval:<br>
-            On \([-1, 0]\): Test \( x = -0.5 \): \( -0.5 > (-0.5)^3 = -0.125 \), so \( x > x^3 \)<br>
-            On \([0, 1]\): Test \( x = 0.5 \): \( 0.5 < (0.5)^3 = 0.125 \), wait, \( 0.5 > 0.125 \), so \( x > x^3 \)<br>
-            Actually, \( x^3 \leq x \) on \([-1, 1]\), so \( x \) is on top.
-        </div>
-        <div class="step">
-            <strong>Step 3:</strong> Set up the integral (use symmetry or split at 0):<br>
-            \begin{aligned}
-            A &= \int_{-1}^1 (x - x^3)\,dx \\
-            &= 2\int_0^1 (x - x^3)\,dx \quad \text{(by symmetry)} \\
-            &= 2\left[\frac{x^2}{2} - \frac{x^4}{4}\right]_0^1 \\
-            &= 2\left(\frac{1}{2} - \frac{1}{4}\right) \\
-            &= 2 \cdot \frac{1}{4} = \frac{1}{2}
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            $$ A = \frac{1}{2} $$
-        </div>
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Find intersection points by solving \( x = x^3 \):<br>
+                    \begin{aligned}
+                    x &= x^3 \\
+                    x - x^3 &= 0 \\
+                    x(1-x^2) &= 0 \\
+                    x(1-x)(1+x) &= 0
+                    \end{aligned}
+                    So \( x = 0, 1, -1 \)
+                </div>
+                <div class="step">
+                    <strong>Step 2:</strong> Determine which function is on top on each interval:<br>
+                    On \([-1, 0]\): Test \( x = -0.5 \): \( -0.5 > (-0.5)^3 = -0.125 \), so \( x > x^3 \)<br>
+                    On \([0, 1]\): Test \( x = 0.5 \): \( 0.5 < (0.5)^3 = 0.125 \), wait, \( 0.5 > 0.125 \), so \( x > x^3 \)<br>
+                    Actually, \( x^3 \leq x \) on \([-1, 1]\), so \( x \) is on top.
+                </div>
+                <div class="step">
+                    <strong>Step 3:</strong> Set up the integral (use symmetry or split at 0):<br>
+                    \begin{aligned}
+                    A &= \int_{-1}^1 (x - x^3)\,dx \\
+                    &= 2\int_0^1 (x - x^3)\,dx \quad \text{(by symmetry)} \\
+                    &= 2\left[\frac{x^2}{2} - \frac{x^4}{4}\right]_0^1 \\
+                    &= 2\left(\frac{1}{2} - \frac{1}{4}\right) \\
+                    &= 2 \cdot \frac{1}{4} = \frac{1}{2}
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    $$ A = \frac{1}{2} $$
+                </div>
+            </div>
+        </details>
     </div>
 
     <div class="problem">
         <div class="problem-title">Problem 3: Area Between Two Parabolas</div>
         <p><strong>Task:</strong> Find the area bounded by \( y = x^2 \) and \( y = x + 2 \)</p>
-
-        <div class="step">
-            <strong>Step 1:</strong> Find intersection points by solving \( x^2 = x + 2 \):<br>
-            \begin{aligned}
-            x^2 - x - 2 &= 0 \\
-            (x+1)(x-2) &= 0
-            \end{aligned}
-            So \( x = -1, 2 \)
-        </div>
-        <div class="step">
-            <strong>Step 2:</strong> On \([-1, 2]\), the line \( y = x+2 \) is above the parabola \( y = x^2 \):<br>
-            \begin{aligned}
-            A &= \int_{-1}^2 [(x+2) - x^2]\,dx \\
-            &= \left[\frac{x^2}{2} + 2x - \frac{x^3}{3}\right]_{-1}^2
-            \end{aligned}
-        </div>
-        <div class="step">
-            <strong>Step 3:</strong> Evaluate at the bounds:<br>
-            \begin{aligned}
-            F(2) &= \frac{4}{2} + 4 - \frac{8}{3} = 2 + 4 - \frac{8}{3} = 6 - \frac{8}{3} = \frac{10}{3} \\
-            F(-1) &= \frac{1}{2} - 2 - \frac{-1}{3} = \frac{1}{2} - 2 + \frac{1}{3} = -\frac{7}{6} \\
-            A &= \frac{10}{3} - \left(-\frac{7}{6}\right) = \frac{20}{6} + \frac{7}{6} = \frac{27}{6} = \frac{9}{2}
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            $$ A = \frac{9}{2} $$
-        </div>
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Find intersection points by solving \( x^2 = x + 2 \):<br>
+                    \begin{aligned}
+                    x^2 - x - 2 &= 0 \\
+                    (x+1)(x-2) &= 0
+                    \end{aligned}
+                    So \( x = -1, 2 \)
+                </div>
+                <div class="step">
+                    <strong>Step 2:</strong> On \([-1, 2]\), the line \( y = x+2 \) is above the parabola \( y = x^2 \):<br>
+                    \begin{aligned}
+                    A &= \int_{-1}^2 [(x+2) - x^2]\,dx \\
+                    &= \left[\frac{x^2}{2} + 2x - \frac{x^3}{3}\right]_{-1}^2
+                    \end{aligned}
+                </div>
+                <div class="step">
+                    <strong>Step 3:</strong> Evaluate at the bounds:<br>
+                    \begin{aligned}
+                    F(2) &= \frac{4}{2} + 4 - \frac{8}{3} = 2 + 4 - \frac{8}{3} = 6 - \frac{8}{3} = \frac{10}{3} \\
+                    F(-1) &= \frac{1}{2} - 2 - \frac{-1}{3} = \frac{1}{2} - 2 + \frac{1}{3} = -\frac{7}{6} \\
+                    A &= \frac{10}{3} - \left(-\frac{7}{6}\right) = \frac{20}{6} + \frac{7}{6} = \frac{27}{6} = \frac{9}{2}
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    $$ A = \frac{9}{2} $$
+                </div>
+            </div>
+        </details>
     </div>
 
     <div class="problem">
         <div class="problem-title">Problem 4: Area of a Circle Segment</div>
         <p><strong>Task:</strong> Find the area of the region inside the circle \( x^2 + y^2 = 1 \) and above the x-axis, bounded by \( x = -1 \) and \( x = 1 \)</p>
-
-        <div class="step">
-            <strong>Step 1:</strong> The circle has equation \( x^2 + y^2 = 1 \), so \( y = \sqrt{1-x^2} \) (top half)<br>
-            <strong>Step 2:</strong> Set up the integral for the upper semicircle:<br>
-            \begin{aligned}
-            A &= \int_{-1}^1 \sqrt{1-x^2}\,dx
-            \end{aligned}
-        </div>
-        <div class="step">
-            <strong>Step 3:</strong> Use the substitution \( x = \sin(\theta) \), \( dx = \cos(\theta)\,d\theta \):<br>
-            When \( x = -1 \), \( \theta = -\pi/2 \). When \( x = 1 \), \( \theta = \pi/2 \).<br>
-            \begin{aligned}
-            A &= \int_{-\pi/2}^{\pi/2} \sqrt{1-\sin^2(\theta)} \cdot \cos(\theta)\,d\theta \\
-            &= \int_{-\pi/2}^{\pi/2} \cos^2(\theta)\,d\theta \\
-            &= \int_{-\pi/2}^{\pi/2} \frac{1+\cos(2\theta)}{2}\,d\theta \\
-            &= \frac{1}{2}\left[\theta + \frac{\sin(2\theta)}{2}\right]_{-\pi/2}^{\pi/2} \\
-            &= \frac{1}{2}\left(\frac{\pi}{2} - \left(-\frac{\pi}{2}\right)\right) = \frac{\pi}{2}
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            $$ A = \frac{\pi}{2} $$
-        </div>
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> The circle has equation \( x^2 + y^2 = 1 \), so \( y = \sqrt{1-x^2} \) (top half)<br>
+                    <strong>Step 2:</strong> Set up the integral for the upper semicircle:<br>
+                    \begin{aligned}
+                    A &= \int_{-1}^1 \sqrt{1-x^2}\,dx
+                    \end{aligned}
+                </div>
+                <div class="step">
+                    <strong>Step 3:</strong> Use the substitution \( x = \sin(\theta) \), \( dx = \cos(\theta)\,d\theta \):<br>
+                    When \( x = -1 \), \( \theta = -\pi/2 \). When \( x = 1 \), \( \theta = \pi/2 \).<br>
+                    \begin{aligned}
+                    A &= \int_{-\pi/2}^{\pi/2} \sqrt{1-\sin^2(\theta)} \cdot \cos(\theta)\,d\theta \\
+                    &= \int_{-\pi/2}^{\pi/2} \cos^2(\theta)\,d\theta \\
+                    &= \int_{-\pi/2}^{\pi/2} \frac{1+\cos(2\theta)}{2}\,d\theta \\
+                    &= \frac{1}{2}\left[\theta + \frac{\sin(2\theta)}{2}\right]_{-\pi/2}^{\pi/2} \\
+                    &= \frac{1}{2}\left(\frac{\pi}{2} - \left(-\frac{\pi}{2}\right)\right) = \frac{\pi}{2}
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    $$ A = \frac{\pi}{2} $$
+                </div>
+            </div>
+        </details>
         <p><em>Note:</em> The full circle area is \( \pi \), so the upper semicircle has area \( \pi/2 \).</p>
     </div>
 
     <div class="problem">
         <div class="problem-title">Problem 5: Area with Integration w.r.t. y</div>
         <p><strong>Task:</strong> Find the area of the region bounded by \( x = y^2 - 4 \) and \( x = 0 \) (the y-axis)</p>
-
-        <div class="step">
-            <strong>Step 1:</strong> Find the y-intercepts of \( x = y^2 - 4 \):<br>
-            Set \( x = 0 \): \( 0 = y^2 - 4 \implies y^2 = 4 \implies y = \pm 2 \)<br>
-            So the region extends from \( y = -2 \) to \( y = 2 \)
-        </div>
-        <div class="step">
-            <strong>Step 2:</strong> Set up the integral with respect to \( y \):<br>
-            Right curve: \( x = 0 \), Left curve: \( x = y^2 - 4 \)<br>
-            \begin{aligned}
-            A &= \int_{-2}^2 [0 - (y^2-4)]\,dy \\
-            &= \int_{-2}^2 (4-y^2)\,dy
-            \end{aligned}
-        </div>
-        <div class="step">
-            <strong>Step 3:</strong> Evaluate (using symmetry):<br>
-            \begin{aligned}
-            A &= 2\int_0^2 (4-y^2)\,dy \\
-            &= 2\left[4y - \frac{y^3}{3}\right]_0^2 \\
-            &= 2\left(8 - \frac{8}{3}\right) \\
-            &= 2 \cdot \frac{16}{3} = \frac{32}{3}
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            $$ A = \frac{32}{3} $$
-        </div>
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Find the y-intercepts of \( x = y^2 - 4 \):<br>
+                    Set \( x = 0 \): \( 0 = y^2 - 4 \implies y^2 = 4 \implies y = \pm 2 \)<br>
+                    So the region extends from \( y = -2 \) to \( y = 2 \)
+                </div>
+                <div class="step">
+                    <strong>Step 2:</strong> Set up the integral with respect to \( y \):<br>
+                    Right curve: \( x = 0 \), Left curve: \( x = y^2 - 4 \)<br>
+                    \begin{aligned}
+                    A &= \int_{-2}^2 [0 - (y^2-4)]\,dy \\
+                    &= \int_{-2}^2 (4-y^2)\,dy
+                    \end{aligned}
+                </div>
+                <div class="step">
+                    <strong>Step 3:</strong> Evaluate (using symmetry):<br>
+                    \begin{aligned}
+                    A &= 2\int_0^2 (4-y^2)\,dy \\
+                    &= 2\left[4y - \frac{y^3}{3}\right]_0^2 \\
+                    &= 2\left(8 - \frac{8}{3}\right) \\
+                    &= 2 \cdot \frac{16}{3} = \frac{32}{3}
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    $$ A = \frac{32}{3} $$
+                </div>
+            </div>
+        </details>
     </div>
 
     <div class="problem">
         <div class="problem-title">Problem 6: Volume by Slicing (Disk Method)</div>
         <p><strong>Task:</strong> Find the volume of the solid obtained by revolving \( y = \sqrt{x} \) about the x-axis from \( x = 0 \) to \( x = 4 \)</p>
-
-        <div class="step">
-            <strong>Step 1:</strong> The disk method formula is:<br>
-            \( V = \pi\int_a^b [f(x)]^2\,dx \)<br>
-            <strong>Step 2:</strong> Here \( f(x) = \sqrt{x} \), \( a = 0 \), \( b = 4 \):<br>
-            \begin{aligned}
-            V &= \pi\int_0^4 (\sqrt{x})^2\,dx \\
-            &= \pi\int_0^4 x\,dx \\
-            &= \pi\left[\frac{x^2}{2}\right]_0^4 \\
-            &= \pi\left(\frac{16}{2} - 0\right) = 8\pi
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            $$ V = 8\pi $$
-        </div>
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> The disk method formula is:<br>
+                    \( V = \pi\int_a^b [f(x)]^2\,dx \)<br>
+                    <strong>Step 2:</strong> Here \( f(x) = \sqrt{x} \), \( a = 0 \), \( b = 4 \):<br>
+                    \begin{aligned}
+                    V &= \pi\int_0^4 (\sqrt{x})^2\,dx \\
+                    &= \pi\int_0^4 x\,dx \\
+                    &= \pi\left[\frac{x^2}{2}\right]_0^4 \\
+                    &= \pi\left(\frac{16}{2} - 0\right) = 8\pi
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    $$ V = 8\pi $$
+                </div>
+            </div>
+        </details>
     </div>
 
     <div class="problem">
         <div class="problem-title">Problem 7: Volume of Solid with Hole (Washer Method)</div>
         <p><strong>Task:</strong> Find the volume of the solid obtained by revolving the region bounded by \( y = 2x \) and \( y = x^2 \) about the x-axis</p>
-
-        <div class="step">
-            <strong>Step 1:</strong> Find intersection points: \( 2x = x^2 \implies x^2 - 2x = 0 \implies x(x-2) = 0 \), so \( x = 0, 2 \)<br>
-            <strong>Step 2:</strong> On \([0,2]\), \( 2x \geq x^2 \), so outer radius \( R(x) = 2x \), inner radius \( r(x) = x^2 \)<br>
-            <strong>Step 3:</strong> Apply the washer method:<br>
-            \begin{aligned}
-            V &= \pi\int_0^2 [(2x)^2 - (x^2)^2]\,dx \\
-            &= \pi\int_0^2 (4x^2 - x^4)\,dx \\
-            &= \pi\left[\frac{4x^3}{3} - \frac{x^5}{5}\right]_0^2 \\
-            &= \pi\left(\frac{32}{3} - \frac{32}{5}\right) \\
-            &= \pi\left(\frac{160 - 96}{15}\right) = \frac{64\pi}{15}
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            $$ V = \frac{64\pi}{15} $$
-        </div>
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Find intersection points: \( 2x = x^2 \implies x^2 - 2x = 0 \implies x(x-2) = 0 \), so \( x = 0, 2 \)<br>
+                    <strong>Step 2:</strong> On \([0,2]\), \( 2x \geq x^2 \), so outer radius \( R(x) = 2x \), inner radius \( r(x) = x^2 \)<br>
+                    <strong>Step 3:</strong> Apply the washer method:<br>
+                    \begin{aligned}
+                    V &= \pi\int_0^2 [(2x)^2 - (x^2)^2]\,dx \\
+                    &= \pi\int_0^2 (4x^2 - x^4)\,dx \\
+                    &= \pi\left[\frac{4x^3}{3} - \frac{x^5}{5}\right]_0^2 \\
+                    &= \pi\left(\frac{32}{3} - \frac{32}{5}\right) \\
+                    &= \pi\left(\frac{160 - 96}{15}\right) = \frac{64\pi}{15}
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    $$ V = \frac{64\pi}{15} $$
+                </div>
+            </div>
+        </details>
     </div>
 
     <div class="problem">
         <div class="problem-title">Problem 8: Volume by Slicing about the y-axis</div>
         <p><strong>Task:</strong> Find the volume of the solid obtained by revolving the region bounded by \( y = \sqrt{x} \), \( y = 0 \), \( x = 4 \) about the y-axis</p>
-
-        <div class="step">
-            <strong>Step 1:</strong> Using the disk method with respect to \( y \):<br>
-            \( x = y^2 \), and the limits are \( y = 0 \) to \( y = 2 \) (since \( y = \sqrt{4} = 2 \))<br>
-            <strong>Step 2:</strong> Apply the formula \( V = \pi\int_c^d [g(y)]^2\,dy \):<br>
-            \begin{aligned}
-            V &= \pi\int_0^2 (y^2)^2\,dy \\
-            &= \pi\int_0^2 y^4\,dy \\
-            &= \pi\left[\frac{y^5}{5}\right]_0^2 \\
-            &= \pi \cdot \frac{32}{5} = \frac{32\pi}{5}
-            \end{aligned}
-        </div>
-        <div class="final-answer">
-            $$ V = \frac{32\pi}{5} $$
-        </div>
+        <details class="question">
+            <summary><strong>Click to see the solution</strong></summary>
+            <div class="solution">
+                <div class="step">
+                    <strong>Step 1:</strong> Using the disk method with respect to \( y \):<br>
+                    \( x = y^2 \), and the limits are \( y = 0 \) to \( y = 2 \) (since \( y = \sqrt{4} = 2 \))<br>
+                    <strong>Step 2:</strong> Apply the formula \( V = \pi\int_c^d [g(y)]^2\,dy \):<br>
+                    \begin{aligned}
+                    V &= \pi\int_0^2 (y^2)^2\,dy \\
+                    &= \pi\int_0^2 y^4\,dy \\
+                    &= \pi\left[\frac{y^5}{5}\right]_0^2 \\
+                    &= \pi \cdot \frac{32}{5} = \frac{32\pi}{5}
+                    \end{aligned}
+                </div>
+                <div class="final-answer">
+                    $$ V = \frac{32\pi}{5} $$
+                </div>
+            </div>
+        </details>
     </div>
 
     <footer style="text-align: center; margin-top: 40px; padding: 20px; color: #666; border-top: 1px solid #ddd;">

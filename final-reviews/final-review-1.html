@@ -52,26 +52,35 @@
 
         <h3>Example 1: Integration by Parts</h3>
         <p><strong>Evaluate:</strong> $\int x\ln(x)\,dx$</p>
-        <p>Let $u = \ln(x)$, $dv = x\,dx$</p>
-        <p>$du = \frac{1}{x}\,dx$, $v = \frac{x^2}{2}$</p>
-        $$= \frac{x^2}{2}\ln(x) - \int \frac{x^2}{2}\cdot\frac{1}{x}\,dx$$
-        $$= \frac{x^2}{2}\ln(x) - \frac{1}{2}\int x\,dx$$
-        $$= \frac{x^2}{2}\ln(x) - \frac{x^2}{4} + C$$
+        <details class="question">
+            <summary>Click to see the solution</summary>
+            <p>Let $u = \ln(x)$, $dv = x\,dx$</p>
+            <p>$du = \frac{1}{x}\,dx$, $v = \frac{x^2}{2}$</p>
+            $$= \frac{x^2}{2}\ln(x) - \int \frac{x^2}{2}\cdot\frac{1}{x}\,dx$$
+            $$= \frac{x^2}{2}\ln(x) - \frac{1}{2}\int x\,dx$$
+            $$= \frac{x^2}{2}\ln(x) - \frac{x^2}{4} + C$$
+        </details>
 
         <h3>Example 2: Partial Fractions</h3>
         <p><strong>Evaluate:</strong> $\int \frac{1}{x^2-1}\,dx$</p>
-        $$\frac{1}{x^2-1} = \frac{1}{(x-1)(x+1)} = \frac{1/2}{x-1} - \frac{1/2}{x+1}$$
-        $$= \frac{1}{2}\ln|x-1| - \frac{1}{2}\ln|x+1| + C$$
-        $$= \frac{1}{2}\ln\left|\frac{x-1}{x+1}\right| + C$$
+        <details class="question">
+            <summary>Click to see the solution</summary>
+            $$\frac{1}{x^2-1} = \frac{1}{(x-1)(x+1)} = \frac{1/2}{x-1} - \frac{1/2}{x+1}$$
+            $$= \frac{1}{2}\ln|x-1| - \frac{1}{2}\ln|x+1| + C$$
+            $$= \frac{1}{2}\ln\left|\frac{x-1}{x+1}\right| + C$$
+        </details>
 
         <h3>Example 3: Power Series</h3>
         <p><strong>Task:</strong> Find the interval of convergence for $\sum_{n=0}^{\infty} x^n$</p>
-        <p>Apply the Ratio Test:</p>
-        $$\rho = \lim_{n\to\infty} \frac{|x|^{n+1}}{|x|^n} = |x|$$
-        <p>Converges when $|x| < 1$</p>
-        <p>At $x = 1$: $\sum 1$ diverges</p>
-        <p>At $x = -1$: $\sum (-1)^n$ diverges</p>
-        <p>Interval of Convergence: $(-1, 1)$</p>
+        <details class="question">
+            <summary>Click to see the solution</summary>
+            <p>Apply the Ratio Test:</p>
+            $$\rho = \lim_{n\to\infty} \frac{|x|^{n+1}}{|x|^n} = |x|$$
+            <p>Converges when $|x| < 1$</p>
+            <p>At $x = 1$: $\sum 1$ diverges</p>
+            <p>At $x = -1$: $\sum (-1)^n$ diverges</p>
+            <p>Interval of Convergence: $(-1, 1)$</p>
+        </details>
 
         <h2>Practice Problems</h2>
         <ol>

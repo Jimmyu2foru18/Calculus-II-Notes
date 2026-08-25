@@ -52,25 +52,34 @@
 
         <h3>Example 1: Ratio Test</h3>
         <p><strong>Task:</strong> Test $\sum_{n=1}^{\infty} \frac{n!}{n^2}$</p>
-        $$\rho = \lim_{n\to\infty} \frac{(n+1)!/(n+1)^2}{n!/n^2}$$
-        $$= \lim_{n\to\infty} \frac{(n+1)n!}{(n+1)^2} \cdot \frac{n^2}{n!}$$
-        $$= \lim_{n\to\infty} \frac{n^2}{n+1} = \infty$$
-        <p>Since $\rho = \infty > 1$, the series diverges.</p>
+        <details class="question">
+            <summary>Click to see the solution</summary>
+            $$\rho = \lim_{n\to\infty} \frac{(n+1)!/(n+1)^2}{n!/n^2}$$
+            $$= \lim_{n\to\infty} \frac{(n+1)n!}{(n+1)^2} \cdot \frac{n^2}{n!}$$
+            $$= \lim_{n\to\infty} \frac{n^2}{n+1} = \infty$$
+            <p>Since $\rho = \infty > 1$, the series diverges.</p>
+        </details>
 
         <h3>Example 2: Power Series Interval of Convergence</h3>
         <p><strong>Task:</strong> Find the interval of convergence for $\sum_{n=0}^{\infty} \frac{x^n}{n!}$</p>
-        $$\rho = \lim_{n\to\infty} \frac{|x|^{n+1}/(n+1)!}{|x|^n/n!}$$
-        $$= \lim_{n\to\infty} \frac{|x|}{n+1} = 0$$
-        <p>Since $\rho = 0 < 1$ for all $x$, the series converges for all $x$.</p>
-        <p>Interval of Convergence: $(-\infty, \infty)$</p>
-        <p>Radius of Convergence: $R = \infty$</p>
+        <details class="question">
+            <summary>Click to see the solution</summary>
+            $$\rho = \lim_{n\to\infty} \frac{|x|^{n+1}/(n+1)!}{|x|^n/n!}$$
+            $$= \lim_{n\to\infty} \frac{|x|}{n+1} = 0$$
+            <p>Since $\rho = 0 < 1$ for all $x$, the series converges for all $x$.</p>
+            <p>Interval of Convergence: $(-\infty, \infty)$</p>
+            <p>Radius of Convergence: $R = \infty$</p>
+        </details>
 
         <h3>Example 3: Alternating Series Test</h3>
         <p><strong>Task:</strong> Test $\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n}$</p>
-        <p>$a_n = \frac{1}{n} > 0$ (TRUE)</p>
-        <p>$a_n$ is decreasing (TRUE)</p>
-        <p>$\lim_{n\to\infty} a_n = 0$ (TRUE)</p>
-        <p>All conditions satisfied. The series converges by the Alternating Series Test.</p>
+        <details class="question">
+            <summary>Click to see the solution</summary>
+            <p>$a_n = \frac{1}{n} > 0$ (TRUE)</p>
+            <p>$a_n$ is decreasing (TRUE)</p>
+            <p>$\lim_{n\to\infty} a_n = 0$ (TRUE)</p>
+            <p>All conditions satisfied. The series converges by the Alternating Series Test.</p>
+        </details>
 
         <h2>Practice Problems</h2>
         <ol>

@@ -52,28 +52,37 @@
 
         <h3>Example 1: Polar Coordinates</h3>
         <p><strong>Task:</strong> Convert $r = 4\cos(\theta)$ to rectangular form</p>
-        <p>Multiply by $r$: $r^2 = 4r\cos(\theta)$</p>
-        <p>Substitute: $x^2 + y^2 = 4x$</p>
-        <p>Complete the square: $(x-2)^2 + y^2 = 4$</p>
-        <p>This is a circle of radius 2 centered at $(2, 0)$.</p>
+        <details class="question">
+            <summary>Click to see the solution</summary>
+            <p>Multiply by $r$: $r^2 = 4r\cos(\theta)$</p>
+            <p>Substitute: $x^2 + y^2 = 4x$</p>
+            <p>Complete the square: $(x-2)^2 + y^2 = 4$</p>
+            <p>This is a circle of radius 2 centered at $(2, 0)$.</p>
+        </details>
 
         <h3>Example 2: Area in Polar Coordinates</h3>
         <p><strong>Task:</strong> Find the area enclosed by $r = 1 + \sin(\theta)$</p>
-        $$A = \frac{1}{2}\int_0^{2\pi} (1+\sin(\theta))^2\,d\theta$$
-        <p>Expand: $(1+\sin(\theta))^2 = 1 + 2\sin(\theta) + \sin^2(\theta)$</p>
-        <p>$$= 1 + 2\sin(\theta) + \frac{1-\cos(2\theta)}{2}$$</p>
-        <p>$$= \frac{3}{2} + 2\sin(\theta) - \frac{1}{2}\cos(2\theta)$$</p>
-        $$A = \frac{1}{2}\left[\frac{3\theta}{2} - 2\cos(\theta) - \frac{\sin(2\theta)}{4}\right]_0^{2\pi}$$
-        <p>$$= \frac{1}{2}(3\pi) = \frac{3\pi}{2}$$</p>
+        <details class="question">
+            <summary>Click to see the solution</summary>
+            $$A = \frac{1}{2}\int_0^{2\pi} (1+\sin(\theta))^2\,d\theta$$
+            <p>Expand: $(1+\sin(\theta))^2 = 1 + 2\sin(\theta) + \sin^2(\theta)$</p>
+            <p>$$= 1 + 2\sin(\theta) + \frac{1-\cos(2\theta)}{2}$$</p>
+            <p>$$= \frac{3}{2} + 2\sin(\theta) - \frac{1}{2}\cos(2\theta)$$</p>
+            $$A = \frac{1}{2}\left[\frac{3\theta}{2} - 2\cos(\theta) - \frac{\sin(2\theta)}{4}\right]_0^{2\pi}$$
+            <p>$$= \frac{1}{2}(3\pi) = \frac{3\pi}{2}$$</p>
+        </details>
 
         <h3>Example 3: Parametric Arc Length</h3>
         <p><strong>Task:</strong> Find the arc length of $x = t$, $y = t^2$ from $t=0$ to $t=1$</p>
-        <p>$\frac{dx}{dt} = 1$, $\frac{dy}{dt} = 2t$</p>
-        $$L = \int_0^1 \sqrt{1 + 4t^2}\,dt$$
-        <p>Let $2t = \tan(\theta)$, $dt = \frac{1}{2}\sec^2(\theta)\,d\theta$</p>
-        $$L = \frac{1}{2}\int_0^{\arctan(2)} \sec^3(\theta)\,d\theta$$
-        <p>$$= \frac{1}{2}\left[\frac{1}{2}\sec(\theta)\tan(\theta) + \frac{1}{2}\ln|\sec(\theta)+\tan(\theta)|\right]_0^{\arctan(2)}$$</p>
-        <p>$$= \frac{1}{4}\left[2\sqrt{5} + \ln(2+\sqrt{5})\right]$$</p>
+        <details class="question">
+            <summary>Click to see the solution</summary>
+            <p>$\frac{dx}{dt} = 1$, $\frac{dy}{dt} = 2t$</p>
+            $$L = \int_0^1 \sqrt{1 + 4t^2}\,dt$$
+            <p>Let $2t = \tan(\theta)$, $dt = \frac{1}{2}\sec^2(\theta)\,d\theta$</p>
+            $$L = \frac{1}{2}\int_0^{\arctan(2)} \sec^3(\theta)\,d\theta$$
+            <p>$$= \frac{1}{2}\left[\frac{1}{2}\sec(\theta)\tan(\theta) + \frac{1}{2}\ln|\sec(\theta)+\tan(\theta)|\right]_0^{\arctan(2)}$$</p>
+            <p>$$= \frac{1}{4}\left[2\sqrt{5} + \ln(2+\sqrt{5})\right]$$</p>
+        </details>
 
         <h2>Practice Problems</h2>
         <ol>

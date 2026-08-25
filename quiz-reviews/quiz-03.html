@@ -52,23 +52,32 @@
 
         <h3>Example 1: FTC Part I</h3>
         <p><strong>Task:</strong> If $F(x) = \int_0^x f(t)\,dt$, find $F'(x)$.</p>
-        $$F'(x) = f(x)$$
+        <details class="question">
+            <summary>Click to see the solution</summary>
+            $$F'(x) = f(x)$$
+        </details>
 
         <h3>Example 2: Chain Rule with FTC</h3>
         <p><strong>Task:</strong> Find $\frac{d}{dx}\int_0^{x^2} \sin(t^2)\,dt$</p>
-        <p>Upper limit: $g(x) = x^2$, so $g'(x) = 2x$</p>
-        $$= \sin((x^2)^2) \cdot 2x$$
-        $$= 2x\sin(x^4)$$
+        <details class="question">
+            <summary>Click to see the solution</summary>
+            <p>Upper limit: $g(x) = x^2$, so $g'(x) = 2x$</p>
+            $$= \sin((x^2)^2) \cdot 2x$$
+            $$= 2x\sin(x^4)$$
+        </details>
 
         <h3>Example 3: Area Between Curves</h3>
         <p><strong>Task:</strong> Find the area between $f(x) = \sin(2x)$ and the x-axis from $x=0$ to $x=\pi$.</p>
-        <p>Split at $x = \pi/2$ where $\sin(2x)$ changes sign:</p>
-        $$A = \int_0^{\pi/2} \sin(2x)\,dx + \int_{\pi/2}^{\pi} (-\sin(2x))\,dx$$
-        <p>Let $u = 2x$, $du = 2dx$ in both integrals:</p>
-        $$= \frac{1}{2}\int_0^{\pi} \sin(u)\,du + \frac{1}{2}\int_{\pi}^{2\pi} \sin(u)\,du$$
-        $$= \frac{1}{2}[-\cos(u)]_0^{\pi} + \frac{1}{2}[-\cos(u)]_{\pi}^{2\pi}$$
-        $$= \frac{1}{2}(1+1) + \frac{1}{2}(1+1)$$
-        $$= 2$$
+        <details class="question">
+            <summary>Click to see the solution</summary>
+            <p>Split at $x = \pi/2$ where $\sin(2x)$ changes sign:</p>
+            $$A = \int_0^{\pi/2} \sin(2x)\,dx + \int_{\pi/2}^{\pi} (-\sin(2x))\,dx$$
+            <p>Let $u = 2x$, $du = 2dx$ in both integrals:</p>
+            $$= \frac{1}{2}\int_0^{\pi} \sin(u)\,du + \frac{1}{2}\int_{\pi}^{2\pi} \sin(u)\,du$$
+            $$= \frac{1}{2}[-\cos(u)]_0^{\pi} + \frac{1}{2}[-\cos(u)]_{\pi}^{2\pi}$$
+            $$= \frac{1}{2}(1+1) + \frac{1}{2}(1+1)$$
+            $$= 2$$
+        </details>
 
         <h2>Practice Problems</h2>
         <ol>

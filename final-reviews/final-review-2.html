@@ -54,22 +54,28 @@
 
         <h3>Example 1: Basic Trig Substitution</h3>
         <p><strong>Evaluate:</strong> $\int \frac{dx}{\sqrt{4-x^2}}$</p>
-        <p>Let $x = 2\sin(\theta)$, $dx = 2\cos(\theta)\,d\theta$</p>
-        <p>$\sqrt{4-x^2} = \sqrt{4-4\sin^2(\theta)} = 2\cos(\theta)$</p>
-        $$= \int \frac{2\cos(\theta)\,d\theta}{2\cos(\theta)}$$
-        $$= \int d\theta = \theta + C$$
-        $$= \sin^{-1}\left(\frac{x}{2}\right) + C$$
+        <details class="question">
+            <summary>Click to see the solution</summary>
+            <p>Let $x = 2\sin(\theta)$, $dx = 2\cos(\theta)\,d\theta$</p>
+            <p>$\sqrt{4-x^2} = \sqrt{4-4\sin^2(\theta)} = 2\cos(\theta)$</p>
+            $$= \int \frac{2\cos(\theta)\,d\theta}{2\cos(\theta)}$$
+            $$= \int d\theta = \theta + C$$
+            $$= \sin^{-1}\left(\frac{x}{2}\right) + C$$
+        </details>
 
         <h3>Example 2: Complex Trig Substitution</h3>
         <p><strong>Evaluate:</strong> $\int \frac{x^3\,dx}{\sqrt{4-x^2}}$</p>
-        <p>Let $x = 2\sin(\theta)$, $dx = 2\cos(\theta)\,d\theta$</p>
-        <p>$x^3 = 8\sin^3(\theta)$, $\sqrt{4-x^2} = 2\cos(\theta)$</p>
-        $$= \int \frac{8\sin^3(\theta) \cdot 2\cos(\theta)\,d\theta}{2\cos(\theta)}$$
-        $$= 8\int \sin^3(\theta)\,d\theta$$
-        <p>Use $\sin^2(\theta) = 1-\cos^2(\theta)$ and $u = \cos(\theta)$:</p>
-        $$= 8\int (1-u^2)(-du) = 8\left(\frac{u^3}{3} - u\right) + C$$
-        <p>Back-substitute: $\cos(\theta) = \frac{\sqrt{4-x^2}}{2}$</p>
-        $$= \frac{(4-x^2)^{3/2}}{3} - 4\sqrt{4-x^2} + C$$
+        <details class="question">
+            <summary>Click to see the solution</summary>
+            <p>Let $x = 2\sin(\theta)$, $dx = 2\cos(\theta)\,d\theta$</p>
+            <p>$x^3 = 8\sin^3(\theta)$, $\sqrt{4-x^2} = 2\cos(\theta)$</p>
+            $$= \int \frac{8\sin^3(\theta) \cdot 2\cos(\theta)\,d\theta}{2\cos(\theta)}$$
+            $$= 8\int \sin^3(\theta)\,d\theta$$
+            <p>Use $\sin^2(\theta) = 1-\cos^2(\theta)$ and $u = \cos(\theta)$:</p>
+            $$= 8\int (1-u^2)(-du) = 8\left(\frac{u^3}{3} - u\right) + C$$
+            <p>Back-substitute: $\cos(\theta) = \frac{\sqrt{4-x^2}}{2}$</p>
+            $$= \frac{(4-x^2)^{3/2}}{3} - 4\sqrt{4-x^2} + C$$
+        </details>
 
         <h2>Practice Problems</h2>
         <ol>
