@@ -23,90 +23,254 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 <body>
-<header>
-    <h1>Calculus II Notes</h1>
-    <p class="subtitle">Series Convergence Tests</p>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../days/index.html">Days</a>
-        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-        <a href="../final-reviews/index.html">Final Reviews</a>
-        <a href="../final-samples/index.html">Final Samples</a>
-        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-</header>
-<div class="container">
-    <main>
-        <a href="day-11.html" class="back-button">&larr; Back</a>
-        <p class="lead">Browse through the Series Convergence Tests pages. Use the arrow buttons or keyboard arrows to navigate.</p>
-        <section id="content">
-            <h2>Series Convergence Tests</h2>
+    <header>
+        <h1>Calculus II Notes</h1>
+        <p class="subtitle">Day 12: Series Convergence Tests</p>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../days/index.html">Days</a>
+            <a href="../quiz-reviews/index.html">Quiz Reviews</a>
+            <a href="../final-reviews/index.html">Final Reviews</a>
+            <a href="../final-samples/index.html">Final Samples</a>
+            <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+    </header>
 
-            <h3>Problem 1: Divergence Test</h3>
-            <p><strong>Task:</strong> Test the series sum from n=1 to infinity of 1/(n+1) for convergence.</p>
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Apply the Divergence Test</h4>
-                    <p>Compute lim(n->infinity) a_n = lim(n->infinity) 1/(n+1) = 0</p>
-                    <h4>Step 2: Conclusion</h4>
-                    <p>Since the limit is 0, the Divergence Test is inconclusive.</p>
-                    <p>This is a harmonic series shifted by 1, which diverges.</p>
-                    <h4>Final Answer:</h4>
-                    <p>The series diverges (by comparison to the harmonic series).</p>
+    <div class="container">
+        <main class="chapter">
+            <h2>Day 12: Series Convergence Tests</h2>
+            <p class="lead">Apply the Divergence Test, Integral Test, p-Series Test, and Limit Comparison Test to determine whether infinite series converge or diverge.</p>
+
+            <div class="video-section">
+                <h4>Core Lecture</h4>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
                 </div>
-            </details>
+            </div>
 
-            <h3>Problem 2: Integral Test</h3>
-            <p><strong>Task:</strong> Test the series sum from n=1 to infinity of 1/(n*ln(n)) for convergence.</p>
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Check conditions</h4>
-                    <p>f(x) = 1/(x*ln(x)) is positive, continuous, and decreasing for x > 1.</p>
-                    <h4>Step 2: Apply the Integral Test</h4>
-                    <p>integral from 2 to infinity of 1/(x*ln(x)) dx</p>
-                    <p>Let u = ln(x), du = 1/x dx</p>
-                    <p>= integral from ln(2) to infinity of 1/u du = lim(b->infinity) [ln(u)] from ln(2) to b</p>
-                    <p>= lim(b->infinity) (ln(b) - ln(ln(2))) = infinity</p>
-                    <h4>Final Answer:</h4>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Divergence Test</h5>
+                        <p>Necessary condition for convergence</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Integral Test</h5>
+                        <p>Connecting series to improper integrals</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Comparison Tests</h5>
+                        <p>Direct and limit comparison methods</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Convergence Tests Overview</h2>
+            <p>Several tests allow us to determine whether an infinite series converges without finding its exact sum. Each test has specific conditions for use.</p>
+
+            <div class="notes">
+                <h4>Summary of Tests</h4>
+                <p><strong>Divergence Test:</strong> If $\displaystyle \lim_{n \to \infty} a_n \neq 0$, the series $\sum a_n$ diverges. If the limit is $0$, the test is inconclusive.</p>
+                <p><strong>Integral Test:</strong> If $f(x)$ is positive, continuous, and decreasing for $x \geq 1$, then $\sum_{n=1}^{\infty} f(n)$ and $\int_1^{\infty} f(x)\,dx$ have the same convergence behavior.</p>
+                <p><strong>p-Series Test:</strong> The series $\displaystyle \sum_{n=1}^{\infty} \frac{1}{n^p}$ converges if $p > 1$ and diverges if $p \leq 1$.</p>
+                <p><strong>Limit Comparison Test:</strong> If $\displaystyle \lim_{n \to \infty} \frac{a_n}{b_n} = L$ with $0 < L < \infty$, then $\sum a_n$ and $\sum b_n$ have the same behavior.</p>
+            </div>
+
+            <h2>Problems</h2>
+
+            <div class="example">
+                <h4>Example 1.1</h4>
+                <p><strong>Problem:</strong> Test the series $\displaystyle \sum_{n=1}^{\infty} \frac{1}{n + 1}$ for convergence.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Apply the Divergence Test. Compute:</p>
+                        $$\lim_{n \to \infty} \frac{1}{n + 1} = 0$$
+                        <h4>Step 2:</h4>
+                        <p>The Divergence Test is inconclusive because the limit is $0$. Recognize that this is a harmonic series shifted by $1$: $\sum_{n=2}^{\infty} \frac{1}{n}$, which is known to diverge.</p>
+                        <h4>Final Answer:</h4>
+                        <p>The series diverges by comparison to the harmonic series.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 1.2</h4>
+                <p><strong>Problem:</strong> Test the series $\displaystyle \sum_{n=1}^{\infty} \frac{1}{n\ln(n)}$ for convergence.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Apply the Divergence Test: $\displaystyle \lim_{n \to \infty} \frac{1}{n\ln(n)} = 0$. Inconclusive.</p>
+                        <h4>Step 2:</h4>
+                        <p>Try the Integral Test. Let $f(x) = \frac{1}{x\ln(x)}$. This function is positive, continuous, and decreasing for $x > 1$.</p>
+                        <h4>Step 3:</h4>
+                        <p>Evaluate the corresponding improper integral:</p>
+                        $$\int_2^{\infty} \frac{1}{x\ln(x)}\,dx = \lim_{b \to \infty} \int_2^b \frac{1}{x\ln(x)}\,dx$$
+                        <p>Let $u = \ln(x)$, $du = \frac{1}{x}\,dx$:</p>
+                        $$= \lim_{b \to \infty} \int_{\ln(2)}^{\ln(b)} \frac{1}{u}\,du = \lim_{b \to \infty} [\ln|u|]_{\ln(2)}^{\ln(b)} = \lim_{b \to \infty} (\ln(\ln(b)) - \ln(\ln(2))) = \infty$$
+                        <h4>Final Answer:</h4>
+                        <p>The series diverges by the Integral Test.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 1.3</h4>
+                <p><strong>Problem:</strong> Determine whether $\displaystyle \sum_{n=1}^{\infty} \frac{1}{n^{3/2}}$ converges.</p>
+                <div class="visual-aid">
+                    <h4>Figure — p-series convergence region</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="184" font-size="12" fill="#000">p</text>
+                        <text x="205" y="15" font-size="12" fill="#000">y</text>
+                        <path d="M 30,180 C 100,170 160,150 200,130 C 240,110 300,90 380,70" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <line x1="130" y1="20" x2="130" y2="200" stroke="#c0392b" stroke-width="1" stroke-dasharray="4,3"/>
+                        <text x="125" y="215" font-size="10" fill="#c0392b">$p=1$</text>
+                        <text x="35" y="175" font-size="10" fill="#555">0</text>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">The p-series $\sum 1/n^p$ converges for $p > 1$ (right of dashed line). Here $p = 3/2 > 1$.</p>
+                </div>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Identify as a $p$-series with $p = \frac{3}{2}$.</p>
+                        <h4>Step 2:</h4>
+                        <p>Apply the p-Series Test. Since $p = \frac{3}{2} > 1$, the series converges.</p>
+                        <h4>Final Answer:</h4>
+                        <p>The series converges by the p-Series Test ($p = \frac{3}{2} > 1$).</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 1.4</h4>
+                <p><strong>Problem:</strong> Test the series $\displaystyle \sum_{n=1}^{\infty} \frac{n + 1}{n^2 + 5}$ for convergence.</p>
+                <div class="visual-aid">
+                    <h4>Figure — Limit Comparison Test regions</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="184" font-size="12" fill="#000">n</text>
+                        <text x="205" y="15" font-size="12" fill="#000">aₙ</text>
+                        <path d="M 30,140 C 100,120 160,100 200,85 C 240,70 300,55 380,40" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <path d="M 30,150 C 100,130 160,110 200,95 C 240,80 300,65 380,50" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="4,3"/>
+                        <text x="35" y="175" font-size="10" fill="#555">1</text>
+                        <text x="195" y="195" font-size="10" fill="#555">0</text>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">The series $\sum (n+1)/(n^2+5)$ (blue) behaves like $\sum 1/n$ (red dashed) for large $n$, so it diverges.</p>
+                </div>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>For large $n$, $\displaystyle \frac{n + 1}{n^2 + 5} \sim \frac{n}{n^2} = \frac{1}{n}$. Compare with $\sum \frac{1}{n}$, which diverges.</p>
+                        <h4>Step 2:</h4>
+                        <p>Apply the Limit Comparison Test:</p>
+                        $$\lim_{n \to \infty} \frac{\frac{n + 1}{n^2 + 5}}{\frac{1}{n}} = \lim_{n \to \infty} \frac{n(n + 1)}{n^2 + 5} = \lim_{n \to \infty} \frac{n^2 + n}{n^2 + 5} = 1$$
+                        <h4>Step 3:</h4>
+                        <p>Since $0 < L = 1 < \infty$, both series have the same behavior. Since $\sum \frac{1}{n}$ diverges, the given series also diverges.</p>
+                        <h4>Final Answer:</h4>
+                        <p>The series diverges by the Limit Comparison Test.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="questions">
+                <h4>Practice Problems</h4>
+                <details class="question">
+                    <summary>Problem 1 — Test $\displaystyle \sum_{n=1}^{\infty} \frac{1}{n + 1}$</summary>
+                    <p>Determine convergence using the appropriate test.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>The Divergence Test is inconclusive. This is a shifted harmonic series, which diverges.</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 2 — Test $\displaystyle \sum_{n=1}^{\infty} \frac{1}{n\ln(n)}$</summary>
+                    <p>Apply the Integral Test.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>The series diverges by the Integral Test, since $\displaystyle \int_2^{\infty} \frac{1}{x\ln(x)}\,dx$ diverges.</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 3 — Determine whether $\displaystyle \sum_{n=1}^{\infty} \frac{1}{n^{3/2}}$ converges</summary>
+                    <p>Identify the series type.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>This is a $p$-series with $p = \frac{3}{2} > 1$, so it converges.</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 4 — Test $\displaystyle \sum_{n=1}^{\infty} \frac{n + 1}{n^2 + 5}$</summary>
+                    <p>Use the Limit Comparison Test.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>Compare with $\sum \frac{1}{n}$. The limit is $L = 1$, so the series diverges.</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 5 — Test $\displaystyle \sum_{n=2}^{\infty} \frac{1}{n\sqrt{\ln(n)}}$</summary>
+                    <p>Choose the best test.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>Apply the Integral Test with $f(x) = \frac{1}{x\sqrt{\ln(x)}}$. Let $u = \ln(x)$, $du = \frac{1}{x}\,dx$:</p>
+                    $$\int_2^{\infty} \frac{1}{x\sqrt{\ln(x)}}\,dx = \lim_{b \to \infty} \int_{\ln(2)}^{\ln(b)} u^{-1/2}\,du = \lim_{b \to \infty} [2u^{1/2}]_{\ln(2)}^{\ln(b)} = \infty$$
                     <p>The series diverges by the Integral Test.</p>
-                </div>
-            </details>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 6 — Test $\displaystyle \sum_{n=1}^{\infty} \frac{2^n}{n!}$</summary>
+                    <p>Try the Ratio Test.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>Apply the Ratio Test:</p>
+                    $$\rho = \lim_{n \to \infty} \frac{a_{n+1}}{a_n} = \lim_{n \to \infty} \frac{2^{n+1}/(n+1)!}{2^n/n!} = \lim_{n \to \infty} \frac{2}{n + 1} = 0$$
+                    <p>Since $\rho = 0 < 1$, the series converges absolutely.</p>
+                    </details>
+                </details>
+            </div>
 
-            <h3>Problem 3: p-Series Test</h3>
-            <p><strong>Task:</strong> Determine if sum from n=1 to infinity of 1/n^(3/2) converges.</p>
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Identify as a p-series</h4>
-                    <p>This is a p-series with p = 3/2.</p>
-                    <h4>Step 2: Apply the p-Series Test</h4>
-                    <p>Since p = 3/2 > 1, the series converges.</p>
-                    <h4>Final Answer:</h4>
-                    <p>The series converges (p = 3/2 > 1).</p>
-                </div>
-            </details>
+            <div class="strategies">
+                <h4>Study Tips</h4>
+                <p><strong>1.</strong> Always start with the Divergence Test. It is quick and can immediately rule out convergence.</p>
+                <p><strong>2.</strong> For series involving $n^p$, $\ln(n)$, or $n!\n$, the Integral Test or Ratio Test are usually the most effective.</p>
+                <p><strong>3.</strong> When using the Limit Comparison Test, choose $b_n$ to be a simple series whose behavior you know (usually a $p$-series or geometric series).</p>
+                <p><strong>4.</strong> If $f(x)$ is difficult to integrate, the Integral Test may not be practical. Consider the Comparison Test instead.</p>
+                <p><strong>5.</strong> The Ratio Test is particularly powerful for series with factorials or exponentials like $a^n$.</p>
+            </div>
 
-            <h3>Problem 4: Limit Comparison Test</h3>
-            <p><strong>Task:</strong> Test the series sum from n=1 to infinity of (n+1)/(n^2+5) for convergence.</p>
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Choose a comparison series</h4>
-                    <p>For large n, (n+1)/(n^2+5) ~ n/n^2 = 1/n. Compare with sum of 1/n.</p>
-                    <h4>Step 2: Compute the limit</h4>
-                    <p>lim(n->infinity) [((n+1)/(n^2+5)) / (1/n)] = lim(n->infinity) n(n+1)/(n^2+5)</p>
-                    <p>= lim(n->infinity) (n^2+n)/(n^2+5) = 1</p>
-                    <h4>Step 3: Conclusion</h4>
-                    <p>Since 0 < L = 1 < infinity, both series behave the same way. Since sum of 1/n diverges, the given series also diverges.</p>
-                    <h4>Final Answer:</h4>
-                    <p>The series diverges by the Limit Comparison Test.</p>
-                </div>
-            </details>
-        </section>
-    </main>
-</div>
-<script src="../js/app.js"></script>
+            <nav class="chapter-nav">
+                <a href="day-11.html" class="nav-btn prev" id="prev-chapter">Previous</a>
+                <span class="nav-indicator" id="chapter-indicator"></span>
+                <a href="day-13.html" class="nav-btn next" id="next-chapter">Next</a>
+            </nav>
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
 </body>
 </html>

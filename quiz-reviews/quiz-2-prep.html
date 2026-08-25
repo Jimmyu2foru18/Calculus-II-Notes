@@ -22,135 +22,194 @@
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
-<body>
-<header>
-    <h1>Calculus II Notes</h1>
-    <p class="subtitle">Quiz 2 Preparation</p>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../days/index.html">Days</a>
-        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-        <a href="../final-reviews/index.html">Final Reviews</a>
-        <a href="../final-samples/index.html">Final Samples</a>
-        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-</header>
-<div class="container">
-    <main>
-        <p class="lead">Review these key topics before taking Quiz 2.</p>
+<body class="review-page">
+<div class="review-container">
+    <div class="review-header">
+        <h1>Quiz 2 Preparation</h1>
+        <nav>
+            <a href="../index.html">&larr; All Reviews</a>
+            <span>Advanced Integration</span>
+        </nav>
+    </div>
 
-        <h2>Key Topics</h2>
-        <ul>
-            <li>Advanced u-substitution</li>
-            <li>Trigonometric substitution</li>
-            <li>Riemann sums and summation notation</li>
-            <li>Basic series concepts</li>
-        </ul>
+    <div class="review-hero">
+        <h2>Quiz 2 Preparation</h2>
+        <p>Review these key topics before taking Quiz 2. Use this sheet to identify areas that need more practice.</p>
+        <div class="review-meta">
+            <span>4 Problems</span>
+            <span>Difficulty: Medium</span>
+        </div>
+    </div>
 
-        <h2>Quick Reference</h2>
-        <ul>
-            <li>$\sum_{k=1}^n k = \frac{n(n+1)}{2}$</li>
-            <li>$\sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6}$</li>
-            <li>$\Delta x = \frac{b-a}{n}$</li>
-            <li>$x_i = a + i\Delta x$</li>
-            <li>$\sqrt{a^2-x^2}$: use $x = a\sin(\theta)$</li>
-            <li>$\sqrt{a^2+x^2}$: use $x = a\tan(\theta)$</li>
-        </ul>
+    <div class="review-tabs" role="tablist">
+        <button class="review-tab active" data-tab="tab-formulas" role="tab">Formulas</button>
+        <button class="review-tab" data-tab="tab-examples" role="tab">Worked Examples</button>
+        <button class="review-tab" data-tab="tab-practice" role="tab">Practice Problems</button>
+    </div>
 
-        <h2>Practice Problems</h2>
-
-        <p><strong>Problem 1:</strong> Evaluate $\int \sqrt{9-x^2}\,dx$ using trigonometric substitution.</p>
-
-        <details class="question">
-            <summary><strong>Click to see the solution</strong></summary>
-            <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Let $x = 3\sin(\theta)$, so $dx = 3\cos(\theta)\,d\theta$ and $\sqrt{9-x^2} = 3\cos(\theta)$.
-                </div>
-                <div class="step">
-                    <strong>Step 2:</strong> Rewrite the integral:<br>
-                    $\int 3\cos(\theta) \cdot 3\cos(\theta)\,d\theta = \int 9\cos^2(\theta)\,d\theta$
-                </div>
-                <div class="step">
-                    <strong>Step 3:</strong> Use $\cos^2(\theta) = \frac{1+\cos(2\theta)}{2}$:<br>
-                    $9\int \frac{1+\cos(2\theta)}{2}\,d\theta = \frac{9}{2}\left(\theta + \frac{\sin(2\theta)}{2}\right) + C$
-                </div>
-                <div class="final-answer">
-                    <div class="final-answer-title">Final Answer:</div>
-                    $$\frac{9}{2}\arcsin\left(\frac{x}{3}\right) + \frac{x}{2}\sqrt{9-x^2} + C$$
-                </div>
+    <div class="review-section active" id="tab-formulas">
+        <div class="review-card">
+            <h3>Key Formulas</h3>
+            <div class="review-table">
+                <table>
+                    <thead><tr><th>Formula</th><th>Description</th></tr></thead>
+                    <tbody>
+                        <tr><td>$\sum_{k=1}^n k = \frac{n(n+1)}{2}$</td><td>Sum of first $n$ integers</td></tr>
+                        <tr><td>$\sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6}$</td><td>Sum of first $n$ squares</td></tr>
+                        <tr><td>$\Delta x = \frac{b-a}{n}$</td><td>Subinterval width</td></tr>
+                        <tr><td>$x_i = a + i\Delta x$</td><td>Right endpoint of subinterval $i$</td></tr>
+                        <tr><td>$\sqrt{a^2-x^2}$</td><td>Use $x = a\sin(\theta)$</td></tr>
+                        <tr><td>$\sqrt{a^2+x^2}$</td><td>Use $x = a\tan(\theta)$</td></tr>
+                    </tbody>
+                </table>
             </div>
-        </details>
+        </div>
+    </div>
 
-        <p><strong>Problem 2:</strong> Evaluate $\int_0^2 (x^2+1)\,dx$ using a left Riemann sum with $n=4$ subintervals.</p>
-
-        <details class="question">
-            <summary><strong>Click to see the solution</strong></summary>
-            <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Compute $\Delta x = \frac{2-0}{4} = \frac{1}{2}$.
-                </div>
-                <div class="step">
-                    <strong>Step 2:</strong> The left endpoints are $x_0 = 0$, $x_1 = 0.5$, $x_2 = 1$, $x_3 = 1.5$.
-                </div>
-                <div class="step">
-                    <strong>Step 3:</strong> Evaluate $f(x)$ at each left endpoint:<br>
-                    $f(0)=1$, $f(0.5)=1.25$, $f(1)=2$, $f(1.5)=3.25$
-                </div>
-                <div class="step">
-                    <strong>Step 4:</strong> Compute the sum:<br>
-                    $L_4 = \frac{1}{2}(1 + 1.25 + 2 + 3.25) = \frac{1}{2}(7.5) = 3.75$
-                </div>
-                <div class="final-answer">
-                    <div class="final-answer-title">Final Answer:</div>
-                    $$3.75$$
-                </div>
+    <div class="review-section" id="tab-examples">
+        <div class="review-card">
+            <h3>Worked Examples</h3>
+            <div class="example">
+                <h4>Example 1: Trig Substitution</h4>
+                <p><strong>Evaluate:</strong> $\int \sqrt{9-x^2}\,dx$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Let $x = 3\sin(\theta)$, so $dx = 3\cos(\theta)\,d\theta$ and $\sqrt{9-x^2} = 3\cos(\theta)$.</p>
+                        <h4>Step 2:</h4>
+                        <p>Rewrite the integral:</p>
+                        <p>$\int 3\cos(\theta) \cdot 3\cos(\theta)\,d\theta = \int 9\cos^2(\theta)\,d\theta$</p>
+                        <h4>Step 3:</h4>
+                        <p>Use $\cos^2(\theta) = \frac{1+\cos(2\theta)}{2}$:</p>
+                        <p>$9\int \frac{1+\cos(2\theta)}{2}\,d\theta = \frac{9}{2}\left(\theta + \frac{\sin(2\theta)}{2}\right) + C$</p>
+                        <h4>Final Answer:</h4>
+                        <p>$$\frac{9}{2}\arcsin\left(\frac{x}{3}\right) + \frac{x}{2}\sqrt{9-x^2} + C$$</p>
+                    </div>
+                </details>
             </div>
-        </details>
-
-        <p><strong>Problem 3:</strong> Find $\sum_{k=1}^{10} k^2$ using a summation formula.</p>
-
-        <details class="question">
-            <summary><strong>Click to see the solution</strong></summary>
-            <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Use the formula $\sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6}$ with $n=10$.
-                </div>
-                <div class="step">
-                    <strong>Step 2:</strong> Substitute:<br>
-                    $\frac{10(11)(21)}{6} = \frac{2310}{6}$
-                </div>
-                <div class="final-answer">
-                    <div class="final-answer-title">Final Answer:</div>
-                    $$385$$
-                </div>
+            <div class="example">
+                <h4>Example 2: Left Riemann Sum</h4>
+                <p><strong>Evaluate:</strong> $\int_0^2 (x^2+1)\,dx$ with $n=4$ using a left Riemann sum</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Compute $\Delta x = \frac{2-0}{4} = \frac{1}{2}$.</p>
+                        <h4>Step 2:</h4>
+                        <p>The left endpoints are $x_0 = 0$, $x_1 = 0.5$, $x_2 = 1$, $x_3 = 1.5$.</p>
+                        <h4>Step 3:</h4>
+                        <p>Evaluate $f(x)$ at each left endpoint:</p>
+                        <p>$f(0)=1$, $f(0.5)=1.25$, $f(1)=2$, $f(1.5)=3.25$</p>
+                        <h4>Step 4:</h4>
+                        <p>Compute the sum:</p>
+                        <p>$L_4 = \frac{1}{2}(1 + 1.25 + 2 + 3.25) = \frac{1}{2}(7.5) = 3.75$</p>
+                        <h4>Final Answer:</h4>
+                        <p>$$3.75$$</p>
+                    </div>
+                </details>
             </div>
-        </details>
-
-        <p><strong>Problem 4:</strong> Evaluate $\int x\cos(x^2)\,dx$ using u-substitution.</p>
-
-        <details class="question">
-            <summary><strong>Click to see the solution</strong></summary>
-            <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Let $u = x^2$, then $du = 2x\,dx$, so $x\,dx = \frac{1}{2}\,du$.
-                </div>
-                <div class="step">
-                    <strong>Step 2:</strong> Rewrite the integral:<br>
-                    $\int \cos(u) \cdot \frac{1}{2}\,du = \frac{1}{2}\int \cos(u)\,du$
-                </div>
-                <div class="step">
-                    <strong>Step 3:</strong> Integrate:<br>
-                    $\frac{1}{2}\sin(u) + C$
-                </div>
-                <div class="final-answer">
-                    <div class="final-answer-title">Final Answer:</div>
-                    $$\frac{1}{2}\sin(x^2) + C$$
-                </div>
+            <div class="example">
+                <h4>Example 3: Summation Formula</h4>
+                <p><strong>Find:</strong> $\sum_{k=1}^{10} k^2$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Use the formula $\sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6}$ with $n=10$.</p>
+                        <h4>Step 2:</h4>
+                        <p>Substitute:</p>
+                        <p>$\frac{10(11)(21)}{6} = \frac{2310}{6}$</p>
+                        <h4>Final Answer:</h4>
+                        <p>$$385$$</p>
+                    </div>
+                </details>
             </div>
-        </details>
-    </main>
+            <div class="example">
+                <h4>Example 4: u-Substitution with Trig</h4>
+                <p><strong>Evaluate:</strong> $\int x\cos(x^2)\,dx$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Let $u = x^2$, then $du = 2x\,dx$, so $x\,dx = \frac{1}{2}\,du$.</p>
+                        <h4>Step 2:</h4>
+                        <p>Rewrite the integral:</p>
+                        <p>$\int \cos(u) \cdot \frac{1}{2}\,du = \frac{1}{2}\int \cos(u)\,du$</p>
+                        <h4>Step 3:</h4>
+                        <p>Integrate:</p>
+                        <p>$\frac{1}{2}\sin(u) + C$</p>
+                        <h4>Final Answer:</h4>
+                        <p>$$\frac{1}{2}\sin(x^2) + C$$</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+
+    <div class="review-section" id="tab-practice">
+        <div class="review-card">
+            <h3>Practice Problems</h3>
+            <details class="question">
+                <summary>Problem 1</summary>
+                <p><strong>Evaluate:</strong> $\int \sqrt{9-x^2}\,dx$ using trigonometric substitution.</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>$$\frac{9}{2}\arcsin\left(\frac{x}{3}\right) + \frac{x}{2}\sqrt{9-x^2} + C$$</p>
+                </details>
+            </details>
+            <details class="question">
+                <summary>Problem 2</summary>
+                <p><strong>Approximate:</strong> $\int_0^2 (x^2+1)\,dx$ with $n=4$ left Riemann sum.</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>$\Delta x = \frac{1}{2}$, $L_4 = \frac{1}{2}(1 + 1.25 + 2 + 3.25) = 3.75$</p>
+                </details>
+            </details>
+            <details class="question">
+                <summary>Problem 3</summary>
+                <p><strong>Find:</strong> $\sum_{k=1}^{10} k^2$ using a summation formula.</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>$$\frac{10(11)(21)}{6} = 385$$</p>
+                </details>
+            </details>
+            <details class="question">
+                <summary>Problem 4</summary>
+                <p><strong>Evaluate:</strong> $\int x\cos(x^2)\,dx$ using u-substitution.</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>Let $u = x^2$, $du = 2x\,dx$. Then $\frac{1}{2}\int\cos(u)\,du = \frac{1}{2}\sin(x^2) + C$</p>
+                </details>
+            </details>
+        </div>
+    </div>
+
+    <div class="review-nav">
+        <a href="quiz-1-prep.html" class="review-nav-btn">&larr; Previous Review</a>
+        <span class="review-nav-indicator">Self-Check</span>
+        <a href="quiz-3-prep.html" class="review-nav-btn">Next Review &rarr;</a>
+    </div>
 </div>
+
 <script src="../js/app.js"></script>
+<script>
+document.querySelectorAll('.review-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = tab.dataset.tab;
+        document.querySelectorAll('.review-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.review-section').forEach(s => s.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(target).classList.add('active');
+        if (window.MathJax && MathJax.typesetPromise) {
+            MathJax.typesetPromise();
+        }
+    });
+});
+</script>
 </body>
 </html>

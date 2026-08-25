@@ -23,81 +23,207 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 <body>
-<header>
-    <h1>Calculus II Notes</h1>
-    <p class="subtitle">Advanced Series Tests</p>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../days/index.html">Days</a>
-        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-        <a href="../final-reviews/index.html">Final Reviews</a>
-        <a href="../final-samples/index.html">Final Samples</a>
-        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-</header>
-<div class="container">
-    <main>
-        <a href="day-12.html" class="back-button">&larr; Back</a>
-        <p class="lead">Browse through the Advanced Series Tests pages. Use the arrow buttons or keyboard arrows to navigate.</p>
-        <section id="content">
-            <h2>Advanced Series Tests</h2>
+    <header>
+        <h1>Calculus II Notes</h1>
+        <p class="subtitle">Day 13: Advanced Series Tests</p>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../days/index.html">Days</a>
+            <a href="../quiz-reviews/index.html">Quiz Reviews</a>
+            <a href="../final-reviews/index.html">Final Reviews</a>
+            <a href="../final-samples/index.html">Final Samples</a>
+            <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+    </header>
 
-            <h3>Problem 1: Ratio Test</h3>
-            <p><strong>Task:</strong> Test the series sum from n=1 to infinity of n!/(n^2) for convergence.</p>
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Apply the Ratio Test</h4>
-                    <p>rho = lim(n->infinity) |a_(n+1)/a_n|</p>
-                    <p>a_n = n!/n^2</p>
-                    <p>a_(n+1) = (n+1)!/(n+1)^2</p>
-                    <h4>Step 2: Compute the ratio</h4>
-                    <p>a_(n+1)/a_n = [(n+1)!/(n+1)^2] / [n!/n^2]</p>
-                    <p>= [(n+1)*n!/(n+1)^2] * [n^2/n!]</p>
-                    <p>= n^2/(n+1)</p>
-                    <h4>Step 3: Take the limit</h4>
-                    <p>rho = lim(n->infinity) n^2/(n+1) = infinity</p>
-                    <h4>Final Answer:</h4>
-                    <p>The series diverges by the Ratio Test (rho = infinity > 1).</p>
-                </div>
-            </details>
+    <div class="container">
+        <main class="chapter">
+            <h2>Day 13: Advanced Series Tests</h2>
+            <p class="lead">Detailed exploration of the Ratio Test, Root Test, and Alternating Series Test for determining series convergence.</p>
 
-            <h3>Problem 2: Root Test</h3>
-            <p><strong>Task:</strong> Test the series sum from n=1 to infinity of (n/(n+1))^n for convergence.</p>
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Apply the Root Test</h4>
-                    <p>rho = lim(n->infinity) |a_n|^(1/n)</p>
-                    <p>a_n = (n/(n+1))^n</p>
-                    <h4>Step 2: Compute the nth root</h4>
-                    <p>|a_n|^(1/n) = [(n/(n+1))^n]^(1/n) = n/(n+1)</p>
-                    <h4>Step 3: Take the limit</h4>
-                    <p>rho = lim(n->infinity) n/(n+1) = 1</p>
-                    <h4>Final Answer:</h4>
-                    <p>The Root Test is inconclusive (rho = 1). Another test is needed.</p>
+            <div class="video-section">
+                <h4>Core Lecture</h4>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
                 </div>
-            </details>
+            </div>
 
-            <h3>Problem 3: Alternating Series Test</h3>
-            <p><strong>Task:</strong> Test the series sum from n=1 to infinity of (-1)^(n+1)/n for convergence.</p>
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Check the conditions</h4>
-                    <p>a_n = 1/n</p>
-                    <p>Condition 1: a_n > 0 for all n (TRUE)</p>
-                    <p>Condition 2: a_n is decreasing (TRUE, since 1/(n+1) < 1/n)</p>
-                    <p>Condition 3: lim(n->infinity) a_n = lim(n->infinity) 1/n = 0 (TRUE)</p>
-                    <h4>Step 2: Conclusion</h4>
-                    <p>All conditions are satisfied, so the series converges by the Alternating Series Test.</p>
-                    <h4>Final Answer:</h4>
-                    <p>The series converges by the Alternating Series Test.</p>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Video Title</h5>
+                        <p>Description</p>
+                    </div>
                 </div>
-            </details>
-        </section>
-    </main>
-</div>
-<script src="../js/app.js"></script>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Video Title</h5>
+                        <p>Description</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Video Title</h5>
+                        <p>Description</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Advanced Convergence Tests</h2>
+            <p>When basic tests are inconclusive, advanced tests like the Ratio Test, Root Test, and Alternating Series Test help determine convergence or divergence.</p>
+
+            <div class="notes">
+                <h4>Test Formulas</h4>
+                <p><strong>Ratio Test:</strong> Let $\rho = \lim_{n \to \infty} \left|\frac{a_{n+1}}{a_n}\right|$. If $\rho < 1$, the series converges absolutely. If $\rho > 1$ (or $\rho = \infty$), the series diverges. If $\rho = 1$, the test is inconclusive.</p>
+                <p><strong>Root Test:</strong> Let $\rho = \lim_{n \to \infty} \sqrt[n]{|a_n|}$. If $\rho < 1$, the series converges absolutely. If $\rho > 1$ (or $\rho = \infty$), the series diverges. If $\rho = 1$, the test is inconclusive.</p>
+                <p><strong>Alternating Series Test:</strong> The series $\sum (-1)^n a_n$ converges if $a_n > 0$, $a_{n+1} \leq a_n$ for all $n$, and $\lim_{n \to \infty} a_n = 0$.</p>
+            </div>
+
+            <div class="example">
+                <h4>Example 13.1</h4>
+                <p><strong>Problem:</strong> Test the series $\sum_{n=1}^{\infty} \frac{n!}{n^2}$ for convergence.</p>
+                <div class="visual-aid">
+                    <h4>Figure — Ratio Test convergence diagram</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="184" font-size="12" fill="#000">n</text>
+                        <text x="205" y="15" font-size="12" fill="#000">|aₙ|</text>
+                        <path d="M 30,180 C 80,170 120,150 160,120 C 200,80 240,40 280,15 C 300,5 320,0 380,0" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <line x1="30" y1="20" x2="380" y2="20" stroke="#c0392b" stroke-width="1" stroke-dasharray="4,3"/>
+                        <text x="35" y="175" font-size="10" fill="#555">1</text>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">The terms $|a_n| = n!/n^2$ grow rapidly, giving $\rho = \infty > 1$, so the series diverges.</p>
+                </div>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Apply the Ratio Test</h4>
+                        <p>$\rho = \lim_{n \to \infty} \left|\frac{a_{n+1}}{a_n}\right|$</p>
+                        <p>$a_n = \frac{n!}{n^2}$</p>
+                        <p>$a_{n+1} = \frac{(n+1)!}{(n+1)^2}$</p>
+                        <h4>Step 2: Compute the ratio</h4>
+                        <p>$\frac{a_{n+1}}{a_n} = \frac{(n+1)!/(n+1)^2}{n!/n^2} = \frac{n^2}{n+1}$</p>
+                        <h4>Step 3: Take the limit</h4>
+                        <p>$$\rho = \lim_{n \to \infty} \frac{n^2}{n+1} = \infty$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>The series diverges by the Ratio Test ($\rho = \infty > 1$).</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 13.2</h4>
+                <p><strong>Problem:</strong> Test the series $\sum_{n=1}^{\infty} \left(\frac{n}{n+1}\right)^n$ for convergence.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Apply the Root Test</h4>
+                        <p>$\rho = \lim_{n \to \infty} \sqrt[n]{|a_n|}$</p>
+                        <p>$a_n = \left(\frac{n}{n+1}\right)^n$</p>
+                        <h4>Step 2: Compute the $n$th root</h4>
+                        <p>$$\sqrt[n]{\left(\frac{n}{n+1}\right)^n} = \frac{n}{n+1}$$</p>
+                        <h4>Step 3: Take the limit</h4>
+                        <p>$$\rho = \lim_{n \to \infty} \frac{n}{n+1} = 1$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>The Root Test is inconclusive ($\rho = 1$). Another test is needed.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 13.3</h4>
+                <p><strong>Problem:</strong> Test the series $\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n}$ for convergence.</p>
+                <div class="visual-aid">
+                    <h4>Figure — Alternating harmonic series</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="184" font-size="12" fill="#000">n</text>
+                        <text x="205" y="15" font-size="12" fill="#000">aₙ</text>
+                        <path d="M 30,140 L 60,160 L 90,140 L 120,155 L 150,140 L 180,150 L 210,140 L 240,145 L 270,140 L 300,143 L 330,140 L 360,142" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <line x1="30" y1="180" x2="380" y2="180" stroke="#c0392b" stroke-width="1" stroke-dasharray="4,3"/>
+                        <text x="35" y="175" font-size="10" fill="#555">1</text>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">The alternating harmonic series terms $a_n = (-1)^{n+1}/n$ decrease in magnitude to 0, so it converges.</p>
+                </div>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Check the conditions</h4>
+                        <p>$a_n = \frac{1}{n}$</p>
+                        <p>Condition 1: $a_n > 0$ for all $n$ (TRUE)</p>
+                        <p>Condition 2: $a_n$ is decreasing (TRUE, since $\frac{1}{n+1} < \frac{1}{n}$)</p>
+                        <p>Condition 3: $\lim_{n \to \infty} a_n = \lim_{n \to \infty} \frac{1}{n} = 0$ (TRUE)</p>
+                        <h4>Step 2: Conclusion</h4>
+                        <p>All conditions are satisfied, so the series converges by the Alternating Series Test.</p>
+                        <h4>Final Answer:</h4>
+                        <p>The series converges by the Alternating Series Test.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="questions">
+                <h4>Practice Problems</h4>
+                <details class="question">
+                    <summary>Problem 1 — Ratio Test with Factorial</summary>
+                    <p>Test the series $\sum_{n=1}^{\infty} \frac{n!}{n^3}$ for convergence.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>Apply the Ratio Test:</p>
+                        <p>$$\rho = \lim_{n \to \infty} \frac{(n+1)!/(n+1)^3}{n!/n^3} = \lim_{n \to \infty} \frac{n^3}{n+1} = \infty$$</p>
+                        <p>The series diverges by the Ratio Test.</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 2 — Alternating Series with $n^2$</summary>
+                    <p>Test the series $\sum_{n=1}^{\infty} \frac{(-1)^n}{n^2}$ for convergence.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>$a_n = \frac{1}{n^2} > 0$, $a_{n+1} \leq a_n$, and $\lim_{n \to \infty} a_n = 0$.</p>
+                        <p>The series converges by the Alternating Series Test (and absolutely by the $p$-series test).</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 3 — Root Test with Exponential</summary>
+                    <p>Test the series $\sum_{n=1}^{\infty} \left(\frac{2n}{3n+1}\right)^n$ for convergence.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>Apply the Root Test:</p>
+                        <p>$$\rho = \lim_{n \to \infty} \frac{2n}{3n+1} = \frac{2}{3} < 1$$</p>
+                        <p>The series converges absolutely by the Root Test.</p>
+                    </details>
+                </details>
+            </div>
+
+            <div class="strategies">
+                <h4>Study Tips</h4>
+                <p><strong>1.</strong> Start with the simplest test (divergence test, geometric, $p$-series) before trying advanced tests.</p>
+                <p><strong>2.</strong> The Ratio Test is especially useful for series with factorials or exponentials.</p>
+                <p><strong>3.</strong> The Root Test works well for series with $n$th powers.</p>
+                <p><strong>4.</strong> When a test is inconclusive, try a different test or combine tests.</p>
+            </div>
+
+            <nav class="chapter-nav">
+                <a href="day-12.html" class="nav-btn prev" id="prev-chapter">Previous</a>
+                <span class="nav-indicator" id="chapter-indicator"></span>
+                <a href="day-14.html" class="nav-btn next" id="next-chapter">Next</a>
+            </nav>
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
 </body>
 </html>

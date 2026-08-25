@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 11 - Sequences, Series, and L'Hopital | Calculus II Notes</title>
+    <title>Day 11 - Sequences, Series, and L'Hopital's Rule | Calculus II Notes</title>
     <link rel="stylesheet" href="../css/styles.css">
     <script>
     window.MathJax = {
@@ -23,76 +23,298 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 <body>
-<header>
-    <h1>Calculus II Notes</h1>
-    <p class="subtitle">Sequences, Series, and L'Hopital</p>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../days/index.html">Days</a>
-        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-        <a href="../final-reviews/index.html">Final Reviews</a>
-        <a href="../final-samples/index.html">Final Samples</a>
-        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-</header>
-<div class="container">
-    <main>
-        <a href="day-10.html" class="back-button">&larr; Back</a>
-        <p class="lead">Browse through the Sequences, Series, and L'Hopital pages. Use the arrow buttons or keyboard arrows to navigate.</p>
-        <section id="content">
-            <h2>Sequences, Series, and L'Hopital's Rule</h2>
-            
-            <h3>Problem 1: Improper Integral with p = 3/4</h3>
-            <p><strong>Task:</strong> Determine if integral from 0 to 1 of 1/(x^(3/4)) dx converges or diverges.</p>
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Identify the type</h4>
-                    <p>This is an improper integral of Type II (infinite discontinuity at x = 0).</p>
-                    <h4>Step 2: Set up as a limit</h4>
-                    <p>integral from 0 to 1 of x^(-3/4) dx = lim(a->0+) integral from a to 1 of x^(-3/4) dx</p>
-                    <h4>Step 3: Integrate</h4>
-                    <p>= lim(a->0+) [x^(1/4)/(1/4)] from a to 1</p>
-                    <p>= lim(a->0+) [4x^(1/4)] from a to 1</p>
-                    <h4>Step 4: Evaluate the limit</h4>
-                    <p>= 4(1) - 4(0) = 4</p>
-                    <h4>Final Answer:</h4>
-                    <p>The integral converges to 4.</p>
-                </div>
-            </details>
+    <header>
+        <h1>Calculus II Notes</h1>
+        <p class="subtitle">Day 11: Sequences, Series, and L'Hopital's Rule</p>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../days/index.html">Days</a>
+            <a href="../quiz-reviews/index.html">Quiz Reviews</a>
+            <a href="../final-reviews/index.html">Final Reviews</a>
+            <a href="../final-samples/index.html">Final Samples</a>
+            <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+    </header>
 
-            <h3>Problem 2: L'Hopital's Rule</h3>
-            <p><strong>Task:</strong> Evaluate lim(x->0+) x*ln(x)</p>
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Identify the indeterminate form</h4>
-                    <p>As x -> 0+, ln(x) -> -infinity, so we have 0 * (-infinity).</p>
-                    <h4>Step 2: Rewrite as a quotient</h4>
-                    <p>x*ln(x) = ln(x)/(1/x)</p>
-                    <h4>Step 3: Apply L'Hopital's Rule</h4>
-                    <p>lim(x->0+) ln(x)/(1/x) = lim(x->0+) (1/x)/(-1/x^2) = lim(x->0+) (-x) = 0</p>
-                    <h4>Final Answer:</h4>
-                    <p>lim(x->0+) x*ln(x) = 0</p>
-                </div>
-            </details>
+    <div class="container">
+        <main class="chapter">
+            <h2>Day 11: Sequences, Series, and L'Hopital's Rule</h2>
+            <p class="lead">Understand limits of sequences, the basics of infinite series, and apply L'Hopital's Rule to tricky indeterminate forms.</p>
 
-            <h3>Problem 3: Sequences and Limits</h3>
-            <p><strong>Task:</strong> Find the limit of the sequence a_n = (2n + 7)/(3n + 5)</p>
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Divide numerator and denominator by n</h4>
-                    <p>a_n = (2 + 7/n)/(3 + 5/n)</p>
-                    <h4>Step 2: Take the limit as n -> infinity</h4>
-                    <p>lim(n->infinity) a_n = (2 + 0)/(3 + 0) = 2/3</p>
-                    <h4>Final Answer:</h4>
-                    <p>lim(n->infinity) (2n+7)/(3n+5) = 2/3</p>
+            <div class="video-section">
+                <h4>Core Lecture</h4>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
                 </div>
-            </details>
-        </section>
-    </main>
-</div>
-<script src="../js/app.js"></script>
+            </div>
+
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Sequences and Limits</h5>
+                        <p>Finding limits of sequences as $n \to \infty$</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Infinite Series Intro</h5>
+                        <p>Geometric series and partial sums</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>L'Hopital's Rule</h5>
+                        <p>Resolving indeterminate forms</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Sequences</h2>
+            <p>A sequence is a function whose domain is the set of positive integers. We are typically interested in the limit of a sequence as $n \to \infty$.</p>
+
+            <div class="notes">
+                <h4>Sequences</h4>
+                <p>A sequence $\{a_n\}$ converges to $L$ if $\displaystyle \lim_{n \to \infty} a_n = L$. If the limit does not exist, the sequence diverges.</p>
+                <p><strong>Useful limit:</strong> $\displaystyle \lim_{n \to \infty} \frac{1}{n^p} = 0$ for any $p > 0$.</p>
+                <p><strong>Squeeze Theorem:</strong> If $a_n \leq b_n \leq c_n$ and $\lim a_n = \lim c_n = L$, then $\lim b_n = L$.</p>
+            </div>
+
+            <div class="example">
+                <h4>Example 1.1</h4>
+                <p><strong>Problem:</strong> Find $\displaystyle \lim_{n \to \infty} \frac{2n + 7}{3n + 5}$.</p>
+                <div class="visual-aid">
+                    <h4>Figure — Sequence convergence to $2/3$</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="184" font-size="12" fill="#000">n</text>
+                        <text x="205" y="15" font-size="12" fill="#000">aₙ</text>
+                        <path d="M 30,140 C 100,120 160,100 200,90 C 240,80 300,75 380,70" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <line x1="30" y1="70" x2="380" y2="70" stroke="#c0392b" stroke-width="1" stroke-dasharray="4,3"/>
+                        <text x="35" y="175" font-size="10" fill="#555">1</text>
+                        <text x="195" y="195" font-size="10" fill="#555">0</text>
+                        <text x="25" y="75" font-size="10" fill="#c0392b">2/3</text>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">The sequence terms $a_n = (2n+7)/(3n+5)$ approach the limit $2/3$ as $n \to \infty$.</p>
+                </div>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Divide numerator and denominator by $n$:</p>
+                        $$\frac{2n + 7}{3n + 5} = \frac{2 + \frac{7}{n}}{3 + \frac{5}{n}}$$
+                        <h4>Step 2:</h4>
+                        <p>Take the limit as $n \to \infty$:</p>
+                        $$\lim_{n \to \infty} \frac{2n + 7}{3n + 5} = \frac{2 + 0}{3 + 0} = \frac{2}{3}$$
+                        <h4>Final Answer:</h4>
+                        $$\lim_{n \to \infty} \frac{2n + 7}{3n + 5} = \frac{2}{3}$$
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 1.2</h4>
+                <p><strong>Problem:</strong> Find $\displaystyle \lim_{n \to \infty} \frac{\ln(n)}{n}$.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>This is of the form $\frac{\infty}{\infty}$. Apply L'Hopital's Rule (treating $n$ as a continuous variable for the limit):</p>
+                        $$\lim_{n \to \infty} \frac{\ln(n)}{n} = \lim_{n \to \infty} \frac{1/n}{1} = \lim_{n \to \infty} \frac{1}{n} = 0$$
+                        <h4>Final Answer:</h4>
+                        $$\lim_{n \to \infty} \frac{\ln(n)}{n} = 0$$
+                    </div>
+                </details>
+            </div>
+
+            <h2>Series Introduction</h2>
+            <p>An infinite series is the sum of the terms of a sequence. We write $\displaystyle \sum_{n=1}^{\infty} a_n$ and study whether the sum approaches a finite value.</p>
+
+            <div class="notes">
+                <h4>Geometric Series</h4>
+                <p>A geometric series has the form $\displaystyle \sum_{n=0}^{\infty} ar^n$.</p>
+                <p>It converges to $\displaystyle \frac{a}{1 - r}$ when $|r| < 1$, and diverges when $|r| \geq 1$.</p>
+                <p><strong>Partial sums:</strong> $S_n = a + ar + ar^2 + \cdots + ar^n$.</p>
+            </div>
+
+            <div class="example">
+                <h4>Example 2.1</h4>
+                <p><strong>Problem:</strong> Determine whether $\displaystyle \sum_{n=0}^{\infty} \frac{3}{2^n}$ converges, and if so, find its sum.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Identify as a geometric series with $a = 3$ and $r = \frac{1}{2}$.</p>
+                        <h4>Step 2:</h4>
+                        <p>Since $|r| = \frac{1}{2} < 1$, the series converges.</p>
+                        <h4>Final Answer:</h4>
+                        $$\sum_{n=0}^{\infty} \frac{3}{2^n} = \frac{3}{1 - \frac{1}{2}} = 6$$
+                    </div>
+                </details>
+            </div>
+
+            <h2>L'Hopital's Rule</h2>
+            <p>L'Hopital's Rule applies to limits of the form $\frac{0}{0}$ or $\frac{\infty}{\infty}$. It states that if $\lim f(x) = \lim g(x) = 0$ or $\infty$, then:</p>
+            $$\lim_{x \to c} \frac{f(x)}{g(x)} = \lim_{x \to c} \frac{f'(x)}{g'(x)}$$
+            <p>provided the limit on the right exists.</p>
+
+            <div class="notes">
+                <h4>Indeterminate Forms</h4>
+                <p><strong>Forms $\frac{0}{0}$ and $\frac{\infty}{\infty}$:</strong> Apply L'Hopital's Rule directly.</p>
+                <p><strong>Form $0 \cdot \infty$:</strong> Rewrite as $\frac{0}{1/\infty}$ or $\frac{\infty}{1/0}$ to create a quotient.</p>
+                <p><strong>Form $\infty - \infty$:</strong> Combine into a single fraction using a common denominator.</p>
+                <p><strong>Forms $0^0$, $1^{\infty}$, $\infty^0$:</strong> Take the natural logarithm and use L'Hopital's Rule on the resulting product.</p>
+            </div>
+
+            <div class="example">
+                <h4>Example 3.1</h4>
+                <p><strong>Problem:</strong> Evaluate $\displaystyle \lim_{x \to 0^+} x\ln(x)$.</p>
+                <div class="visual-aid">
+                    <h4>Figure — Indeterminate form $0 \cdot (-\infty)$</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="184" font-size="12" fill="#000">x</text>
+                        <text x="205" y="15" font-size="12" fill="#000">y</text>
+                        <path d="M 30,180 C 60,170 100,140 150,100 C 180,70 200,50 380,20" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <text x="35" y="175" font-size="10" fill="#555">0</text>
+                        <text x="195" y="195" font-size="10" fill="#555">0</text>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">As $x \to 0^+$, $x\ln(x) \to 0$ despite $\ln(x) \to -\infty$. The limit is 0.</p>
+                </div>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Identify the indeterminate form. As $x \to 0^+$, $\ln(x) \to -\infty$, so $x\ln(x)$ has the form $0 \cdot (-\infty)$.</p>
+                        <h4>Step 2:</h4>
+                        <p>Rewrite as a quotient:</p>
+                        $$x\ln(x) = \frac{\ln(x)}{1/x}$$
+                        <h4>Step 3:</h4>
+                        <p>Apply L'Hopital's Rule to $\frac{\infty}{\infty}$:</p>
+                        $$\lim_{x \to 0^+} \frac{\ln(x)}{1/x} = \lim_{x \to 0^+} \frac{1/x}{-1/x^2} = \lim_{x \to 0^+} (-x) = 0$$
+                        <h4>Final Answer:</h4>
+                        $$\lim_{x \to 0^+} x\ln(x) = 0$$
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 3.2</h4>
+                <p><strong>Problem:</strong> Evaluate $\displaystyle \lim_{x \to \infty} \left(1 + \frac{2}{x}\right)^x$.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>This has the form $1^{\infty}$. Let $y = \left(1 + \frac{2}{x}\right)^x$ and take the natural logarithm:</p>
+                        $$\ln(y) = x\ln\left(1 + \frac{2}{x}\right)$$
+                        <h4>Step 2:</h4>
+                        <p>Rewrite as a quotient to apply L'Hopital's Rule:</p>
+                        $$\ln(y) = \frac{\ln\left(1 + \frac{2}{x}\right)}{1/x}$$
+                        <p>As $x \to \infty$, this has the form $\frac{0}{0}$.</p>
+                        <h4>Step 3:</h4>
+                        <p>Apply L'Hopital's Rule. Let $u = 1 + \frac{2}{x}$, so $\frac{du}{dx} = -\frac{2}{x^2}$:</p>
+                        $$\lim_{x \to \infty} \frac{\ln\left(1 + \frac{2}{x}\right)}{1/x} = \lim_{x \to \infty} \frac{-\frac{2}{x^2}\left(1 + \frac{2}{x}\right)^{-1}}{-\frac{1}{x^2}} = \lim_{x \to \infty} \frac{2}{1 + \frac{2}{x}} = 2$$
+                        <h4>Step 4:</h4>
+                        <p>Exponentiate to find $y$:</p>
+                        $$y = e^{\ln(y)} = e^2$$
+                        <h4>Final Answer:</h4>
+                        $$\lim_{x \to \infty} \left(1 + \frac{2}{x}\right)^x = e^2$$
+                    </div>
+                </details>
+            </div>
+
+            <div class="questions">
+                <h4>Practice Problems</h4>
+                <details class="question">
+                    <summary>Problem 1 — Find $\displaystyle \lim_{n \to \infty} \frac{n^2 + 1}{3n^2 - 2}$</summary>
+                    <p>Evaluate the limit of the sequence.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>Divide by $n^2$:</p>
+                    $$\lim_{n \to \infty} \frac{n^2 + 1}{3n^2 - 2} = \lim_{n \to \infty} \frac{1 + \frac{1}{n^2}}{3 - \frac{2}{n^2}} = \frac{1}{3}$$
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 2 — Determine whether $\displaystyle \sum_{n=0}^{\infty} \frac{5}{3^n}$ converges</summary>
+                    <p>Identify the series type and find its sum if it converges.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>This is geometric with $a = 5$ and $r = \frac{1}{3}$. Since $|r| < 1$, it converges to:</p>
+                    $$\sum_{n=0}^{\infty} \frac{5}{3^n} = \frac{5}{1 - \frac{1}{3}} = \frac{15}{2}$$
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 3 — Evaluate $\displaystyle \lim_{x \to 0} \frac{\sin(5x)}{3x}$</summary>
+                    <p>Use L'Hopital's Rule or the standard limit.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>Using L'Hopital's Rule:</p>
+                    $$\lim_{x \to 0} \frac{\sin(5x)}{3x} = \lim_{x \to 0} \frac{5\cos(5x)}{3} = \frac{5}{3}$$
+                    <p>Alternatively, $\lim_{x \to 0} \frac{\sin(kx)}{x} = k$, so the limit is $\frac{5}{3}$.</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 4 — Find $\displaystyle \lim_{n \to \infty} \left(\frac{n}{n + 1}\right)^n$</summary>
+                    <p>Use logarithms and L'Hopital's Rule.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>Let $y = \left(\frac{n}{n + 1}\right)^n$. Then $\ln(y) = n\ln\left(\frac{n}{n + 1}\right) = n\ln\left(1 - \frac{1}{n + 1}\right)$. As $n \to \infty$, this has the form $\infty \cdot 0$. Rewrite:</p>
+                    $$\ln(y) = \frac{\ln\left(1 - \frac{1}{n + 1}\right)}{1/n} \sim \frac{-\frac{1}{n + 1}}{1/n} = \frac{-n}{n + 1} \to -1$$
+                    <p>So $y \to e^{-1} = \frac{1}{e}$.</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 5 — Evaluate $\displaystyle \lim_{x \to \infty} \frac{\ln(x)}{\sqrt{x}}$</summary>
+                    <p>Use L'Hopital's Rule.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>Apply L'Hopital's Rule twice:</p>
+                    $$\lim_{x \to \infty} \frac{\ln(x)}{\sqrt{x}} = \lim_{x \to \infty} \frac{1/x}{1/(2\sqrt{x})} = \lim_{x \to \infty} \frac{2\sqrt{x}}{x} = \lim_{x \to \infty} \frac{2}{\sqrt{x}} = 0$$
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 6 — Determine whether $\displaystyle \sum_{n=1}^{\infty} \frac{1}{n^2}$ converges</summary>
+                    <p>Identify as a $p$-series and state the result.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>This is a $p$-series with $p = 2 > 1$, so it converges. In fact, $\displaystyle \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}$.</p>
+                    </details>
+                </details>
+            </div>
+
+            <div class="strategies">
+                <h4>Study Tips</h4>
+                <p><strong>1.</strong> For sequence limits, divide numerator and denominator by the highest power of $n$ when dealing with rational functions.</p>
+                <p><strong>2.</strong> Geometric series are the easiest series to evaluate. Memorize the formula and the convergence condition $|r| < 1$.</p>
+                <p><strong>3.</strong> L'Hopital's Rule can be applied repeatedly as long as the indeterminate form persists.</p>
+                <p><strong>4.</strong> For $0 \cdot \infty$ forms, rewriting as a quotient is the key step. Try both $\frac{0}{1/\infty}$ and $\frac{\infty}{1/0}$ to see which gives a cleaner derivative.</p>
+                <p><strong>5.</strong> For $1^{\infty}$ forms, always take the natural log first, evaluate the limit, then exponentiate at the end.</p>
+            </div>
+
+            <nav class="chapter-nav">
+                <a href="day-10.html" class="nav-btn prev" id="prev-chapter">Previous</a>
+                <span class="nav-indicator" id="chapter-indicator"></span>
+                <a href="day-12.html" class="nav-btn next" id="next-chapter">Next</a>
+            </nav>
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
 </body>
 </html>

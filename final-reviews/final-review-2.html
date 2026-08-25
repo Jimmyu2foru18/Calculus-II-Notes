@@ -22,69 +22,212 @@
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
-<body>
-<header>
-    <h1>Calculus II Notes</h1>
-    <p class="subtitle">Advanced Integration: Trig and Substitution</p>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../days/index.html">Days</a>
-        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-        <a href="../final-reviews/index.html">Final Reviews</a>
-        <a href="../final-samples/index.html">Final Samples</a>
-        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-</header>
-<div class="container">
-    <main>
-        <p class="lead">Use this review sheet to test your understanding. Try each problem without looking at your notes, then check the formulas and worked examples below.</p>
+<body class="review-page">
+<div class="review-container">
+    <div class="review-header">
+        <h1>Final Review 2: Advanced Integration — Trig and Substitution</h1>
+        <nav>
+            <a href="../index.html">← All Reviews</a>
+            <span>Sections Trig Substitution, Power-Reducing Identities</span>
+        </nav>
+    </div>
 
-        <h2>Key Formulas at a Glance</h2>
-        <ul>
-            <li>$\sqrt{a^2-x^2}$: use $x = a\sin(\theta)$</li>
-            <li>$\sqrt{a^2+x^2}$: use $x = a\tan(\theta)$</li>
-            <li>$\sqrt{x^2-a^2}$: use $x = a\sec(\theta)$</li>
-            <li>$\sin^2(x) = \frac{1-\cos(2x)}{2}$</li>
-            <li>$\cos^2(x) = \frac{1+\cos(2x)}{2}$</li>
-            <li>$\int \tan(\theta)\,d\theta = \ln|\sec(\theta)| + C$</li>
-            <li>$\int \sec(\theta)\,d\theta = \ln|\sec(\theta)+\tan(\theta)| + C$</li>
-        </ul>
+    <div class="review-hero">
+        <h2>Final Review 2: Advanced Integration — Trig and Substitution</h2>
+        <p>Use this review sheet to test your understanding. Try each problem without looking at your notes, then check the formulas and worked examples below.</p>
+        <div class="review-meta">
+            <span>2 Worked Examples</span>
+            <span>Comprehensive</span>
+        </div>
+    </div>
 
-        <h2>Worked Examples</h2>
+    <div class="review-tabs" role="tablist">
+        <button class="review-tab active" data-tab="tab-basics" role="tab">Key Concepts</button>
+        <button class="review-tab" data-tab="tab-formulas" role="tab">Formulas</button>
+        <button class="review-tab" data-tab="tab-examples" role="tab">Worked Examples</button>
+        <button class="review-tab" data-tab="tab-practice" role="tab">Practice Problems</button>
+    </div>
 
-        <h3>Example 1: Basic Trig Substitution</h3>
-        <p><strong>Evaluate:</strong> $\int \frac{dx}{\sqrt{4-x^2}}$</p>
-        <details class="question">
-            <summary>Click to see the solution</summary>
-            <p>Let $x = 2\sin(\theta)$, $dx = 2\cos(\theta)\,d\theta$</p>
-            <p>$\sqrt{4-x^2} = \sqrt{4-4\sin^2(\theta)} = 2\cos(\theta)$</p>
-            $$= \int \frac{2\cos(\theta)\,d\theta}{2\cos(\theta)}$$
-            $$= \int d\theta = \theta + C$$
-            $$= \sin^{-1}\left(\frac{x}{2}\right) + C$$
-        </details>
+    <div class="review-section active" id="tab-basics">
+        <div class="review-card">
+            <h3>Trigonometric Substitution</h3>
+            <p>Trigonometric substitution converts integrals involving radicals into trigonometric integrals that can be evaluated using standard techniques. The substitution is chosen based on the form of the radical.</p>
+            <div class="review-formula">
+                \[ \sqrt{a^2-x^2} \implies x = a\sin(\theta) \quad \sqrt{a^2+x^2} \implies x = a\tan(\theta) \quad \sqrt{x^2-a^2} \implies x = a\sec(\theta) \]
+                <div class="formula-label">Trig Substitution Patterns</div>
+            </div>
+            <div class="review-callout info">
+                <p><strong>Key insight:</strong> Always draw the reference triangle when doing trig substitution. It helps with back-substitution and simplifies the algebra.</p>
+            </div>
+        </div>
+        <div class="review-card">
+            <h3>Power-Reducing Identities</h3>
+            <p>Power-reducing identities express powers of sine and cosine in terms of first powers, making them integrable. These are especially useful for integrals involving $\sin^2(x)$ or $\cos^2(x)$.</p>
+            <div class="review-formula">
+                \[ \sin^2(x) = \frac{1-\cos(2x)}{2} \qquad \cos^2(x) = \frac{1+\cos(2x)}{2} \]
+                <div class="formula-label">Power-Reducing Identities</div>
+            </div>
+        </div>
+        <div class="review-card">
+            <h3>Standard Trig Integrals</h3>
+            <p>Two important standard integrals that frequently appear after trig substitution are the integrals of tangent and secant.</p>
+            <div class="review-formula">
+                \[ \int \tan(\theta)\,d\theta = \ln|\sec(\theta)| + C \qquad \int \sec(\theta)\,d\theta = \ln|\sec(\theta)+\tan(\theta)| + C \]
+                <div class="formula-label">Standard Trig Integrals</div>
+            </div>
+        </div>
+    </div>
 
-        <h3>Example 2: Complex Trig Substitution</h3>
-        <p><strong>Evaluate:</strong> $\int \frac{x^3\,dx}{\sqrt{4-x^2}}$</p>
-        <details class="question">
-            <summary>Click to see the solution</summary>
-            <p>Let $x = 2\sin(\theta)$, $dx = 2\cos(\theta)\,d\theta$</p>
-            <p>$x^3 = 8\sin^3(\theta)$, $\sqrt{4-x^2} = 2\cos(\theta)$</p>
-            $$= \int \frac{8\sin^3(\theta) \cdot 2\cos(\theta)\,d\theta}{2\cos(\theta)}$$
-            $$= 8\int \sin^3(\theta)\,d\theta$$
-            <p>Use $\sin^2(\theta) = 1-\cos^2(\theta)$ and $u = \cos(\theta)$:</p>
-            $$= 8\int (1-u^2)(-du) = 8\left(\frac{u^3}{3} - u\right) + C$$
-            <p>Back-substitute: $\cos(\theta) = \frac{\sqrt{4-x^2}}{2}$</p>
-            $$= \frac{(4-x^2)^{3/2}}{3} - 4\sqrt{4-x^2} + C$$
-        </details>
+    <div class="review-section" id="tab-formulas">
+        <div class="review-card">
+            <h3>Formula Sheet</h3>
+            <div class="review-table">
+                <table>
+                    <thead>
+                        <tr><th>Formula</th><th>Use</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>$\sqrt{a^2-x^2}$: use $x = a\sin(\theta)$</td>
+                            <td>Trig Substitution</td>
+                        </tr>
+                        <tr>
+                            <td>$\sqrt{a^2+x^2}$: use $x = a\tan(\theta)$</td>
+                            <td>Trig Substitution</td>
+                        </tr>
+                        <tr>
+                            <td>$\sqrt{x^2-a^2}$: use $x = a\sec(\theta)$</td>
+                            <td>Trig Substitution</td>
+                        </tr>
+                        <tr>
+                            <td>$\sin^2(x) = \frac{1-\cos(2x)}{2}$</td>
+                            <td>Power-Reducing Identity</td>
+                        </tr>
+                        <tr>
+                            <td>$\cos^2(x) = \frac{1+\cos(2x)}{2}$</td>
+                            <td>Power-Reducing Identity</td>
+                        </tr>
+                        <tr>
+                            <td>$\int \tan(\theta)\,d\theta = \ln|\sec(\theta)| + C$</td>
+                            <td>Standard Integral</td>
+                        </tr>
+                        <tr>
+                            <td>$\int \sec(\theta)\,d\theta = \ln|\sec(\theta)+\tan(\theta)| + C$</td>
+                            <td>Standard Integral</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
-        <h2>Practice Problems</h2>
-        <ol>
-            <li>$\int \frac{dx}{\sqrt{9+4x^2}}$</li>
-            <li>$\int \sin^3(3x)\,dx$</li>
-            <li>$\int \cos^4(x)\sin^2(x)\,dx$</li>
-        </ol>
-    </main>
+    <div class="review-section" id="tab-examples">
+        <div class="review-card">
+            <h3>Worked Examples</h3>
+            <div class="example">
+                <h4>Example 1: Basic Trig Substitution</h4>
+                <p><strong>Evaluate:</strong> $\int \frac{dx}{\sqrt{4-x^2}}$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Let $x = 2\sin(\theta)$, so $dx = 2\cos(\theta)\,d\theta$.</p>
+                        <p>Then $\sqrt{4-x^2} = \sqrt{4-4\sin^2(\theta)} = 2\cos(\theta)$.</p>
+                        <h4>Step 2:</h4>
+                        <p>Substitute into the integral:</p>
+                        $$= \int \frac{2\cos(\theta)\,d\theta}{2\cos(\theta)}$$
+                        <h4>Step 3:</h4>
+                        <p>Simplify and integrate:</p>
+                        $$= \int d\theta = \theta + C$$
+                        <h4>Final Answer:</h4>
+                        <p>Back-substitute using $\theta = \sin^{-1}\left(\frac{x}{2}\right)$:</p>
+                        <p>$$= \sin^{-1}\left(\frac{x}{2}\right) + C$$</p>
+                    </div>
+                </details>
+            </div>
+            <div class="example">
+                <h4>Example 2: Complex Trig Substitution</h4>
+                <p><strong>Evaluate:</strong> $\int \frac{x^3\,dx}{\sqrt{4-x^2}}$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Let $x = 2\sin(\theta)$, so $dx = 2\cos(\theta)\,d\theta$.</p>
+                        <p>Then $x^3 = 8\sin^3(\theta)$ and $\sqrt{4-x^2} = 2\cos(\theta)$.</p>
+                        <h4>Step 2:</h4>
+                        <p>Substitute into the integral:</p>
+                        $$= \int \frac{8\sin^3(\theta) \cdot 2\cos(\theta)\,d\theta}{2\cos(\theta)}$$
+                        <p>$$= 8\int \sin^3(\theta)\,d\theta$$</p>
+                        <h4>Step 3:</h4>
+                        <p>Use $\sin^2(\theta) = 1-\cos^2(\theta)$ and let $u = \cos(\theta)$:</p>
+                        <p>$$= 8\int (1-u^2)(-du) = 8\left(\frac{u^3}{3} - u\right) + C$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>Back-substitute $\cos(\theta) = \frac{\sqrt{4-x^2}}{2}$:</p>
+                        <p>$$= \frac{(4-x^2)^{3/2}}{3} - 4\sqrt{4-x^2} + C$$</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+
+    <div class="review-section" id="tab-practice">
+        <div class="review-card">
+            <h3>Practice Problems</h3>
+            <details class="question">
+                <summary>Problem 1 — Basic Trig Substitution</summary>
+                <p>Evaluate $\int \frac{dx}{\sqrt{9+4x^2}}$</p>
+                <details>
+                <summary>Show Answer</summary>
+                <p><strong>Answer:</strong></p>
+                <p>Let $2x = 3\tan(\theta)$, so $dx = \frac{3}{2}\sec^2(\theta)\,d\theta$.</p>
+                <p>$$\sqrt{9+4x^2} = 3\sec(\theta)$$</p>
+                <p>$$= \frac{1}{3}\ln|\sec(\theta)+\tan(\theta)| + C = \frac{1}{3}\ln\left|\frac{\sqrt{9+4x^2}+2x}{3}\right| + C$$</p>
+                </details>
+            </details>
+            <details class="question">
+                <summary>Problem 2 — Power-Reducing Identity</summary>
+                <p>Evaluate $\int \sin^3(3x)\,dx$</p>
+                <details>
+                <summary>Show Answer</summary>
+                <p><strong>Answer:</strong></p>
+                <p>Use $\sin^3(3x) = \sin(3x)(1-\cos^2(3x))$ with $u = \cos(3x)$.</p>
+                <p>$$= -\frac{1}{3}\cos(3x) + \frac{1}{9}\cos^3(3x) + C$$</p>
+                </details>
+            </details>
+            <details class="question">
+                <summary>Problem 3 — Power-Reducing Integral</summary>
+                <p>Evaluate $\int \cos^4(x)\sin^2(x)\,dx$</p>
+                <details>
+                <summary>Show Answer</summary>
+                <p><strong>Answer:</strong></p>
+                <p>Use power-reducing identities to convert to cosines of multiple angles, then integrate term by term.</p>
+                <p>$$= \frac{1}{16}\left(x - \frac{1}{4}\sin(4x) + \frac{1}{6}\sin(6x)\right) + C$$</p>
+                </details>
+            </details>
+        </div>
+    </div>
+
+    <div class="review-nav">
+        <a href="final-review-1.html" class="review-nav-btn">← Previous Review</a>
+        <span class="review-nav-indicator">Self-Check</span>
+        <a href="final-review-3.html" class="review-nav-btn">Next Review →</a>
+    </div>
 </div>
+
 <script src="../js/app.js"></script>
+<script>
+document.querySelectorAll('.review-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = tab.dataset.tab;
+        document.querySelectorAll('.review-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.review-section').forEach(s => s.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(target).classList.add('active');
+        if (window.MathJax && MathJax.typesetPromise) {
+            MathJax.typesetPromise();
+        }
+    });
+});
+</script>
 </body>
 </html>

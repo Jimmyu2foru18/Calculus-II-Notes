@@ -23,140 +23,204 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 <body>
-<header>
-    <h1>Calculus II Notes</h1>
-    <p class="subtitle">Integration Techniques Review</p>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../days/index.html">Days</a>
-        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-        <a href="../final-reviews/index.html">Final Reviews</a>
-        <a href="../final-samples/index.html">Final Samples</a>
-        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-</header>
+    <header>
+        <h1>Calculus II Notes</h1>
+        <p class="subtitle">Integration Techniques Review</p>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../days/index.html">Days</a>
+            <a href="../quiz-reviews/index.html">Quiz Reviews</a>
+            <a href="../final-reviews/index.html">Final Reviews</a>
+            <a href="../final-samples/index.html">Final Samples</a>
+            <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+    </header>
 
-<div class="container">
-    <main>
-        <a href="day-07.html" class="back-button">&larr; Back</a>
-        <p class="lead">Browse through the Integration Techniques Review pages. Use the arrow buttons or keyboard arrows to navigate.</p>
+    <div class="container">
+        <main class="chapter">
+            <h2>Day 08: Integration Techniques Review</h2>
+            <p class="lead">Comprehensive review of integration techniques: trigonometric substitution, integration by parts, and a preview of partial fractions.</p>
 
-        <section id="content">
-            <h2>Integration Techniques Review</h2>
-
-            <h3>Problem 1: Trigonometric Substitution</h3>
-            <p><strong>Evaluate:</strong> $\int \frac{dx}{\sqrt{9+4x^2}}$</p>
-
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Identify the substitution</h4>
-                    <p>We have $\sqrt{9+4x^2} = \sqrt{a^2+x^2}$ form with $a = 3$.</p>
-                    <p>Use the substitution $2x = 3\tan(\theta)$, so $x = \frac{3}{2}\tan(\theta)$:</p>
-                    $$dx = \frac{3}{2}\sec^2(\theta)\,d\theta$$
-
-                    <h4>Step 2: Simplify the radical</h4>
-                    $$\sqrt{9+4x^2} = \sqrt{9 + 4 \cdot \frac{9}{4}\tan^2(\theta)}$$
-                    $$= \sqrt{9(1+\tan^2(\theta))}$$
-                    $$= 3\sqrt{\sec^2(\theta)}$$
-                    $$= 3\sec(\theta)$$
-
-                    <h4>Step 3: Substitute</h4>
-                    $$\int \frac{dx}{\sqrt{9+4x^2}} = \int \frac{\frac{3}{2}\sec^2(\theta)\,d\theta}{3\sec(\theta)}$$
-                    $$= \frac{1}{2}\int \sec(\theta)\,d\theta$$
-                    $$= \frac{1}{2}\ln|\sec(\theta) + \tan(\theta)| + C$$
-
-                    <h4>Step 4: Back-substitute</h4>
-                    <p>From $x = \frac{3}{2}\tan(\theta)$, we have $\tan(\theta) = \frac{2x}{3}$.</p>
-                    <p>Using the right triangle: opposite $= 2x$, adjacent $= 3$, hypotenuse $= \sqrt{9+4x^2}$:</p>
-                    $$\sec(\theta) = \frac{\sqrt{9+4x^2}}{3}$$
-                    <p>Therefore:</p>
-                    $$\sec(\theta) + \tan(\theta) = \frac{\sqrt{9+4x^2}}{3} + \frac{2x}{3} = \frac{\sqrt{9+4x^2} + 2x}{3}$$
-
-                    <h4>Step 5: Final result</h4>
-                    $$= \frac{1}{2}\ln\left|\frac{\sqrt{9+4x^2} + 2x}{3}\right| + C$$
-                    $$= \frac{1}{2}\ln|\sqrt{9+4x^2} + 2x| - \frac{1}{2}\ln(3) + C$$
-                    <p>Combining constants:</p>
-                    $$= \frac{1}{2}\ln|\sqrt{9+4x^2} + 2x| + C'$$
-
-                    <h4>Final Answer:</h4>
-                    $$\boxed{\int \frac{dx}{\sqrt{9+4x^2}} = \frac{1}{2}\ln|\sqrt{9+4x^2} + 2x| + C}$$
+            <div class="video-section">
+                <h4>Core Lecture</h4>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
                 </div>
-            </details>
+            </div>
 
-            <h3>Problem 2: Trigonometric Substitution with $\sqrt{4-x^2}$</h3>
-            <p><strong>Evaluate:</strong> $\int \frac{dx}{x^2\sqrt{4-x^2}}$</p>
-
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Identify the substitution</h4>
-                    <p>We have $\sqrt{4-x^2} = \sqrt{a^2-x^2}$ with $a = 2$. Use $x = 2\sin(\theta)$:</p>
-                    $$x = 2\sin(\theta), \quad dx = 2\cos(\theta)\,d\theta$$
-                    <p>Then:</p>
-                    $$\sqrt{4-x^2} = \sqrt{4 - 4\sin^2(\theta)} = 2\cos(\theta)$$
-
-                    <h4>Step 2: Substitute</h4>
-                    $$\int \frac{dx}{x^2\sqrt{4-x^2}} = \int \frac{2\cos(\theta)\,d\theta}{4\sin^2(\theta) \cdot 2\cos(\theta)}$$
-                    $$= \int \frac{d\theta}{4\sin^2(\theta)}$$
-                    $$= \frac{1}{4}\int \csc^2(\theta)\,d\theta$$
-
-                    <h4>Step 3: Integrate</h4>
-                    $$\int \csc^2(\theta)\,d\theta = -\cot(\theta) + C$$
-                    <p>So:</p>
-                    $$= -\frac{1}{4}\cot(\theta) + C$$
-
-                    <h4>Step 4: Back-substitute</h4>
-                    <p>From $x = 2\sin(\theta)$, we have $\sin(\theta) = \frac{x}{2}$.</p>
-                    <p>Using the right triangle: opposite $= x$, hypotenuse $= 2$, adjacent $= \sqrt{4-x^2}$:</p>
-                    $$\cot(\theta) = \frac{\sqrt{4-x^2}}{x}$$
-                    <p>Therefore:</p>
-                    $$= -\frac{1}{4} \cdot \frac{\sqrt{4-x^2}}{x} + C$$
-
-                    <h4>Final Answer:</h4>
-                    $$\boxed{\int \frac{dx}{x^2\sqrt{4-x^2}} = -\frac{\sqrt{4-x^2}}{4x} + C}$$
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Trig Substitution Review</h5>
+                        <p>When to use each substitution and common pitfalls</p>
+                    </div>
                 </div>
-            </details>
-
-            <h3>Problem 3: Trigonometric Substitution - More Complex</h3>
-            <p><strong>Evaluate:</strong> $\int \frac{x^3\,dx}{\sqrt{4-x^2}}$</p>
-
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Identify the substitution</h4>
-                    <p>Use $x = 2\sin(\theta)$, $dx = 2\cos(\theta)\,d\theta$, and $\sqrt{4-x^2} = 2\cos(\theta)$:</p>
-
-                    <h4>Step 2: Substitute</h4>
-                    $$\int \frac{x^3\,dx}{\sqrt{4-x^2}} = \int \frac{(2\sin(\theta))^3 \cdot 2\cos(\theta)\,d\theta}{2\cos(\theta)}$$
-                    $$= \int \frac{8\sin^3(\theta) \cdot 2\cos(\theta)\,d\theta}{2\cos(\theta)}$$
-                    $$= \int 8\sin^3(\theta)\,d\theta$$
-                    $$= 8\int \sin^2(\theta)\sin(\theta)\,d\theta$$
-
-                    <h4>Step 3: Use the identity $\sin^2(\theta) = 1 - \cos^2(\theta)$</h4>
-                    $$= 8\int (1 - \cos^2(\theta))\sin(\theta)\,d\theta$$
-
-                    <h4>Step 4: Use substitution</h4>
-                    <p>Let $u = \cos(\theta)$, then $du = -\sin(\theta)\,d\theta$:</p>
-                    $$= 8\int (1-u^2)(-du)$$
-                    $$= 8\int (u^2 - 1)\,du$$
-                    $$= 8\left[\frac{u^3}{3} - u\right] + C$$
-                    $$= \frac{8u^3}{3} - 8u + C$$
-
-                    <h4>Step 5: Back-substitute</h4>
-                    <p>From $x = 2\sin(\theta)$, we have $\sin(\theta) = \frac{x}{2}$.</p>
-                    <p>Using the right triangle: $\cos(\theta) = \frac{\sqrt{4-x^2}}{2}$:</p>
-                    $$= \frac{8}{3}\left(\frac{\sqrt{4-x^2}}{2}\right)^3 - 8 \cdot \frac{\sqrt{4-x^2}}{2} + C$$
-                    $$= \frac{8}{3} \cdot \frac{(4-x^2)^{3/2}}{8} - 4\sqrt{4-x^2} + C$$
-                    $$= \frac{(4-x^2)^{3/2}}{3} - 4\sqrt{4-x^2} + C$$
-
-                    <h4>Final Answer:</h4>
-                    $$\boxed{\int \frac{x^3\,dx}{\sqrt{4-x^2}} = \frac{(4-x^2)^{3/2}}{3} - 4\sqrt{4-x^2} + C}$$
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Integration by Parts</h5>
+                        <p>Repeated applications and tabular method</p>
+                    </div>
                 </div>
-            </details>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Partial Fractions Preview</h5>
+                        <p>Decomposing rational functions for integration</p>
+                    </div>
+                </div>
+            </div>
 
-            <h3>Summary of Trigonometric Substitutions</h3>
+            <h2>Trigonometric Substitution</h2>
+            <p>Trigonometric substitution is used to evaluate integrals involving square roots of quadratic expressions. The key is to use the Pythagorean identities to eliminate the radical.</p>
+
             <div class="notes">
+                <h4>Substitution Guide</h4>
+                <ul>
+                    <li>For $\sqrt{a^2 - x^2}$: use $x = a\sin(\theta)$, $dx = a\cos(\theta)\,d\theta$</li>
+                    <li>For $\sqrt{a^2 + x^2}$: use $x = a\tan(\theta)$, $dx = a\sec^2(\theta)\,d\theta$</li>
+                    <li>For $\sqrt{x^2 - a^2}$: use $x = a\sec(\theta)$, $dx = a\sec(\theta)\tan(\theta)\,d\theta$</li>
+                </ul>
+                <p>After substitution, draw a right triangle to express trigonometric functions back in terms of $x$.</p>
+            </div>
+
+            <div class="example">
+                <h4>Example 1.1</h4>
+                <p><strong>Problem:</strong> Evaluate $\int \frac{dx}{\sqrt{9+4x^2}}$</p>
+                <div class="visual-aid">
+                    <h4>Figure — Trig substitution reference triangle</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <text x="180" y="30" font-size="12" fill="#000">Reference Triangle</text>
+                        <line x1="200" y1="180" x2="200" y2="80" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="80" x2="280" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="180" x2="280" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <text x="185" y="130" font-size="11" fill="#000">$2x$</text>
+                        <text x="225" y="195" font-size="11" fill="#000">$3$</text>
+                        <text x="290" y="165" font-size="11" fill="#000">$\sqrt{9+4x^2}$</text>
+                        <text x="180" y="210" font-size="10" fill="#555">From $2x = 3\tan\theta$</text>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">The right triangle labels come from the substitution $2x = 3\tan\theta$, giving hypotenuse $\sqrt{9+4x^2}$.</p>
+                </div>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Identify the substitution</h4>
+                        <p>We have $\sqrt{9+4x^2} = \sqrt{a^2+x^2}$ form with $a = 3$.</p>
+                        <p>Use the substitution $2x = 3\tan(\theta)$, so $x = \frac{3}{2}\tan(\theta)$:</p>
+                        $$dx = \frac{3}{2}\sec^2(\theta)\,d\theta$$
+
+                        <h4>Step 2: Simplify the radical</h4>
+                        $$\sqrt{9+4x^2} = \sqrt{9 + 4 \cdot \frac{9}{4}\tan^2(\theta)}$$
+                        $$= \sqrt{9(1+\tan^2(\theta))}$$
+                        $$= 3\sqrt{\sec^2(\theta)}$$
+                        $$= 3\sec(\theta)$$
+
+                        <h4>Step 3: Substitute</h4>
+                        $$\int \frac{dx}{\sqrt{9+4x^2}} = \int \frac{\frac{3}{2}\sec^2(\theta)\,d\theta}{3\sec(\theta)}$$
+                        $$= \frac{1}{2}\int \sec(\theta)\,d\theta$$
+                        $$= \frac{1}{2}\ln|\sec(\theta) + \tan(\theta)| + C$$
+
+                        <h4>Step 4: Back-substitute</h4>
+                        <p>From $x = \frac{3}{2}\tan(\theta)$, we have $\tan(\theta) = \frac{2x}{3}$.</p>
+                        <p>Using the right triangle: opposite $= 2x$, adjacent $= 3$, hypotenuse $= \sqrt{9+4x^2}$:</p>
+                        $$\sec(\theta) = \frac{\sqrt{9+4x^2}}{3}$$
+                        <p>Therefore:</p>
+                        $$\sec(\theta) + \tan(\theta) = \frac{\sqrt{9+4x^2}}{3} + \frac{2x}{3} = \frac{\sqrt{9+4x^2} + 2x}{3}$$
+
+                        <h4>Step 5: Final result</h4>
+                        $$= \frac{1}{2}\ln\left|\frac{\sqrt{9+4x^2} + 2x}{3}\right| + C$$
+                        $$= \frac{1}{2}\ln|\sqrt{9+4x^2} + 2x| - \frac{1}{2}\ln(3) + C$$
+                        <p>Combining constants:</p>
+                        $$= \frac{1}{2}\ln|\sqrt{9+4x^2} + 2x| + C'$$
+
+                        <h4>Final Answer:</h4>
+                        $$\boxed{\int \frac{dx}{\sqrt{9+4x^2}} = \frac{1}{2}\ln|\sqrt{9+4x^2} + 2x| + C}$$
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 1.2</h4>
+                <p><strong>Problem:</strong> Evaluate $\int \frac{dx}{x^2\sqrt{4-x^2}}$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Identify the substitution</h4>
+                        <p>We have $\sqrt{4-x^2} = \sqrt{a^2-x^2}$ with $a = 2$. Use $x = 2\sin(\theta)$:</p>
+                        $$x = 2\sin(\theta), \quad dx = 2\cos(\theta)\,d\theta$$
+                        <p>Then:</p>
+                        $$\sqrt{4-x^2} = \sqrt{4 - 4\sin^2(\theta)} = 2\cos(\theta)$$
+
+                        <h4>Step 2: Substitute</h4>
+                        $$\int \frac{dx}{x^2\sqrt{4-x^2}} = \int \frac{2\cos(\theta)\,d\theta}{4\sin^2(\theta) \cdot 2\cos(\theta)}$$
+                        $$= \int \frac{d\theta}{4\sin^2(\theta)}$$
+                        $$= \frac{1}{4}\int \csc^2(\theta)\,d\theta$$
+
+                        <h4>Step 3: Integrate</h4>
+                        $$\int \csc^2(\theta)\,d\theta = -\cot(\theta) + C$$
+                        <p>So:</p>
+                        $$= -\frac{1}{4}\cot(\theta) + C$$
+
+                        <h4>Step 4: Back-substitute</h4>
+                        <p>From $x = 2\sin(\theta)$, we have $\sin(\theta) = \frac{x}{2}$.</p>
+                        <p>Using the right triangle: opposite $= x$, hypotenuse $= 2$, adjacent $= \sqrt{4-x^2}$:</p>
+                        $$\cot(\theta) = \frac{\sqrt{4-x^2}}{x}$$
+                        <p>Therefore:</p>
+                        $$= -\frac{1}{4} \cdot \frac{\sqrt{4-x^2}}{x} + C$$
+
+                        <h4>Final Answer:</h4>
+                        $$\boxed{\int \frac{dx}{x^2\sqrt{4-x^2}} = -\frac{\sqrt{4-x^2}}{4x} + C}$$
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 1.3</h4>
+                <p><strong>Problem:</strong> Evaluate $\int \frac{x^3\,dx}{\sqrt{4-x^2}}$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Identify the substitution</h4>
+                        <p>Use $x = 2\sin(\theta)$, $dx = 2\cos(\theta)\,d\theta$, and $\sqrt{4-x^2} = 2\cos(\theta)$:</p>
+
+                        <h4>Step 2: Substitute</h4>
+                        $$\int \frac{x^3\,dx}{\sqrt{4-x^2}} = \int \frac{(2\sin(\theta))^3 \cdot 2\cos(\theta)\,d\theta}{2\cos(\theta)}$$
+                        $$= \int \frac{8\sin^3(\theta) \cdot 2\cos(\theta)\,d\theta}{2\cos(\theta)}$$
+                        $$= \int 8\sin^3(\theta)\,d\theta$$
+                        $$= 8\int \sin^2(\theta)\sin(\theta)\,d\theta$$
+
+                        <h4>Step 3: Use the identity $\sin^2(\theta) = 1 - \cos^2(\theta)$</h4>
+                        $$= 8\int (1 - \cos^2(\theta))\sin(\theta)\,d\theta$$
+
+                        <h4>Step 4: Use substitution</h4>
+                        <p>Let $u = \cos(\theta)$, then $du = -\sin(\theta)\,d\theta$:</p>
+                        $$= 8\int (1-u^2)(-du)$$
+                        $$= 8\int (u^2 - 1)\,du$$
+                        $$= 8\left[\frac{u^3}{3} - u\right] + C$$
+                        $$= \frac{8u^3}{3} - 8u + C$$
+
+                        <h4>Step 5: Back-substitute</h4>
+                        <p>From $x = 2\sin(\theta)$, we have $\sin(\theta) = \frac{x}{2}$.</p>
+                        <p>Using the right triangle: $\cos(\theta) = \frac{\sqrt{4-x^2}}{2}$:</p>
+                        $$= \frac{8}{3}\left(\frac{\sqrt{4-x^2}}{2}\right)^3 - 8 \cdot \frac{\sqrt{4-x^2}}{2} + C$$
+                        $$= \frac{8}{3} \cdot \frac{(4-x^2)^{3/2}}{8} - 4\sqrt{4-x^2} + C$$
+                        $$= \frac{(4-x^2)^{3/2}}{3} - 4\sqrt{4-x^2} + C$$
+
+                        <h4>Final Answer:</h4>
+                        $$\boxed{\int \frac{x^3\,dx}{\sqrt{4-x^2}} = \frac{(4-x^2)^{3/2}}{3} - 4\sqrt{4-x^2} + C}$$
+                    </div>
+                </details>
+            </div>
+
+            <div class="notes">
+                <h4>Summary of Trigonometric Substitutions</h4>
                 <table>
                     <tr><th>Form</th><th>Substitution</th><th>Identity Used</th></tr>
                     <tr><td>$\sqrt{a^2-x^2}$</td><td>$x = a\sin(\theta)$</td><td>$1-\sin^2(\theta) = \cos^2(\theta)$</td></tr>
@@ -164,10 +228,231 @@
                     <tr><td>$\sqrt{x^2-a^2}$</td><td>$x = a\sec(\theta)$</td><td>$\sec^2(\theta)-1 = \tan^2(\theta)$</td></tr>
                 </table>
             </div>
-        </section>
-    </main>
-</div>
 
-<script src="../js/app.js"></script>
+            <h2>Integration by Parts Review</h2>
+            <p>Integration by parts is essential for products of algebraic and transcendental functions. The formula is $\int u\,dv = uv - \int v\,du$.</p>
+
+            <div class="example">
+                <h4>Example 2.1</h4>
+                <p><strong>Problem:</strong> Evaluate $\int x \ln(x)\,dx$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Choose u and dv</h4>
+                        <p>Using LIATE: Logarithmic comes before Algebraic.</p>
+                        $$u = \ln(x), \quad dv = x\,dx$$
+
+                        <h4>Step 2: Compute du and v</h4>
+                        $$du = \frac{1}{x}\,dx, \quad v = \frac{x^2}{2}$$
+
+                        <h4>Step 3: Apply integration by parts</h4>
+                        $$\int x \ln(x)\,dx = \ln(x) \cdot \frac{x^2}{2} - \int \frac{x^2}{2} \cdot \frac{1}{x}\,dx$$
+                        $$= \frac{x^2}{2}\ln(x) - \frac{1}{2}\int x\,dx$$
+                        $$= \frac{x^2}{2}\ln(x) - \frac{1}{2} \cdot \frac{x^2}{2} + C$$
+                        $$= \frac{x^2}{2}\ln(x) - \frac{x^2}{4} + C$$
+
+                        <h4>Final Answer:</h4>
+                        $$\boxed{\int x \ln(x)\,dx = \frac{x^2}{4}\left(2\ln(x) - 1\right) + C}$$
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 2.2</h4>
+                <p><strong>Problem:</strong> Evaluate $\int e^x \sin(x)\,dx$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: First integration by parts</h4>
+                        <p>Choose $u = \sin(x)$ and $dv = e^x\,dx$:</p>
+                        $$du = \cos(x)\,dx, \quad v = e^x$$
+                        $$\int e^x \sin(x)\,dx = e^x \sin(x) - \int e^x \cos(x)\,dx$$
+
+                        <h4>Step 2: Second integration by parts</h4>
+                        <p>For $\int e^x \cos(x)\,dx$, choose $u = \cos(x)$ and $dv = e^x\,dx$:</p>
+                        $$du = -\sin(x)\,dx, \quad v = e^x$$
+                        $$\int e^x \cos(x)\,dx = e^x \cos(x) - \int e^x (-\sin(x))\,dx$$
+                        $$= e^x \cos(x) + \int e^x \sin(x)\,dx$$
+
+                        <h4>Step 3: Solve for the original integral</h4>
+                        <p>Let $I = \int e^x \sin(x)\,dx$. Then:</p>
+                        $$I = e^x \sin(x) - \left(e^x \cos(x) + I\right)$$
+                        $$I = e^x \sin(x) - e^x \cos(x) - I$$
+                        $$2I = e^x(\sin(x) - \cos(x))$$
+                        $$I = \frac{e^x}{2}(\sin(x) - \cos(x))$$
+
+                        <h4>Final Answer:</h4>
+                        $$\boxed{\int e^x \sin(x)\,dx = \frac{e^x}{2}(\sin(x) - \cos(x)) + C}$$
+                    </div>
+                </details>
+            </div>
+
+            <h2>Partial Fractions Preview</h2>
+            <p>Partial fractions decomposition allows us to integrate rational functions by expressing them as a sum of simpler fractions.</p>
+
+            <div class="notes">
+                <h4>Partial Fractions Framework</h4>
+                <p>For a proper rational function $\frac{P(x)}{Q(x)}$ where $\deg(P) < \deg(Q)$:</p>
+                <ul>
+                    <li>Factor the denominator $Q(x)$ into linear and irreducible quadratic factors.</li>
+                    <li>For each linear factor $(x - a)^n$, write terms: $\frac{A_1}{x-a} + \frac{A_2}{(x-a)^2} + \cdots + \frac{A_n}{(x-a)^n}$.</li>
+                    <li>For each irreducible quadratic factor $(x^2 + bx + c)^m$, write terms: $\frac{B_1x+C_1}{x^2+bx+c} + \cdots + \frac{B_mx+C_m}{(x^2+bx+c)^m}$.</li>
+                    <li>Clear denominators and solve for the unknown coefficients.</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <h4>Example 3.1</h4>
+                <p><strong>Problem:</strong> Evaluate $\int \frac{dx}{x^2 - 1}$</p>
+                <div class="visual-aid">
+                    <h4>Figure — Partial fractions regions</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="184" font-size="12" fill="#000">x</text>
+                        <text x="205" y="15" font-size="12" fill="#000">y</text>
+                        <path d="M 30,200 C 100,190 160,170 200,150 C 240,130 300,110 380,90" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <line x1="130" y1="20" x2="130" y2="200" stroke="#c0392b" stroke-width="1" stroke-dasharray="4,3"/>
+                        <line x1="270" y1="20" x2="270" y2="200" stroke="#c0392b" stroke-width="1" stroke-dasharray="4,3"/>
+                        <text x="125" y="215" font-size="10" fill="#c0392b">$x=-1$</text>
+                        <text x="265" y="215" font-size="10" fill="#c0392b">$x=1$</text>
+                        <text x="35" y="175" font-size="10" fill="#555">0</text>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">The integrand $\frac{1}{x^2-1}$ has vertical asymptotes at $x=\pm 1$ from the partial fractions decomposition.</p>
+                </div>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Factor the denominator</h4>
+                        $$x^2 - 1 = (x-1)(x+1)$$
+
+                        <h4>Step 2: Set up the partial fraction decomposition</h4>
+                        $$\frac{1}{x^2-1} = \frac{A}{x-1} + \frac{B}{x+1}$$
+
+                        <h4>Step 3: Clear denominators</h4>
+                        $$1 = A(x+1) + B(x-1)$$
+
+                        <h4>Step 4: Solve for A and B</h4>
+                        <p>Set $x = 1$: $1 = A(2) + B(0) \implies A = \frac{1}{2}$</p>
+                        <p>Set $x = -1$: $1 = A(0) + B(-2) \implies B = -\frac{1}{2}$</p>
+                        <p>Therefore:</p>
+                        $$\frac{1}{x^2-1} = \frac{1/2}{x-1} - \frac{1/2}{x+1}$$
+
+                        <h4>Step 5: Integrate</h4>
+                        $$\int \frac{dx}{x^2-1} = \frac{1}{2}\int \frac{dx}{x-1} - \frac{1}{2}\int \frac{dx}{x+1}$$
+                        $$= \frac{1}{2}\ln|x-1| - \frac{1}{2}\ln|x+1| + C$$
+
+                        <h4>Final Answer:</h4>
+                        $$\boxed{\int \frac{dx}{x^2-1} = \frac{1}{2}\ln\left|\frac{x-1}{x+1}\right| + C}$$
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 3.2</h4>
+                <p><strong>Problem:</strong> Evaluate $\int \frac{x+1}{x^2(x-1)}\,dx$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Set up the partial fraction decomposition</h4>
+                        <p>For the repeated linear factor $x^2$ and the factor $(x-1)$:</p>
+                        $$\frac{x+1}{x^2(x-1)} = \frac{A}{x} + \frac{B}{x^2} + \frac{C}{x-1}$$
+
+                        <h4>Step 2: Clear denominators</h4>
+                        $$x+1 = A x(x-1) + B(x-1) + C x^2$$
+
+                        <h4>Step 3: Solve for coefficients</h4>
+                        <p>Set $x = 0$: $1 = A(0) + B(-1) + C(0) \implies B = -1$</p>
+                        <p>Set $x = 1$: $2 = A(0) + B(0) + C(1) \implies C = 2$</p>
+                        <p>Expand and equate coefficients for $x^2$: $0 = A + C \implies A = -2$</p>
+
+                        <h4>Step 4: Write the decomposition</h4>
+                        $$\frac{x+1}{x^2(x-1)} = \frac{-2}{x} - \frac{1}{x^2} + \frac{2}{x-1}$$
+
+                        <h4>Step 5: Integrate term by term</h4>
+                        $$\int \frac{x+1}{x^2(x-1)}\,dx = -2\int \frac{dx}{x} - \int x^{-2}\,dx + 2\int \frac{dx}{x-1}$$
+                        $$= -2\ln|x| + \frac{1}{x} + 2\ln|x-1| + C$$
+
+                        <h4>Final Answer:</h4>
+                        $$\boxed{\int \frac{x+1}{x^2(x-1)}\,dx = 2\ln\left|\frac{x-1}{x}\right| + \frac{1}{x} + C}$$
+                    </div>
+                </details>
+            </div>
+
+            <div class="questions">
+                <h4>Practice Problems</h4>
+                <details class="question">
+                    <summary>Problem 1 — Trig Substitution</summary>
+                    <p>Evaluate $\int \frac{dx}{\sqrt{9-x^2}}$ using trigonometric substitution.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>$$\sin^{-1}\left(\frac{x}{3}\right) + C$$</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 2 — Trig Substitution</summary>
+                    <p>Evaluate $\int \frac{dx}{x^2\sqrt{4-x^2}}$.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>$$-\frac{\sqrt{4-x^2}}{4x} + C$$</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 3 — Trig Substitution</summary>
+                    <p>Evaluate $\int \frac{x^3\,dx}{\sqrt{4-x^2}}$.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>$$\frac{(4-x^2)^{3/2}}{3} - 4\sqrt{4-x^2} + C$$</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 4 — Integration by Parts</summary>
+                    <p>Evaluate $\int x \ln(x)\,dx$.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>$$\frac{x^2}{4}\left(2\ln(x) - 1\right) + C$$</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 5 — Integration by Parts</summary>
+                    <p>Evaluate $\int e^x \sin(x)\,dx$.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>$$\frac{e^x}{2}(\sin(x) - \cos(x)) + C$$</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 6 — Partial Fractions</summary>
+                    <p>Evaluate $\int \frac{dx}{x^2-1}$.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>$$\frac{1}{2}\ln\left|\frac{x-1}{x+1}\right| + C$$</p>
+                    </details>
+                </details>
+            </div>
+
+            <div class="strategies">
+                <h4>Study Tips</h4>
+                <p><strong>1.</strong> When choosing a trigonometric substitution, first rewrite the integral to match one of the three standard forms: $\sqrt{a^2-x^2}$, $\sqrt{a^2+x^2}$, or $\sqrt{x^2-a^2}$.</p>
+                <p><strong>2.</strong> Always draw a right triangle after making a trig substitution. It is the fastest way to back-substitute and express the answer in terms of $x$.</p>
+                <p><strong>3.</strong> For integration by parts, if applying the formula once returns the original integral (like with $e^x\sin(x)$), solve algebraically for the integral rather than integrating by parts again.</p>
+                <p><strong>4.</strong> Before attempting partial fractions, confirm the rational function is proper. If the numerator degree is greater than or equal to the denominator, perform polynomial long division first.</p>
+            </div>
+
+            <nav class="chapter-nav">
+                <a href="day-07.html" class="nav-btn prev" id="prev-chapter">Previous</a>
+                <span class="nav-indicator" id="chapter-indicator"></span>
+                <a href="day-10.html" class="nav-btn next" id="next-chapter">Next</a>
+            </nav>
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
 </body>
 </html>

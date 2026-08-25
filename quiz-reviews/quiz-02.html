@@ -22,84 +22,185 @@
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
-<body>
-<header>
-    <h1>Calculus II Notes</h1>
-    <p class="subtitle">Substitution, Series, and Riemann</p>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../days/index.html">Days</a>
-        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-        <a href="../final-reviews/index.html">Final Reviews</a>
-        <a href="../final-samples/index.html">Final Samples</a>
-        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-</header>
-<div class="container">
-    <main>
-        <p class="lead">Use this sheet to test your understanding before moving forward. Try each problem without looking at your notes, then check the formulas below.</p>
+<body class="review-page">
+<div class="review-container">
+    <div class="review-header">
+        <h1>Quiz 02: Substitution, Series, and Riemann</h1>
+        <nav>
+            <a href="../index.html">&larr; All Reviews</a>
+            <span>Advanced Integration</span>
+        </nav>
+    </div>
 
-        <h2>Key Formulas at a Glance</h2>
-        <ul>
-            <li>$\sum_{k=1}^n k = \frac{n(n+1)}{2}$</li>
-            <li>$\sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6}$</li>
-            <li>$\sum_{k=1}^n k^3 = \left[\frac{n(n+1)}{2}\right]^2$</li>
-            <li>Riemann Sum: $L_n = \sum_{i=0}^{n-1} f(x_i)\Delta x$</li>
-            <li>Riemann Sum: $R_n = \sum_{i=1}^{n} f(x_i)\Delta x$</li>
-            <li>$\Delta x = \frac{b-a}{n}$</li>
-            <li>$x_i = a + i\Delta x$</li>
-        </ul>
+    <div class="review-hero">
+        <h2>Quiz 02: Substitution, Series, and Riemann</h2>
+        <p>Use this sheet to test your understanding before moving forward. Try each problem without looking at your notes, then check the formulas below.</p>
+        <div class="review-meta">
+            <span>3 Problems</span>
+            <span>Difficulty: Medium</span>
+        </div>
+    </div>
 
-        <h2>Worked Examples</h2>
+    <div class="review-tabs" role="tablist">
+        <button class="review-tab active" data-tab="tab-formulas" role="tab">Formulas</button>
+        <button class="review-tab" data-tab="tab-examples" role="tab">Worked Examples</button>
+        <button class="review-tab" data-tab="tab-practice" role="tab">Practice Problems</button>
+    </div>
 
-        <h3>Example 1: Trig Substitution</h3>
-        <p><strong>Evaluate:</strong> $\int \sin(x)\cos^2(x)\,dx$</p>
-        <details class="question">
-        <summary>Click to see the solution</summary>
-        <p>Let $u = \cos(x)$, $du = -\sin(x)\,dx$, so $\sin(x)\,dx = -du$</p>
-        $$= \int u^2(-du)$$
-        $$= -\frac{u^3}{3} + C$$
-        $$= -\frac{\cos^3(x)}{3} + C$$
-        </details>
+    <div class="review-section active" id="tab-formulas">
+        <div class="review-card">
+            <h3>Key Formulas</h3>
+            <div class="review-table">
+                <table>
+                    <thead><tr><th>Formula</th><th>Description</th></tr></thead>
+                    <tbody>
+                        <tr><td>$\sum_{k=1}^n k = \frac{n(n+1)}{2}$</td><td>Sum of first $n$ integers</td></tr>
+                        <tr><td>$\sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6}$</td><td>Sum of first $n$ squares</td></tr>
+                        <tr><td>$\sum_{k=1}^n k^3 = \left[\frac{n(n+1)}{2}\right]^2$</td><td>Sum of first $n$ cubes</td></tr>
+                        <tr><td>$\Delta x = \frac{b-a}{n}$</td><td>Subinterval width</td></tr>
+                        <tr><td>$x_i = a + i\Delta x$</td><td>Right endpoint of subinterval $i$</td></tr>
+                        <tr><td>$L_n = \sum_{i=0}^{n-1} f(x_i)\Delta x$</td><td>Left Riemann Sum</td></tr>
+                        <tr><td>$R_n = \sum_{i=1}^{n} f(x_i)\Delta x$</td><td>Right Riemann Sum</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
-        <h3>Example 2: Exponential with Trig</h3>
-        <p><strong>Evaluate:</strong> $\int \sec^2(x)e^{\tan(x)}\,dx$</p>
-        <details class="question">
-        <summary>Click to see the solution</summary>
-        <p>Let $u = \tan(x)$, $du = \sec^2(x)\,dx$</p>
-        $$= \int e^u\,du$$
-        $$= e^u + C$$
-        $$= e^{\tan(x)} + C$$
-        </details>
+    <div class="review-section" id="tab-examples">
+        <div class="review-card">
+            <h3>Worked Examples</h3>
+            <div class="example">
+                <h4>Example 1: Trig Substitution</h4>
+                <p><strong>Evaluate:</strong> $\int \sin(x)\cos^2(x)\,dx$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Let $u = \cos(x)$, $du = -\sin(x)\,dx$, so $\sin(x)\,dx = -du$</p>
+                        <h4>Step 2:</h4>
+                        <p>Substitute into the integral:</p>
+                        $$= \int u^2(-du)$$
+                        <h4>Step 3:</h4>
+                        <p>Integrate and back-substitute:</p>
+                        $$= -\frac{u^3}{3} + C$$
+                        <h4>Final Answer:</h4>
+                        <p>$$-\frac{\cos^3(x)}{3} + C$$</p>
+                    </div>
+                </details>
+            </div>
+            <div class="example">
+                <h4>Example 2: Exponential with Trig</h4>
+                <p><strong>Evaluate:</strong> $\int \sec^2(x)e^{\tan(x)}\,dx$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Let $u = \tan(x)$, $du = \sec^2(x)\,dx$</p>
+                        <h4>Step 2:</h4>
+                        <p>Substitute into the integral:</p>
+                        $$= \int e^u\,du$$
+                        <h4>Step 3:</h4>
+                        <p>Integrate and back-substitute:</p>
+                        $$= e^u + C$$
+                        <h4>Final Answer:</h4>
+                        <p>$$e^{\tan(x)} + C$$</p>
+                    </div>
+                </details>
+            </div>
+            <div class="example">
+                <h4>Example 3: Summation</h4>
+                <p><strong>Task:</strong> Evaluate $\sum_{k=1}^{1000} (2k^2-3k)$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Split the summation using linearity:</p>
+                        $$= 2\sum_{k=1}^{1000} k^2 - 3\sum_{k=1}^{1000} k$$
+                        <h4>Step 2:</h4>
+                        <p>Apply the summation formulas:</p>
+                        $$= 2\cdot\frac{1000(1001)(2001)}{6} - 3\cdot\frac{1000(1001)}{2}$$
+                        <h4>Step 3:</h4>
+                        <p>Compute each term:</p>
+                        $$= 2\cdot 333833500 - 3\cdot 500500$$
+                        <h4>Final Answer:</h4>
+                        <p>$$= 667667000 - 1501500 = 666165500$$</p>
+                    </div>
+                </details>
+            </div>
+            <div class="example">
+                <h4>Example 4: Riemann Sums</h4>
+                <p><strong>Task:</strong> Approximate $\int_1^6 (x+1)\,dx$ with $n=5$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Compute the subinterval width:</p>
+                        <p>$\Delta x = \frac{6-1}{5} = 1$</p>
+                        <h4>Step 2:</h4>
+                        <p>Evaluate the left and right sums:</p>
+                        <p>Left Sum: $L_5 = 1\cdot(2+3+4+5+6) = 20$</p>
+                        <p>Right Sum: $R_5 = 1\cdot(3+4+5+6+7) = 25$</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
 
-        <h3>Example 3: Summation</h3>
-        <p><strong>Task:</strong> Evaluate $\sum_{k=1}^{1000} (2k^2-3k)$</p>
-        <details class="question">
-        <summary>Click to see the solution</summary>
-        $$= 2\sum_{k=1}^{1000} k^2 - 3\sum_{k=1}^{1000} k$$
-        $$= 2\cdot\frac{1000(1001)(2001)}{6} - 3\cdot\frac{1000(1001)}{2}$$
-        $$= 2\cdot 333833500 - 3\cdot 500500$$
-        $$= 667667000 - 1501500$$
-        $$= 666165500$$
-        </details>
+    <div class="review-section" id="tab-practice">
+        <div class="review-card">
+            <h3>Practice Problems</h3>
+            <details class="question">
+                <summary>Problem 1</summary>
+                <p><strong>Evaluate:</strong> $\int \cos^4(x)\sin(x)\,dx$</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>$$-\frac{\cos^5(x)}{5} + C$$</p>
+                </details>
+            </details>
+            <details class="question">
+                <summary>Problem 2</summary>
+                <p><strong>Evaluate:</strong> $\sum_{k=1}^{500} (3k^2-2k)$</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>$$= 3\cdot\frac{500(501)(1001)}{6} - 2\cdot\frac{500(501)}{2} = 125750250 - 250500 = 125499750$$</p>
+                </details>
+            </details>
+            <details class="question">
+                <summary>Problem 3</summary>
+                <p><strong>Approximate:</strong> $\int_0^4 x^2\,dx$ with $n=4$ using left endpoints</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>$\Delta x = 1$, $L_4 = 1\cdot(0 + 1 + 4 + 9) = 14$</p>
+                </details>
+            </details>
+        </div>
+    </div>
 
-        <h3>Example 4: Riemann Sums</h3>
-        <p><strong>Task:</strong> Approximate $\int_1^6 (x+1)\,dx$ with $n=5$</p>
-        <details class="question">
-        <summary>Click to see the solution</summary>
-        <p>$\Delta x = \frac{6-1}{5} = 1$</p>
-        <p>Left Sum: $L_5 = 1\cdot(2+3+4+5+6) = 20$</p>
-        <p>Right Sum: $R_5 = 1\cdot(3+4+5+6+7) = 25$</p>
-        </details>
-
-        <h2>Practice Problems</h2>
-        <ol>
-            <li>$\int \cos^4(x)\sin(x)\,dx$</li>
-            <li>$\sum_{k=1}^{500} (3k^2-2k)$</li>
-            <li>Approximate $\int_0^4 x^2\,dx$ with $n=4$ using left endpoints</li>
-        </ol>
-    </main>
+    <div class="review-nav">
+        <a href="quiz-01.html" class="review-nav-btn">&larr; Previous Review</a>
+        <span class="review-nav-indicator">Self-Check</span>
+        <a href="quiz-03.html" class="review-nav-btn">Next Review &rarr;</a>
+    </div>
 </div>
+
 <script src="../js/app.js"></script>
+<script>
+document.querySelectorAll('.review-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = tab.dataset.tab;
+        document.querySelectorAll('.review-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.review-section').forEach(s => s.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(target).classList.add('active');
+        if (window.MathJax && MathJax.typesetPromise) {
+            MathJax.typesetPromise();
+        }
+    });
+});
+</script>
 </body>
 </html>

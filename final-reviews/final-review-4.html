@@ -22,76 +22,227 @@
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
-<body>
-<header>
-    <h1>Calculus II Notes</h1>
-    <p class="subtitle">Parametric, Polar, and Series Apps</p>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../days/index.html">Days</a>
-        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-        <a href="../final-reviews/index.html">Final Reviews</a>
-        <a href="../final-samples/index.html">Final Samples</a>
-        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-</header>
-<div class="container">
-    <main>
-        <p class="lead">Use this review sheet to test your understanding. Try each problem without looking at your notes, then check the formulas and worked examples below.</p>
+<body class="review-page">
+<div class="review-container">
+    <div class="review-header">
+        <h1>Final Review 4: Parametric, Polar, and Series Apps</h1>
+        <nav>
+            <a href="../index.html">← All Reviews</a>
+            <span>Sections Polar Coordinates, Polar Area, Parametric Arc Length</span>
+        </nav>
+    </div>
 
-        <h2>Key Formulas at a Glance</h2>
-        <ul>
-            <li>Polar to Rectangular: $x = r\cos(\theta)$, $y = r\sin(\theta)$</li>
-            <li>Rectangular to Polar: $r = \sqrt{x^2+y^2}$, $\theta = \tan^{-1}(y/x)$</li>
-            <li>Polar Area: $A = \frac{1}{2}\int_{\alpha}^{\beta} [r(\theta)]^2\,d\theta$</li>
-            <li>Parametric arc length: $L = \int_a^b \sqrt{[x'(t)]^2 + [y'(t)]^2}\,dt$</li>
-            <li>Taylor series: $f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n$</li>
-        </ul>
+    <div class="review-hero">
+        <h2>Final Review 4: Parametric, Polar, and Series Apps</h2>
+        <p>Use this review sheet to test your understanding. Try each problem without looking at your notes, then check the formulas and worked examples below.</p>
+        <div class="review-meta">
+            <span>3 Worked Examples</span>
+            <span>Comprehensive</span>
+        </div>
+    </div>
 
-        <h2>Worked Examples</h2>
+    <div class="review-tabs" role="tablist">
+        <button class="review-tab active" data-tab="tab-basics" role="tab">Key Concepts</button>
+        <button class="review-tab" data-tab="tab-formulas" role="tab">Formulas</button>
+        <button class="review-tab" data-tab="tab-examples" role="tab">Worked Examples</button>
+        <button class="review-tab" data-tab="tab-practice" role="tab">Practice Problems</button>
+    </div>
 
-        <h3>Example 1: Polar Coordinates</h3>
-        <p><strong>Task:</strong> Convert $r = 4\cos(\theta)$ to rectangular form</p>
-        <details class="question">
-            <summary>Click to see the solution</summary>
-            <p>Multiply by $r$: $r^2 = 4r\cos(\theta)$</p>
-            <p>Substitute: $x^2 + y^2 = 4x$</p>
-            <p>Complete the square: $(x-2)^2 + y^2 = 4$</p>
-            <p>This is a circle of radius 2 centered at $(2, 0)$.</p>
-        </details>
+    <div class="review-section active" id="tab-basics">
+        <div class="review-card">
+            <h3>Polar Coordinates</h3>
+            <p>Polar coordinates represent points using a distance from the origin and an angle from the positive x-axis. Converting between polar and rectangular forms is essential for analyzing curves and areas.</p>
+            <div class="review-formula">
+                \[ x = r\cos(\theta), \quad y = r\sin(\theta) \qquad r = \sqrt{x^2+y^2}, \quad \theta = \tan^{-1}(y/x) \]
+                <div class="formula-label">Polar ↔ Rectangular Conversion</div>
+            </div>
+            <div class="review-callout info">
+                <p><strong>Key insight:</strong> When converting $r = f(\theta)$ to rectangular form, multiply both sides by $r$ when possible to create $r^2$, then substitute $x^2 + y^2$.</p>
+            </div>
+        </div>
+        <div class="review-card">
+            <h3>Area in Polar Coordinates</h3>
+            <p>The area enclosed by a polar curve $r = f(\theta)$ from $\alpha$ to $\beta$ is found by integrating the area of infinitesimal sectors.</p>
+            <div class="review-formula">
+                \[ A = \frac{1}{2}\int_{\alpha}^{\beta} [r(\theta)]^2\,d\theta \]
+                <div class="formula-label">Polar Area Formula</div>
+            </div>
+            <div class="review-callout warning">
+                <p><strong>Warning:</strong> Determine the correct limits of integration by finding where the curve starts and ends, or where it intersects itself. For symmetric curves, compute one portion and multiply.</p>
+            </div>
+        </div>
+        <div class="review-card">
+            <h3>Parametric Arc Length</h3>
+            <p>For a curve defined parametrically by $x(t)$ and $y(t)$, the arc length is the integral of the speed over the parameter interval.</p>
+            <div class="review-formula">
+                \[ L = \int_a^b \sqrt{[x'(t)]^2 + [y'(t)]^2}\,dt \]
+                <div class="formula-label">Parametric Arc Length</div>
+            </div>
+            <div class="review-callout info">
+                <p><strong>Key insight:</strong> For $x = t$, $y = t^2$, the arc length integral becomes $\int_a^b \sqrt{1+(2t)^2}\,dt$, which requires trig substitution.</p>
+            </div>
+        </div>
+    </div>
 
-        <h3>Example 2: Area in Polar Coordinates</h3>
-        <p><strong>Task:</strong> Find the area enclosed by $r = 1 + \sin(\theta)$</p>
-        <details class="question">
-            <summary>Click to see the solution</summary>
-            $$A = \frac{1}{2}\int_0^{2\pi} (1+\sin(\theta))^2\,d\theta$$
-            <p>Expand: $(1+\sin(\theta))^2 = 1 + 2\sin(\theta) + \sin^2(\theta)$</p>
-            <p>$$= 1 + 2\sin(\theta) + \frac{1-\cos(2\theta)}{2}$$</p>
-            <p>$$= \frac{3}{2} + 2\sin(\theta) - \frac{1}{2}\cos(2\theta)$$</p>
-            $$A = \frac{1}{2}\left[\frac{3\theta}{2} - 2\cos(\theta) - \frac{\sin(2\theta)}{4}\right]_0^{2\pi}$$
-            <p>$$= \frac{1}{2}(3\pi) = \frac{3\pi}{2}$$</p>
-        </details>
+    <div class="review-section" id="tab-formulas">
+        <div class="review-card">
+            <h3>Formula Sheet</h3>
+            <div class="review-table">
+                <table>
+                    <thead>
+                        <tr><th>Formula</th><th>Use</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>$x = r\cos(\theta)$, $y = r\sin(\theta)$</td>
+                            <td>Polar to Rectangular</td>
+                        </tr>
+                        <tr>
+                            <td>$r = \sqrt{x^2+y^2}$, $\theta = \tan^{-1}(y/x)$</td>
+                            <td>Rectangular to Polar</td>
+                        </tr>
+                        <tr>
+                            <td>$A = \frac{1}{2}\int_{\alpha}^{\beta} [r(\theta)]^2\,d\theta$</td>
+                            <td>Polar Area</td>
+                        </tr>
+                        <tr>
+                            <td>$L = \int_a^b \sqrt{[x'(t)]^2 + [y'(t)]^2}\,dt$</td>
+                            <td>Parametric Arc Length</td>
+                        </tr>
+                        <tr>
+                            <td>$f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n$</td>
+                            <td>Taylor Series</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
-        <h3>Example 3: Parametric Arc Length</h3>
-        <p><strong>Task:</strong> Find the arc length of $x = t$, $y = t^2$ from $t=0$ to $t=1$</p>
-        <details class="question">
-            <summary>Click to see the solution</summary>
-            <p>$\frac{dx}{dt} = 1$, $\frac{dy}{dt} = 2t$</p>
-            $$L = \int_0^1 \sqrt{1 + 4t^2}\,dt$$
-            <p>Let $2t = \tan(\theta)$, $dt = \frac{1}{2}\sec^2(\theta)\,d\theta$</p>
-            $$L = \frac{1}{2}\int_0^{\arctan(2)} \sec^3(\theta)\,d\theta$$
-            <p>$$= \frac{1}{2}\left[\frac{1}{2}\sec(\theta)\tan(\theta) + \frac{1}{2}\ln|\sec(\theta)+\tan(\theta)|\right]_0^{\arctan(2)}$$</p>
-            <p>$$= \frac{1}{4}\left[2\sqrt{5} + \ln(2+\sqrt{5})\right]$$</p>
-        </details>
+    <div class="review-section" id="tab-examples">
+        <div class="review-card">
+            <h3>Worked Examples</h3>
+            <div class="example">
+                <h4>Example 1: Polar Coordinates</h4>
+                <p><strong>Task:</strong> Convert $r = 4\cos(\theta)$ to rectangular form</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Multiply both sides by $r$ to create $r^2$:</p>
+                        <p>$r^2 = 4r\cos(\theta)$</p>
+                        <h4>Step 2:</h4>
+                        <p>Substitute $r^2 = x^2 + y^2$ and $r\cos(\theta) = x$:</p>
+                        <p>$x^2 + y^2 = 4x$</p>
+                        <h4>Final Answer:</h4>
+                        <p>Complete the square: $(x-2)^2 + y^2 = 4$. This is a circle of radius 2 centered at $(2, 0)$.</p>
+                    </div>
+                </details>
+            </div>
+            <div class="example">
+                <h4>Example 2: Area in Polar Coordinates</h4>
+                <p><strong>Task:</strong> Find the area enclosed by $r = 1 + \sin(\theta)$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Set up the area integral over $[0, 2\pi]$:</p>
+                        $$A = \frac{1}{2}\int_0^{2\pi} (1+\sin(\theta))^2\,d\theta$$
+                        <h4>Step 2:</h4>
+                        <p>Expand the integrand:</p>
+                        <p>$$(1+\sin(\theta))^2 = 1 + 2\sin(\theta) + \sin^2(\theta) = 1 + 2\sin(\theta) + \frac{1-\cos(2\theta)}{2}$$</p>
+                        <p>$$= \frac{3}{2} + 2\sin(\theta) - \frac{1}{2}\cos(2\theta)$$</p>
+                        <h4>Step 3:</h4>
+                        <p>Integrate term by term:</p>
+                        <p>$$A = \frac{1}{2}\left[\frac{3\theta}{2} - 2\cos(\theta) - \frac{\sin(2\theta)}{4}\right]_0^{2\pi}$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>$$= \frac{1}{2}(3\pi) = \frac{3\pi}{2}$$</p>
+                    </div>
+                </details>
+            </div>
+            <div class="example">
+                <h4>Example 3: Parametric Arc Length</h4>
+                <p><strong>Task:</strong> Find the arc length of $x = t$, $y = t^2$ from $t=0$ to $t=1$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Compute the derivatives: $\frac{dx}{dt} = 1$ and $\frac{dy}{dt} = 2t$.</p>
+                        <h4>Step 2:</h4>
+                        <p>Set up the arc length integral:</p>
+                        $$L = \int_0^1 \sqrt{1 + 4t^2}\,dt$$
+                        <p>Let $2t = \tan(\theta)$, so $dt = \frac{1}{2}\sec^2(\theta)\,d\theta$.</p>
+                        <p>When $t=0$, $\theta=0$. When $t=1$, $\theta=\arctan(2)$.</p>
+                        <h4>Step 3:</h4>
+                        <p>Substitute and simplify:</p>
+                        <p>$$L = \frac{1}{2}\int_0^{\arctan(2)} \sec^3(\theta)\,d\theta$$</p>
+                        <p>$$= \frac{1}{2}\left[\frac{1}{2}\sec(\theta)\tan(\theta) + \frac{1}{2}\ln|\sec(\theta)+\tan(\theta)|\right]_0^{\arctan(2)}$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>$$= \frac{1}{4}\left[2\sqrt{5} + \ln(2+\sqrt{5})\right]$$</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
 
-        <h2>Practice Problems</h2>
-        <ol>
-            <li>Convert $x^2 + y^2 = 6y$ to polar form</li>
-            <li>Find the area enclosed by $r = 2\sin(2\theta)$</li>
-            <li>Find the Maclaurin series for $f(x) = e^{-x}$</li>
-        </ol>
-    </main>
+    <div class="review-section" id="tab-practice">
+        <div class="review-card">
+            <h3>Practice Problems</h3>
+            <details class="question">
+                <summary>Problem 1 — Polar Form Conversion</summary>
+                <p>Convert $x^2 + y^2 = 6y$ to polar form.</p>
+                <details>
+                <summary>Show Answer</summary>
+                <p><strong>Answer:</strong></p>
+                <p>Substitute $r^2 = x^2 + y^2$ and $y = r\sin(\theta)$:</p>
+                <p>$r^2 = 6r\sin(\theta) \implies r = 6\sin(\theta)$.</p>
+                </details>
+            </details>
+            <details class="question">
+                <summary>Problem 2 — Polar Area</summary>
+                <p>Find the area enclosed by $r = 2\sin(2\theta)$.</p>
+                <details>
+                <summary>Show Answer</summary>
+                <p><strong>Answer:</strong></p>
+                <p>The curve is a four-petaled rose. Integrate over one petal $[0, \pi/2]$ and multiply by 4:</p>
+                <p>$A = 4 \cdot \frac{1}{2}\int_0^{\pi/2} 4\sin^2(2\theta)\,d\theta = 4\int_0^{\pi/2} \sin^2(2\theta)\,d\theta = 2\pi$.</p>
+                </details>
+            </details>
+            <details class="question">
+                <summary>Problem 3 — Maclaurin Series</summary>
+                <p>Find the Maclaurin series for $f(x) = e^{-x}$.</p>
+                <details>
+                <summary>Show Answer</summary>
+                <p><strong>Answer:</strong></p>
+                <p>Using $f^{(n)}(x) = (-1)^n e^{-x}$ and evaluating at $x=0$:</p>
+                <p>$$e^{-x} = \sum_{n=0}^{\infty} \frac{(-1)^n x^n}{n!} = 1 - x + \frac{x^2}{2} - \frac{x^3}{6} + \cdots$$</p>
+                <p>Interval of Convergence: $(-\infty, \infty)$.</p>
+                </details>
+            </details>
+        </div>
+    </div>
+
+    <div class="review-nav">
+        <a href="final-review-3.html" class="review-nav-btn">← Previous Review</a>
+        <span class="review-nav-indicator">Self-Check</span>
+        <a href="../final-samples/final-sample-1.html" class="review-nav-btn">Next Review →</a>
+    </div>
 </div>
+
 <script src="../js/app.js"></script>
+<script>
+document.querySelectorAll('.review-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = tab.dataset.tab;
+        document.querySelectorAll('.review-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.review-section').forEach(s => s.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(target).classList.add('active');
+        if (window.MathJax && MathJax.typesetPromise) {
+            MathJax.typesetPromise();
+        }
+    });
+});
+</script>
 </body>
 </html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 14 - Taylor Polynomial Approximations | Calculus II Notes</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true,
+            tags: 'ams'
+        },
+        svg: { fontCache: 'global' },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            ignoreHtmlClass: 'no-mathjax'
+        }
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Calculus II Notes</h1>
+        <p class="subtitle">Day 14: Taylor Polynomial Approximations</p>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../days/index.html">Days</a>
+            <a href="../quiz-reviews/index.html">Quiz Reviews</a>
+            <a href="../final-reviews/index.html">Final Reviews</a>
+            <a href="../final-samples/index.html">Final Samples</a>
+            <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main class="chapter">
+            <h2>Day 14: Taylor Polynomial Approximations</h2>
+            <p class="lead">Taylor polynomial approximations, remainder term, error bounds, and applications of Taylor series.</p>
+
+            <div class="video-section">
+                <h4>Core Lecture</h4>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Video Title</h5>
+                        <p>Description</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Video Title</h5>
+                        <p>Description</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Video Title</h5>
+                        <p>Description</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Taylor Polynomial Approximations</h2>
+            <p>Taylor polynomials provide polynomial approximations of functions using derivatives at a point. The <strong>Maclaurin series</strong> is the special case where $a = 0$.</p>
+
+            <div class="notes">
+                <h4>Key Formulas</h4>
+                <p><strong>Taylor Polynomial of degree $n$ at $a$:</strong></p>
+                <p>$$T_n(x) = \sum_{k=0}^{n} \frac{f^{(k)}(a)}{k!}(x-a)^k$$</p>
+                <p><strong>Maclaurin Polynomial ($a = 0$):</strong></p>
+                <p>$$T_n(x) = \sum_{k=0}^{n} \frac{f^{(k)}(0)}{k!}x^k$$</p>
+                <p><strong>Remainder Term (Lagrange form):</strong></p>
+                <p>$$R_n(x) = \frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$$</p>
+                <p><strong>Taylor's Inequality (Error Bound):</strong></p>
+                <p>$$|R_n(x)| \leq \frac{M}{(n+1)!}|x-a|^{n+1}$$</p>
+                <p>where $|f^{(n+1)}(x)| \leq M$ for all $x$ between $a$ and $x$.</p>
+            </div>
+
+            <div class="example">
+                <h4>Example 14.1</h4>
+                <p><strong>Problem:</strong> Find the Taylor polynomial $T_3(x)$ for $f(x) = e^x$ at $a = 0$ and use it to approximate $e^{0.1}$.</p>
+                <div class="visual-aid">
+                    <h4>Figure — Taylor polynomial approximation for $e^x$</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="184" font-size="12" fill="#000">x</text>
+                        <text x="205" y="15" font-size="12" fill="#000">y</text>
+                        <path d="M 30,180 C 100,170 160,150 200,130 C 240,110 300,80 380,40" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <path d="M 30,180 C 100,170 160,150 200,130 C 240,110 300,80 380,40" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="4,3"/>
+                        <circle cx="230" cy="110" r="3" fill="#c0392b"/>
+                        <text x="235" y="105" font-size="10" fill="#c0392b">$T_3(0.1)$</text>
+                        <text x="35" y="175" font-size="10" fill="#555">0</text>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">$T_3(x) = 1 + x + x^2/2 + x^3/6$ approximates $e^x$ near $x=0$.</p>
+                </div>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Compute derivatives at $a = 0$:</p>
+                        <p>$f(x) = e^x$, $f(0) = 1$</p>
+                        <p>$f'(x) = e^x$, $f'(0) = 1$</p>
+                        <p>$f''(x) = e^x$, $f''(0) = 1$</p>
+                        <p>$f'''(x) = e^x$, $f'''(0) = 1$</p>
+                        <h4>Step 2:</h4>
+                        <p>Write the Taylor polynomial:</p>
+                        <p>$$T_3(x) = f(0) + f'(0)x + \frac{f''(0)}{2!}x^2 + \frac{f'''(0)}{3!}x^3$$</p>
+                        <p>$$= 1 + x + \frac{x^2}{2} + \frac{x^3}{6}$$</p>
+                        <h4>Step 3:</h4>
+                        <p>Approximate $e^{0.1}$:</p>
+                        <p>$$T_3(0.1) = 1 + 0.1 + \frac{(0.1)^2}{2} + \frac{(0.1)^3}{6}$$</p>
+                        <p>$$= 1 + 0.1 + 0.005 + 0.000167$$</p>
+                        <p>$$= 1.105167$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>$T_3(x) = 1 + x + \frac{x^2}{2} + \frac{x^3}{6}$ and $e^{0.1} \approx 1.105167$.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 14.2</h4>
+                <p><strong>Problem:</strong> Find the Taylor polynomial $T_3(x)$ for $f(x) = \ln(x)$ at $a = 1$ and estimate the error on $[0.5, 1.5]$ using Taylor's Inequality.</p>
+                <div class="visual-aid">
+                    <h4>Figure — Error bound for Taylor polynomial</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="184" font-size="12" fill="#000">x</text>
+                        <text x="205" y="15" font-size="12" fill="#000">y</text>
+                        <path d="M 30,200 C 100,180 160,150 200,130 C 240,110 300,80 380,40" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <path d="M 30,200 C 100,180 160,150 200,130 C 240,110 300,80 380,40" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="4,3"/>
+                        <line x1="130" y1="20" x2="130" y2="200" stroke="#e74c3c" stroke-width="1" stroke-dasharray="3,3"/>
+                        <line x1="270" y1="20" x2="270" y2="200" stroke="#e74c3c" stroke-width="1" stroke-dasharray="3,3"/>
+                        <text x="125" y="215" font-size="10" fill="#e74c3c">0.5</text>
+                        <text x="265" y="215" font-size="10" fill="#e74c3c">1.5</text>
+                        <text x="35" y="175" font-size="10" fill="#555">0</text>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">On $[0.5, 1.5]$, the maximum error $|R_3(x)| \leq 0.25$ occurs at the endpoints.</p>
+                </div>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Compute derivatives at $a = 1$:</p>
+                        <p>$f(x) = \ln(x)$, $f(1) = 0$</p>
+                        <p>$f'(x) = \frac{1}{x}$, $f'(1) = 1$</p>
+                        <p>$f''(x) = -\frac{1}{x^2}$, $f''(1) = -1$</p>
+                        <p>$f'''(x) = \frac{2}{x^3}$, $f'''(1) = 2$</p>
+                        <p>$f^{(4)}(x) = -\frac{6}{x^4}$</p>
+                        <h4>Step 2:</h4>
+                        <p>Write $T_3(x)$:</p>
+                        <p>$$T_3(x) = 0 + 1(x-1) + \frac{-1}{2!}(x-1)^2 + \frac{2}{3!}(x-1)^3$$</p>
+                        <p>$$= (x-1) - \frac{(x-1)^2}{2} + \frac{(x-1)^3}{3}$$</p>
+                        <h4>Step 3:</h4>
+                        <p>Bound the remainder using Taylor's Inequality. For $x \in [0.5, 1.5]$:</p>
+                        <p>$$|f^{(4)}(x)| = \left|-\frac{6}{x^4}\right| = \frac{6}{x^4} \leq \frac{6}{(0.5)^4} = 96$$</p>
+                        <p>So $M = 96$ and:</p>
+                        <p>$$|R_3(x)| \leq \frac{96}{4!}|x-1|^4 = \frac{96}{24}|x-1|^4 = 4|x-1|^4$$</p>
+                        <p>On $[0.5, 1.5]$, the maximum error occurs at the endpoints where $|x-1| = 0.5$:</p>
+                        <p>$$|R_3(x)| \leq 4(0.5)^4 = 4(0.0625) = 0.25$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>$T_3(x) = (x-1) - \frac{(x-1)^2}{2} + \frac{(x-1)^3}{3}$ with maximum error $0.25$ on $[0.5, 1.5]$.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 14.3</h4>
+                <p><strong>Problem:</strong> Use the Maclaurin series for $\sin(x)$ to approximate $\sin(0.2)$ with an error less than $10^{-5}$.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>The Maclaurin series for $\sin(x)$ is:</p>
+                        <p>$$\sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots$$</p>
+                        <p>For an alternating series with decreasing terms, the error is bounded by the first omitted term.</p>
+                        <h4>Step 2:</h4>
+                        <p>We need $\left|\frac{x^{n+1}}{(n+1)!}\right| < 10^{-5}$ with $x = 0.2$.</p>
+                        <p>Try $n = 3$ (giving $T_3(x) = x - \frac{x^3}{3!}$):</p>
+                        <p>$$\left|\frac{(0.2)^5}{5!}\right| = \frac{0.00032}{120} \approx 2.67 \times 10^{-6}$$</p>
+                        <p>This is less than $10^{-5}$, so $T_3(x)$ suffices.</p>
+                        <h4>Step 3:</h4>
+                        <p>Compute the approximation:</p>
+                        <p>$$\sin(0.2) \approx 0.2 - \frac{(0.2)^3}{6} = 0.2 - \frac{0.008}{6} = 0.2 - 0.001333$$</p>
+                        <p>$$= 0.198667$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>$\sin(0.2) \approx 0.198667$ with error $< 2.67 \times 10^{-6} < 10^{-5}$.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 14.4</h4>
+                <p><strong>Problem:</strong> Find $T_4(x)$ for $f(x) = \cos(x)$ at $a = 0$ and estimate the error for $x = 0.5$ using Taylor's Inequality.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Compute derivatives at $a = 0$:</p>
+                        <p>$f(x) = \cos(x)$, $f(0) = 1$</p>
+                        <p>$f'(x) = -\sin(x)$, $f'(0) = 0$</p>
+                        <p>$f''(x) = -\cos(x)$, $f''(0) = -1$</p>
+                        <p>$f'''(x) = \sin(x)$, $f'''(0) = 0$</p>
+                        <p>$f^{(4)}(x) = \cos(x)$, $f^{(4)}(0) = 1$</p>
+                        <p>$f^{(5)}(x) = -\sin(x)$, so $|f^{(5)}(x)| \leq 1$ for all $x$.</p>
+                        <h4>Step 2:</h4>
+                        <p>Write $T_4(x)$:</p>
+                        <p>$$T_4(x) = 1 - \frac{x^2}{2!} + \frac{x^4}{4!}$$</p>
+                        <p>$$= 1 - \frac{x^2}{2} + \frac{x^4}{24}$$</p>
+                        <h4>Step 3:</h4>
+                        <p>Apply Taylor's Inequality with $M = 1$, $a = 0$, $x = 0.5$, $n = 4$:</p>
+                        <p>$$|R_4(0.5)| \leq \frac{1}{5!}(0.5)^5 = \frac{1}{120}(0.03125) \approx 0.000260$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>$T_4(x) = 1 - \frac{x^2}{2} + \frac{x^4}{24}$ with error $|R_4(0.5)| < 0.000260$.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="questions">
+                <h4>Practice Problems</h4>
+                <details class="question">
+                    <summary>Problem 1 — Taylor Polynomial for $\sqrt{x}$</summary>
+                    <p>Find $T_2(x)$ for $f(x) = \sqrt{x}$ at $a = 1$ and bound the error on $[0.5, 1.5]$ using Taylor's Inequality.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>$f(x) = x^{1/2}$, $f'(x) = \frac{1}{2}x^{-1/2}$, $f''(x) = -\frac{1}{4}x^{-3/2}$</p>
+                        <p>$T_2(x) = 1 + \frac{1}{2}(x-1) - \frac{1}{8}(x-1)^2$</p>
+                        <p>For $x \in [0.5, 1.5]$, $|f'''(x)| = \left|-\frac{3}{8}x^{-5/2}\right| \leq \frac{3}{8}(0.5)^{-5/2} \approx 2.12$</p>
+                        <p>Error bound: $|R_2(x)| \leq \frac{2.12}{3!}|x-1|^3 \approx 0.35|x-1|^3$.</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 2 — Taylor Polynomial for $\arctan(x)$</summary>
+                    <p>Find $T_3(x)$ for $f(x) = \arctan(x)$ at $a = 0$ and use it to approximate $\arctan(0.5)$.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>$f(x) = \arctan(x)$, $f'(x) = \frac{1}{1+x^2}$, $f''(x) = \frac{-2x}{(1+x^2)^2}$, $f'''(x) = \frac{6x^2-2}{(1+x^2)^3}$</p>
+                        <p>$f(0) = 0$, $f'(0) = 1$, $f''(0) = 0$, $f'''(0) = -2$</p>
+                        <p>$T_3(x) = x - \frac{x^3}{3}$</p>
+                        <p>$\arctan(0.5) \approx 0.5 - \frac{0.125}{3} \approx 0.4583$</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 3 — Error Bound for $e^x$</summary>
+                    <p>Use the Maclaurin series for $e^x$ to approximate $e^{0.1}$ with error less than $10^{-6}$. Find the minimum degree Taylor polynomial needed.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>The remainder for $e^x$ is $R_n(x) = \frac{e^c}{(n+1)!}x^{n+1}$ with $c \in (0, x)$.</p>
+                        <p>Since $e^c < e^{0.1} < 1.11$, we need $\frac{1.11}{(n+1)!}(0.1)^{n+1} < 10^{-6}$.</p>
+                        <p>For $n = 4$: $\frac{1.11}{120}(0.00001) \approx 9.25 \times 10^{-8} < 10^{-6}$. So $T_4(x)$ suffices.</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 4 — Taylor Polynomial for $\ln(1+x)$</summary>
+                    <p>Find $T_4(x)$ for $f(x) = \ln(1+x)$ at $a = 0$ and use it to approximate $\ln(1.2)$ with error bound.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>$f(x) = \ln(1+x)$, $f'(x) = \frac{1}{1+x}$, $f''(x) = -\frac{1}{(1+x)^2}$, $f'''(x) = \frac{2}{(1+x)^3}$, $f^{(4)}(x) = -\frac{6}{(1+x)^4}$</p>
+                        <p>At $a = 0$: $f(0) = 0$, $f'(0) = 1$, $f''(0) = -1$, $f'''(0) = 2$, $f^{(4)}(0) = -6$</p>
+                        <p>$T_4(x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4}$</p>
+                        <p>$\ln(1.2) \approx 0.2 - 0.02 + 0.002667 - 0.0004 = 0.1823$</p>
+                        <p>Error bound: $|R_4(x)| \leq \frac{6}{5!}(0.2)^5 = \frac{6}{120}(0.00032) = 0.000016$.</p>
+                    </details>
+                </details>
+            </div>
+
+            <div class="strategies">
+                <h4>Study Tips</h4>
+                <p><strong>1.</strong> Always write out the Taylor polynomial formula before computing derivatives.</p>
+                <p><strong>2.</strong> For error bounds, find $M$ by maximizing $|f^{(n+1)}(x)|$ on the interval containing $a$ and $x$.</p>
+                <p><strong>3.</strong> When using alternating series, the error is bounded by the first omitted term.</p>
+                <p><strong>4.</strong> More terms give better approximations, but factorial growth means diminishing returns.</p>
+            </div>
+
+            <nav class="chapter-nav">
+                <a href="day-13.html" class="nav-btn prev" id="prev-chapter">Previous</a>
+                <span class="nav-indicator" id="chapter-indicator"></span>
+                <a href="day-15.html" class="nav-btn next" id="next-chapter">Next</a>
+            </nav>
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

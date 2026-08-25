@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 10 - Partial Fractions and Improper | Calculus II Notes</title>
+    <title>Day 10 - Partial Fractions and Improper Integrals | Calculus II Notes</title>
     <link rel="stylesheet" href="../css/styles.css">
     <script>
     window.MathJax = {
@@ -23,62 +23,319 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 <body>
-<header>
-    <h1>Calculus II Notes</h1>
-    <p class="subtitle">Partial Fractions and Improper</p>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../days/index.html">Days</a>
-        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-        <a href="../final-reviews/index.html">Final Reviews</a>
-        <a href="../final-samples/index.html">Final Samples</a>
-        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-</header>
-<div class="container">
-    <main>
-        <a href="day-08.html" class="back-button">&larr; Back</a>
-        <p class="lead">Browse through the Partial Fractions and Improper pages. Use the arrow buttons or keyboard arrows to navigate.</p>
-        <section id="content">
-            <h2>Partial Fractions and Improper Integrals</h2>
-            
-            <h3>Problem 1: Partial Fraction Decomposition</h3>
-            <p><strong>Task:</strong> Decompose (3x+5)/(x^2-4) into partial fractions.</p>
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Factor the denominator</h4>
-                    <p>x^2 - 4 = (x+2)(x-2)</p>
-                    <h4>Step 2: Set up the decomposition</h4>
-                    <p>(3x+5)/((x+2)(x-2)) = A/(x+2) + B/(x-2)</p>
-                    <h4>Step 3: Clear denominators</h4>
-                    <p>3x + 5 = A(x-2) + B(x+2)</p>
-                    <h4>Step 4: Solve for A and B</h4>
-                    <p>Set x = 2: 3(2)+5 = A(0) + B(4) => 11 = 4B => B = 11/4</p>
-                    <p>Set x = -2: 3(-2)+5 = A(-4) + B(0) => -1 = -4A => A = 1/4</p>
-                    <h4>Final Answer:</h4>
-                    <p>(3x+5)/(x^2-4) = 1/(4(x+2)) + 11/(4(x-2))</p>
-                </div>
-            </details>
+    <header>
+        <h1>Calculus II Notes</h1>
+        <p class="subtitle">Day 10: Partial Fractions and Improper Integrals</p>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../days/index.html">Days</a>
+            <a href="../quiz-reviews/index.html">Quiz Reviews</a>
+            <a href="../final-reviews/index.html">Final Reviews</a>
+            <a href="../final-samples/index.html">Final Samples</a>
+            <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+    </header>
 
-            <h3>Problem 2: Improper Integrals</h3>
-            <p><strong>Task:</strong> Determine if integral from 1 to infinity of 1/x^2 dx converges or diverges.</p>
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Set up as a limit</h4>
-                    <p>integral from 1 to infinity of 1/x^2 dx = lim(b->infinity) integral from 1 to b of x^(-2) dx</p>
-                    <h4>Step 2: Integrate</h4>
-                    <p>= lim(b->infinity) [-1/x] from 1 to b</p>
-                    <h4>Step 3: Evaluate the limit</h4>
-                    <p>= lim(b->infinity) (-1/b + 1) = 0 + 1 = 1</p>
-                    <h4>Final Answer:</h4>
-                    <p>The integral converges to 1</p>
+    <div class="container">
+        <main class="chapter">
+            <h2>Day 10: Partial Fractions and Improper Integrals</h2>
+            <p class="lead">Expand partial fractions to handle repeated and quadratic factors, then learn to evaluate integrals with infinite limits or discontinuities.</p>
+
+            <div class="video-section">
+                <h4>Core Lecture</h4>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
                 </div>
-            </details>
-        </section>
-    </main>
-</div>
-<script src="../js/app.js"></script>
+            </div>
+
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Repeated Factors</h5>
+                        <p>Handling repeated linear and quadratic factors</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Improper Integral Type I</h5>
+                        <p>Integrals with infinite limits of integration</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Improper Integral Type II</h5>
+                        <p>Integrals with discontinuities in the interval</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Partial Fractions with Repeated Factors</h2>
+            <p>When the denominator contains a repeated factor $(x - r)^k$, the decomposition includes a term for each power from $1$ to $k$.</p>
+
+            <div class="notes">
+                <h4>Repeated Linear Factors</h4>
+                <p>For a factor $(x - r)^k$, write:</p>
+                $$\frac{P(x)}{(x - r)^k} = \frac{A_1}{x - r} + \frac{A_2}{(x - r)^2} + \cdots + \frac{A_k}{(x - r)^k}$$
+            </div>
+
+            <div class="example">
+                <h4>Example 1.1</h4>
+                <p><strong>Problem:</strong> Decompose $\displaystyle \frac{x^2 + 3x + 2}{(x + 1)^3}$.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Set up the decomposition for the repeated factor $(x + 1)^3$:</p>
+                        $$\frac{x^2 + 3x + 2}{(x + 1)^3} = \frac{A}{x + 1} + \frac{B}{(x + 1)^2} + \frac{C}{(x + 1)^3}$$
+                        <h4>Step 2:</h4>
+                        <p>Clear denominators:</p>
+                        $$x^2 + 3x + 2 = A(x + 1)^2 + B(x + 1) + C$$
+                        <h4>Step 3:</h4>
+                        <p>Expand and match coefficients:</p>
+                        $$x^2 + 3x + 2 = Ax^2 + (2A + B)x + (A + B + C)$$
+                        <p>Matching coefficients gives $A = 1$, $B = 1$, $C = 0$.</p>
+                        <h4>Final Answer:</h4>
+                        $$\frac{x^2 + 3x + 2}{(x + 1)^3} = \frac{1}{x + 1} + \frac{1}{(x + 1)^2}$$
+                    </div>
+                </details>
+            </div>
+
+            <h2>Partial Fractions with Irreducible Quadratics</h2>
+            <p>When the denominator contains an irreducible quadratic factor $ax^2 + bx + c$, the numerator of that term must be linear: $Ax + B$.</p>
+
+            <div class="example">
+                <h4>Example 1.2</h4>
+                <p><strong>Problem:</strong> Decompose $\displaystyle \frac{x^2}{(x - 1)(x^2 + 4)}$.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Set up the decomposition with a linear factor and an irreducible quadratic:</p>
+                        $$\frac{x^2}{(x - 1)(x^2 + 4)} = \frac{A}{x - 1} + \frac{Bx + C}{x^2 + 4}$$
+                        <h4>Step 2:</h4>
+                        <p>Clear denominators:</p>
+                        $$x^2 = A(x^2 + 4) + (Bx + C)(x - 1)$$
+                        <h4>Step 3:</h4>
+                        <p>Expand and collect terms:</p>
+                        $$x^2 = Ax^2 + 4A + Bx^2 - Bx + Cx - C$$
+                        $$= (A + B)x^2 + (-B + C)x + (4A - C)$$
+                        <h4>Step 4:</h4>
+                        <p>Match coefficients: $A + B = 1$, $-B + C = 0$, $4A - C = 0$. Solving gives $A = \frac{1}{5}$, $B = \frac{4}{5}$, $C = \frac{4}{5}$.</p>
+                        <h4>Final Answer:</h4>
+                        $$\frac{x^2}{(x - 1)(x^2 + 4)} = \frac{1}{5(x - 1)} + \frac{4x + 4}{5(x^2 + 4)}$$
+                    </div>
+                </details>
+            </div>
+
+            <h2>Improper Integrals</h2>
+            <p>An improper integral has either an infinite limit of integration or an integrand that is discontinuous on the interval. We evaluate these by taking limits.</p>
+
+            <div class="notes">
+                <h4>Types of Improper Integrals</h4>
+                <p><strong>Type I:</strong> Infinite interval, e.g. $\displaystyle \int_1^{\infty} f(x)\,dx = \lim_{b \to \infty} \int_1^b f(x)\,dx$.</p>
+                <p><strong>Type II:</strong> Discontinuous integrand, e.g. $\displaystyle \int_0^1 f(x)\,dx = \lim_{a \to 0^+} \int_a^1 f(x)\,dx$.</p>
+                <p><strong>Convergence:</strong> If the limit exists (finite), the integral converges. Otherwise, it diverges.</p>
+            </div>
+
+            <div class="example">
+                <h4>Example 2.1</h4>
+                <p><strong>Problem:</strong> Determine whether $\displaystyle \int_1^{\infty} \frac{1}{x^2}\,dx$ converges or diverges.</p>
+                <div class="visual-aid">
+                    <h4>Figure — Improper integral of $1/x^2$</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="184" font-size="12" fill="#000">x</text>
+                        <text x="205" y="15" font-size="12" fill="#000">y</text>
+                        <path d="M 30,200 C 100,180 160,150 200,130 C 240,110 300,90 380,70" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <line x1="30" y1="180" x2="380" y2="40" stroke="#000" stroke-width="0.5" stroke-dasharray="3,3"/>
+                        <text x="35" y="175" font-size="10" fill="#555">1</text>
+                        <text x="195" y="195" font-size="10" fill="#555">0</text>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">The function $y = 1/x^2$ has a finite improper integral $\int_1^{\infty} x^{-2}\,dx = 1$.</p>
+                </div>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Set up as a limit (Type I improper integral):</p>
+                        $$\int_1^{\infty} \frac{1}{x^2}\,dx = \lim_{b \to \infty} \int_1^b x^{-2}\,dx$$
+                        <h4>Step 2:</h4>
+                        <p>Integrate:</p>
+                        $$\lim_{b \to \infty} \left[-\frac{1}{x}\right]_1^b = \lim_{b \to \infty} \left(-\frac{1}{b} + 1\right)$$
+                        <h4>Step 3:</h4>
+                        <p>Evaluate the limit:</p>
+                        $$= 0 + 1 = 1$$
+                        <h4>Final Answer:</h4>
+                        <p>The integral converges to $1$.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 2.2</h4>
+                <p><strong>Problem:</strong> Determine whether $\displaystyle \int_0^1 \frac{1}{x^{3/4}}\,dx$ converges or diverges.</p>
+                <div class="visual-aid">
+                    <h4>Figure — Improper integral of $x^{-3/4}$ near $x=0$</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="184" font-size="12" fill="#000">x</text>
+                        <text x="205" y="15" font-size="12" fill="#000">y</text>
+                        <path d="M 30,180 C 60,160 100,120 150,80 C 180,55 200,40 380,10" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <text x="35" y="175" font-size="10" fill="#555">0</text>
+                        <text x="195" y="195" font-size="10" fill="#555">0</text>
+                        <text x="350" y="175" font-size="10" fill="#555">1</text>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">The function $y = x^{-3/4}$ has a vertical asymptote at $x=0$ but the integral converges to 4.</p>
+                </div>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Identify as Type II (discontinuity at $x = 0$). Set up as a limit:</p>
+                        $$\int_0^1 x^{-3/4}\,dx = \lim_{a \to 0^+} \int_a^1 x^{-3/4}\,dx$$
+                        <h4>Step 2:</h4>
+                        <p>Integrate:</p>
+                        $$\lim_{a \to 0^+} \left[ \frac{x^{1/4}}{1/4} \right]_a^1 = \lim_{a \to 0^+} \left[ 4x^{1/4} \right]_a^1$$
+                        <h4>Step 3:</h4>
+                        <p>Evaluate the limit:</p>
+                        $$= 4(1) - 4(0) = 4$$
+                        <h4>Final Answer:</h4>
+                        <p>The integral converges to $4$.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 2.3</h4>
+                <p><strong>Problem:</strong> Determine whether $\displaystyle \int_1^{\infty} \frac{1}{x}\,dx$ converges or diverges.</p>
+                <div class="visual-aid">
+                    <h4>Figure — Comparison of $1/x$ and $1/x^2$</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="184" font-size="12" fill="#000">x</text>
+                        <text x="205" y="15" font-size="12" fill="#000">y</text>
+                        <path d="M 30,140 C 100,120 160,100 200,85 C 240,70 300,55 380,40" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <path d="M 30,200 C 100,180 160,150 200,130 C 240,110 300,90 380,70" fill="none" stroke="#c0392b" stroke-width="2"/>
+                        <text x="35" y="175" font-size="10" fill="#555">1</text>
+                        <text x="195" y="195" font-size="10" fill="#555">0</text>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">The harmonic integral $\int_1^{\infty} \frac{1}{x}\,dx$ (blue) diverges, while $\int_1^{\infty} \frac{1}{x^2}\,dx$ (red) converges.</p>
+                </div>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Set up as a limit:</p>
+                        $$\int_1^{\infty} \frac{1}{x}\,dx = \lim_{b \to \infty} \int_1^b \frac{1}{x}\,dx$$
+                        <h4>Step 2:</h4>
+                        <p>Integrate:</p>
+                        $$\lim_{b \to \infty} [\ln|x|]_1^b = \lim_{b \to \infty} (\ln(b) - \ln(1)) = \lim_{b \to \infty} \ln(b)$$
+                        <h4>Step 3:</h4>
+                        <p>Evaluate the limit:</p>
+                        $$= \infty$$
+                        <h4>Final Answer:</h4>
+                        <p>The integral diverges.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="questions">
+                <h4>Practice Problems</h4>
+                <details class="question">
+                    <summary>Problem 1 — Decompose $\displaystyle \frac{2x - 1}{x^2 - 5x + 6}$</summary>
+                    <p>Factor the denominator and find the partial fraction decomposition.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>Factor: $x^2 - 5x + 6 = (x - 2)(x - 3)$. The decomposition is:</p>
+                    $$\frac{2x - 1}{x^2 - 5x + 6} = \frac{3}{x - 2} - \frac{1}{x - 3}$$
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 2 — Evaluate $\displaystyle \int \frac{dx}{x^2\sqrt{4 - x^2}}$</summary>
+                    <p>Use trigonometric substitution.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>Use $x = 2\sin(\theta)$. The result is:</p>
+                    $$\int \frac{dx}{x^2\sqrt{4 - x^2}} = -\frac{\sqrt{4 - x^2}}{4x} + C$$
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 3 — Determine whether $\displaystyle \int_2^{\infty} \frac{1}{x(\ln x)^2}\,dx$ converges</summary>
+                    <p>Evaluate the improper integral.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>Let $u = \ln(x)$, $du = \frac{1}{x}\,dx$. When $x = 2$, $u = \ln(2)$. When $x \to \infty$, $u \to \infty$:</p>
+                    $$\int_2^{\infty} \frac{1}{x(\ln x)^2}\,dx = \lim_{b \to \infty} \int_{\ln(2)}^b \frac{1}{u^2}\,du = \lim_{b \to \infty} \left[-\frac{1}{u}\right]_{\ln(2)}^b = \frac{1}{\ln(2)}$$
+                    <p>The integral converges to $\frac{1}{\ln(2)}$.</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 4 — Determine whether $\displaystyle \int_0^3 \frac{1}{(x - 1)^{2/3}}\,dx$ converges</summary>
+                    <p>Note the discontinuity at $x = 1$.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>Split the integral at the discontinuity:</p>
+                    $$\int_0^3 \frac{1}{(x - 1)^{2/3}}\,dx = \lim_{a \to 1^-} \int_0^a (x - 1)^{-2/3}\,dx + \lim_{b \to 1^+} \int_b^3 (x - 1)^{-2/3}\,dx$$
+                    <p>Each integral evaluates to $3(x - 1)^{1/3}$, and both limits exist. The total is $3(2^{1/3}) + 3(2^{1/3}) = 6\sqrt[3]{2}$. The integral converges.</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 5 — Evaluate $\displaystyle \int \frac{2x + 3}{x^3 + x}\,dx$ using partial fractions</summary>
+                    <p>Factor the denominator and decompose before integrating.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>Factor: $x^3 + x = x(x^2 + 1)$. Decompose:</p>
+                    $$\frac{2x + 3}{x(x^2 + 1)} = \frac{3}{x} + \frac{-3x + 2}{x^2 + 1}$$
+                    <p>Integrate term by term:</p>
+                    $$\int \frac{2x + 3}{x^3 + x}\,dx = 3\ln|x| - \frac{3}{2}\ln(x^2 + 1) + 2\arctan(x) + C$$
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 6 — Determine whether $\displaystyle \int_0^{\infty} e^{-x^2}\,dx$ converges</summary>
+                    <p>Use a comparison test.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>For $x \geq 0$, $e^{-x^2} \leq e^{-x}$ (since $x^2 \geq x$ for $x \geq 1$ and the inequality holds near $0$ by continuity). Since $\int_0^{\infty} e^{-x}\,dx = 1$ converges, by the Comparison Test, $\int_0^{\infty} e^{-x^2}\,dx$ also converges.</p>
+                    <p>In fact, $\int_0^{\infty} e^{-x^2}\,dx = \frac{\sqrt{\pi}}{2}$.</p>
+                    </details>
+                </details>
+            </div>
+
+            <div class="strategies">
+                <h4>Study Tips</h4>
+                <p><strong>1.</strong> For Type I improper integrals, always write the limit explicitly before evaluating.</p>
+                <p><strong>2.</strong> For Type II improper integrals with a single discontinuity, split the integral at the discontinuity and evaluate each limit separately.</p>
+                <p><strong>3.</strong> Use the Comparison Test when direct integration is difficult. Compare with a known $p$-series or exponential integral.</p>
+                <p><strong>4.</strong> When decomposing rational functions, always check that $\deg(P) < \deg(Q)$ first. If not, perform polynomial long division.</p>
+                <p><strong>5.</strong> Memorize standard integrals like $\int \frac{1}{x^2 + a^2}\,dx = \frac{1}{a}\arctan\left(\frac{x}{a}\right) + C$ for partial fractions with quadratics.</p>
+            </div>
+
+            <nav class="chapter-nav">
+                <a href="day-09.html" class="nav-btn prev" id="prev-chapter">Previous</a>
+                <span class="nav-indicator" id="chapter-indicator"></span>
+                <a href="day-11.html" class="nav-btn next" id="next-chapter">Next</a>
+            </nav>
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
 </body>
 </html>

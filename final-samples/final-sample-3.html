@@ -22,62 +22,214 @@
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
-<body>
-<header>
-    <h1>Calculus II Notes</h1>
-    <p class="subtitle">Comprehensive Sample Exam 3</p>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../days/index.html">Days</a>
-        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-        <a href="../final-reviews/index.html">Final Reviews</a>
-        <a href="../final-samples/index.html">Final Samples</a>
-        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-</header>
-<div class="container">
-    <main>
-        <p class="lead">Use this sample exam to test your understanding of the full course. Try each problem without looking at your notes, then check the worked solutions below.</p>
+<body class="review-page">
+<div class="review-container">
+    <div class="review-header">
+        <h1>Final Sample 3: Comprehensive Sample Exam 3</h1>
+        <nav>
+            <a href="../index.html">← All Reviews</a>
+            <span>Full Course Coverage</span>
+        </nav>
+    </div>
 
-        <h2>Problems</h2>
+    <div class="review-hero">
+        <h2>Final Sample 3: Comprehensive Sample Exam 3</h2>
+        <p>Use this sample exam to test your understanding of the full course. Try each problem without looking at your notes, then check the worked solutions below.</p>
+        <div class="review-meta">
+            <span>3 Problems</span>
+            <span>Full Course Coverage</span>
+        </div>
+    </div>
 
-        <h3>Problem 1: Trig Substitution</h3>
-        <p><strong>Evaluate:</strong> $\int \frac{x^3}{\sqrt{4-x^2}}\,dx$</p>
-        <details class="question">
-            <summary>Click to see the solution</summary>
-            <p>Let $x = 2\sin(\theta)$, $dx = 2\cos(\theta)\,d\theta$</p>
-            <p>$x^3 = 8\sin^3(\theta)$, $\sqrt{4-x^2} = 2\cos(\theta)$</p>
-            $$= \int \frac{8\sin^3(\theta) \cdot 2\cos(\theta)\,d\theta}{2\cos(\theta)}$$
-            $$= 8\int \sin^3(\theta)\,d\theta$$
-            <p>Use $\sin^2(\theta) = 1-\cos^2(\theta)$ and $u = \cos(\theta)$:</p>
-            $$= 8\int (1-u^2)(-du) = -8\left(u - \frac{u^3}{3}\right) + C$$
-            <p>Back-substitute: $\cos(\theta) = \frac{\sqrt{4-x^2}}{2}$</p>
-            $$= -4\sqrt{4-x^2} + \frac{(4-x^2)^{3/2}}{3} + C$$
-        </details>
+    <div class="review-tabs" role="tablist">
+        <button class="review-tab active" data-tab="tab-basics" role="tab">Key Concepts</button>
+        <button class="review-tab" data-tab="tab-formulas" role="tab">Formulas</button>
+        <button class="review-tab" data-tab="tab-examples" role="tab">Worked Solutions</button>
+        <button class="review-tab" data-tab="tab-practice" role="tab">Exam Problems</button>
+    </div>
 
-        <h3>Problem 2: Series Convergence with Ratio Test</h3>
-        <p><strong>Task:</strong> Test $\sum_{n=1}^{\infty} \frac{n^2}{3^n}$ for convergence</p>
-        <details class="question">
-            <summary>Click to see the solution</summary>
-            $$\rho = \lim_{n\to\infty} \frac{(n+1)^2/3^{n+1}}{n^2/3^n}$$
-            $$= \lim_{n\to\infty} \frac{(n+1)^2}{3n^2}$$
-            $$= \lim_{n\to\infty} \frac{1}{3}\left(1 + \frac{1}{n}\right)^2$$
-            $$= \frac{1}{3}$$
-            <p>Since $\rho = \frac{1}{3} < 1$, the series converges by the Ratio Test.</p>
-        </details>
+    <div class="review-section active" id="tab-basics">
+        <div class="review-card">
+            <h3>Trigonometric Substitution</h3>
+            <p>Trigonometric substitution handles integrals with radicals of the form $\sqrt{a^2-x^2}$, $\sqrt{a^2+x^2}$, and $\sqrt{x^2-a^2}$ by converting them to standard trigonometric integrals.</p>
+            <div class="review-formula">
+                \[ \sqrt{4-x^2} \implies x = 2\sin(\theta), \quad dx = 2\cos(\theta)\,d\theta \]
+                <div class="formula-label">Trig Substitution for $\sqrt{a^2-x^2}$</div>
+            </div>
+            <div class="review-callout info">
+                <p><strong>Key insight:</strong> When the integrand contains $x^3$ and $\sqrt{a^2-x^2}$, split off one factor of $x$ to pair with $dx$, then use $\sin^2(\theta) = 1-\cos^2(\theta)$.</p>
+            </div>
+        </div>
+        <div class="review-card">
+            <h3>Ratio Test</h3>
+            <p>The Ratio Test is particularly effective for series with factorials or exponential growth. Compute the limit of the ratio of consecutive terms.</p>
+            <div class="review-formula">
+                \[ \rho = \lim_{n\to\infty} \left|\frac{a_{n+1}}{a_n}\right| \]
+                <div class="formula-label">Ratio Test</div>
+            </div>
+        </div>
+        <div class="review-card">
+            <h3>Parametric Curves</h3>
+            <p>For a curve defined parametrically by $x(t)$ and $y(t)$, the slope of the tangent line is found by dividing the derivatives with respect to $t$.</p>
+            <div class="review-formula">
+                \[ \frac{dy}{dx} = \frac{dy/dt}{dx/dt} \]
+                <div class="formula-label">Slope of Tangent to Parametric Curve</div>
+            </div>
+            <div class="review-callout warning">
+                <p><strong>Warning:</strong> A vertical tangent occurs when $dx/dt = 0$ (and $dy/dt \neq 0$). A horizontal tangent occurs when $dy/dt = 0$ (and $dx/dt \neq 0$).</p>
+            </div>
+        </div>
+    </div>
 
-        <h3>Problem 3: Parametric Curves</h3>
-        <p><strong>Task:</strong> Find the slope of the tangent line to the curve $x = \cos(t)$, $y = \sin(t)$ at $t = \pi/4$</p>
-        <details class="question">
-            <summary>Click to see the solution</summary>
-            <p>$\frac{dx}{dt} = -\sin(t)$, $\frac{dy}{dt} = \cos(t)$</p>
-            <p>Slope: $\frac{dy}{dx} = \frac{dy/dt}{dx/dt} = \frac{\cos(t)}{-\sin(t)} = -\cot(t)$</p>
-            <p>At $t = \pi/4$:</p>
-            $$m = -\cot\left(\frac{\pi}{4}\right) = -1$$
-            <p>The tangent line has slope $-1$.</p>
-        </details>
-    </main>
+    <div class="review-section" id="tab-formulas">
+        <div class="review-card">
+            <h3>Formula Sheet</h3>
+            <div class="review-table">
+                <table>
+                    <thead>
+                        <tr><th>Formula</th><th>Use</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>$\sqrt{a^2-x^2}$: use $x = a\sin(\theta)$</td>
+                            <td>Trig Substitution</td>
+                        </tr>
+                        <tr>
+                            <td>$\rho = \lim_{n\to\infty} \left|\frac{a_{n+1}}{a_n}\right|$</td>
+                            <td>Ratio Test</td>
+                        </tr>
+                        <tr>
+                            <td>$\frac{dy}{dx} = \frac{dy/dt}{dx/dt}$</td>
+                            <td>Parametric Tangent Slope</td>
+                        </tr>
+                        <tr>
+                            <td>$\int \tan(\theta)\,d\theta = \ln|\sec(\theta)| + C$</td>
+                            <td>Standard Integral</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="review-section" id="tab-examples">
+        <div class="review-card">
+            <h3>Worked Solutions</h3>
+            <div class="example">
+                <h4>Problem 1: Trig Substitution</h4>
+                <p><strong>Evaluate:</strong> $\int \frac{x^3}{\sqrt{4-x^2}}\,dx$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Let $x = 2\sin(\theta)$, so $dx = 2\cos(\theta)\,d\theta$.</p>
+                        <p>Then $x^3 = 8\sin^3(\theta)$ and $\sqrt{4-x^2} = 2\cos(\theta)$.</p>
+                        <h4>Step 2:</h4>
+                        <p>Substitute into the integral:</p>
+                        <p>$$= \int \frac{8\sin^3(\theta) \cdot 2\cos(\theta)\,d\theta}{2\cos(\theta)}$$</p>
+                        <p>$$= 8\int \sin^3(\theta)\,d\theta$$</p>
+                        <h4>Step 3:</h4>
+                        <p>Use $\sin^2(\theta) = 1-\cos^2(\theta)$ and let $u = \cos(\theta)$:</p>
+                        <p>$$= 8\int (1-u^2)(-du) = -8\left(u - \frac{u^3}{3}\right) + C$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>Back-substitute $\cos(\theta) = \frac{\sqrt{4-x^2}}{2}$:</p>
+                        <p>$$= -4\sqrt{4-x^2} + \frac{(4-x^2)^{3/2}}{3} + C$$</p>
+                    </div>
+                </details>
+            </div>
+            <div class="example">
+                <h4>Problem 2: Series Convergence with Ratio Test</h4>
+                <p><strong>Task:</strong> Test $\sum_{n=1}^{\infty} \frac{n^2}{3^n}$ for convergence</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Compute the ratio of consecutive terms:</p>
+                        <p>$$\rho = \lim_{n\to\infty} \frac{(n+1)^2/3^{n+1}}{n^2/3^n}$$</p>
+                        <h4>Step 2:</h4>
+                        <p>Simplify:</p>
+                        <p>$$= \lim_{n\to\infty} \frac{(n+1)^2}{3n^2} = \lim_{n\to\infty} \frac{1}{3}\left(1 + \frac{1}{n}\right)^2$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>$$= \frac{1}{3}$$ Since $\rho = \frac{1}{3} < 1$, the series converges by the Ratio Test.</p>
+                    </div>
+                </details>
+            </div>
+            <div class="example">
+                <h4>Problem 3: Parametric Curves</h4>
+                <p><strong>Task:</strong> Find the slope of the tangent line to the curve $x = \cos(t)$, $y = \sin(t)$ at $t = \pi/4$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Compute the derivatives with respect to $t$:</p>
+                        <p>$\frac{dx}{dt} = -\sin(t)$ and $\frac{dy}{dt} = \cos(t)$.</p>
+                        <h4>Step 2:</h4>
+                        <p>Compute the slope:</p>
+                        <p>$$\frac{dy}{dx} = \frac{dy/dt}{dx/dt} = \frac{\cos(t)}{-\sin(t)} = -\cot(t)$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>At $t = \pi/4$:</p>
+                        <p>$$m = -\cot\left(\frac{\pi}{4}\right) = -1$$</p>
+                        <p>The tangent line has slope $-1$.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+
+    <div class="review-section" id="tab-practice">
+        <div class="review-card">
+            <h3>Exam Problems</h3>
+            <details class="question">
+                <summary>Problem 1 — Trig Substitution</summary>
+                <p>Evaluate $\int \frac{x^3}{\sqrt{4-x^2}}\,dx$</p>
+                <details>
+                <summary>Show Answer</summary>
+                <p><strong>Answer:</strong></p>
+                <p>$$= -4\sqrt{4-x^2} + \frac{(4-x^2)^{3/2}}{3} + C$$</p>
+                </details>
+            </details>
+            <details class="question">
+                <summary>Problem 2 — Ratio Test</summary>
+                <p>Test $\sum_{n=1}^{\infty} \frac{n^2}{3^n}$ for convergence.</p>
+                <details>
+                <summary>Show Answer</summary>
+                <p><strong>Answer:</strong></p>
+                <p>Converges by the Ratio Test with $\rho = \frac{1}{3} < 1$.</p>
+                </details>
+            </details>
+            <details class="question">
+                <summary>Problem 3 — Parametric Tangent</summary>
+                <p>Find the slope of the tangent line to the curve $x = \cos(t)$, $y = \sin(t)$ at $t = \pi/4$.</p>
+                <details>
+                <summary>Show Answer</summary>
+                <p><strong>Answer:</strong></p>
+                <p>Slope is $-1$.</p>
+                </details>
+            </details>
+        </div>
+    </div>
+
+    <div class="review-nav">
+        <a href="final-sample-2.html" class="review-nav-btn">← Previous Sample</a>
+        <span class="review-nav-indicator">Self-Check</span>
+        <a href="../final-reviews/index.html" class="review-nav-btn">Next Review →</a>
+    </div>
 </div>
+
 <script src="../js/app.js"></script>
+<script>
+document.querySelectorAll('.review-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = tab.dataset.tab;
+        document.querySelectorAll('.review-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.review-section').forEach(s => s.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(target).classList.add('active');
+        if (window.MathJax && MathJax.typesetPromise) {
+            MathJax.typesetPromise();
+        }
+    });
+});
+</script>
 </body>
 </html>

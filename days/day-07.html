@@ -23,28 +23,62 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 <body>
-<header>
-    <h1>Calculus II Notes</h1>
-    <p class="subtitle">Integration by Parts and Trig</p>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../days/index.html">Days</a>
-        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-        <a href="../final-reviews/index.html">Final Reviews</a>
-        <a href="../final-samples/index.html">Final Samples</a>
-        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-</header>
+    <header>
+        <h1>Calculus II Notes</h1>
+        <p class="subtitle">Integration by Parts and Trig</p>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../days/index.html">Days</a>
+            <a href="../quiz-reviews/index.html">Quiz Reviews</a>
+            <a href="../final-reviews/index.html">Final Reviews</a>
+            <a href="../final-samples/index.html">Final Samples</a>
+            <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+    </header>
 
-<div class="container">
-    <main>
-        <a href="day-06.html" class="back-button">&larr; Back</a>
-        <p class="lead">Browse through the Integration by Parts and Trig pages. Use the arrow buttons or keyboard arrows to navigate.</p>
+    <div class="container">
+        <main class="chapter">
+            <h2>Day 07: Integration by Parts and Trig</h2>
+            <p class="lead">Browse through the Integration by Parts and Trig pages. Use the arrow buttons or keyboard arrows to navigate.</p>
 
-        <section id="content">
-            <h2>Integration by Parts and Trig</h2>
+            <div class="video-section">
+                <h4>Core Lecture</h4>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                </div>
+            </div>
 
-            <h3>Integration by Parts</h3>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Integration by Parts</h5>
+                        <p>Derivation and the LIATE rule for choosing $u$</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Trigonometric Integrals</h5>
+                        <p>Odd and even powers of sine and cosine</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Trig Substitution</h5>
+                        <p>When and how to use trigonometric substitution</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Integration by Parts</h2>
             <p>The integration by parts formula comes from the product rule for differentiation:</p>
             $$\frac{d}{dx}[u \cdot v] = u'v + uv'$$
             <p>Integrating both sides:</p>
@@ -62,117 +96,134 @@
                 </ol>
             </div>
 
-            <h3>Problem 1: Basic Integration by Parts</h3>
-            <p><strong>Evaluate:</strong> $\int x e^x\,dx$</p>
-
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Choose u and dv</h4>
-                    <p>Using LIATE: Algebraic ($x$) comes before Exponential ($e^x$), so:</p>
-                    $$u = x, \quad dv = e^x\,dx$$
-
-                    <h4>Step 2: Compute du and v</h4>
-                    $$du = dx, \quad v = \int e^x\,dx = e^x$$
-
-                    <h4>Step 3: Apply the integration by parts formula</h4>
-                    $$\int x e^x\,dx = x \cdot e^x - \int e^x\,dx$$
-                    $$\int x e^x\,dx = x e^x - e^x + C$$
-
-                    <h4>Final Answer:</h4>
-                    $$\boxed{\int x e^x\,dx = x e^x - e^x + C}$$
+            <div class="example">
+                <h4>Example 1.1</h4>
+                <p><strong>Problem:</strong> Evaluate $\int x e^x\,dx$</p>
+                <div class="visual-aid">
+                    <h4>Figure — Area interpretation of integration by parts</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="184" font-size="12" fill="#000">x</text>
+                        <text x="205" y="15" font-size="12" fill="#000">y</text>
+                        <path d="M 30,180 C 100,160 160,120 200,80 C 240,40 300,20 380,10" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <text x="35" y="175" font-size="10" fill="#555">0</text>
+                        <text x="195" y="195" font-size="10" fill="#555">0</text>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">Integration by parts relates the area under $xe^x$ to the area under $e^x$.</p>
                 </div>
-            </details>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Choose u and dv</h4>
+                        <p>Using LIATE: Algebraic ($x$) comes before Exponential ($e^x$), so:</p>
+                        $$u = x, \quad dv = e^x\,dx$$
 
-            <h3>Problem 2: Integration by Parts with Logarithm</h3>
-            <p><strong>Evaluate:</strong> $\int x^2 \ln(x)\,dx$</p>
+                        <h4>Step 2: Compute du and v</h4>
+                        $$du = dx, \quad v = \int e^x\,dx = e^x$$
 
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Choose u and dv</h4>
-                    <p>Using LIATE: Logarithmic ($\ln(x)$) comes before Algebraic ($x^2$):</p>
-                    $$u = \ln(x), \quad dv = x^2\,dx$$
+                        <h4>Step 3: Apply the integration by parts formula</h4>
+                        $$\int x e^x\,dx = x \cdot e^x - \int e^x\,dx$$
+                        $$\int x e^x\,dx = x e^x - e^x + C$$
 
-                    <h4>Step 2: Compute du and v</h4>
-                    $$du = \frac{1}{x}\,dx, \quad v = \int x^2\,dx = \frac{x^3}{3}$$
+                        <h4>Final Answer:</h4>
+                        $$\boxed{\int x e^x\,dx = x e^x - e^x + C}$$
+                    </div>
+                </details>
+            </div>
 
-                    <h4>Step 3: Apply integration by parts</h4>
-                    $$\int x^2 \ln(x)\,dx = \ln(x) \cdot \frac{x^3}{3} - \int \frac{x^3}{3} \cdot \frac{1}{x}\,dx$$
-                    $$= \frac{x^3}{3}\ln(x) - \frac{1}{3}\int x^2\,dx$$
-                    $$= \frac{x^3}{3}\ln(x) - \frac{1}{3} \cdot \frac{x^3}{3} + C$$
-                    $$= \frac{x^3}{3}\ln(x) - \frac{x^3}{9} + C$$
+            <div class="example">
+                <h4>Example 1.2</h4>
+                <p><strong>Problem:</strong> Evaluate $\int x^2 \ln(x)\,dx$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Choose u and dv</h4>
+                        <p>Using LIATE: Logarithmic ($\ln(x)$) comes before Algebraic ($x^2$):</p>
+                        $$u = \ln(x), \quad dv = x^2\,dx$$
 
-                    <h4>Final Answer:</h4>
-                    $$\boxed{\int x^2 \ln(x)\,dx = \frac{x^3}{3}\ln(x) - \frac{x^3}{9} + C}$$
-                </div>
-            </details>
+                        <h4>Step 2: Compute du and v</h4>
+                        $$du = \frac{1}{x}\,dx, \quad v = \int x^2\,dx = \frac{x^3}{3}$$
 
-            <h3>Problem 3: Integration by Parts with Polynomial and Trig</h3>
-            <p><strong>Evaluate:</strong> $\int x^2 \cos(2x)\,dx$</p>
+                        <h4>Step 3: Apply integration by parts</h4>
+                        $$\int x^2 \ln(x)\,dx = \ln(x) \cdot \frac{x^3}{3} - \int \frac{x^3}{3} \cdot \frac{1}{x}\,dx$$
+                        $$= \frac{x^3}{3}\ln(x) - \frac{1}{3}\int x^2\,dx$$
+                        $$= \frac{x^3}{3}\ln(x) - \frac{1}{3} \cdot \frac{x^3}{3} + C$$
+                        $$= \frac{x^3}{3}\ln(x) - \frac{x^3}{9} + C$$
 
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: First application of integration by parts</h4>
-                    <p>Choose $u = x^2$ and $dv = \cos(2x)\,dx$:</p>
-                    $$du = 2x\,dx, \quad v = \int \cos(2x)\,dx = \frac{1}{2}\sin(2x)$$
-                    $$\int x^2 \cos(2x)\,dx = \frac{x^2}{2}\sin(2x) - \int \frac{1}{2}\sin(2x) \cdot 2x\,dx$$
-                    $$= \frac{x^2}{2}\sin(2x) - \int x\sin(2x)\,dx$$
+                        <h4>Final Answer:</h4>
+                        $$\boxed{\int x^2 \ln(x)\,dx = \frac{x^3}{3}\ln(x) - \frac{x^3}{9} + C}$$
+                    </div>
+                </details>
+            </div>
 
-                    <h4>Step 2: Second application of integration by parts</h4>
-                    <p>For $\int x\sin(2x)\,dx$, choose $u = x$ and $dv = \sin(2x)\,dx$:</p>
-                    $$du = dx, \quad v = \int \sin(2x)\,dx = -\frac{1}{2}\cos(2x)$$
-                    $$\int x\sin(2x)\,dx = -\frac{x}{2}\cos(2x) - \int \left(-\frac{1}{2}\cos(2x)\right)\,dx$$
-                    $$= -\frac{x}{2}\cos(2x) + \frac{1}{2}\int \cos(2x)\,dx$$
-                    $$= -\frac{x}{2}\cos(2x) + \frac{1}{2} \cdot \frac{1}{2}\sin(2x)$$
-                    $$= -\frac{x}{2}\cos(2x) + \frac{1}{4}\sin(2x)$$
+            <div class="example">
+                <h4>Example 1.3</h4>
+                <p><strong>Problem:</strong> Evaluate $\int x^2 \cos(2x)\,dx$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: First application of integration by parts</h4>
+                        <p>Choose $u = x^2$ and $dv = \cos(2x)\,dx$:</p>
+                        $$du = 2x\,dx, \quad v = \int \cos(2x)\,dx = \frac{1}{2}\sin(2x)$$
+                        $$\int x^2 \cos(2x)\,dx = \frac{x^2}{2}\sin(2x) - \int \frac{1}{2}\sin(2x) \cdot 2x\,dx$$
+                        $$= \frac{x^2}{2}\sin(2x) - \int x\sin(2x)\,dx$$
 
-                    <h4>Step 3: Combine results</h4>
-                    $$\int x^2 \cos(2x)\,dx = \frac{x^2}{2}\sin(2x) - \left(-\frac{x}{2}\cos(2x) + \frac{1}{4}\sin(2x)\right) + C$$
-                    $$= \frac{x^2}{2}\sin(2x) + \frac{x}{2}\cos(2x) - \frac{1}{4}\sin(2x) + C$$
+                        <h4>Step 2: Second application of integration by parts</h4>
+                        <p>For $\int x\sin(2x)\,dx$, choose $u = x$ and $dv = \sin(2x)\,dx$:</p>
+                        $$du = dx, \quad v = \int \sin(2x)\,dx = -\frac{1}{2}\cos(2x)$$
+                        $$\int x\sin(2x)\,dx = -\frac{x}{2}\cos(2x) - \int \left(-\frac{1}{2}\cos(2x)\right)\,dx$$
+                        $$= -\frac{x}{2}\cos(2x) + \frac{1}{2}\int \cos(2x)\,dx$$
+                        $$= -\frac{x}{2}\cos(2x) + \frac{1}{2} \cdot \frac{1}{2}\sin(2x)$$
+                        $$= -\frac{x}{2}\cos(2x) + \frac{1}{4}\sin(2x)$$
 
-                    <h4>Final Answer:</h4>
-                    $$\boxed{\int x^2 \cos(2x)\,dx = \frac{x^2}{2}\sin(2x) + \frac{x}{2}\cos(2x) - \frac{1}{4}\sin(2x) + C}$$
-                </div>
-            </details>
+                        <h4>Step 3: Combine results</h4>
+                        $$\int x^2 \cos(2x)\,dx = \frac{x^2}{2}\sin(2x) - \left(-\frac{x}{2}\cos(2x) + \frac{1}{4}\sin(2x)\right) + C$$
+                        $$= \frac{x^2}{2}\sin(2x) + \frac{x}{2}\cos(2x) - \frac{1}{4}\sin(2x) + C$$
 
-            <h3>Problem 4: Integration by Parts - Repeated Application</h3>
-            <p><strong>Evaluate:</strong> $\int x^3 e^{2x}\,dx$</p>
+                        <h4>Final Answer:</h4>
+                        $$\boxed{\int x^2 \cos(2x)\,dx = \frac{x^2}{2}\sin(2x) + \frac{x}{2}\cos(2x) - \frac{1}{4}\sin(2x) + C}$$
+                    </div>
+                </details>
+            </div>
 
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: First integration by parts</h4>
-                    <p>Choose $u = x^3$ and $dv = e^{2x}\,dx$:</p>
-                    $$du = 3x^2\,dx, \quad v = \frac{1}{2}e^{2x}$$
-                    $$\int x^3 e^{2x}\,dx = \frac{x^3}{2}e^{2x} - \frac{3}{2}\int x^2 e^{2x}\,dx$$
+            <div class="example">
+                <h4>Example 1.4</h4>
+                <p><strong>Problem:</strong> Evaluate $\int x^3 e^{2x}\,dx$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: First integration by parts</h4>
+                        <p>Choose $u = x^3$ and $dv = e^{2x}\,dx$:</p>
+                        $$du = 3x^2\,dx, \quad v = \frac{1}{2}e^{2x}$$
+                        $$\int x^3 e^{2x}\,dx = \frac{x^3}{2}e^{2x} - \frac{3}{2}\int x^2 e^{2x}\,dx$$
 
-                    <h4>Step 2: Second integration by parts on $\int x^2 e^{2x}\,dx$</h4>
-                    <p>Choose $u = x^2$ and $dv = e^{2x}\,dx$:</p>
-                    $$du = 2x\,dx, \quad v = \frac{1}{2}e^{2x}$$
-                    $$\int x^2 e^{2x}\,dx = \frac{x^2}{2}e^{2x} - \int x e^{2x}\,dx$$
+                        <h4>Step 2: Second integration by parts on $\int x^2 e^{2x}\,dx$</h4>
+                        <p>Choose $u = x^2$ and $dv = e^{2x}\,dx$:</p>
+                        $$du = 2x\,dx, \quad v = \frac{1}{2}e^{2x}$$
+                        $$\int x^2 e^{2x}\,dx = \frac{x^2}{2}e^{2x} - \int x e^{2x}\,dx$$
 
-                    <h4>Step 3: Third integration by parts on $\int x e^{2x}\,dx$</h4>
-                    <p>Choose $u = x$ and $dv = e^{2x}\,dx$:</p>
-                    $$du = dx, \quad v = \frac{1}{2}e^{2x}$$
-                    $$\int x e^{2x}\,dx = \frac{x}{2}e^{2x} - \frac{1}{2}\int e^{2x}\,dx$$
-                    $$= \frac{x}{2}e^{2x} - \frac{1}{4}e^{2x}$$
+                        <h4>Step 3: Third integration by parts on $\int x e^{2x}\,dx$</h4>
+                        <p>Choose $u = x$ and $dv = e^{2x}\,dx$:</p>
+                        $$du = dx, \quad v = \frac{1}{2}e^{2x}$$
+                        $$\int x e^{2x}\,dx = \frac{x}{2}e^{2x} - \frac{1}{2}\int e^{2x}\,dx$$
+                        $$= \frac{x}{2}e^{2x} - \frac{1}{4}e^{2x}$$
 
-                    <h4>Step 4: Back-substitute</h4>
-                    $$\int x^2 e^{2x}\,dx = \frac{x^2}{2}e^{2x} - \left(\frac{x}{2}e^{2x} - \frac{1}{4}e^{2x}\right)$$
-                    $$= \frac{x^2}{2}e^{2x} - \frac{x}{2}e^{2x} + \frac{1}{4}e^{2x}$$
+                        <h4>Step 4: Back-substitute</h4>
+                        $$\int x^2 e^{2x}\,dx = \frac{x^2}{2}e^{2x} - \left(\frac{x}{2}e^{2x} - \frac{1}{4}e^{2x}\right)$$
+                        $$= \frac{x^2}{2}e^{2x} - \frac{x}{2}e^{2x} + \frac{1}{4}e^{2x}$$
 
-                    <h4>Step 5: Final result</h4>
-                    $$\int x^3 e^{2x}\,dx = \frac{x^3}{2}e^{2x} - \frac{3}{2}\left(\frac{x^2}{2}e^{2x} - \frac{x}{2}e^{2x} + \frac{1}{4}e^{2x}\right)$$
-                    $$= \frac{x^3}{2}e^{2x} - \frac{3x^2}{4}e^{2x} + \frac{3x}{4}e^{2x} - \frac{3}{8}e^{2x} + C$$
+                        <h4>Step 5: Final result</h4>
+                        $$\int x^3 e^{2x}\,dx = \frac{x^3}{2}e^{2x} - \frac{3}{2}\left(\frac{x^2}{2}e^{2x} - \frac{x}{2}e^{2x} + \frac{1}{4}e^{2x}\right)$$
+                        $$= \frac{x^3}{2}e^{2x} - \frac{3x^2}{4}e^{2x} + \frac{3x}{4}e^{2x} - \frac{3}{8}e^{2x} + C$$
 
-                    <h4>Final Answer:</h4>
-                    $$\boxed{\int x^3 e^{2x}\,dx = \frac{e^{2x}}{8}(4x^3 - 6x^2 + 6x - 3) + C}$$
-                </div>
-            </details>
+                        <h4>Final Answer:</h4>
+                        $$\boxed{\int x^3 e^{2x}\,dx = \frac{e^{2x}}{8}(4x^3 - 6x^2 + 6x - 3) + C}$$
+                    </div>
+                </details>
+            </div>
 
-            <h3>Trigonometric Integrals</h3>
+            <h2>Trigonometric Integrals</h2>
             <p>Key identities for trigonometric integrals:</p>
             <ul>
                 <li>$\sin^2(x) = \frac{1 - \cos(2x)}{2}$</li>
@@ -181,133 +232,151 @@
                 <li>$\cos^2(x) = 1 - \sin^2(x)$</li>
             </ul>
 
-            <h3>Problem 5: Integrals with $\sin^n(x)$ (odd power)</h3>
-            <p><strong>Evaluate:</strong> $\int \sin^3(x)\,dx$</p>
+            <div class="example">
+                <h4>Example 2.1</h4>
+                <p><strong>Problem:</strong> Evaluate $\int \sin^3(x)\,dx$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Use the identity $\sin^2(x) = 1 - \cos^2(x)$</h4>
+                        $$\int \sin^3(x)\,dx = \int \sin^2(x) \cdot \sin(x)\,dx$$
+                        $$= \int (1 - \cos^2(x))\sin(x)\,dx$$
 
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Use the identity $\sin^2(x) = 1 - \cos^2(x)$</h4>
-                    $$\int \sin^3(x)\,dx = \int \sin^2(x) \cdot \sin(x)\,dx$$
-                    $$= \int (1 - \cos^2(x))\sin(x)\,dx$$
+                        <h4>Step 2: Use substitution</h4>
+                        <p>Let $u = \cos(x)$, then $du = -\sin(x)\,dx$, so $\sin(x)\,dx = -du$:</p>
+                        $$= \int (1 - u^2)(-du)$$
+                        $$= \int (u^2 - 1)\,du$$
 
-                    <h4>Step 2: Use substitution</h4>
-                    <p>Let $u = \cos(x)$, then $du = -\sin(x)\,dx$, so $\sin(x)\,dx = -du$:</p>
-                    $$= \int (1 - u^2)(-du)$$
-                    $$= \int (u^2 - 1)\,du$$
+                        <h4>Step 3: Integrate</h4>
+                        $$= \frac{u^3}{3} - u + C$$
 
-                    <h4>Step 3: Integrate</h4>
-                    $$= \frac{u^3}{3} - u + C$$
+                        <h4>Step 4: Back-substitute</h4>
+                        $$= \frac{\cos^3(x)}{3} - \cos(x) + C$$
 
-                    <h4>Step 4: Back-substitute</h4>
-                    $$= \frac{\cos^3(x)}{3} - \cos(x) + C$$
+                        <h4>Final Answer:</h4>
+                        $$\boxed{\int \sin^3(x)\,dx = \frac{\cos^3(x)}{3} - \cos(x) + C}$$
+                    </div>
+                </details>
+            </div>
 
-                    <h4>Final Answer:</h4>
-                    $$\boxed{\int \sin^3(x)\,dx = \frac{\cos^3(x)}{3} - \cos(x) + C}$$
+            <div class="example">
+                <h4>Example 2.2</h4>
+                <p><strong>Problem:</strong> Evaluate $\int \cos^4(x)\sin(x)\,dx$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Identify the substitution</h4>
+                        <p>Since we have $\sin(x)\,dx$ (which is the derivative of $\cos(x)$), let:</p>
+                        $$u = \cos(x), \quad du = -\sin(x)\,dx$$
+                        <p>So $\sin(x)\,dx = -du$:</p>
+                        $$\int \cos^4(x)\sin(x)\,dx = \int u^4 (-du) = -\int u^4\,du$$
+
+                        <h4>Step 2: Integrate</h4>
+                        $$= -\frac{u^5}{5} + C$$
+
+                        <h4>Step 3: Back-substitute</h4>
+                        $$= -\frac{\cos^5(x)}{5} + C$$
+
+                        <h4>Final Answer:</h4>
+                        $$\boxed{\int \cos^4(x)\sin(x)\,dx = -\frac{\cos^5(x)}{5} + C}$$
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 2.3</h4>
+                <p><strong>Problem:</strong> Evaluate $\int \cos^5(x)\sin^3(x)\,dx$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Use the identity $\sin^2(x) = 1 - \cos^2(x)$</h4>
+                        $$\int \cos^5(x)\sin^3(x)\,dx = \int \cos^5(x)\sin^2(x)\sin(x)\,dx$$
+                        $$= \int \cos^5(x)(1 - \cos^2(x))\sin(x)\,dx$$
+
+                        <h4>Step 2: Use substitution</h4>
+                        <p>Let $u = \cos(x)$, then $du = -\sin(x)\,dx$:</p>
+                        $$= \int u^5(1 - u^2)(-du)$$
+                        $$= \int (u^7 - u^5)\,du$$
+
+                        <h4>Step 3: Integrate</h4>
+                        $$= \frac{u^8}{8} - \frac{u^6}{6} + C$$
+
+                        <h4>Step 4: Back-substitute</h4>
+                        $$= \frac{\cos^8(x)}{8} - \frac{\cos^6(x)}{6} + C$$
+
+                        <h4>Final Answer:</h4>
+                        $$\boxed{\int \cos^5(x)\sin^3(x)\,dx = \frac{\cos^8(x)}{8} - \frac{\cos^6(x)}{6} + C}$$
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 2.4</h4>
+                <p><strong>Problem:</strong> Evaluate $\int \sin^2(3x)\,dx$</p>
+                <div class="visual-aid">
+                    <h4>Figure — Graph of $y = \sin^2(3x)$</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="184" font-size="12" fill="#000">x</text>
+                        <text x="205" y="15" font-size="12" fill="#000">y</text>
+                        <path d="M 30,140 C 60,100 90,60 120,140 C 150,100 180,60 210,140 C 240,100 270,60 300,140 C 330,100 360,60 380,140" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <text x="35" y="175" font-size="10" fill="#555">0</text>
+                        <text x="195" y="195" font-size="10" fill="#555">0</text>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">The function $y = \sin^2(3x)$ has period $\pi/3$ and oscillates between 0 and 1.</p>
                 </div>
-            </details>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Use the half-angle identity</h4>
+                        $$\sin^2(\theta) = \frac{1 - \cos(2\theta)}{2}$$
+                        <p>With $\theta = 3x$:</p>
+                        $$\sin^2(3x) = \frac{1 - \cos(6x)}{2}$$
 
-            <h3>Problem 6: Integrals with $\cos^n(x)\sin(x)$</h3>
-            <p><strong>Evaluate:</strong> $\int \cos^4(x)\sin(x)\,dx$</p>
+                        <h4>Step 2: Substitute and integrate</h4>
+                        $$\int \sin^2(3x)\,dx = \int \frac{1 - \cos(6x)}{2}\,dx$$
+                        $$= \frac{1}{2}\int (1 - \cos(6x))\,dx$$
+                        $$= \frac{1}{2}\left[x - \frac{1}{6}\sin(6x)\right] + C$$
+                        $$= \frac{x}{2} - \frac{\sin(6x)}{12} + C$$
 
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Identify the substitution</h4>
-                    <p>Since we have $\sin(x)\,dx$ (which is the derivative of $\cos(x)$), let:</p>
-                    $$u = \cos(x), \quad du = -\sin(x)\,dx$$
-                    <p>So $\sin(x)\,dx = -du$:</p>
-                    $$\int \cos^4(x)\sin(x)\,dx = \int u^4 (-du) = -\int u^4\,du$$
+                        <h4>Final Answer:</h4>
+                        $$\boxed{\int \sin^2(3x)\,dx = \frac{x}{2} - \frac{\sin(6x)}{12} + C}$$
+                    </div>
+                </details>
+            </div>
 
-                    <h4>Step 2: Integrate</h4>
-                    $$= -\frac{u^5}{5} + C$$
+            <div class="example">
+                <h4>Example 2.5</h4>
+                <p><strong>Problem:</strong> Evaluate $\int \sin^4(2x)\,dx$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Use the half-angle identity twice</h4>
+                        $$\sin^2(\theta) = \frac{1 - \cos(2\theta)}{2}$$
+                        <p>With $\theta = 2x$:</p>
+                        $$\sin^2(2x) = \frac{1 - \cos(4x)}{2}$$
+                        <p>Therefore:</p>
+                        $$\sin^4(2x) = \left(\frac{1 - \cos(4x)}{2}\right)^2 = \frac{1 - 2\cos(4x) + \cos^2(4x)}{4}$$
 
-                    <h4>Step 3: Back-substitute</h4>
-                    $$= -\frac{\cos^5(x)}{5} + C$$
+                        <h4>Step 2: Apply the identity again to $\cos^2(4x)$</h4>
+                        $$\cos^2(4x) = \frac{1 + \cos(8x)}{2}$$
+                        <p>So:</p>
+                        $$\sin^4(2x) = \frac{1}{4}\left[1 - 2\cos(4x) + \frac{1 + \cos(8x)}{2}\right]$$
+                        $$= \frac{1}{4}\left[\frac{3}{2} - 2\cos(4x) + \frac{\cos(8x)}{2}\right]$$
+                        $$= \frac{3}{8} - \frac{\cos(4x)}{2} + \frac{\cos(8x)}{8}$$
 
-                    <h4>Final Answer:</h4>
-                    $$\boxed{\int \cos^4(x)\sin(x)\,dx = -\frac{\cos^5(x)}{5} + C}$$
-                </div>
-            </details>
+                        <h4>Step 3: Integrate term by term</h4>
+                        $$\int \sin^4(2x)\,dx = \int \left(\frac{3}{8} - \frac{\cos(4x)}{2} + \frac{\cos(8x)}{8}\right)\,dx$$
+                        $$= \frac{3x}{8} - \frac{\sin(4x)}{8} + \frac{\sin(8x)}{64} + C$$
 
-            <h3>Problem 7: Integrals with $\cos^5(x)\sin(x)$ (both odd)</h3>
-            <p><strong>Evaluate:</strong> $\int \cos^5(x)\sin^3(x)\,dx$</p>
+                        <h4>Final Answer:</h4>
+                        $$\boxed{\int \sin^4(2x)\,dx = \frac{3x}{8} - \frac{\sin(4x)}{8} + \frac{\sin(8x)}{64} + C}$$
+                    </div>
+                </details>
+            </div>
 
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Use the identity $\sin^2(x) = 1 - \cos^2(x)$</h4>
-                    $$\int \cos^5(x)\sin^3(x)\,dx = \int \cos^5(x)\sin^2(x)\sin(x)\,dx$$
-                    $$= \int \cos^5(x)(1 - \cos^2(x))\sin(x)\,dx$$
-
-                    <h4>Step 2: Use substitution</h4>
-                    <p>Let $u = \cos(x)$, then $du = -\sin(x)\,dx$:</p>
-                    $$= \int u^5(1 - u^2)(-du)$$
-                    $$= \int (u^7 - u^5)\,du$$
-
-                    <h4>Step 3: Integrate</h4>
-                    $$= \frac{u^8}{8} - \frac{u^6}{6} + C$$
-
-                    <h4>Step 4: Back-substitute</h4>
-                    $$= \frac{\cos^8(x)}{8} - \frac{\cos^6(x)}{6} + C$$
-
-                    <h4>Final Answer:</h4>
-                    $$\boxed{\int \cos^5(x)\sin^3(x)\,dx = \frac{\cos^8(x)}{8} - \frac{\cos^6(x)}{6} + C}$$
-                </div>
-            </details>
-
-            <h3>Problem 8: Integrals with Even Powers</h3>
-            <p><strong>Evaluate:</strong> $\int \sin^2(3x)\,dx$</p>
-
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Use the half-angle identity</h4>
-                    $$\sin^2(\theta) = \frac{1 - \cos(2\theta)}{2}$$
-                    <p>With $\theta = 3x$:</p>
-                    $$\sin^2(3x) = \frac{1 - \cos(6x)}{2}$$
-
-                    <h4>Step 2: Substitute and integrate</h4>
-                    $$\int \sin^2(3x)\,dx = \int \frac{1 - \cos(6x)}{2}\,dx$$
-                    $$= \frac{1}{2}\int (1 - \cos(6x))\,dx$$
-                    $$= \frac{1}{2}\left[x - \frac{1}{6}\sin(6x)\right] + C$$
-                    $$= \frac{x}{2} - \frac{\sin(6x)}{12} + C$$
-
-                    <h4>Final Answer:</h4>
-                    $$\boxed{\int \sin^2(3x)\,dx = \frac{x}{2} - \frac{\sin(6x)}{12} + C}$$
-                </div>
-            </details>
-
-            <h3>Problem 9: Integrals with $\sin^4(2x)$ (even power)</h3>
-            <p><strong>Evaluate:</strong> $\int \sin^4(2x)\,dx$</p>
-
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Use the half-angle identity twice</h4>
-                    $$\sin^2(\theta) = \frac{1 - \cos(2\theta)}{2}$$
-                    <p>With $\theta = 2x$:</p>
-                    $$\sin^2(2x) = \frac{1 - \cos(4x)}{2}$$
-                    <p>Therefore:</p>
-                    $$\sin^4(2x) = \left(\frac{1 - \cos(4x)}{2}\right)^2 = \frac{1 - 2\cos(4x) + \cos^2(4x)}{4}$$
-
-                    <h4>Step 2: Apply the identity again to $\cos^2(4x)$</h4>
-                    $$\cos^2(4x) = \frac{1 + \cos(8x)}{2}$$
-                    <p>So:</p>
-                    $$\sin^4(2x) = \frac{1}{4}\left[1 - 2\cos(4x) + \frac{1 + \cos(8x)}{2}\right]$$
-                    $$= \frac{1}{4}\left[\frac{3}{2} - 2\cos(4x) + \frac{\cos(8x)}{2}\right]$$
-                    $$= \frac{3}{8} - \frac{\cos(4x)}{2} + \frac{\cos(8x)}{8}$$
-
-                    <h4>Step 3: Integrate term by term</h4>
-                    $$\int \sin^4(2x)\,dx = \int \left(\frac{3}{8} - \frac{\cos(4x)}{2} + \frac{\cos(8x)}{8}\right)\,dx$$
-                    $$= \frac{3x}{8} - \frac{\sin(4x)}{8} + \frac{\sin(8x)}{64} + C$$
-
-                    <h4>Final Answer:</h4>
-                    $$\boxed{\int \sin^4(2x)\,dx = \frac{3x}{8} - \frac{\sin(4x)}{8} + \frac{\sin(8x)}{64} + C}$$
-                </div>
-            </details>
-
-            <h3>Trigonometric Substitution</h3>
+            <h2>Trigonometric Substitution</h2>
             <p>For integrals involving $\sqrt{a^2 - x^2}$, $\sqrt{a^2 + x^2}$, or $\sqrt{x^2 - a^2}$:</p>
             <ul>
                 <li>$\sqrt{a^2 - x^2}$: Use $x = a\sin(\theta)$</li>
@@ -315,34 +384,58 @@
                 <li>$\sqrt{x^2 - a^2}$: Use $x = a\sec(\theta)$</li>
             </ul>
 
-            <h3>Problem 10: Trigonometric Substitution - Example</h3>
-            <p><strong>Evaluate:</strong> $\int \frac{dx}{\sqrt{9-x^2}}$</p>
+            <div class="example">
+                <h4>Example 3.1</h4>
+                <p><strong>Problem:</strong> Evaluate $\int \frac{dx}{\sqrt{9-x^2}}$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Identify the substitution</h4>
+                        <p>We have $\sqrt{9-x^2} = \sqrt{a^2-x^2}$ with $a = 3$. Use $x = 3\sin(\theta)$:</p>
+                        $$x = 3\sin(\theta), \quad dx = 3\cos(\theta)\,d\theta$$
+                        <p>Then:</p>
+                        $$\sqrt{9-x^2} = \sqrt{9 - 9\sin^2(\theta)} = 3\sqrt{1-\sin^2(\theta)} = 3\cos(\theta)$$
 
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Identify the substitution</h4>
-                    <p>We have $\sqrt{9-x^2} = \sqrt{a^2-x^2}$ with $a = 3$. Use $x = 3\sin(\theta)$:</p>
-                    $$x = 3\sin(\theta), \quad dx = 3\cos(\theta)\,d\theta$$
-                    <p>Then:</p>
-                    $$\sqrt{9-x^2} = \sqrt{9 - 9\sin^2(\theta)} = 3\sqrt{1-\sin^2(\theta)} = 3\cos(\theta)$$
+                        <h4>Step 2: Substitute</h4>
+                        $$\int \frac{dx}{\sqrt{9-x^2}} = \int \frac{3\cos(\theta)\,d\theta}{3\cos(\theta)}$$
+                        $$= \int d\theta = \theta + C$$
 
-                    <h4>Step 2: Substitute</h4>
-                    $$\int \frac{dx}{\sqrt{9-x^2}} = \int \frac{3\cos(\theta)\,d\theta}{3\cos(\theta)}$$
-                    $$= \int d\theta = \theta + C$$
+                        <h4>Step 3: Back-substitute</h4>
+                        <p>Since $x = 3\sin(\theta)$, we have $\sin(\theta) = \frac{x}{3}$, so $\theta = \sin^{-1}\left(\frac{x}{3}\right)$:</p>
+                        $$= \sin^{-1}\left(\frac{x}{3}\right) + C$$
 
-                    <h4>Step 3: Back-substitute</h4>
-                    <p>Since $x = 3\sin(\theta)$, we have $\sin(\theta) = \frac{x}{3}$, so $\theta = \sin^{-1}\left(\frac{x}{3}\right)$:</p>
-                    $$= \sin^{-1}\left(\frac{x}{3}\right) + C$$
+                        <h4>Final Answer:</h4>
+                        $$\boxed{\int \frac{dx}{\sqrt{9-x^2}} = \sin^{-1}\left(\frac{x}{3}\right) + C}$$
+                    </div>
+                </details>
+            </div>
 
-                    <h4>Final Answer:</h4>
-                    $$\boxed{\int \frac{dx}{\sqrt{9-x^2}} = \sin^{-1}\left(\frac{x}{3}\right) + C}$$
-                </div>
-            </details>
-        </section>
-    </main>
-</div>
+            <div class="notes">
+                <h4>Summary of Trigonometric Substitutions</h4>
+                <table>
+                    <tr><th>Form</th><th>Substitution</th><th>Identity Used</th></tr>
+                    <tr><td>$\sqrt{a^2-x^2}$</td><td>$x = a\sin(\theta)$</td><td>$1-\sin^2(\theta) = \cos^2(\theta)$</td></tr>
+                    <tr><td>$\sqrt{a^2+x^2}$</td><td>$x = a\tan(\theta)$</td><td>$1+\tan^2(\theta) = \sec^2(\theta)$</td></tr>
+                    <tr><td>$\sqrt{x^2-a^2}$</td><td>$x = a\sec(\theta)$</td><td>$\sec^2(\theta)-1 = \tan^2(\theta)$</td></tr>
+                </table>
+            </div>
 
-<script src="../js/app.js"></script>
+            <div class="strategies">
+                <h4>Study Tips</h4>
+                <p><strong>1.</strong> Memorize the LIATE rule for integration by parts. When in doubt, choose $u$ to be the function that becomes simpler when differentiated.</p>
+                <p><strong>2.</strong> For trigonometric integrals, check if the power of sine or cosine is odd. If so, save one factor for the $du$ substitution and convert the rest using $\sin^2(x) + \cos^2(x) = 1$.</p>
+                <p><strong>3.</strong> For even powers of sine and cosine, use the half-angle identities repeatedly to reduce the powers.</p>
+                <p><strong>4.</strong> In trigonometric substitution, always draw a right triangle to help with back-substitution. Label the sides based on your substitution and the original radical.</p>
+            </div>
+
+            <nav class="chapter-nav">
+                <a href="day-06.html" class="nav-btn prev" id="prev-chapter">Previous</a>
+                <span class="nav-indicator" id="chapter-indicator"></span>
+                <a href="day-08.html" class="nav-btn next" id="next-chapter">Next</a>
+            </nav>
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
 </body>
 </html>

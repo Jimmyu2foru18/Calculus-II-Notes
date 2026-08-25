@@ -22,65 +22,212 @@
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
-<body>
-<header>
-    <h1>Calculus II Notes</h1>
-    <p class="subtitle">Comprehensive Sample Exam 1</p>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../days/index.html">Days</a>
-        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-        <a href="../final-reviews/index.html">Final Reviews</a>
-        <a href="../final-samples/index.html">Final Samples</a>
-        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-</header>
-<div class="container">
-    <main>
-        <p class="lead">Use this sample exam to test your understanding of the full course. Try each problem without looking at your notes, then check the worked solutions below.</p>
+<body class="review-page">
+<div class="review-container">
+    <div class="review-header">
+        <h1>Final Sample 1: Comprehensive Sample Exam 1</h1>
+        <nav>
+            <a href="../index.html">← All Reviews</a>
+            <span>Full Course Coverage</span>
+        </nav>
+    </div>
 
-        <h2>Problems</h2>
+    <div class="review-hero">
+        <h2>Final Sample 1: Comprehensive Sample Exam 1</h2>
+        <p>Use this sample exam to test your understanding of the full course. Try each problem without looking at your notes, then check the worked solutions below.</p>
+        <div class="review-meta">
+            <span>3 Problems</span>
+            <span>Full Course Coverage</span>
+        </div>
+    </div>
 
-        <h3>Problem 1: Integration by Parts</h3>
-        <p><strong>Evaluate:</strong> $\int x^2 e^x\,dx$</p>
-        <details class="question">
-            <summary>Click to see the solution</summary>
-            <p>First integration by parts: $u = x^2$, $dv = e^x dx$</p>
-            <p>$du = 2x\,dx$, $v = e^x$</p>
-            $$= x^2 e^x - 2\int x e^x\,dx$$
-            <p>Second integration by parts: $u = x$, $dv = e^x dx$</p>
-            <p>$du = dx$, $v = e^x$</p>
-            $$\int x e^x\,dx = x e^x - \int e^x\,dx = x e^x - e^x$$
-            <p>Substitute back:</p>
-            $$= x^2 e^x - 2(x e^x - e^x) + C$$
-            $$= (x^2 - 2x + 2)e^x + C$$
-        </details>
+    <div class="review-tabs" role="tablist">
+        <button class="review-tab active" data-tab="tab-basics" role="tab">Key Concepts</button>
+        <button class="review-tab" data-tab="tab-formulas" role="tab">Formulas</button>
+        <button class="review-tab" data-tab="tab-examples" role="tab">Worked Solutions</button>
+        <button class="review-tab" data-tab="tab-practice" role="tab">Exam Problems</button>
+    </div>
 
-        <h3>Problem 2: Series Convergence</h3>
-        <p><strong>Task:</strong> Test $\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n}$ for convergence</p>
-        <details class="question">
-            <summary>Click to see the solution</summary>
-            <p>This is the alternating harmonic series.</p>
-            <p>$a_n = \frac{1}{n} > 0$</p>
-            <p>$a_n$ is decreasing</p>
-            <p>$\lim_{n\to\infty} a_n = 0$</p>
-            <p>All conditions of the Alternating Series Test are satisfied.</p>
-            <p>The series converges.</p>
-        </details>
+    <div class="review-section active" id="tab-basics">
+        <div class="review-card">
+            <h3>Integration by Parts</h3>
+            <p>Integration by parts is the primary technique for integrating products of algebraic and transcendental functions. The LIATE rule helps choose $u$.</p>
+            <div class="review-formula">
+                \[ \int u\,dv = uv - \int v\,du \]
+                <div class="formula-label">Integration by Parts Formula</div>
+            </div>
+            <div class="review-callout info">
+                <p><strong>Key insight:</strong> Tabular integration by parts is faster for polynomials multiplied by $e^x$, $\sin(x)$, or $\cos(x)$.</p>
+            </div>
+        </div>
+        <div class="review-card">
+            <h3>Alternating Series</h3>
+            <p>The alternating harmonic series is a classic example of conditional convergence. It converges by the Alternating Series Test but diverges absolutely.</p>
+            <div class="review-formula">
+                \[ \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n} \]
+                <div class="formula-label">Alternating Harmonic Series</div>
+            </div>
+        </div>
+        <div class="review-card">
+            <h3>Shell Method</h3>
+            <p>The shell method computes volumes of revolution by integrating the volume of cylindrical shells. It is especially useful when revolving around the y-axis.</p>
+            <div class="review-formula">
+                \[ V = 2\pi \int_a^b x \cdot h(x)\,dx \]
+                <div class="formula-label">Shell Method Volume</div>
+            </div>
+            <div class="review-callout warning">
+                <p><strong>Warning:</strong> For the shell method, the radius is always the horizontal distance from the axis of rotation. Be careful with horizontal axes of rotation.</p>
+            </div>
+        </div>
+    </div>
 
-        <h3>Problem 3: Volume by Shells</h3>
-        <p><strong>Task:</strong> Find the volume when the region bounded by $y = x^2$ and $y = 4$ is revolved about the y-axis.</p>
-        <details class="question">
-            <summary>Click to see the solution</summary>
-            <p>Intersection: $x^2 = 4 \implies x = 2$</p>
-            $$V = 2\pi \int_0^2 x(4-x^2)\,dx$$
-            $$= 2\pi \int_0^2 (4x - x^3)\,dx$$
-            $$= 2\pi \left[2x^2 - \frac{x^4}{4}\right]_0^2$$
-            $$= 2\pi(8 - 4)$$
-            $$= 8\pi$$
-        </details>
-    </main>
+    <div class="review-section" id="tab-formulas">
+        <div class="review-card">
+            <h3>Formula Sheet</h3>
+            <div class="review-table">
+                <table>
+                    <thead>
+                        <tr><th>Formula</th><th>Use</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>$\int u\,dv = uv - \int v\,du$</td>
+                            <td>Integration by Parts</td>
+                        </tr>
+                        <tr>
+                            <td>$V = 2\pi \int_a^b x \cdot h(x)\,dx$</td>
+                            <td>Shell Method</td>
+                        </tr>
+                        <tr>
+                            <td>$\sum_{n=1}^{\infty} (-1)^{n+1}a_n$ converges if $a_n > 0$, decreasing, $\lim a_n = 0$</td>
+                            <td>Alternating Series Test</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="review-section" id="tab-examples">
+        <div class="review-card">
+            <h3>Worked Solutions</h3>
+            <div class="example">
+                <h4>Problem 1: Integration by Parts</h4>
+                <p><strong>Evaluate:</strong> $\int x^2 e^x\,dx$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Apply integration by parts with $u = x^2$ and $dv = e^x dx$.</p>
+                        <p>$du = 2x\,dx$ and $v = e^x$.</p>
+                        <p>$$= x^2 e^x - 2\int x e^x\,dx$$</p>
+                        <h4>Step 2:</h4>
+                        <p>Apply integration by parts again with $u = x$ and $dv = e^x dx$.</p>
+                        <p>$du = dx$ and $v = e^x$.</p>
+                        <p>$$\int x e^x\,dx = x e^x - \int e^x\,dx = x e^x - e^x$$</p>
+                        <h4>Step 3:</h4>
+                        <p>Substitute back:</p>
+                        <p>$$= x^2 e^x - 2(x e^x - e^x) + C$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>$$= (x^2 - 2x + 2)e^x + C$$</p>
+                    </div>
+                </details>
+            </div>
+            <div class="example">
+                <h4>Problem 2: Series Convergence</h4>
+                <p><strong>Task:</strong> Test $\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n}$ for convergence</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Identify this as the alternating harmonic series with $a_n = \frac{1}{n}$.</p>
+                        <p>$a_n = \frac{1}{n} > 0$</p>
+                        <p>$a_n$ is decreasing</p>
+                        <p>$\lim_{n\to\infty} a_n = 0$</p>
+                        <h4>Final Answer:</h4>
+                        <p>All conditions of the Alternating Series Test are satisfied. The series converges.</p>
+                    </div>
+                </details>
+            </div>
+            <div class="example">
+                <h4>Problem 3: Volume by Shells</h4>
+                <p><strong>Task:</strong> Find the volume when the region bounded by $y = x^2$ and $y = 4$ is revolved about the y-axis.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Find the intersection: $x^2 = 4 \implies x = 2$.</p>
+                        <p>The height of a shell at position $x$ is $4 - x^2$.</p>
+                        <h4>Step 2:</h4>
+                        <p>Set up the shell method integral:</p>
+                        <p>$$V = 2\pi \int_0^2 x(4-x^2)\,dx$$</p>
+                        <p>$$= 2\pi \int_0^2 (4x - x^3)\,dx$$</p>
+                        <h4>Step 3:</h4>
+                        <p>Evaluate the integral:</p>
+                        <p>$$= 2\pi \left[2x^2 - \frac{x^4}{4}\right]_0^2$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>$$= 2\pi(8 - 4) = 8\pi$$</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+
+    <div class="review-section" id="tab-practice">
+        <div class="review-card">
+            <h3>Exam Problems</h3>
+            <details class="question">
+                <summary>Problem 1 — Integration by Parts</summary>
+                <p>Evaluate $\int x^2 e^x\,dx$</p>
+                <details>
+                <summary>Show Answer</summary>
+                <p><strong>Answer:</strong></p>
+                <p>Apply integration by parts twice.</p>
+                <p>$$(x^2 - 2x + 2)e^x + C$$</p>
+                </details>
+            </details>
+            <details class="question">
+                <summary>Problem 2 — Alternating Series</summary>
+                <p>Test $\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n}$ for convergence.</p>
+                <details>
+                <summary>Show Answer</summary>
+                <p><strong>Answer:</strong></p>
+                <p>Converges by the Alternating Series Test.</p>
+                </details>
+            </details>
+            <details class="question">
+                <summary>Problem 3 — Shell Method</summary>
+                <p>Find the volume when the region bounded by $y = x^2$ and $y = 4$ is revolved about the y-axis.</p>
+                <details>
+                <summary>Show Answer</summary>
+                <p><strong>Answer:</strong></p>
+                <p>$$V = 8\pi$$</p>
+                </details>
+            </details>
+        </div>
+    </div>
+
+    <div class="review-nav">
+        <a href="../final-reviews/index.html" class="review-nav-btn">← Back to Home</a>
+        <span class="review-nav-indicator">Self-Check</span>
+        <a href="final-sample-2.html" class="review-nav-btn">Next Sample →</a>
+    </div>
 </div>
+
 <script src="../js/app.js"></script>
+<script>
+document.querySelectorAll('.review-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = tab.dataset.tab;
+        document.querySelectorAll('.review-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.review-section').forEach(s => s.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(target).classList.add('active');
+        if (window.MathJax && MathJax.typesetPromise) {
+            MathJax.typesetPromise();
+        }
+    });
+});
+</script>
 </body>
 </html>

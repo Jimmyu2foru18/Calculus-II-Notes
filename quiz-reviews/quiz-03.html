@@ -22,71 +22,158 @@
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
-<body>
-<header>
-    <h1>Calculus II Notes</h1>
-    <p class="subtitle">FTC and Applications</p>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../days/index.html">Days</a>
-        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-        <a href="../final-reviews/index.html">Final Reviews</a>
-        <a href="../final-samples/index.html">Final Samples</a>
-        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-</header>
-<div class="container">
-    <main>
-        <p class="lead">Use this sheet to test your understanding before moving forward. Try each problem without looking at your notes, then check the formulas below.</p>
+<body class="review-page">
+<div class="review-container">
+    <div class="review-header">
+        <h1>Quiz 03: FTC and Applications</h1>
+        <nav>
+            <a href="../index.html">&larr; All Reviews</a>
+            <span>Fundamental Theorem</span>
+        </nav>
+    </div>
 
-        <h2>Key Formulas at a Glance</h2>
-        <ul>
-            <li>FTC Part I: $\frac{d}{dx}\int_a^x f(t)\,dt = f(x)$</li>
-            <li>FTC Part II: $\int_a^b f(x)\,dx = F(b) - F(a)$</li>
-            <li>Chain Rule: $\frac{d}{dx}\int_a^{g(x)} f(t)\,dt = f(g(x))\cdot g'(x)$</li>
-            <li>Mean Value Theorem for Integrals: $f(c) = \frac{1}{b-a}\int_a^b f(x)\,dx$</li>
-            <li>Area Between Curves: $A = \int_a^b [f(x) - g(x)]\,dx$</li>
-        </ul>
+    <div class="review-hero">
+        <h2>Quiz 03: FTC and Applications</h2>
+        <p>Use this sheet to test your understanding before moving forward. Try each problem without looking at your notes, then check the formulas below.</p>
+        <div class="review-meta">
+            <span>3 Problems</span>
+            <span>Difficulty: Medium</span>
+        </div>
+    </div>
 
-        <h2>Worked Examples</h2>
+    <div class="review-tabs" role="tablist">
+        <button class="review-tab active" data-tab="tab-formulas" role="tab">Formulas</button>
+        <button class="review-tab" data-tab="tab-examples" role="tab">Worked Examples</button>
+        <button class="review-tab" data-tab="tab-practice" role="tab">Practice Problems</button>
+    </div>
 
-        <h3>Example 1: FTC Part I</h3>
-        <p><strong>Task:</strong> If $F(x) = \int_0^x f(t)\,dt$, find $F'(x)$.</p>
-        <details class="question">
-            <summary>Click to see the solution</summary>
-            $$F'(x) = f(x)$$
-        </details>
+    <div class="review-section active" id="tab-formulas">
+        <div class="review-card">
+            <h3>Key Formulas</h3>
+            <div class="review-table">
+                <table>
+                    <thead><tr><th>Formula</th><th>Description</th></tr></thead>
+                    <tbody>
+                        <tr><td>$\frac{d}{dx}\int_a^x f(t)\,dt = f(x)$</td><td>FTC Part I</td></tr>
+                        <tr><td>$\int_a^b f(x)\,dx = F(b) - F(a)$</td><td>FTC Part II</td></tr>
+                        <tr><td>$\frac{d}{dx}\int_a^{g(x)} f(t)\,dt = f(g(x))\cdot g'(x)$</td><td>Chain Rule (variable upper limit)</td></tr>
+                        <tr><td>$f(c) = \frac{1}{b-a}\int_a^b f(x)\,dx$</td><td>Mean Value Theorem for Integrals</td></tr>
+                        <tr><td>$A = \int_a^b [f(x) - g(x)]\,dx$</td><td>Area Between Curves</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
-        <h3>Example 2: Chain Rule with FTC</h3>
-        <p><strong>Task:</strong> Find $\frac{d}{dx}\int_0^{x^2} \sin(t^2)\,dt$</p>
-        <details class="question">
-            <summary>Click to see the solution</summary>
-            <p>Upper limit: $g(x) = x^2$, so $g'(x) = 2x$</p>
-            $$= \sin((x^2)^2) \cdot 2x$$
-            $$= 2x\sin(x^4)$$
-        </details>
+    <div class="review-section" id="tab-examples">
+        <div class="review-card">
+            <h3>Worked Examples</h3>
+            <div class="example">
+                <h4>Example 1: FTC Part I</h4>
+                <p><strong>Task:</strong> If $F(x) = \int_0^x f(t)\,dt$, find $F'(x)$.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Apply FTC Part I directly:</p>
+                        <h4>Final Answer:</h4>
+                        <p>$$F'(x) = f(x)$$</p>
+                    </div>
+                </details>
+            </div>
+            <div class="example">
+                <h4>Example 2: Chain Rule with FTC</h4>
+                <p><strong>Task:</strong> Find $\frac{d}{dx}\int_0^{x^2} \sin(t^2)\,dt$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Identify the upper limit function $g(x) = x^2$, so $g'(x) = 2x$</p>
+                        <h4>Step 2:</h4>
+                        <p>Apply the chain rule for variable upper limits:</p>
+                        $$= \sin((x^2)^2) \cdot 2x$$
+                        <h4>Final Answer:</h4>
+                        <p>$$2x\sin(x^4)$$</p>
+                    </div>
+                </details>
+            </div>
+            <div class="example">
+                <h4>Example 3: Area Between Curves</h4>
+                <p><strong>Task:</strong> Find the area between $f(x) = \sin(2x)$ and the x-axis from $x=0$ to $x=\pi$.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Split at $x = \pi/2$ where $\sin(2x)$ changes sign:</p>
+                        $$A = \int_0^{\pi/2} \sin(2x)\,dx + \int_{\pi/2}^{\pi} (-\sin(2x))\,dx$$
+                        <h4>Step 2:</h4>
+                        <p>Let $u = 2x$, $du = 2dx$ in both integrals:</p>
+                        $$= \frac{1}{2}\int_0^{\pi} \sin(u)\,du + \frac{1}{2}\int_{\pi}^{2\pi} \sin(u)\,du$$
+                        <h4>Step 3:</h4>
+                        <p>Evaluate both integrals:</p>
+                        $$= \frac{1}{2}[-\cos(u)]_0^{\pi} + \frac{1}{2}[-\cos(u)]_{\pi}^{2\pi}$$
+                        <h4>Final Answer:</h4>
+                        <p>$$= \frac{1}{2}(1+1) + \frac{1}{2}(1+1) = 2$$</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
 
-        <h3>Example 3: Area Between Curves</h3>
-        <p><strong>Task:</strong> Find the area between $f(x) = \sin(2x)$ and the x-axis from $x=0$ to $x=\pi$.</p>
-        <details class="question">
-            <summary>Click to see the solution</summary>
-            <p>Split at $x = \pi/2$ where $\sin(2x)$ changes sign:</p>
-            $$A = \int_0^{\pi/2} \sin(2x)\,dx + \int_{\pi/2}^{\pi} (-\sin(2x))\,dx$$
-            <p>Let $u = 2x$, $du = 2dx$ in both integrals:</p>
-            $$= \frac{1}{2}\int_0^{\pi} \sin(u)\,du + \frac{1}{2}\int_{\pi}^{2\pi} \sin(u)\,du$$
-            $$= \frac{1}{2}[-\cos(u)]_0^{\pi} + \frac{1}{2}[-\cos(u)]_{\pi}^{2\pi}$$
-            $$= \frac{1}{2}(1+1) + \frac{1}{2}(1+1)$$
-            $$= 2$$
-        </details>
+    <div class="review-section" id="tab-practice">
+        <div class="review-card">
+            <h3>Practice Problems</h3>
+            <details class="question">
+                <summary>Problem 1</summary>
+                <p><strong>Find:</strong> $\frac{d}{dx}\int_1^{x^3} e^{t^2}\,dt$</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>$$e^{(x^3)^2}\cdot 3x^2 = 3x^2e^{x^6}$$</p>
+                </details>
+            </details>
+            <details class="question">
+                <summary>Problem 2</summary>
+                <p><strong>Find the area:</strong> Between $y = x^2$ and $y = 2x+1$</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>Intersection at $x = 1$. Area $= \int_0^1 [(2x+1) - x^2]\,dx = \left[x^2+x-\frac{x^3}{3}\right]_0^1 = \frac{5}{3}$</p>
+                </details>
+            </details>
+            <details class="question">
+                <summary>Problem 3</summary>
+                <p><strong>State and explain:</strong> The Mean Value Theorem for Integrals</p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>If $f$ is continuous on $[a,b]$, there exists $c \in [a,b]$ such that $f(c) = \frac{1}{b-a}\int_a^b f(x)\,dx$. This means $f$ attains its average value somewhere on the interval.</p>
+                </details>
+            </details>
+        </div>
+    </div>
 
-        <h2>Practice Problems</h2>
-        <ol>
-            <li>Find $\frac{d}{dx}\int_1^{x^3} e^{t^2}\,dt$</li>
-            <li>Find the area between $y = x^2$ and $y = 2x+1$</li>
-            <li>State and explain the Mean Value Theorem for Integrals</li>
-        </ol>
-    </main>
+    <div class="review-nav">
+        <a href="quiz-02.html" class="review-nav-btn">&larr; Previous Review</a>
+        <span class="review-nav-indicator">Self-Check</span>
+        <a href="quiz-1-prep.html" class="review-nav-btn">Next Review &rarr;</a>
+    </div>
 </div>
+
 <script src="../js/app.js"></script>
+<script>
+document.querySelectorAll('.review-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = tab.dataset.tab;
+        document.querySelectorAll('.review-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.review-section').forEach(s => s.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(target).classList.add('active');
+        if (window.MathJax && MathJax.typesetPromise) {
+            MathJax.typesetPromise();
+        }
+    });
+});
+</script>
 </body>
 </html>

@@ -23,28 +23,62 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 <body>
-<header>
-    <h1>Calculus II Notes</h1>
-    <p class="subtitle">Volumes by Shells and Motion</p>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../days/index.html">Days</a>
-        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-        <a href="../final-reviews/index.html">Final Reviews</a>
-        <a href="../final-samples/index.html">Final Samples</a>
-        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-</header>
+    <header>
+        <h1>Calculus II Notes</h1>
+        <p class="subtitle">Volumes by Shells and Motion</p>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../days/index.html">Days</a>
+            <a href="../quiz-reviews/index.html">Quiz Reviews</a>
+            <a href="../final-reviews/index.html">Final Reviews</a>
+            <a href="../final-samples/index.html">Final Samples</a>
+            <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+    </header>
 
-<div class="container">
-    <main>
-        <a href="day-04.html" class="back-button">&larr; Back</a>
-        <p class="lead">Browse through the Volumes by Shells and Motion pages. Use the arrow buttons or keyboard arrows to navigate.</p>
+    <div class="container">
+        <main class="chapter">
+            <h2>Day 06: Volumes by Shells and Motion</h2>
+            <p class="lead">Browse through the Volumes by Shells and Motion pages. Use the arrow buttons or keyboard arrows to navigate.</p>
 
-        <section id="content">
-            <h2>Volumes by Shells and Motion</h2>
+            <div class="video-section">
+                <h4>Core Lecture</h4>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                </div>
+            </div>
 
-            <h3>Volumes by Shells Method</h3>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Shell Method Overview</h5>
+                        <p>Introduction to the shell method for volumes of revolution</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Motion and Physics</h5>
+                        <p>Position, velocity, and acceleration relationships</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Work Examples</h5>
+                        <p>Calculating work in physics applications</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Volumes by Shells Method</h2>
             <p>The Shell Method is used to find the volume of a solid of revolution when the disk/washer method is difficult to apply.</p>
 
             <div class="notes">
@@ -57,108 +91,142 @@
                 </ul>
             </div>
 
-            <h3>Problem 1: Volume by Shells about the y-axis</h3>
-            <p><strong>Given:</strong> Region bounded by $y = x^2$, $y = 4$, and $x = 0$, revolved about the y-axis.</p>
-
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Identify the bounds and functions</h4>
-                    <p>Find the intersection of $y = x^2$ and $y = 4$:</p>
-                    $$x^2 = 4 \implies x = \pm 2$$
-                    <p>Since $x \geq 0$, we have $x = 2$. The region extends from $x = 0$ to $x = 2$.</p>
-
-                    <h4>Step 2: Set up the shell integral</h4>
-                    <p>Using the shell method about the y-axis with vertical slices:</p>
-                    $$V = 2\pi \int_0^2 x \cdot (\text{top} - \text{bottom})\,dx$$
-                    <p>Here, $\text{top} = 4$ and $\text{bottom} = x^2$:</p>
-                    $$V = 2\pi \int_0^2 x(4 - x^2)\,dx$$
-
-                    <h4>Step 3: Evaluate the integral</h4>
-                    $$V = 2\pi \int_0^2 (4x - x^3)\,dx$$
-                    $$V = 2\pi \left[2x^2 - \frac{x^4}{4}\right]_0^2$$
-
-                    <h4>Step 4: Compute the bounds</h4>
-                    $$V = 2\pi \left[\left(2(2)^2 - \frac{(2)^4}{4}\right) - \left(2(0)^2 - \frac{(0)^4}{4}\right)\right]$$
-                    $$V = 2\pi \left[8 - 4\right]$$
-                    $$V = 2\pi \cdot 4$$
-
-                    <h4>Final Answer:</h4>
-                    $$\boxed{V = 8\pi}$$
+            <div class="example">
+                <h4>Example 1.1</h4>
+                <p><strong>Problem:</strong> Region bounded by $y = x^2$, $y = 4$, and $x = 0$, revolved about the y-axis.</p>
+                <div class="visual-aid">
+                    <h4>Figure — Shell method: region and cylindrical shell</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="184" font-size="12" fill="#000">x</text>
+                        <text x="205" y="15" font-size="12" fill="#000">y</text>
+                        <path d="M 30,180 C 100,160 160,120 200,80 C 240,40 300,20 380,10" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <line x1="130" y1="20" x2="130" y2="180" stroke="#c0392b" stroke-width="1.5"/>
+                        <ellipse cx="130" cy="80" rx="20" ry="10" fill="none" stroke="#000" stroke-width="1"/>
+                        <text x="120" y="75" font-size="9" fill="#000">shell</text>
+                        <text x="35" y="175" font-size="10" fill="#555">0</text>
+                        <text x="120" y="175" font-size="10" fill="#555">2</text>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">A typical cylindrical shell at radius $x$ has height $4 - x^2$ and thickness $dx$.</p>
                 </div>
-            </details>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Identify the bounds and functions</h4>
+                        <p>Find the intersection of $y = x^2$ and $y = 4$:</p>
+                        $$x^2 = 4 \implies x = \pm 2$$
+                        <p>Since $x \geq 0$, we have $x = 2$. The region extends from $x = 0$ to $x = 2$.</p>
 
-            <h3>Problem 2: Volume by Shells about the y-axis</h3>
-            <p><strong>Given:</strong> Region bounded by $y = x$ and $y = x^2$ revolved about the y-axis.</p>
+                        <h4>Step 2: Set up the shell integral</h4>
+                        <p>Using the shell method about the y-axis with vertical slices:</p>
+                        $$V = 2\pi \int_0^2 x \cdot (\text{top} - \text{bottom})\,dx$$
+                        <p>Here, $\text{top} = 4$ and $\text{bottom} = x^2$:</p>
+                        $$V = 2\pi \int_0^2 x(4 - x^2)\,dx$$
 
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Find intersection points</h4>
-                    <p>Set $x = x^2$:</p>
-                    $$x^2 - x = 0 \implies x(x-1) = 0$$
-                    <p>So $x = 0$ and $x = 1$. The region extends from $x = 0$ to $x = 1$.</p>
+                        <h4>Step 3: Evaluate the integral</h4>
+                        $$V = 2\pi \int_0^2 (4x - x^3)\,dx$$
+                        $$V = 2\pi \left[2x^2 - \frac{x^4}{4}\right]_0^2$$
 
-                    <h4>Step 2: Set up the shell integral</h4>
-                    <p>Using the shell method about the y-axis with vertical slices:</p>
-                    $$V = 2\pi \int_0^1 x(\text{top} - \text{bottom})\,dx$$
-                    <p>Here, $\text{top} = x$ and $\text{bottom} = x^2$:</p>
-                    $$V = 2\pi \int_0^1 x(x - x^2)\,dx$$
+                        <h4>Step 4: Compute the bounds</h4>
+                        $$V = 2\pi \left[\left(2(2)^2 - \frac{(2)^4}{4}\right) - \left(2(0)^2 - \frac{(0)^4}{4}\right)\right]$$
+                        $$V = 2\pi \left[8 - 4\right]$$
+                        $$V = 2\pi \cdot 4$$
 
-                    <h4>Step 3: Evaluate the integral</h4>
-                    $$V = 2\pi \int_0^1 (x^2 - x^3)\,dx$$
-                    $$V = 2\pi \left[\frac{x^3}{3} - \frac{x^4}{4}\right]_0^1$$
+                        <h4>Final Answer:</h4>
+                        $$\boxed{V = 8\pi}$$
+                    </div>
+                </details>
+            </div>
 
-                    <h4>Step 4: Compute the bounds</h4>
-                    $$V = 2\pi \left[\left(\frac{1}{3} - \frac{1}{4}\right) - 0\right]$$
-                    $$V = 2\pi \cdot \frac{1}{12}$$
-
-                    <h4>Final Answer:</h4>
-                    $$\boxed{V = \frac{\pi}{6}}$$
+            <div class="example">
+                <h4>Example 1.2</h4>
+                <p><strong>Problem:</strong> Region bounded by $y = x$ and $y = x^2$ revolved about the y-axis.</p>
+                <div class="visual-aid">
+                    <h4>Figure — Washer cross-section comparison</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="184" font-size="12" fill="#000">x</text>
+                        <text x="205" y="15" font-size="12" fill="#000">y</text>
+                        <path d="M 30,180 C 100,160 160,120 200,80 C 240,40 300,20 380,10" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <path d="M 30,180 C 100,170 160,150 200,130 C 240,110 300,90 380,70" fill="none" stroke="#c0392b" stroke-width="2"/>
+                        <line x1="100" y1="20" x2="100" y2="180" stroke="#000" stroke-width="0.5" stroke-dasharray="3,3"/>
+                        <text x="35" y="175" font-size="10" fill="#555">0</text>
+                        <text x="95" y="175" font-size="10" fill="#555">1</text>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">Comparing shell method (vertical slice) with washer method (horizontal slice) for the same region.</p>
                 </div>
-            </details>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Find intersection points</h4>
+                        <p>Set $x = x^2$:</p>
+                        $$x^2 - x = 0 \implies x(x-1) = 0$$
+                        <p>So $x = 0$ and $x = 1$. The region extends from $x = 0$ to $x = 1$.</p>
 
-            <h3>Problem 3: Volume by Shells about the x-axis</h3>
-            <p><strong>Given:</strong> Region bounded by $y = 4 - x^2$ and the x-axis, revolved about the x-axis using horizontal shells.</p>
+                        <h4>Step 2: Set up the shell integral</h4>
+                        <p>Using the shell method about the y-axis with vertical slices:</p>
+                        $$V = 2\pi \int_0^1 x(\text{top} - \text{bottom})\,dx$$
+                        <p>Here, $\text{top} = x$ and $\text{bottom} = x^2$:</p>
+                        $$V = 2\pi \int_0^1 x(x - x^2)\,dx$$
 
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Express x in terms of y</h4>
-                    <p>From $y = 4 - x^2$, we get $x^2 = 4 - y$, so $x = \sqrt{4-y}$ (right side).</p>
+                        <h4>Step 3: Evaluate the integral</h4>
+                        $$V = 2\pi \int_0^1 (x^2 - x^3)\,dx$$
+                        $$V = 2\pi \left[\frac{x^3}{3} - \frac{x^4}{4}\right]_0^1$$
 
-                    <h4>Step 2: Set up the shell integral about the x-axis</h4>
-                    <p>Using horizontal shells (integrating with respect to $y$):</p>
-                    $$V = 2\pi \int_0^4 y \cdot (\text{right} - \text{left})\,dy$$
-                    <p>Here, $\text{right} = \sqrt{4-y}$ and $\text{left} = 0$:</p>
-                    $$V = 2\pi \int_0^4 y\sqrt{4-y}\,dy$$
+                        <h4>Step 4: Compute the bounds</h4>
+                        $$V = 2\pi \left[\left(\frac{1}{3} - \frac{1}{4}\right) - 0\right]$$
+                        $$V = 2\pi \cdot \frac{1}{12}$$
 
-                    <h4>Step 3: Use substitution to evaluate</h4>
-                    <p>Let $u = 4 - y$, then $du = -dy$ and $y = 4 - u$.</p>
-                    <p>When $y = 0$, $u = 4$. When $y = 4$, $u = 0$.</p>
-                    $$V = 2\pi \int_4^0 (4-u)\sqrt{u}\,(-du)$$
-                    $$V = 2\pi \int_0^4 (4-u)u^{1/2}\,du$$
-                    $$V = 2\pi \int_0^4 (4u^{1/2} - u^{3/2})\,du$$
+                        <h4>Final Answer:</h4>
+                        $$\boxed{V = \frac{\pi}{6}}$$
+                    </div>
+                </details>
+            </div>
 
-                    <h4>Step 4: Integrate</h4>
-                    $$V = 2\pi \left[4 \cdot \frac{2}{3}u^{3/2} - \frac{2}{5}u^{5/2}\right]_0^4$$
-                    $$V = 2\pi \left[\frac{8}{3}u^{3/2} - \frac{2}{5}u^{5/2}\right]_0^4$$
+            <div class="example">
+                <h4>Example 1.3</h4>
+                <p><strong>Problem:</strong> Region bounded by $y = 4 - x^2$ and the x-axis, revolved about the x-axis using horizontal shells.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Express x in terms of y</h4>
+                        <p>From $y = 4 - x^2$, we get $x^2 = 4 - y$, so $x = \sqrt{4-y}$ (right side).</p>
 
-                    <h4>Step 5: Evaluate at bounds</h4>
-                    $$V = 2\pi \left[\left(\frac{8}{3}(4)^{3/2} - \frac{2}{5}(4)^{5/2}\right) - 0\right]$$
-                    <p>Note: $4^{3/2} = 8$ and $4^{5/2} = 32$</p>
-                    $$V = 2\pi \left[\frac{8}{3} \cdot 8 - \frac{2}{5} \cdot 32\right]$$
-                    $$V = 2\pi \left[\frac{64}{3} - \frac{64}{5}\right]$$
-                    $$V = 2\pi \cdot 64 \cdot \left(\frac{1}{3} - \frac{1}{5}\right)$$
-                    $$V = 128\pi \cdot \frac{5-3}{15}$$
-                    $$V = 128\pi \cdot \frac{2}{15}$$
+                        <h4>Step 2: Set up the shell integral about the x-axis</h4>
+                        <p>Using horizontal shells (integrating with respect to $y$):</p>
+                        $$V = 2\pi \int_0^4 y \cdot (\text{right} - \text{left})\,dy$$
+                        <p>Here, $\text{right} = \sqrt{4-y}$ and $\text{left} = 0$:</p>
+                        $$V = 2\pi \int_0^4 y\sqrt{4-y}\,dy$$
 
-                    <h4>Final Answer:</h4>
-                    $$\boxed{V = \frac{256\pi}{15}}$$
-                </div>
-            </details>
+                        <h4>Step 3: Use substitution to evaluate</h4>
+                        <p>Let $u = 4 - y$, then $du = -dy$ and $y = 4 - u$.</p>
+                        <p>When $y = 0$, $u = 4$. When $y = 4$, $u = 0$.</p>
+                        $$V = 2\pi \int_4^0 (4-u)\sqrt{u}\,(-du)$$
+                        $$V = 2\pi \int_0^4 (4-u)u^{1/2}\,du$$
+                        $$V = 2\pi \int_0^4 (4u^{1/2} - u^{3/2})\,du$$
 
-            <h3>Motion: Position, Velocity, and Acceleration</h3>
+                        <h4>Step 4: Integrate</h4>
+                        $$V = 2\pi \left[4 \cdot \frac{2}{3}u^{3/2} - \frac{2}{5}u^{5/2}\right]_0^4$$
+                        $$V = 2\pi \left[\frac{8}{3}u^{3/2} - \frac{2}{5}u^{5/2}\right]_0^4$$
+
+                        <h4>Step 5: Evaluate at bounds</h4>
+                        $$V = 2\pi \left[\left(\frac{8}{3}(4)^{3/2} - \frac{2}{5}(4)^{5/2}\right) - 0\right]$$
+                        <p>Note: $4^{3/2} = 8$ and $4^{5/2} = 32$</p>
+                        $$V = 2\pi \left[\frac{8}{3} \cdot 8 - \frac{2}{5} \cdot 32\right]$$
+                        $$V = 2\pi \left[\frac{64}{3} - \frac{64}{5}\right]$$
+                        $$V = 2\pi \cdot 64 \cdot \left(\frac{1}{3} - \frac{1}{5}\right)$$
+                        $$V = 128\pi \cdot \frac{5-3}{15}$$
+                        $$V = 128\pi \cdot \frac{2}{15}$$
+
+                        <h4>Final Answer:</h4>
+                        $$\boxed{V = \frac{256\pi}{15}}$$
+                    </div>
+                </details>
+            </div>
+
+            <h2>Motion: Position, Velocity, and Acceleration</h2>
             <p>The relationships between position $s(t)$, velocity $v(t)$, and acceleration $a(t)$ are:</p>
             <ul>
                 <li>$a(t) = v'(t) = s''(t)$</li>
@@ -166,103 +234,133 @@
                 <li>$s(t) = \int v(t)\,dt$</li>
             </ul>
 
-            <h3>Problem 4: Motion on Earth</h3>
-            <p><strong>Given:</strong> Acceleration due to gravity $a(t) = -9.8$ m/s². Find $v(t)$ and $s(t)$.</p>
+            <div class="example">
+                <h4>Example 2.1</h4>
+                <p><strong>Problem:</strong> Acceleration due to gravity $a(t) = -9.8$ m/s². Find $v(t)$ and $s(t)$.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Find velocity</h4>
+                        $$v(t) = \int a(t)\,dt = \int (-9.8)\,dt = -9.8t + C_1$$
 
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Find velocity</h4>
-                    $$v(t) = \int a(t)\,dt = \int (-9.8)\,dt = -9.8t + C_1$$
+                        <h4>Step 2: Find position</h4>
+                        $$s(t) = \int v(t)\,dt = \int (-9.8t + C_1)\,dt = -4.9t^2 + C_1t + C_2$$
 
-                    <h4>Step 2: Find position</h4>
-                    $$s(t) = \int v(t)\,dt = \int (-9.8t + C_1)\,dt = -4.9t^2 + C_1t + C_2$$
+                        <h4>Note:</h4>
+                        <p>Without initial conditions, we cannot determine the constants $C_1$ and $C_2$.</p>
 
-                    <h4>Note:</h4>
-                    <p>Without initial conditions, we cannot determine the constants $C_1$ and $C_2$.</p>
+                        <h4>Final Answer (with constants):</h4>
+                        $$\boxed{v(t) = -9.8t + C_1}$$
+                        $$\boxed{s(t) = -4.9t^2 + C_1t + C_2}$$
+                    </div>
+                </details>
+            </div>
 
-                    <h4>Final Answer (with constants):</h4>
-                    $$\boxed{v(t) = -9.8t + C_1}$$
-                    $$\boxed{s(t) = -4.9t^2 + C_1t + C_2}$$
+            <div class="example">
+                <h4>Example 2.2</h4>
+                <p><strong>Problem:</strong> Given $a(t) = t$, $v(0) = 0$, $s(0) = 100$. Find $v(t)$ and $s(t)$.</p>
+                <div class="visual-aid">
+                    <h4>Figure — Position, velocity, and acceleration</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="184" font-size="12" fill="#000">t</text>
+                        <text x="205" y="15" font-size="12" fill="#000">y</text>
+                        <path d="M 30,180 C 100,170 160,150 200,130 C 240,110 300,80 380,40" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <path d="M 30,180 C 100,165 160,140 200,115 C 240,90 300,55 380,15" fill="none" stroke="#c0392b" stroke-width="2"/>
+                        <text x="35" y="175" font-size="10" fill="#555">0</text>
+                        <text x="195" y="195" font-size="10" fill="#555">0</text>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">Position $s(t) = t^3/6 + 100$ (blue) and velocity $v(t) = t^2/2$ (red) for $a(t)=t$ with $s(0)=100, v(0)=0$.</p>
                 </div>
-            </details>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Find velocity</h4>
+                        $$v(t) = \int a(t)\,dt = \int t\,dt = \frac{t^2}{2} + C$$
+                        <p>Apply the initial condition $v(0) = 0$:</p>
+                        $$v(0) = \frac{(0)^2}{2} + C = 0 \implies C = 0$$
+                        <p>Therefore:</p>
+                        $$v(t) = \frac{t^2}{2}$$
 
-            <h3>Problem 5: Motion with Initial Conditions</h3>
-            <p><strong>Given:</strong> $a(t) = t$, $v(0) = 0$, $s(0) = 100$. Find $v(t)$ and $s(t)$.</p>
+                        <h4>Step 2: Find position</h4>
+                        $$s(t) = \int v(t)\,dt = \int \frac{t^2}{2}\,dt = \frac{t^3}{6} + D$$
+                        <p>Apply the initial condition $s(0) = 100$:</p>
+                        $$s(0) = \frac{(0)^3}{6} + D = 100 \implies D = 100$$
+                        <p>Therefore:</p>
+                        $$s(t) = \frac{t^3}{6} + 100$$
 
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Find velocity</h4>
-                    $$v(t) = \int a(t)\,dt = \int t\,dt = \frac{t^2}{2} + C$$
-                    <p>Apply the initial condition $v(0) = 0$:</p>
-                    $$v(0) = \frac{(0)^2}{2} + C = 0 \implies C = 0$$
-                    <p>Therefore:</p>
-                    $$v(t) = \frac{t^2}{2}$$
+                        <h4>Final Answer:</h4>
+                        $$\boxed{v(t) = \frac{t^2}{2} \text{ m/s}}$$
+                        $$\boxed{s(t) = \frac{t^3}{6} + 100 \text{ meters}}$$
+                    </div>
+                </details>
+            </div>
 
-                    <h4>Step 2: Find position</h4>
-                    $$s(t) = \int v(t)\,dt = \int \frac{t^2}{2}\,dt = \frac{t^3}{6} + D$$
-                    <p>Apply the initial condition $s(0) = 100$:</p>
-                    $$s(0) = \frac{(0)^3}{6} + D = 100 \implies D = 100$$
-                    <p>Therefore:</p>
-                    $$s(t) = \frac{t^3}{6} + 100$$
+            <div class="example">
+                <h4>Example 2.3</h4>
+                <p><strong>Problem:</strong> Given $a(t) = e^{-t}$, $v(0) = 0$, $s(0) = 0$. Find $v(t)$ and $s(t)$.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Find velocity</h4>
+                        $$v(t) = \int a(t)\,dt = \int e^{-t}\,dt = -e^{-t} + C$$
+                        <p>Apply the initial condition $v(0) = 0$:</p>
+                        $$v(0) = -e^{0} + C = 0 \implies -1 + C = 0 \implies C = 1$$
+                        <p>Therefore:</p>
+                        $$v(t) = -e^{-t} + 1 = 1 - e^{-t}$$
 
-                    <h4>Final Answer:</h4>
-                    $$\boxed{v(t) = \frac{t^2}{2} \text{ m/s}}$$
-                    $$\boxed{s(t) = \frac{t^3}{6} + 100 \text{ meters}}$$
-                </div>
-            </details>
+                        <h4>Step 2: Find position</h4>
+                        $$s(t) = \int v(t)\,dt = \int (1 - e^{-t})\,dt = t + e^{-t} + D$$
+                        <p>Apply the initial condition $s(0) = 0$:</p>
+                        $$s(0) = 0 + e^{0} + D = 0 \implies 1 + D = 0 \implies D = -1$$
+                        <p>Therefore:</p>
+                        $$s(t) = t + e^{-t} - 1$$
 
-            <h3>Problem 6: Motion with Exponential Acceleration</h3>
-            <p><strong>Given:</strong> $a(t) = e^{-t}$, $v(0) = 0$, $s(0) = 0$. Find $v(t)$ and $s(t)$.</p>
+                        <h4>Final Answer:</h4>
+                        $$\boxed{v(t) = 1 - e^{-t}}$$
+                        $$\boxed{s(t) = t + e^{-t} - 1}$$
+                    </div>
+                </details>
+            </div>
 
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Find velocity</h4>
-                    $$v(t) = \int a(t)\,dt = \int e^{-t}\,dt = -e^{-t} + C$$
-                    <p>Apply the initial condition $v(0) = 0$:</p>
-                    $$v(0) = -e^{0} + C = 0 \implies -1 + C = 0 \implies C = 1$$
-                    <p>Therefore:</p>
-                    $$v(t) = -e^{-t} + 1 = 1 - e^{-t}$$
+            <div class="example">
+                <h4>Example 2.4</h4>
+                <p><strong>Problem:</strong> Physics Application - Spaceship Velocity. Given $v(t) = 100(e^{t/10} - 1)$. When does the spaceship reach velocity 100 m/s?</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Set up the equation</h4>
+                        $$v(t) = 100$$
+                        $$100(e^{t/10} - 1) = 100$$
 
-                    <h4>Step 2: Find position</h4>
-                    $$s(t) = \int v(t)\,dt = \int (1 - e^{-t})\,dt = t + e^{-t} + D$$
-                    <p>Apply the initial condition $s(0) = 0$:</p>
-                    $$s(0) = 0 + e^{0} + D = 0 \implies 1 + D = 0 \implies D = -1$$
-                    <p>Therefore:</p>
-                    $$s(t) = t + e^{-t} - 1$$
+                        <h4>Step 2: Solve for t</h4>
+                        $$e^{t/10} - 1 = 1$$
+                        $$e^{t/10} = 2$$
+                        $$\frac{t}{10} = \ln(2)$$
+                        $$t = 10\ln(2)$$
 
-                    <h4>Final Answer:</h4>
-                    $$\boxed{v(t) = 1 - e^{-t}}$$
-                    $$\boxed{s(t) = t + e^{-t} - 1}$$
-                </div>
-            </details>
+                        <h4>Final Answer:</h4>
+                        $$\boxed{t = 10\ln(2) \approx 6.93 \text{ seconds}}$$
+                    </div>
+                </details>
+            </div>
 
-            <h3>Problem 7: Physics Application - Spaceship Velocity</h3>
-            <p><strong>Given:</strong> $v(t) = 100(e^{t/10} - 1)$. When does the spaceship reach velocity 100 m/s?</p>
+            <div class="strategies">
+                <h4>Study Tips</h4>
+                <p><strong>1.</strong> When using the shell method, visualize the cylindrical shells being formed. The radius is the distance from the axis of rotation to the shell, and the height is the function value (or difference of functions).</p>
+                <p><strong>2.</strong> For motion problems, always integrate acceleration to get velocity, then integrate velocity to get position. Don't forget the constants of integration!</p>
+                <p><strong>3.</strong> When the axis of rotation is the y-axis, use vertical slices (integrate with respect to $x$). When the axis is the x-axis, use horizontal slices (integrate with respect to $y$) for the shell method.</p>
+            </div>
 
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Set up the equation</h4>
-                    $$v(t) = 100$$
-                    $$100(e^{t/10} - 1) = 100$$
+            <nav class="chapter-nav">
+                <a href="day-04.html" class="nav-btn prev" id="prev-chapter">Previous</a>
+                <span class="nav-indicator" id="chapter-indicator"></span>
+                <a href="day-07.html" class="nav-btn next" id="next-chapter">Next</a>
+            </nav>
+        </main>
+    </div>
 
-                    <h4>Step 2: Solve for t</h4>
-                    $$e^{t/10} - 1 = 1$$
-                    $$e^{t/10} = 2$$
-                    $$\frac{t}{10} = \ln(2)$$
-                    $$t = 10\ln(2)$$
-
-                    <h4>Final Answer:</h4>
-                    $$\boxed{t = 10\ln(2) \approx 6.93 \text{ seconds}}$$
-                </div>
-            </details>
-        </section>
-    </main>
-</div>
-
-<script src="../js/app.js"></script>
+    <script src="../js/app.js"></script>
 </body>
 </html>

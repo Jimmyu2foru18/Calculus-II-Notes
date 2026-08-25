@@ -23,82 +23,312 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 <body>
-<header>
-    <h1>Calculus II Notes</h1>
-    <p class="subtitle">Conic Sections and Polar</p>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../days/index.html">Days</a>
-        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-        <a href="../final-reviews/index.html">Final Reviews</a>
-        <a href="../final-samples/index.html">Final Samples</a>
-        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-</header>
-<div class="container">
-    <main>
-        <a href="day-16.html" class="back-button">&larr; Back</a>
-        <p class="lead">Browse through the Conic Sections and Polar pages. Use the arrow buttons or keyboard arrows to navigate.</p>
-        <section id="content">
+    <header>
+        <h1>Calculus II Notes</h1>
+        <p class="subtitle">Day 17: Conic Sections and Polar</p>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../days/index.html">Days</a>
+            <a href="../quiz-reviews/index.html">Quiz Reviews</a>
+            <a href="../final-reviews/index.html">Final Reviews</a>
+            <a href="../final-samples/index.html">Final Samples</a>
+            <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main class="chapter">
+            <h2>Day 17: Conic Sections and Polar</h2>
+            <p class="lead">Polar coordinate conversions, graphing polar curves, and computing areas in polar coordinates.</p>
+
+            <div class="video-section">
+                <h4>Core Lecture</h4>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Video Title</h5>
+                        <p>Description</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Video Title</h5>
+                        <p>Description</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Video Title</h5>
+                        <p>Description</p>
+                    </div>
+                </div>
+            </div>
+
             <h2>Conic Sections and Polar Coordinates</h2>
+            <p>Polar coordinates provide an alternative to rectangular coordinates for describing curves. Conic sections can also be expressed naturally in polar form with a focus at the origin.</p>
 
-            <h3>Problem 1: Polar Coordinates Conversion</h3>
-            <p><strong>Task:</strong> Convert the rectangular equation x^2 + y^2 = 4x to polar form.</p>
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Use polar coordinate substitutions</h4>
-                    <p>x = r*cos(theta), y = r*sin(theta), x^2 + y^2 = r^2</p>
-                    <h4>Step 2: Substitute</h4>
-                    <p>r^2 = 4r*cos(theta)</p>
-                    <h4>Step 3: Simplify</h4>
-                    <p>r = 4*cos(theta) (for r != 0)</p>
-                    <h4>Final Answer:</h4>
-                    <p>The polar form is r = 4*cos(theta). This is a circle of radius 2 centered at (2, 0).</p>
-                </div>
-            </details>
+            <div class="notes">
+                <h4>Key Formulas</h4>
+                <p><strong>Polar to Rectangular:</strong></p>
+                <p>$$x = r\cos(\theta), \quad y = r\sin(\theta), \quad x^2 + y^2 = r^2$$</p>
+                <p><strong>Rectangular to Polar:</strong></p>
+                <p>$$r = \sqrt{x^2 + y^2}, \quad \theta = \arctan\left(\frac{y}{x}\right)$$</p>
+                <p><strong>Area in Polar Coordinates:</strong></p>
+                <p>$$A = \frac{1}{2} \int_{\alpha}^{\beta} [r(\theta)]^2 \, d\theta$$</p>
+                <p><strong>Conic Section in Polar Form:</strong></p>
+                <p>$$r = \frac{ed}{1 + e\cos(\theta)} \quad \text{or} \quad r = \frac{ed}{1 + e\sin(\theta)}$$</p>
+                <p>where $e$ is the eccentricity and $d$ is the distance from the focus to the directrix.</p>
+            </div>
 
-            <h3>Problem 2: Graphing Polar Curves</h3>
-            <p><strong>Task:</strong> Describe and sketch the graph of r = 2*cos(3*theta).</p>
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Identify the type of curve</h4>
-                    <p>r = a*cos(n*theta) with a = 2 and n = 3 is a rose curve.</p>
-                    <h4>Step 2: Determine the number of petals</h4>
-                    <p>Since n = 3 is odd, the rose has n = 3 petals.</p>
-                    <h4>Step 3: Find key points</h4>
-                    <p>theta = 0: r = 2*cos(0) = 2</p>
-                    <p>theta = pi/6: r = 2*cos(pi/2) = 0</p>
-                    <p>theta = pi/3: r = 2*cos(pi) = -2</p>
-                    <p>theta = pi/2: r = 2*cos(3*pi/2) = 0</p>
-                    <h4>Final Answer:</h4>
-                    <p>A 3-petaled rose with petals of length 2, centered at the origin.</p>
-                </div>
-            </details>
+            <div class="example">
+                <h4>Example 17.1</h4>
+                <p><strong>Problem:</strong> Convert the rectangular equation $x^2 + y^2 = 4x$ to polar form.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Use polar coordinate substitutions</h4>
+                        <p>$x = r\cos(\theta)$, $y = r\sin(\theta)$, $x^2 + y^2 = r^2$</p>
+                        <h4>Step 2: Substitute</h4>
+                        <p>$$r^2 = 4r\cos(\theta)$$</p>
+                        <h4>Step 3: Simplify</h4>
+                        <p>$$r = 4\cos(\theta) \quad (\text{for } r \neq 0)$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>The polar form is $r = 4\cos(\theta)$. This is a circle of radius 2 centered at $(2, 0)$.</p>
+                    </div>
+                </details>
+            </div>
 
-            <h3>Problem 3: Area in Polar Coordinates</h3>
-            <p><strong>Task:</strong> Find the area enclosed by the curve r = 2*sin(theta).</p>
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Identify the curve</h4>
-                    <p>r = 2*sin(theta) is a circle of radius 1 centered at (0, 1).</p>
-                    <h4>Step 2: Set up the area integral</h4>
-                    <p>A = (1/2) * integral from 0 to pi of (2*sin(theta))^2 d(theta)</p>
-                    <p>= (1/2) * integral from 0 to pi of 4*sin^2(theta) d(theta)</p>
-                    <p>= 2 * integral from 0 to pi of (1 - cos(2*theta))/2 d(theta)</p>
-                    <p>= integral from 0 to pi of (1 - cos(2*theta)) d(theta)</p>
-                    <h4>Step 3: Evaluate</h4>
-                    <p>= [theta - (1/2)*sin(2*theta)] from 0 to pi</p>
-                    <p>= (pi - 0) - (0 - 0) = pi</p>
-                    <h4>Final Answer:</h4>
-                    <p>The area is pi.</p>
+            <div class="example">
+                <h4>Example 17.2</h4>
+                <p><strong>Problem:</strong> Describe and sketch the graph of $r = 2\cos(3\theta)$.</p>
+                <div class="visual-aid">
+                    <h4>Figure — 3-petaled rose curve $r = 2\cos(3\theta)$</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="110" x2="380" y2="110" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="114" font-size="12" fill="#000">x</text>
+                        <text x="205" y="15" font-size="12" fill="#000">y</text>
+                        <path d="M 200,30 C 220,50 240,80 260,110 C 240,140 220,170 200,190 C 180,170 160,140 140,110 C 160,80 180,50 200,30" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <path d="M 200,30 C 180,50 160,80 140,110 C 160,140 180,170 200,190 C 220,170 240,140 260,110 C 240,80 220,50 200,30" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <circle cx="200" cy="110" r="3" fill="#000"/>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">The rose curve $r = 2\cos(3\theta)$ has 3 petals of length 2.</p>
                 </div>
-            </details>
-        </section>
-    </main>
-</div>
-<script src="../js/app.js"></script>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Identify the type of curve</h4>
+                        <p>$r = a\cos(n\theta)$ with $a = 2$ and $n = 3$ is a rose curve.</p>
+                        <h4>Step 2: Determine the number of petals</h4>
+                        <p>Since $n = 3$ is odd, the rose has $n = 3$ petals.</p>
+                        <h4>Step 3: Find key points</h4>
+                        <p>$\theta = 0$: $r = 2\cos(0) = 2$</p>
+                        <p>$\theta = \frac{\pi}{6}$: $r = 2\cos(\frac{\pi}{2}) = 0$</p>
+                        <p>$\theta = \frac{\pi}{3}$: $r = 2\cos(\pi) = -2$</p>
+                        <p>$\theta = \frac{\pi}{2}$: $r = 2\cos(\frac{3\pi}{2}) = 0$</p>
+                        <h4>Final Answer:</h4>
+                        <p>A 3-petaled rose with petals of length 2, centered at the origin.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 17.3</h4>
+                <p><strong>Problem:</strong> Find the area enclosed by the curve $r = 2\sin(\theta)$.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Identify the curve</h4>
+                        <p>$r = 2\sin(\theta)$ is a circle of radius 1 centered at $(0, 1)$.</p>
+                        <h4>Step 2: Set up the area integral</h4>
+                        <p>$$A = \frac{1}{2} \int_{0}^{\pi} (2\sin(\theta))^2 \, d\theta$$</p>
+                        <p>$$= \frac{1}{2} \int_{0}^{\pi} 4\sin^2(\theta) \, d\theta$$</p>
+                        <p>$$= 2 \int_{0}^{\pi} \frac{1 - \cos(2\theta)}{2} \, d\theta$$</p>
+                        <p>$$= \int_{0}^{\pi} (1 - \cos(2\theta)) \, d\theta$$</p>
+                        <h4>Step 3: Evaluate</h4>
+                        <p>$$= \left[\theta - \frac{1}{2}\sin(2\theta)\right]_{0}^{\pi}$$</p>
+                        <p>$$= (\pi - 0) - (0 - 0) = \pi$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>The area is $\pi$.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 17.4</h4>
+                <p><strong>Problem:</strong> Convert the polar equation $r = \frac{6}{2 + \cos(\theta)}$ to rectangular form and identify the conic.</p>
+                <div class="visual-aid">
+                    <h4>Figure — Conic section: ellipse</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="110" x2="380" y2="110" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="114" font-size="12" fill="#000">x</text>
+                        <text x="205" y="15" font-size="12" fill="#000">y</text>
+                        <ellipse cx="140" cy="110" rx="120" ry="70" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <text x="35" y="175" font-size="10" fill="#555">-6</text>
+                        <text x="195" y="195" font-size="10" fill="#555">0</text>
+                        <text x="340" y="175" font-size="10" fill="#555">2</text>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">The polar equation $r = 6/(2+\cos\theta)$ represents an ellipse centered at $(-2, 0)$.</p>
+                </div>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Clear the denominator</h4>
+                        <p>$$r(2 + \cos(\theta)) = 6$$</p>
+                        <p>$$2r + r\cos(\theta) = 6$$</p>
+                        <h4>Step 2: Substitute polar conversions</h4>
+                        <p>$$2\sqrt{x^2 + y^2} + x = 6$$</p>
+                        <p>$$2\sqrt{x^2 + y^2} = 6 - x$$</p>
+                        <h4>Step 3: Square both sides</h4>
+                        <p>$$4(x^2 + y^2) = (6-x)^2 = 36 - 12x + x^2$$</p>
+                        <p>$$4x^2 + 4y^2 = 36 - 12x + x^2$$</p>
+                        <p>$$3x^2 + 12x + 4y^2 = 36$$</p>
+                        <p>$$3(x^2 + 4x) + 4y^2 = 36$$</p>
+                        <p>$$3(x+2)^2 + 4y^2 = 48$$</p>
+                        <p>$$\frac{(x+2)^2}{16} + \frac{y^2}{12} = 1$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>Rectangular form: $\frac{(x+2)^2}{16} + \frac{y^2}{12} = 1$, which is an ellipse centered at $(-2, 0)$ with semi-major axis 4 and semi-minor axis $2\sqrt{3}$.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 17.5</h4>
+                <p><strong>Problem:</strong> Describe and sketch the graph of $r = 1 + 2\sin(\theta)$.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Identify the type of curve</h4>
+                        <p>$r = a + b\sin(\theta)$ with $a = 1$ and $b = 2$ is a limacon.</p>
+                        <p>Since $|b| > |a|$, the limacon has an inner loop.</p>
+                        <h4>Step 2: Find key points</h4>
+                        <p>$\theta = 0$: $r = 1$</p>
+                        <p>$\theta = \frac{\pi}{2}$: $r = 1 + 2 = 3$ (maximum)</p>
+                        <p>$\theta = \pi$: $r = 1$</p>
+                        <p>$\theta = \frac{3\pi}{2}$: $r = 1 - 2 = -1$ (inner loop)</p>
+                        <h4>Step 3: Find where $r = 0$</h4>
+                        <p>$1 + 2\sin(\theta) = 0 \Rightarrow \sin(\theta) = -\frac{1}{2}$</p>
+                        <p>$\theta = \frac{7\pi}{6}, \frac{11\pi}{6}$</p>
+                        <h4>Final Answer:</h4>
+                        <p>A limacon with an inner loop, symmetric about the vertical axis, with maximum $r = 3$ and inner loop reaching $r = -1$.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 17.6</h4>
+                <p><strong>Problem:</strong> Find the area inside the cardioid $r = 1 + \cos(\theta)$.</p>
+                <div class="visual-aid">
+                    <h4>Figure — Polar area of cardioid $r = 1 + \cos(\theta)$</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="110" x2="380" y2="110" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="114" font-size="12" fill="#000">x</text>
+                        <text x="205" y="15" font-size="12" fill="#000">y</text>
+                        <path d="M 200,20 C 240,20 280,40 300,80 C 320,120 300,160 260,180 C 220,200 180,200 140,180 C 100,160 80,120 100,80 C 120,40 160,20 200,20" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <circle cx="200" cy="110" r="3" fill="#000"/>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">The cardioid $r = 1 + \cos(\theta)$ encloses an area of $3\pi/2$.</p>
+                </div>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Set up the area integral</h4>
+                        <p>$$A = \frac{1}{2} \int_{0}^{2\pi} (1 + \cos(\theta))^2 \, d\theta$$</p>
+                        <h4>Step 2: Expand the integrand</h4>
+                        <p>$$(1 + \cos(\theta))^2 = 1 + 2\cos(\theta) + \cos^2(\theta)$$</p>
+                        <p>$$= 1 + 2\cos(\theta) + \frac{1 + \cos(2\theta)}{2}$$</p>
+                        <p>$$= \frac{3}{2} + 2\cos(\theta) + \frac{1}{2}\cos(2\theta)$$</p>
+                        <h4>Step 3: Integrate</h4>
+                        <p>$$A = \frac{1}{2} \int_{0}^{2\pi} \left[\frac{3}{2} + 2\cos(\theta) + \frac{1}{2}\cos(2\theta)\right] d\theta$$</p>
+                        <p>$$= \frac{1}{2} \left[\frac{3\theta}{2} + 2\sin(\theta) + \frac{1}{4}\sin(2\theta)\right]_{0}^{2\pi}$$</p>
+                        <p>$$= \frac{1}{2} \left[(3\pi) + 0 + 0 - 0\right]$$</p>
+                        <p>$$= \frac{3\pi}{2}$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>The area is $\frac{3\pi}{2}$.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="questions">
+                <h4>Practice Problems</h4>
+                <details class="question">
+                    <summary>Problem 1 — Polar to Rectangular Conversion</summary>
+                    <p>Convert $r = 2\sin(\theta)$ to rectangular form.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>$r = 2\sin(\theta) \Rightarrow r^2 = 2r\sin(\theta) \Rightarrow x^2 + y^2 = 2y$.</p>
+                        <p>Completing the square: $x^2 + (y-1)^2 = 1$, a circle of radius 1 centered at $(0, 1)$.</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 2 — Area of a Rose Curve</summary>
+                    <p>Find the area of one petal of the rose $r = 2\sin(3\theta)$.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>One petal spans from $\theta = 0$ to $\theta = \frac{\pi}{3}$.</p>
+                        <p>$$A = \frac{1}{2} \int_{0}^{\pi/3} (2\sin(3\theta))^2 \, d\theta = \frac{1}{2} \int_{0}^{\pi/3} 4\sin^2(3\theta) \, d\theta$$</p>
+                        <p>$$= \int_{0}^{\pi/3} \frac{1 - \cos(6\theta)}{2} \, d\theta = \left[\frac{\theta}{2} - \frac{\sin(6\theta)}{12}\right]_{0}^{\pi/3} = \frac{\pi}{6}$$</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 3 — Area Between Polar Curves</summary>
+                    <p>Find the area inside the circle $r = 2$ and outside the cardioid $r = 1 + \cos(\theta)$.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>The curves intersect when $2 = 1 + \cos(\theta) \Rightarrow \cos(\theta) = 1 \Rightarrow \theta = 0$ and by symmetry at $\theta = 2\pi$.</p>
+                        <p>Actually, they intersect at $\theta = 0$ and $\theta = 2\pi$, but the cardioid is inside the circle everywhere except at $\theta = 0$.</p>
+                        <p>Better: The area inside the circle is $\pi(2)^2 = 4\pi$. The area of the cardioid is $\frac{3\pi}{2}$ (from Example 17.6).</p>
+                        <p>Area between curves: $4\pi - \frac{3\pi}{2} = \frac{5\pi}{2}$.</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 4 — Conic Section in Polar Form</summary>
+                    <p>Identify the conic section given by $r = \frac{4}{1 + 2\sin(\theta)}$.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>The equation is of the form $r = \frac{ed}{1 + e\sin(\theta)}$ with $e = 2$ and $ed = 4$, so $d = 2$.</p>
+                        <p>Since $e = 2 > 1$, this is a hyperbola.</p>
+                    </details>
+                </details>
+            </div>
+
+            <div class="strategies">
+                <h4>Study Tips</h4>
+                <p><strong>1.</strong> Memorize the polar-to-rectangular conversions; they are essential.</p>
+                <p><strong>2.</strong> For rose curves $r = a\cos(n\theta)$ or $r = a\sin(n\theta)$: if $n$ is odd, there are $n$ petals; if $n$ is even, there are $2n$ petals.</p>
+                <p><strong>3.</strong> To find the area of a polar region, sketch the region first to determine the correct limits of integration.</p>
+                <p><strong>4.</strong> For conic sections in polar form, identify $e$ to determine the type: $e < 1$ (ellipse), $e = 1$ (parabola), $e > 1$ (hyperbola).</p>
+                <p><strong>5.</strong> When converting to rectangular form, multiply by the denominator first to eliminate fractions.</p>
+            </div>
+
+            <nav class="chapter-nav">
+                <a href="day-16.html" class="nav-btn prev" id="prev-chapter">Previous</a>
+                <span class="nav-indicator" id="chapter-indicator"></span>
+                <a href="day-18.html" class="nav-btn next" id="next-chapter">Next</a>
+            </nav>
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
 </body>
 </html>

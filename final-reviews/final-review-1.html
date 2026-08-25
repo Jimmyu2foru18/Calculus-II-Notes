@@ -22,74 +22,217 @@
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
-<body>
-<header>
-    <h1>Calculus II Notes</h1>
-    <p class="subtitle">Integration Techniques and Series</p>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../days/index.html">Days</a>
-        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-        <a href="../final-reviews/index.html">Final Reviews</a>
-        <a href="../final-samples/index.html">Final Samples</a>
-        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-</header>
-<div class="container">
-    <main>
-        <p class="lead">Use this review sheet to test your understanding. Try each problem without looking at your notes, then check the formulas and worked examples below.</p>
+<body class="review-page">
+<div class="review-container">
+    <div class="review-header">
+        <h1>Final Review 1: Integration Techniques and Series</h1>
+        <nav>
+            <a href="../index.html">← All Reviews</a>
+            <span>Sections Integration by Parts, Partial Fractions, Series</span>
+        </nav>
+    </div>
 
-        <h2>Key Formulas at a Glance</h2>
-        <ul>
-            <li>Integration by Parts: $\int u\,dv = uv - \int v\,du$</li>
-            <li>u-Substitution: $\int f(g(x))g'(x)\,dx = \int f(u)\,du$</li>
-            <li>Partial Fractions: $\frac{1}{(x-a)(x-b)} = \frac{A}{x-a} + \frac{B}{x-b}$</li>
-            <li>Geometric Series: $\sum_{n=0}^{\infty} ar^n = \frac{a}{1-r}$ for $|r| < 1$</li>
-            <li>p-Series: $\sum_{n=1}^{\infty} \frac{1}{n^p}$ converges if $p > 1$</li>
-        </ul>
+    <div class="review-hero">
+        <h2>Final Review 1: Integration Techniques and Series</h2>
+        <p>Use this review sheet to test your understanding. Try each problem without looking at your notes, then check the formulas and worked examples below.</p>
+        <div class="review-meta">
+            <span>3 Worked Examples</span>
+            <span>Comprehensive</span>
+        </div>
+    </div>
 
-        <h2>Worked Examples</h2>
+    <div class="review-tabs" role="tablist">
+        <button class="review-tab active" data-tab="tab-basics" role="tab">Key Concepts</button>
+        <button class="review-tab" data-tab="tab-formulas" role="tab">Formulas</button>
+        <button class="review-tab" data-tab="tab-examples" role="tab">Worked Examples</button>
+        <button class="review-tab" data-tab="tab-practice" role="tab">Practice Problems</button>
+    </div>
 
-        <h3>Example 1: Integration by Parts</h3>
-        <p><strong>Evaluate:</strong> $\int x\ln(x)\,dx$</p>
-        <details class="question">
-            <summary>Click to see the solution</summary>
-            <p>Let $u = \ln(x)$, $dv = x\,dx$</p>
-            <p>$du = \frac{1}{x}\,dx$, $v = \frac{x^2}{2}$</p>
-            $$= \frac{x^2}{2}\ln(x) - \int \frac{x^2}{2}\cdot\frac{1}{x}\,dx$$
-            $$= \frac{x^2}{2}\ln(x) - \frac{1}{2}\int x\,dx$$
-            $$= \frac{x^2}{2}\ln(x) - \frac{x^2}{4} + C$$
-        </details>
+    <div class="review-section active" id="tab-basics">
+        <div class="review-card">
+            <h3>Integration by Parts</h3>
+            <p>Integration by parts is used to integrate products of functions. Choose $u$ to differentiate and $dv$ to integrate such that the resulting integral is simpler.</p>
+            <div class="review-formula">
+                \[ \int u\,dv = uv - \int v\,du \]
+                <div class="formula-label">Integration by Parts Formula</div>
+            </div>
+            <div class="review-callout info">
+                <p><strong>Key insight:</strong> For $\int x^n e^x\,dx$, let $u = x^n$ and $dv = e^x\,dx$. Repeated application reduces the power of $x$ until the integral is elementary.</p>
+            </div>
+        </div>
+        <div class="review-card">
+            <h3>Partial Fractions</h3>
+            <p>Decompose a rational function into simpler fractions that can be integrated individually. Requires the degree of the numerator to be less than the degree of the denominator.</p>
+            <div class="review-formula">
+                \[ \frac{1}{(x-a)(x-b)} = \frac{A}{x-a} + \frac{B}{x-b} \]
+                <div class="formula-label">Simple Partial Fraction Decomposition</div>
+            </div>
+            <div class="review-callout warning">
+                <p><strong>Warning:</strong> Always perform polynomial long division first if the numerator degree is greater than or equal to the denominator degree.</p>
+            </div>
+        </div>
+        <div class="review-card">
+            <h3>Series Convergence</h3>
+            <p>A series converges if the sequence of partial sums approaches a finite limit. Several tests help determine convergence without finding the exact sum.</p>
+            <div class="review-callout info">
+                <p><strong>Key insight:</strong> Always check the limit of the terms first. If $\lim_{n\to\infty} a_n \neq 0$, the series diverges by the Divergence Test.</p>
+            </div>
+        </div>
+    </div>
 
-        <h3>Example 2: Partial Fractions</h3>
-        <p><strong>Evaluate:</strong> $\int \frac{1}{x^2-1}\,dx$</p>
-        <details class="question">
-            <summary>Click to see the solution</summary>
-            $$\frac{1}{x^2-1} = \frac{1}{(x-1)(x+1)} = \frac{1/2}{x-1} - \frac{1/2}{x+1}$$
-            $$= \frac{1}{2}\ln|x-1| - \frac{1}{2}\ln|x+1| + C$$
-            $$= \frac{1}{2}\ln\left|\frac{x-1}{x+1}\right| + C$$
-        </details>
+    <div class="review-section" id="tab-formulas">
+        <div class="review-card">
+            <h3>Formula Sheet</h3>
+            <div class="review-table">
+                <table>
+                    <thead>
+                        <tr><th>Formula</th><th>Use</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>$\int u\,dv = uv - \int v\,du$</td>
+                            <td>Integration by Parts</td>
+                        </tr>
+                        <tr>
+                            <td>$\int f(g(x))g'(x)\,dx = \int f(u)\,du$</td>
+                            <td>u-Substitution</td>
+                        </tr>
+                        <tr>
+                            <td>$\frac{1}{(x-a)(x-b)} = \frac{A}{x-a} + \frac{B}{x-b}$</td>
+                            <td>Partial Fractions</td>
+                        </tr>
+                        <tr>
+                            <td>$\sum_{n=0}^{\infty} ar^n = \frac{a}{1-r}$</td>
+                            <td>Geometric Series ($|r| < 1$)</td>
+                        </tr>
+                        <tr>
+                            <td>$\sum_{n=1}^{\infty} \frac{1}{n^p}$ converges if $p > 1$</td>
+                            <td>p-Series Test</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
-        <h3>Example 3: Power Series</h3>
-        <p><strong>Task:</strong> Find the interval of convergence for $\sum_{n=0}^{\infty} x^n$</p>
-        <details class="question">
-            <summary>Click to see the solution</summary>
-            <p>Apply the Ratio Test:</p>
-            $$\rho = \lim_{n\to\infty} \frac{|x|^{n+1}}{|x|^n} = |x|$$
-            <p>Converges when $|x| < 1$</p>
-            <p>At $x = 1$: $\sum 1$ diverges</p>
-            <p>At $x = -1$: $\sum (-1)^n$ diverges</p>
-            <p>Interval of Convergence: $(-1, 1)$</p>
-        </details>
+    <div class="review-section" id="tab-examples">
+        <div class="review-card">
+            <h3>Worked Examples</h3>
+            <div class="example">
+                <h4>Example 1: Integration by Parts</h4>
+                <p><strong>Evaluate:</strong> $\int x\ln(x)\,dx$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Choose $u = \ln(x)$ and $dv = x\,dx$.</p>
+                        <p>Then $du = \frac{1}{x}\,dx$ and $v = \frac{x^2}{2}$.</p>
+                        <h4>Step 2:</h4>
+                        <p>Apply the integration by parts formula:</p>
+                        $$= \frac{x^2}{2}\ln(x) - \int \frac{x^2}{2}\cdot\frac{1}{x}\,dx$$
+                        <h4>Step 3:</h4>
+                        <p>Simplify and integrate:</p>
+                        $$= \frac{x^2}{2}\ln(x) - \frac{1}{2}\int x\,dx$$
+                        <h4>Final Answer:</h4>
+                        <p>$$= \frac{x^2}{2}\ln(x) - \frac{x^2}{4} + C$$</p>
+                    </div>
+                </details>
+            </div>
+            <div class="example">
+                <h4>Example 2: Partial Fractions</h4>
+                <p><strong>Evaluate:</strong> $\int \frac{1}{x^2-1}\,dx$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Factor the denominator and decompose:</p>
+                        $$\frac{1}{x^2-1} = \frac{1}{(x-1)(x+1)} = \frac{1/2}{x-1} - \frac{1/2}{x+1}$$
+                        <h4>Step 2:</h4>
+                        <p>Integrate each term separately:</p>
+                        $$= \frac{1}{2}\ln|x-1| - \frac{1}{2}\ln|x+1| + C$$
+                        <h4>Final Answer:</h4>
+                        <p>$$= \frac{1}{2}\ln\left|\frac{x-1}{x+1}\right| + C$$</p>
+                    </div>
+                </details>
+            </div>
+            <div class="example">
+                <h4>Example 3: Power Series</h4>
+                <p><strong>Task:</strong> Find the interval of convergence for $\sum_{n=0}^{\infty} x^n$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Apply the Ratio Test:</p>
+                        $$\rho = \lim_{n\to\infty} \frac{|x|^{n+1}}{|x|^n} = |x|$$
+                        <h4>Step 2:</h4>
+                        <p>The series converges when $|x| < 1$.</p>
+                        <p>At $x = 1$: $\sum 1$ diverges.</p>
+                        <p>At $x = -1$: $\sum (-1)^n$ diverges.</p>
+                        <h4>Final Answer:</h4>
+                        <p>Interval of Convergence: $(-1, 1)$</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
 
-        <h2>Practice Problems</h2>
-        <ol>
-            <li>$\int x^2 e^x\,dx$</li>
-            <li>$\int \frac{3x+5}{x^2-4}\,dx$</li>
-            <li>Test $\sum_{n=1}^{\infty} \frac{n!}{n^2}$ for convergence</li>
-        </ol>
-    </main>
+    <div class="review-section" id="tab-practice">
+        <div class="review-card">
+            <h3>Practice Problems</h3>
+            <details class="question">
+                <summary>Problem 1 — Integration by Parts</summary>
+                <p>Evaluate $\int x^2 e^x\,dx$</p>
+                <details>
+                <summary>Show Answer</summary>
+                <p><strong>Answer:</strong></p>
+                <p>Apply integration by parts twice with $u = x^2$ and $u = x$.</p>
+                <p>$$= (x^2 - 2x + 2)e^x + C$$</p>
+                </details>
+            </details>
+            <details class="question">
+                <summary>Problem 2 — Partial Fractions</summary>
+                <p>Evaluate $\int \frac{3x+5}{x^2-4}\,dx$</p>
+                <details>
+                <summary>Show Answer</summary>
+                <p><strong>Answer:</strong></p>
+                <p>Decompose: $\frac{3x+5}{(x-2)(x+2)} = \frac{1/4}{x-2} + \frac{11/4}{x+2}$.</p>
+                <p>$$= \frac{1}{4}\ln|x-2| + \frac{11}{4}\ln|x+2| + C$$</p>
+                </details>
+            </details>
+            <details class="question">
+                <summary>Problem 3 — Series Convergence</summary>
+                <p>Test $\sum_{n=1}^{\infty} \frac{n!}{n^2}$ for convergence.</p>
+                <details>
+                <summary>Show Answer</summary>
+                <p><strong>Answer:</strong></p>
+                <p>Apply the Ratio Test: $\rho = \lim_{n\to\infty} \frac{(n+1)!/(n+1)^2}{n!/n^2} = \lim_{n\to\infty} \frac{n^2}{n+1} = \infty$.</p>
+                <p>The series diverges since $\rho > 1$.</p>
+                </details>
+            </details>
+        </div>
+    </div>
+
+    <div class="review-nav">
+        <a href="../final-reviews/index.html" class="review-nav-btn">← Back to Home</a>
+        <span class="review-nav-indicator">Self-Check</span>
+        <a href="final-review-2.html" class="review-nav-btn">Next Review →</a>
+    </div>
 </div>
+
 <script src="../js/app.js"></script>
+<script>
+document.querySelectorAll('.review-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = tab.dataset.tab;
+        document.querySelectorAll('.review-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.review-section').forEach(s => s.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(target).classList.add('active');
+        if (window.MathJax && MathJax.typesetPromise) {
+            MathJax.typesetPromise();
+        }
+    });
+});
+</script>
 </body>
 </html>

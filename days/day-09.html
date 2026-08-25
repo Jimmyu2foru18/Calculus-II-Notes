@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 09 - Partial Fractions and Advanced Integration | Calculus II Notes</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true,
+            tags: 'ams'
+        },
+        svg: { fontCache: 'global' },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            ignoreHtmlClass: 'no-mathjax'
+        }
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Calculus II Notes</h1>
+        <p class="subtitle">Day 09: Partial Fractions and Advanced Integration</p>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../days/index.html">Days</a>
+            <a href="../quiz-reviews/index.html">Quiz Reviews</a>
+            <a href="../final-reviews/index.html">Final Reviews</a>
+            <a href="../final-samples/index.html">Final Samples</a>
+            <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main class="chapter">
+            <h2>Day 09: Partial Fractions and Advanced Integration</h2>
+            <p class="lead">Master partial fractions decomposition, trigonometric substitution, and learn how to select the best integration technique for a given problem.</p>
+
+            <div class="video-section">
+                <h4>Core Lecture</h4>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Partial Fractions Overview</h5>
+                        <p>Introduction to decomposition strategies</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Trig Substitution Patterns</h5>
+                        <p>When and how to apply trig substitution</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Choosing Integration Methods</h5>
+                        <p>Strategy guide for selecting techniques</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Partial Fractions Decomposition</h2>
+            <p>Partial fractions decomposition breaks a rational function into a sum of simpler fractions that are easier to integrate. The method depends on the factorization of the denominator.</p>
+
+            <div class="notes">
+                <h4>Partial Fractions Rules</h4>
+                <p><strong>Distinct linear factors:</strong> For each factor $(x - r)$, include a term $\frac{A}{x - r}$.</p>
+                <p><strong>Repeated linear factors:</strong> For $(x - r)^k$, include $\frac{A_1}{x - r} + \frac{A_2}{(x - r)^2} + \cdots + \frac{A_k}{(x - r)^k}$.</p>
+                <p><strong>Irreducible quadratic factors:</strong> For $ax^2 + bx + c$, include $\frac{Ax + B}{ax^2 + bx + c}$.</p>
+                <p><strong>Repeated irreducible quadratics:</strong> Include terms with numerators linear in $x$ for each power.</p>
+            </div>
+
+            <div class="example">
+                <h4>Example 1.1</h4>
+                <p><strong>Problem:</strong> Decompose $\displaystyle \frac{3x + 5}{x^2 - 4}$ into partial fractions.</p>
+                <div class="visual-aid">
+                    <h4>Figure — Partial fractions decomposition regions</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="184" font-size="12" fill="#000">x</text>
+                        <text x="205" y="15" font-size="12" fill="#000">y</text>
+                        <path d="M 30,200 C 100,190 160,170 200,150 C 240,130 300,110 380,90" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <line x1="100" y1="20" x2="100" y2="200" stroke="#c0392b" stroke-width="1" stroke-dasharray="4,3"/>
+                        <line x1="300" y1="20" x2="300" y2="200" stroke="#c0392b" stroke-width="1" stroke-dasharray="4,3"/>
+                        <text x="95" y="215" font-size="10" fill="#c0392b">$x=-2$</text>
+                        <text x="295" y="215" font-size="10" fill="#c0392b">$x=2$</text>
+                        <text x="35" y="175" font-size="10" fill="#555">0</text>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">The denominator $x^2-4 = (x+2)(x-2)$ creates vertical asymptotes at $x = \pm 2$.</p>
+                </div>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Factor the denominator: $x^2 - 4 = (x + 2)(x - 2)$.</p>
+                        <h4>Step 2:</h4>
+                        <p>Set up the decomposition with distinct linear factors:</p>
+                        $$\frac{3x + 5}{(x + 2)(x - 2)} = \frac{A}{x + 2} + \frac{B}{x - 2}$$
+                        <h4>Step 3:</h4>
+                        <p>Clear denominators by multiplying through:</p>
+                        $$3x + 5 = A(x - 2) + B(x + 2)$$
+                        <h4>Step 4:</h4>
+                        <p>Solve for $A$ and $B$ using strategic substitutions:</p>
+                        <p>Set $x = 2$: $3(2) + 5 = A(0) + B(4) \Rightarrow 11 = 4B \Rightarrow B = \frac{11}{4}$</p>
+                        <p>Set $x = -2$: $3(-2) + 5 = A(-4) + B(0) \Rightarrow -1 = -4A \Rightarrow A = \frac{1}{4}$</p>
+                        <h4>Final Answer:</h4>
+                        $$\frac{3x + 5}{x^2 - 4} = \frac{1}{4(x + 2)} + \frac{11}{4(x - 2)}$$
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 1.2</h4>
+                <p><strong>Problem:</strong> Decompose $\displaystyle \frac{x^2 + 3x + 2}{(x + 1)^3}$ into partial fractions.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Identify the repeated linear factor $(x + 1)^3$. Set up the decomposition:</p>
+                        $$\frac{x^2 + 3x + 2}{(x + 1)^3} = \frac{A}{x + 1} + \frac{B}{(x + 1)^2} + \frac{C}{(x + 1)^3}$$
+                        <h4>Step 2:</h4>
+                        <p>Clear denominators:</p>
+                        $$x^2 + 3x + 2 = A(x + 1)^2 + B(x + 1) + C$$
+                        <h4>Step 3:</h4>
+                        <p>Expand the right side:</p>
+                        $$x^2 + 3x + 2 = A(x^2 + 2x + 1) + Bx + B + C$$
+                        $$= Ax^2 + (2A + B)x + (A + B + C)$$
+                        <h4>Step 4:</h4>
+                        <p>Match coefficients:</p>
+                        $$A = 1, \quad 2A + B = 3 \Rightarrow B = 1, \quad A + B + C = 2 \Rightarrow C = 0$$
+                        <h4>Final Answer:</h4>
+                        $$\frac{x^2 + 3x + 2}{(x + 1)^3} = \frac{1}{x + 1} + \frac{1}{(x + 1)^2}$$
+                    </div>
+                </details>
+            </div>
+
+            <h2>Trigonometric Substitution</h2>
+            <p>Trigonometric substitution is used for integrals containing $\sqrt{a^2 - x^2}$, $\sqrt{a^2 + x^2}$, or $\sqrt{x^2 - a^2}$. The substitution simplifies the radical using trigonometric identities.</p>
+
+            <div class="notes">
+                <h4>Trig Substitution Reference</h4>
+                <table>
+                    <tr><th>Form</th><th>Substitution</th><th>Identity Used</th></tr>
+                    <tr><td>$\sqrt{a^2 - x^2}$</td><td>$x = a\sin(\theta)$</td><td>$1 - \sin^2(\theta) = \cos^2(\theta)$</td></tr>
+                    <tr><td>$\sqrt{a^2 + x^2}$</td><td>$x = a\tan(\theta)$</td><td>$1 + \tan^2(\theta) = \sec^2(\theta)$</td></tr>
+                    <tr><td>$\sqrt{x^2 - a^2}$</td><td>$x = a\sec(\theta)$</td><td>$\sec^2(\theta) - 1 = \tan^2(\theta)$</td></tr>
+                </table>
+            </div>
+
+            <div class="example">
+                <h4>Example 2.1</h4>
+                <p><strong>Problem:</strong> Evaluate $\displaystyle \int \frac{dx}{\sqrt{9 + 4x^2}}$.</p>
+                <div class="visual-aid">
+                    <h4>Figure — Trig substitution setup for $\sqrt{9+4x^2}$</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <text x="180" y="30" font-size="12" fill="#000">Reference Triangle</text>
+                        <line x1="200" y1="180" x2="200" y2="80" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="80" x2="280" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="180" x2="280" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <text x="185" y="130" font-size="11" fill="#000">$2x$</text>
+                        <text x="225" y="195" font-size="11" fill="#000">$3$</text>
+                        <text x="290" y="165" font-size="11" fill="#000">$\sqrt{9+4x^2}$</text>
+                        <text x="180" y="210" font-size="10" fill="#555">From $2x = 3\tan\theta$</text>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">The right triangle for back-substitution uses $2x = 3\tan\theta$ to eliminate the radical.</p>
+                </div>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Identify the form $\sqrt{a^2 + x^2}$ with $a = 3$ (note: $4x^2 = (2x)^2$). Use $2x = 3\tan(\theta)$, so $x = \frac{3}{2}\tan(\theta)$:</p>
+                        $$dx = \frac{3}{2}\sec^2(\theta)\,d\theta$$
+                        <h4>Step 2:</h4>
+                        <p>Simplify the radical:</p>
+                        $$\sqrt{9 + 4x^2} = \sqrt{9 + 4 \cdot \frac{9}{4}\tan^2(\theta)} = \sqrt{9(1 + \tan^2(\theta))} = 3\sec(\theta)$$
+                        <h4>Step 3:</h4>
+                        <p>Substitute into the integral:</p>
+                        $$\int \frac{dx}{\sqrt{9 + 4x^2}} = \int \frac{\frac{3}{2}\sec^2(\theta)\,d\theta}{3\sec(\theta)} = \frac{1}{2}\int \sec(\theta)\,d\theta$$
+                        <h4>Step 4:</h4>
+                        <p>Evaluate the integral and back-substitute. From $x = \frac{3}{2}\tan(\theta)$, we have $\tan(\theta) = \frac{2x}{3}$ and $\sec(\theta) = \frac{\sqrt{9 + 4x^2}}{3}$:</p>
+                        $$\frac{1}{2}\ln|\sec(\theta) + \tan(\theta)| + C = \frac{1}{2}\ln\left|\frac{\sqrt{9 + 4x^2} + 2x}{3}\right| + C$$
+                        <h4>Final Answer:</h4>
+                        $$\int \frac{dx}{\sqrt{9 + 4x^2}} = \frac{1}{2}\ln|\sqrt{9 + 4x^2} + 2x| + C$$
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 2.2</h4>
+                <p><strong>Problem:</strong> Evaluate $\displaystyle \int \frac{x^3\,dx}{\sqrt{4 - x^2}}$.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Use $x = 2\sin(\theta)$, $dx = 2\cos(\theta)\,d\theta$, and $\sqrt{4 - x^2} = 2\cos(\theta)$:</p>
+                        $$\int \frac{x^3\,dx}{\sqrt{4 - x^2}} = \int \frac{(2\sin(\theta))^3 \cdot 2\cos(\theta)\,d\theta}{2\cos(\theta)} = \int 8\sin^3(\theta)\,d\theta$$
+                        <h4>Step 2:</h4>
+                        <p>Use the identity $\sin^2(\theta) = 1 - \cos^2(\theta)$:</p>
+                        $$8\int \sin^3(\theta)\,d\theta = 8\int (1 - \cos^2(\theta))\sin(\theta)\,d\theta$$
+                        <h4>Step 3:</h4>
+                        <p>Use substitution $u = \cos(\theta)$, $du = -\sin(\theta)\,d\theta$:</p>
+                        $$= 8\int (1 - u^2)(-du) = 8\int (u^2 - 1)\,du = 8\left(\frac{u^3}{3} - u\right) + C$$
+                        <h4>Step 4:</h4>
+                        <p>Back-substitute using $\cos(\theta) = \frac{\sqrt{4 - x^2}}{2}$:</p>
+                        $$= \frac{8}{3}\left(\frac{\sqrt{4 - x^2}}{2}\right)^3 - 8 \cdot \frac{\sqrt{4 - x^2}}{2} + C = \frac{(4 - x^2)^{3/2}}{3} - 4\sqrt{4 - x^2} + C$$
+                        <h4>Final Answer:</h4>
+                        $$\int \frac{x^3\,dx}{\sqrt{4 - x^2}} = \frac{(4 - x^2)^{3/2}}{3} - 4\sqrt{4 - x^2} + C$$
+                    </div>
+                </details>
+            </div>
+
+            <h2>Comparing Integration Techniques</h2>
+            <p>Choosing the right technique is critical. Use this decision tree: first try substitution, then integration by parts, then trig substitution, then partial fractions.</p>
+
+            <div class="notes">
+                <h4>Integration Strategy Guide</h4>
+                <p><strong>1. Simplify the integrand</strong> algebraically before choosing a method.</p>
+                <p><strong>2. Substitution:</strong> Look for a function and its derivative in the integrand.</p>
+                <p><strong>3. Integration by parts:</strong> Useful for products of algebraic and transcendental functions: $\int u\,dv = uv - \int v\,du$.</p>
+                <p><strong>4. Trigonometric substitution:</strong> Use when radicals of the form $\sqrt{a^2 \pm x^2}$ or $\sqrt{x^2 - a^2}$ appear.</p>
+                <p><strong>5. Partial fractions:</strong> Apply to rational functions $\frac{P(x)}{Q(x)}$ where $\deg(P) < \deg(Q)$.</p>
+                <p><strong>6. If nothing works:</strong> Consider rewriting the integrand using identities or splitting into pieces.</p>
+            </div>
+
+            <div class="example">
+                <h4>Example 3.1</h4>
+                <p><strong>Problem:</strong> Evaluate $\displaystyle \int x\cos(x^2)\,dx$ by selecting the best method.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Identify the structure: we have $x$ multiplied by $\cos(x^2)$. Notice that $\frac{d}{dx}(x^2) = 2x$, so the derivative of the inner function is present (up to a constant). This suggests substitution.</p>
+                        <h4>Step 2:</h4>
+                        <p>Use substitution: let $u = x^2$, $du = 2x\,dx$:</p>
+                        $$\int x\cos(x^2)\,dx = \frac{1}{2}\int \cos(u)\,du = \frac{1}{2}\sin(u) + C$$
+                        <h4>Final Answer:</h4>
+                        $$\int x\cos(x^2)\,dx = \frac{1}{2}\sin(x^2) + C$$
+                    </div>
+                </details>
+            </div>
+
+            <div class="questions">
+                <h4>Practice Problems</h4>
+                <details class="question">
+                    <summary>Problem 1 — Decompose $\displaystyle \frac{2x - 1}{x^2 - 5x + 6}$</summary>
+                    <p>Factor the denominator and find the partial fraction decomposition.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>Factor: $x^2 - 5x + 6 = (x - 2)(x - 3)$. The decomposition is:</p>
+                    $$\frac{2x - 1}{x^2 - 5x + 6} = \frac{3}{x - 2} - \frac{1}{x - 3}$$
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 2 — Evaluate $\displaystyle \int \frac{dx}{x^2\sqrt{4 - x^2}}$</summary>
+                    <p>Use trigonometric substitution to evaluate the integral.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>Use $x = 2\sin(\theta)$. The result is:</p>
+                    $$\int \frac{dx}{x^2\sqrt{4 - x^2}} = -\frac{\sqrt{4 - x^2}}{4x} + C$$
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 3 — Evaluate $\displaystyle \int x e^{3x}\,dx$</summary>
+                    <p>Choose the best integration technique and evaluate.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>Use integration by parts with $u = x$, $dv = e^{3x}\,dx$:</p>
+                    $$\int x e^{3x}\,dx = \frac{x e^{3x}}{3} - \frac{e^{3x}}{9} + C = \frac{e^{3x}(3x - 1)}{9} + C$$
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 4 — Decompose $\displaystyle \frac{x^2}{(x - 1)(x^2 + 4)}$</summary>
+                    <p>Find the partial fraction decomposition including the irreducible quadratic factor.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>The decomposition takes the form:</p>
+                    $$\frac{x^2}{(x - 1)(x^2 + 4)} = \frac{1}{5(x - 1)} + \frac{-x + 4}{5(x^2 + 4)}$$
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 5 — Evaluate $\displaystyle \int \frac{dx}{x^2 + 4x + 5}$</summary>
+                    <p>Complete the square and use an appropriate substitution.</p>
+                    <details>
+                    <summary>Show Answer</summary>
+                    <p><strong>Answer:</strong></p>
+                    <p>Complete the square: $x^2 + 4x + 5 = (x + 2)^2 + 1$. Use $u = x + 2$:</p>
+                    $$\int \frac{dx}{x^2 + 4x + 5} = \arctan(x + 2) + C$$
+                    </details>
+                </details>
+            </div>
+
+            <div class="strategies">
+                <h4>Study Tips</h4>
+                <p><strong>1.</strong> Always simplify the integrand algebraically before selecting a method.</p>
+                <p><strong>2.</strong> For rational functions, long division must come first if the numerator degree is greater than or equal to the denominator degree.</p>
+                <p><strong>3.</strong> When using trig substitution, draw a right triangle to make back-substitution easier.</p>
+                <p><strong>4.</strong> Integration by parts often requires applying the formula more than once. Choose $u$ and $dv$ so that $\int v\,du$ is simpler than the original integral.</p>
+                <p><strong>5.</strong> Practice recognizing patterns. With enough examples, you will intuitively know which method to try first.</p>
+            </div>
+
+            <nav class="chapter-nav">
+                <a href="day-08.html" class="nav-btn prev" id="prev-chapter">Previous</a>
+                <span class="nav-indicator" id="chapter-indicator"></span>
+                <a href="day-10.html" class="nav-btn next" id="next-chapter">Next</a>
+            </nav>
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

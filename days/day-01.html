@@ -4,62 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 01 - Review & Course Overview | Calculus II Notes</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
     <script>
         window.MathJax = {
             tex: {
-                inlineMath: [['\\(', '\\)']],
+                inlineMath: [['$', '$']],
                 displayMath: [['$$', '$$'], ['\\[', '\\]']],
-                processEscapes: true
+                processEscapes: true,
+            tags: 'ams'
             },
             options: {
-                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            ignoreHtmlClass: 'no-mathjax'
             }
         };
     </script>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Georgia', serif; line-height: 1.8; color: #1a1a1a; background: #fafafa; max-width: 900px; margin: 0 auto; padding: 20px; }
-        header { background: #1a237e; color: white; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
-        header h1 { font-size: 1.8em; }
-        nav { background: #e8eaf6; padding: 12px; border-radius: 8px; margin-bottom: 25px; }
-        nav a { color: #1a237e; text-decoration: none; margin-right: 20px; font-weight: bold; }
-        nav a:hover { text-decoration: underline; }
-        .problem { background: white; border: 1px solid #ddd; border-radius: 8px; padding: 25px; margin-bottom: 25px; }
-        .problem-title { font-size: 1.3em; color: #1a237e; border-bottom: 2px solid #1a237e; padding-bottom: 8px; margin-bottom: 15px; }
-        .step { margin: 15px 0; padding: 10px; background: #f5f5f5; border-left: 4px solid #1a237e; }
-        .final-answer { background: #e8f5e9; border: 2px solid #2e7d32; padding: 15px; margin-top: 20px; border-radius: 8px; }
-        .final-answer-title { color: #2e7d32; font-weight: bold; margin-bottom: 8px; }
-        img { max-width: 100%; border: 1px solid #ccc; border-radius: 4px; margin: 10px 0; }
-        .image-ref { font-style: italic; color: #666; text-align: center; margin: 10px 0; }
-        h2 { color: #1a237e; margin-top: 30px; }
-        h3 { color: #283593; margin-top: 20px; }
-        .formula-box { background: #fff3e0; border: 1px solid #ff9800; padding: 12px; margin: 10px 0; border-radius: 6px; }
-    </style>
-</head>
+    </head>
 <body>
     <header>
-        <h1>Day 01: Review & Course Overview</h1>
-        <p>Calculus II - Complete Step-by-Step Solutions</p>
+        <h1>Calculus II Notes</h1>
+        <p class="subtitle">Day 01: Review & Course Overview</p>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../days/index.html">Days</a>
+            <a href="../quiz-reviews/index.html">Quiz Reviews</a>
+            <a href="../final-reviews/index.html">Final Reviews</a>
+            <a href="../final-samples/index.html">Final Samples</a>
+            <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+        </nav>
     </header>
 
-    <nav>
-        <a href="day-01.html">Day 01</a>
-        <a href="day-02.html">Day 02</a>
-        <a href="day-03.html">Day 03</a>
-        <a href="day-04.html">Day 04</a>
-        <a href="day-05.html">Day 05</a>
-        <a href="quiz-01.html">Quiz 01</a>
-        <a href="quiz-02.html">Quiz 02</a>
-        <a href="quiz-03.html">Quiz 03</a>
-        <a href="final-review-1.html">Final Review 1</a>
-        <a href="final-review-2.html">Final Review 2</a>
-        <a href="final-review-3.html">Final Review 3</a>
-        <a href="final-review-4.html">Final Review 4</a>
-    </nav>
-
-    <h2>Course Overview</h2>
+    <div class="container">
+        <main class="chapter">
+            <section id="content">
+<p class="lead">A review of Calculus I derivative and anti-derivative rules to prepare for Calculus II integration techniques.</p>
+<div class="video-section">
+<h4>Core Lecture</h4>
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+</div>
+</div>
+<div class="video-grid">
+<div class="video-card">
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+    </div>
+    <div class="video-card-caption">
+        <h5>Video Title</h5>
+        <p>Description</p>
+    </div>
+</div>
+<div class="video-card">
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+    </div>
+    <div class="video-card-caption">
+        <h5>Video Title</h5>
+        <p>Description</p>
+    </div>
+</div>
+<div class="video-card">
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+    </div>
+    <div class="video-card-caption">
+        <h5>Video Title</h5>
+        <p>Description</p>
+    </div>
+</div>
+</div>
     <p>Calculus II covers advanced integration techniques, applications of integrals, sequences and series, and parametric/polar coordinates.</p>
 
     <h3>Main Topics</h3>
@@ -71,13 +85,14 @@
         <li><strong>Parametric & Polar:</strong> Parametric Equations, Polar Coordinates, Conic Sections</li>
     </ul>
 
-    <div class="problem">
-        <div class="problem-title">Problem 1: Basic Derivative Rules Review</div>
+    <div class="example">
+        <h4>Example 1.0</h4>
         <p><strong>Task:</strong> Review and apply basic derivative rules.</p>
         
         <h3>Derivative Rules Summary</h3>
-        <div class="formula-box">
-            \begin{aligned}
+        <div class="notes">
+<h4>Key Formula</h4>
+<p>\begin{aligned}
             &\frac{d}{dx}[c] = 0 \\
             &\frac{d}{dx}[x^n] = nx^{n-1} \\
             &\frac{d}{dx}[e^x] = e^x \\
@@ -88,173 +103,196 @@
             &\frac{d}{dx}[\csc(x)] = -\csc(x)\cot(x) \\
             &\frac{d}{dx}[\tan(x)] = \sec^2(x) \\
             &\frac{d}{dx}[\cot(x)] = -\csc^2(x)
-            \end{aligned}
-        </div>
+            \end{aligned}</p>
+</div>
 
         <h3>Example 1a: Power and Constant Rules</h3>
-        <p><strong>Find</strong> \( f'(x) \) where \( f(x) = 7x^2 + 5x + 7\sqrt{x} \)</p>
+        <p><strong>Find</strong> $ f'(x) $ where $ f(x) = 7x^2 + 5x + 7\sqrt{x} $</p>
+        <div class="visual-aid">
+            <h4>Figure — Graph of $f(x) = 7x^2 + 5x + 7\sqrt{x}$</h4>
+            <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                <text x="385" y="184" font-size="12" fill="#000">x</text>
+                <text x="205" y="15" font-size="12" fill="#000">y</text>
+                <path d="M 30,158 C 80,150 120,130 170,110 C 220,85 270,55 320,35 C 350,25 370,20 380,18" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                <text x="35" y="175" font-size="10" fill="#555">0</text>
+                <text x="195" y="195" font-size="10" fill="#555">0</text>
+            </svg>
+            <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">The function $f(x) = 7x^2 + 5x + 7\sqrt{x}$ is increasing and concave up for $x \geq 0$.</p>
+        </div>
         
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Rewrite all terms using rational exponents:<br>
-                    \( f(x) = 7x^2 + 5x + 7x^{1/2} \)
-                </div>
-                <div class="step">
-                    <strong>Step 2:</strong> Apply the power rule \( \frac{d}{dx}[x^n] = nx^{n-1} \) to each term:<br>
-                    \begin{aligned}
+                <h4>Step 1:</h4>
+<p>Rewrite all terms using rational exponents:</p>
+<h4>Step 2:</h4>
+<p>$ f(x) = 7x^2 + 5x + 7x^{1/2} $</p>
+                <h4>Step 3:</h4>
+<p>Apply the power rule $ \frac{d}{dx}[x^n] = nx^{n-1} $ to each term:</p>
+<h4>Step 4:</h4>
+<p>\begin{aligned}
                     f'(x) &= 7 \cdot 2x^{2-1} + 5 \cdot 1x^{1-1} + 7 \cdot \frac{1}{2}x^{1/2 - 1} \\
                     &= 14x^1 + 5x^0 + \frac{7}{2}x^{-1/2}
-                    \end{aligned}
-                </div>
-                <div class="step">
-                    <strong>Step 3:</strong> Simplify:<br>
-                    \( f'(x) = 14x + 5 + \frac{7}{2\sqrt{x}} \)
-                </div>
+                    \end{aligned}</p>
+                <h4>Step 5:</h4>
+<p>Simplify:</p>
+<h4>Step 6:</h4>
+<p>$ f'(x) = 14x + 5 + \frac{7}{2\sqrt{x}} $</p>
 
-                <div class="final-answer">
-                    <div class="final-answer-title">Final Answer:</div>
+                <h4>Final Answer:</h4>
+<p><div class="final-answer-title">Final Answer:</p>
                     $$ f'(x) = 14x + 5 + \frac{7}{2\sqrt{x}} $$
                 </div>
             </div>
         </details>
 
         <h3>Example 1b: Chain Rule</h3>
-        <p><strong>Find</strong> \( f'(x) \) where \( f(x) = e^{x^2 + 1} \)</p>
+        <p><strong>Find</strong> $ f'(x) $ where $ f(x) = e^{x^2 + 1} $</p>
+        <div class="visual-aid">
+            <h4>Figure — Graph of $f(x) = e^{x^2+1}$</h4>
+            <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                <text x="385" y="184" font-size="12" fill="#000">x</text>
+                <text x="205" y="15" font-size="12" fill="#000">y</text>
+                <path d="M 30,42 C 60,43 90,50 120,70 C 150,95 180,130 200,155 C 220,130 250,95 280,70 C 310,50 340,43 380,42" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                <text x="35" y="175" font-size="10" fill="#555">-1.5</text>
+                <text x="195" y="195" font-size="10" fill="#555">0</text>
+            </svg>
+            <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">The function $f(x) = e^{x^2+1}$ is symmetric about the y-axis and grows rapidly as $|x|$ increases.</p>
+        </div>
         
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Identify outer and inner functions:<br>
-                    Outer: \( e^u \), Inner: \( u = x^2 + 1 \)
-                </div>
-                <div class="step">
-                    <strong>Step 2:</strong> Apply the chain rule \( \frac{d}{dx}[f(g(x))] = f'(g(x)) \cdot g'(x) \):<br>
-                    \begin{aligned}
+                <h4>Step 7:</h4>
+<p>Identify outer and inner functions:</p>
+<h4>Step 8:</h4>
+<p>Outer: $ e^u $, Inner: $ u = x^2 + 1 $</p>
+                <h4>Step 9:</h4>
+<p>Apply the chain rule $ \frac{d}{dx}[f(g(x))] = f'(g(x)) \cdot g'(x) $:</p>
+<h4>Step 10:</h4>
+<p>\begin{aligned}
                     f'(x) &= e^{x^2+1} \cdot \frac{d}{dx}[x^2 + 1] \\
                     &= e^{x^2+1} \cdot (2x)
-                    \end{aligned}
-                </div>
-                <div class="final-answer">
-                    <div class="final-answer-title">Final Answer:</div>
+                    \end{aligned}</p>
+                <h4>Final Answer:</h4>
+<p><div class="final-answer-title">Final Answer:</p>
                     $$ f'(x) = 2xe^{x^2+1} $$
                 </div>
             </div>
         </details>
 
         <h3>Example 1c: Product Rule</h3>
-        <p><strong>Find</strong> \( f'(x) \) where \( f(x) = e^x \sin(x^2) \)</p>
+        <p><strong>Find</strong> $ f'(x) $ where $ f(x) = e^x \sin(x^2) $</p>
         
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Identify \( u = e^x \) and \( v = \sin(x^2) \)<br>
-                    <strong>Step 2:</strong> Compute derivatives:<br>
-                    \( u' = e^x \) and \( v' = \cos(x^2) \cdot 2x \) (chain rule)
-                </div>
-                <div class="step">
-                    <strong>Step 3:</strong> Apply product rule \( (uv)' = u'v + uv' \):<br>
-                    \begin{aligned}
+                <h4>Step 11:</h4>
+<p>Identify $ u = e^x $ and $ v = \sin(x^2) $</p>
+<h4>Step 12:</h4>
+<p>Compute derivatives:</p>
+<h4>Step 13:</h4>
+<p>$ u' = e^x $ and $ v' = \cos(x^2) \cdot 2x $ (chain rule)</p>
+                <h4>Step 14:</h4>
+<p>Apply product rule $ (uv)' = u'v + uv' $:</p>
+<h4>Step 15:</h4>
+<p>\begin{aligned}
                     f'(x) &= e^x \cdot \sin(x^2) + e^x \cdot \cos(x^2) \cdot 2x \\
                     &= e^x\sin(x^2) + 2xe^x\cos(x^2)
-                    \end{aligned}
-                </div>
-                <div class="final-answer">
-                    <div class="final-answer-title">Final Answer:</div>
+                    \end{aligned}</p>
+                <h4>Final Answer:</h4>
+<p><div class="final-answer-title">Final Answer:</p>
                     $$ f'(x) = e^x\sin(x^2) + 2xe^x\cos(x^2) $$
                 </div>
             </div>
         </details>
     </div>
 
-    <div class="problem">
-        <div class="problem-title">Problem 2: More Derivative Examples</div>
+    <div class="example">
+        <h4>Example 2.0</h4>
 
-        <h3>Example 2a</h3>
-        <p><strong>Find</strong> \( f'(x) \) where \( f(x) = \sqrt{x^2+1} = (x^2+1)^{1/2} \)</p>
+        <h4>Example 2a</h4>
+        <p><strong>Find</strong> $ f'(x) $ where $ f(x) = \sqrt{x^2+1} = (x^2+1)^{1/2} $</p>
         
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    \begin{aligned}
+                <h4>Step 16:</h4>
+<p>\begin{aligned}
                     f'(x) &= \frac{1}{2}(x^2+1)^{-1/2} \cdot 2x \\
                     &= \frac{x}{\sqrt{x^2+1}}
-                    \end{aligned}
-                </div>
-                <div class="final-answer">
-                    $$ f'(x) = \frac{x}{\sqrt{x^2+1}} $$
-                </div>
+                    \end{aligned}</p>
+                <h4>Final Answer:</h4>
+<p>$$ f'(x) = \frac{x}{\sqrt{x^2+1}} $$</p>
             </div>
         </details>
 
         <h3>Example 2b</h3>
-        <p><strong>Find</strong> \( f'(x) \) where \( f(x) = \cos(\cos(x)) \)</p>
+        <p><strong>Find</strong> $ f'(x) $ where $ f(x) = \cos(\cos(x)) $</p>
         
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    \begin{aligned}
+                <h4>Step 17:</h4>
+<p>\begin{aligned}
                     f'(x) &= -\sin(\cos(x)) \cdot (-\sin(x)) \\
                     &= \sin(\cos(x))\sin(x)
-                    \end{aligned}
-                </div>
-                <div class="final-answer">
-                    $$ f'(x) = \sin(\cos(x))\sin(x) $$
-                </div>
+                    \end{aligned}</p>
+                <h4>Final Answer:</h4>
+<p>$$ f'(x) = \sin(\cos(x))\sin(x) $$</p>
             </div>
         </details>
 
         <h3>Example 2c</h3>
-        <p><strong>Find</strong> \( f'(x) \) where \( f(x) = \sin^{-1}(x^2+1) \)</p>
+        <p><strong>Find</strong> $ f'(x) $ where $ f(x) = \sin^{-1}(x^2+1) $</p>
         
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Note:</strong> \( \frac{d}{dx}[\sin^{-1}(u)] = \frac{u'}{\sqrt{1-u^2}} \)<br><br>
-                    \begin{aligned}
+                <h4>Step 18:</h4>
+<p><strong>Note:</strong> $ \frac{d}{dx}[\sin^{-1}(u)] = \frac{u'}{\sqrt{1-u^2}} $</p>
+<h4>Step 19:</h4>
+<p>\begin{aligned}
                     f'(x) &= \frac{2x}{\sqrt{1-(x^2+1)^2}}
-                    \end{aligned}
-                </div>
-                <div class="final-answer">
-                    $$ f'(x) = \frac{2x}{\sqrt{1-(x^2+1)^2}} $$
-                </div>
+                    \end{aligned}</p>
+                <h4>Final Answer:</h4>
+<p>$$ f'(x) = \frac{2x}{\sqrt{1-(x^2+1)^2}} $$</p>
             </div>
         </details>
 
         <h3>Example 2d</h3>
-        <p><strong>Find</strong> \( f'(x) \) where \( f(x) = \cos(x^2)\sin^{-1}(x^3) \)</p>
+        <p><strong>Find</strong> $ f'(x) $ where $ f(x) = \cos(x^2)\sin^{-1}(x^3) $</p>
         
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Apply product rule with \( u = \cos(x^2) \), \( v = \sin^{-1}(x^3) \)<br>
-                    <strong>Step 2:</strong> Compute \( u' = -\sin(x^2) \cdot 2x \) and \( v' = \frac{3x^2}{\sqrt{1-x^6}} \)<br>
-                    \begin{aligned}
+                <h4>Step 20:</h4>
+<p>Apply product rule with $ u = \cos(x^2) $, $ v = \sin^{-1}(x^3) $</p>
+<h4>Step 21:</h4>
+<p>Compute $ u' = -\sin(x^2) \cdot 2x $ and $ v' = \frac{3x^2}{\sqrt{1-x^6}} $</p>
+<h4>Step 22:</h4>
+<p>\begin{aligned}
                     f'(x) &= -\sin(x^2) \cdot 2x \cdot \sin^{-1}(x^3) + \cos(x^2) \cdot \frac{3x^2}{\sqrt{1-x^6}}
-                    \end{aligned}
-                </div>
-                <div class="final-answer">
-                    $$ f'(x) = -2x\sin(x^2)\sin^{-1}(x^3) + \frac{3x^2\cos(x^2)}{\sqrt{1-x^6}} $$
-                </div>
+                    \end{aligned}</p>
+                <h4>Final Answer:</h4>
+<p>$$ f'(x) = -2x\sin(x^2)\sin^{-1}(x^3) + \frac{3x^2\cos(x^2)}{\sqrt{1-x^6}} $$</p>
             </div>
         </details>
     </div>
 
-    <div class="problem">
-        <div class="problem-title">Problem 3: Anti-derivative (Indefinite Integral) Rules</div>
-        <p>Anti-derivatives reverse the process of differentiation. If \( F'(x) = f(x) \), then \( F(x) \) is an anti-derivative of \( f(x) \), written as:<br>
+    <div class="example">
+        <h4>Example 3.0</h4>
+        <p>Anti-derivatives reverse the process of differentiation. If $ F'(x) = f(x) $, then $ F(x) $ is an anti-derivative of $ f(x) $, written as:<br>
         $$ \int f(x)\,dx = F(x) + C $$</p>
 
         <h3>Basic Integration Rules</h3>
-        <div class="formula-box">
-            \begin{aligned}
+        <div class="notes">
+<h4>Key Formula</h4>
+<p>\begin{aligned}
             &\int x^n\,dx = \frac{x^{n+1}}{n+1} + C, \quad n \neq -1 \\
             &\int e^x\,dx = e^x + C \\
             &\int \frac{1}{x}\,dx = \ln|x| + C \\
@@ -267,344 +305,361 @@
             &\int \frac{1}{\sqrt{1-x^2}}\,dx = \sin^{-1}(x) + C \\
             &\int \frac{1}{1+x^2}\,dx = \tan^{-1}(x) + C \\
             &\int \frac{1}{x\sqrt{x^2-1}}\,dx = \sec^{-1}(x) + C
-            \end{aligned}
-        </div>
+            \end{aligned}</p>
+</div>
 
         <h3>Example 3a</h3>
-        <p><strong>Find</strong> \( \int (x^2 - 5 + 7x^{-1} + 8x^{-2})\,dx \)</p>
+        <p><strong>Find</strong> $ \int (x^2 - 5 + 7x^{-1} + 8x^{-2})\,dx $</p>
         
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Apply linearity of integration:<br>
-                    \( \int (x^2 - 5 + 7x^{-1} + 8x^{-2})\,dx = \int x^2\,dx - \int 5\,dx + \int 7x^{-1}\,dx + \int 8x^{-2}\,dx \)
-                </div>
-                <div class="step">
-                    <strong>Step 2:</strong> Integrate each term:<br>
-                    \begin{aligned}
+                <h4>Step 23:</h4>
+<p>Apply linearity of integration:</p>
+<h4>Step 24:</h4>
+<p>$ \int (x^2 - 5 + 7x^{-1} + 8x^{-2})\,dx = \int x^2\,dx - \int 5\,dx + \int 7x^{-1}\,dx + \int 8x^{-2}\,dx $</p>
+                <h4>Step 25:</h4>
+<p>Integrate each term:</p>
+<h4>Step 26:</h4>
+<p>\begin{aligned}
                     \int x^2\,dx &= \frac{x^3}{3} \\
                     \int 5\,dx &= 5x \\
                     \int 7x^{-1}\,dx &= 7\ln|x| \\
                     \int 8x^{-2}\,dx &= 8 \cdot \frac{x^{-1}}{-1} = -\frac{8}{x}
-                    \end{aligned}
-                </div>
-                <div class="final-answer">
-                    $$ \int (x^2 - 5 + 7x^{-1} + 8x^{-2})\,dx = \frac{x^3}{3} - 5x + 7\ln|x| - \frac{8}{x} + C $$
-                </div>
+                    \end{aligned}</p>
+                <h4>Final Answer:</h4>
+<p>$$ \int (x^2 - 5 + 7x^{-1} + 8x^{-2})\,dx = \frac{x^3}{3} - 5x + 7\ln|x| - \frac{8}{x} + C $$</p>
             </div>
         </details>
 
         <h3>Example 3b</h3>
-        <p><strong>Find</strong> \( \int (3x+1)^2\,dx \)</p>
+        <p><strong>Find</strong> $ \int (3x+1)^2\,dx $</p>
         
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Expand \( (3x+1)^2 = 9x^2 + 6x + 1 \)<br>
-                    <strong>Step 2:</strong> Integrate term by term:<br>
-                    \begin{aligned}
+                <h4>Step 27:</h4>
+<p>Expand $ (3x+1)^2 = 9x^2 + 6x + 1 $</p>
+<h4>Step 28:</h4>
+<p>Integrate term by term:</p>
+<h4>Step 29:</h4>
+<p>\begin{aligned}
                     \int (9x^2 + 6x + 1)\,dx &= 9 \cdot \frac{x^3}{3} + 6 \cdot \frac{x^2}{2} + x \\
                     &= 3x^3 + 3x^2 + x
-                    \end{aligned}
-                </div>
-                <div class="final-answer">
-                    $$ \int (3x+1)^2\,dx = 3x^3 + 3x^2 + x + C $$
-                </div>
+                    \end{aligned}</p>
+                <h4>Final Answer:</h4>
+<p>$$ \int (3x+1)^2\,dx = 3x^3 + 3x^2 + x + C $$</p>
             </div>
         </details>
 
         <h3>Example 3c</h3>
-        <p><strong>Find</strong> \( \int [4(1+x^2)^{-1} + \sec^2(x)]\,dx \)</p>
+        <p><strong>Find</strong> $ \int [4(1+x^2)^{-1} + \sec^2(x)]\,dx $</p>
         
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    \begin{aligned}
+                <h4>Step 30:</h4>
+<p>\begin{aligned}
                     \int [4(1+x^2)^{-1} + \sec^2(x)]\,dx &= 4\int \frac{1}{1+x^2}\,dx + \int \sec^2(x)\,dx \\
                     &= 4\tan^{-1}(x) + \tan(x) + C
-                    \end{aligned}
-                </div>
-                <div class="final-answer">
-                    $$ \int [4(1+x^2)^{-1} + \sec^2(x)]\,dx = 4\tan^{-1}(x) + \tan(x) + C $$
-                </div>
+                    \end{aligned}</p>
+                <h4>Final Answer:</h4>
+<p>$$ \int [4(1+x^2)^{-1} + \sec^2(x)]\,dx = 4\tan^{-1}(x) + \tan(x) + C $$</p>
             </div>
         </details>
 
         <h3>Example 3d</h3>
-        <p><strong>Find</strong> \( \int \sqrt{\sin^2(e^x) + \cos^2(e^x)}\,dx \)</p>
+        <p><strong>Find</strong> $ \int \sqrt{\sin^2(e^x) + \cos^2(e^x)}\,dx $</p>
         
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Use the Pythagorean identity \( \sin^2(\theta) + \cos^2(\theta) = 1 \):<br>
-                    \( \sqrt{\sin^2(e^x) + \cos^2(e^x)} = \sqrt{1} = 1 \)<br>
-                    <strong>Step 2:</strong> Integrate:<br>
-                    \( \int 1\,dx = x + C \)
-                </div>
-                <div class="final-answer">
-                    $$ \int \sqrt{\sin^2(e^x) + \cos^2(e^x)}\,dx = x + C $$
-                </div>
+                <h4>Step 31:</h4>
+<p>Use the Pythagorean identity $ \sin^2(\theta) + \cos^2(\theta) = 1 $:</p>
+<h4>Step 32:</h4>
+<p>$ \sqrt{\sin^2(e^x) + \cos^2(e^x)} = \sqrt{1} = 1 $</p>
+<h4>Step 33:</h4>
+<p>Integrate:</p>
+<h4>Step 34:</h4>
+<p>$ \int 1\,dx = x + C $</p>
+                <h4>Final Answer:</h4>
+<p>$$ \int \sqrt{\sin^2(e^x) + \cos^2(e^x)}\,dx = x + C $$</p>
             </div>
         </details>
 
         <h3>Example 3e</h3>
-        <p><strong>Find</strong> \( \int (\sqrt[3]{x} + \sqrt[5]{x^3} - x^{-3/4} - 5)\,dx \)</p>
+        <p><strong>Find</strong> $ \int (\sqrt[3]{x} + \sqrt[5]{x^3} - x^{-3/4} - 5)\,dx $</p>
         
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Rewrite with rational exponents: \( x^{1/3} + x^{3/5} - x^{-3/4} - 5 \)<br>
-                    <strong>Step 2:</strong> Integrate term by term:<br>
-                    \begin{aligned}
+                <h4>Step 35:</h4>
+<p>Rewrite with rational exponents: $ x^{1/3} + x^{3/5} - x^{-3/4} - 5 $</p>
+<h4>Step 36:</h4>
+<p>Integrate term by term:</p>
+<h4>Step 37:</h4>
+<p>\begin{aligned}
                     \int x^{1/3}\,dx &= \frac{x^{4/3}}{4/3} = \frac{3}{4}x^{4/3} \\
                     \int x^{3/5}\,dx &= \frac{x^{8/5}}{8/5} = \frac{5}{8}x^{8/5} \\
                     \int (-x^{-3/4})\,dx &= -\frac{x^{1/4}}{1/4} = -4x^{1/4} \\
                     \int (-5)\,dx &= -5x
-                    \end{aligned}
-                </div>
-                <div class="final-answer">
-                    $$ \int (\sqrt[3]{x} + \sqrt[5]{x^3} - x^{-3/4} - 5)\,dx = \frac{3}{4}x^{4/3} + \frac{5}{8}x^{8/5} - 4x^{1/4} - 5x + C $$
-                </div>
+                    \end{aligned}</p>
+                <h4>Final Answer:</h4>
+<p>$$ \int (\sqrt[3]{x} + \sqrt[5]{x^3} - x^{-3/4} - 5)\,dx = \frac{3}{4}x^{4/3} + \frac{5}{8}x^{8/5} - 4x^{1/4} - 5x + C $$</p>
             </div>
         </details>
     </div>
 
-    <div class="problem">
-        <div class="problem-title">Problem 4: u-Substitution (Integration by Substitution)</div>
-        <p>The substitution method uses the formula \( \int f(g(x))g'(x)\,dx = \int f(u)\,du \) where \( u = g(x) \) and \( du = g'(x)\,dx \).</p>
+    <div class="example">
+        <h4>Example 4.0</h4>
+        <p>The substitution method uses the formula $ \int f(g(x))g'(x)\,dx = \int f(u)\,du $ where $ u = g(x) $ and $ du = g'(x)\,dx $.</p>
 
         <h3>Example 4a: Basic Substitution</h3>
-        <p><strong>Evaluate</strong> \( \int e^{7x}\,dx \)</p>
+        <p><strong>Evaluate</strong> $ \int e^{7x}\,dx $</p>
         
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Let \( u = 7x \), then \( du = 7\,dx \), so \( dx = \frac{du}{7} \)<br>
-                    <strong>Step 2:</strong> Substitute:<br>
-                    \( \int e^{7x}\,dx = \int e^u \cdot \frac{du}{7} = \frac{1}{7}\int e^u\,du \)<br>
-                    <strong>Step 3:</strong> Integrate and back-substitute:<br>
-                    \( = \frac{1}{7}e^u + C = \frac{1}{7}e^{7x} + C \)
-                </div>
-                <div class="final-answer">
-                    $$ \int e^{7x}\,dx = \frac{1}{7}e^{7x} + C $$
-                </div>
+                <h4>Step 38:</h4>
+<p>Let $ u = 7x $, then $ du = 7\,dx $, so $ dx = \frac{du}{7} $</p>
+<h4>Step 39:</h4>
+<p>Substitute:</p>
+<h4>Step 40:</h4>
+<p>$ \int e^{7x}\,dx = \int e^u \cdot \frac{du}{7} = \frac{1}{7}\int e^u\,du $</p>
+<h4>Step 41:</h4>
+<p>Integrate and back-substitute:</p>
+<h4>Step 42:</h4>
+<p>$ = \frac{1}{7}e^u + C = \frac{1}{7}e^{7x} + C $</p>
+                <h4>Final Answer:</h4>
+<p>$$ \int e^{7x}\,dx = \frac{1}{7}e^{7x} + C $$</p>
             </div>
         </details>
 
         <h3>Example 4b</h3>
-        <p><strong>Evaluate</strong> \( \int (x^3+1)^{3}x^2\,dx \)</p>
+        <p><strong>Evaluate</strong> $ \int (x^3+1)^{3}x^2\,dx $</p>
         
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Let \( u = x^3 + 1 \), then \( du = 3x^2\,dx \), so \( x^2\,dx = \frac{du}{3} \)<br>
-                    <strong>Step 2:</strong> Substitute:<br>
-                    \( \int u^3 \cdot \frac{du}{3} = \frac{1}{3}\int u^3\,du \)<br>
-                    <strong>Step 3:</strong> Integrate:<br>
-                    \( = \frac{1}{3} \cdot \frac{u^4}{4} + C = \frac{u^4}{12} + C \)<br>
-                    <strong>Step 4:</strong> Back-substitute:<br>
-                    \( = \frac{(x^3+1)^4}{12} + C \)
-                </div>
-                <div class="final-answer">
-                    $$ \int (x^3+1)^3 x^2\,dx = \frac{(x^3+1)^4}{12} + C $$
-                </div>
+                <h4>Step 43:</h4>
+<p>Let $ u = x^3 + 1 $, then $ du = 3x^2\,dx $, so $ x^2\,dx = \frac{du}{3} $</p>
+<h4>Step 44:</h4>
+<p>Substitute:</p>
+<h4>Step 45:</h4>
+<p>$ \int u^3 \cdot \frac{du}{3} = \frac{1}{3}\int u^3\,du $</p>
+<h4>Step 46:</h4>
+<p>Integrate:</p>
+<h4>Step 47:</h4>
+<p>$ = \frac{1}{3} \cdot \frac{u^4}{4} + C = \frac{u^4}{12} + C $</p>
+<h4>Step 48:</h4>
+<p>Back-substitute:</p>
+<h4>Step 49:</h4>
+<p>$ = \frac{(x^3+1)^4}{12} + C $</p>
+                <h4>Final Answer:</h4>
+<p>$$ \int (x^3+1)^3 x^2\,dx = \frac{(x^3+1)^4}{12} + C $$</p>
             </div>
         </details>
 
         <h3>Example 4c</h3>
-        <p><strong>Evaluate</strong> \( \int \frac{x^3}{1+x^4}\,dx \)</p>
+        <p><strong>Evaluate</strong> $ \int \frac{x^3}{1+x^4}\,dx $</p>
         
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Let \( u = 1 + x^4 \), then \( du = 4x^3\,dx \), so \( x^3\,dx = \frac{du}{4} \)<br>
-                    <strong>Step 2:</strong> Substitute:<br>
-                    \( \int \frac{1}{u} \cdot \frac{du}{4} = \frac{1}{4}\int \frac{1}{u}\,du \)<br>
-                    <strong>Step 3:</strong> Integrate:<br>
-                    \( = \frac{1}{4}\ln|u| + C = \frac{1}{4}\ln|1+x^4| + C \)
-                </div>
-                <div class="final-answer">
-                    $$ \int \frac{x^3}{1+x^4}\,dx = \frac{1}{4}\ln(1+x^4) + C $$
-                </div>
+                <h4>Step 50:</h4>
+<p>Let $ u = 1 + x^4 $, then $ du = 4x^3\,dx $, so $ x^3\,dx = \frac{du}{4} $</p>
+<h4>Step 51:</h4>
+<p>Substitute:</p>
+<h4>Step 52:</h4>
+<p>$ \int \frac{1}{u} \cdot \frac{du}{4} = \frac{1}{4}\int \frac{1}{u}\,du $</p>
+<h4>Step 53:</h4>
+<p>Integrate:</p>
+<h4>Step 54:</h4>
+<p>$ = \frac{1}{4}\ln|u| + C = \frac{1}{4}\ln|1+x^4| + C $</p>
+                <h4>Final Answer:</h4>
+<p>$$ \int \frac{x^3}{1+x^4}\,dx = \frac{1}{4}\ln(1+x^4) + C $$</p>
             </div>
         </details>
 
         <h3>Example 4d</h3>
-        <p><strong>Evaluate</strong> \( \int \frac{dx}{1+x^2} \) using \( u = x^2 \)</p>
+        <p><strong>Evaluate</strong> $ \int \frac{dx}{1+x^2} $ using $ u = x^2 $</p>
         
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Let \( u = x^2 \), then \( du = 2x\,dx \), so \( dx = \frac{du}{2x} \)<br>
-                    <strong>Step 2:</strong> This substitution doesn't simplify well. Instead, recognize the standard form:<br>
-                    \( \int \frac{dx}{1+x^2} = \tan^{-1}(x) + C \)
-                </div>
-                <div class="final-answer">
-                    $$ \int \frac{dx}{1+x^2} = \tan^{-1}(x) + C $$
-                </div>
+                <h4>Step 55:</h4>
+<p>Let $ u = x^2 $, then $ du = 2x\,dx $, so $ dx = \frac{du}{2x} $</p>
+<h4>Step 56:</h4>
+<p>This substitution doesn't simplify well. Instead, recognize the standard form:</p>
+<h4>Step 57:</h4>
+<p>$ \int \frac{dx}{1+x^2} = \tan^{-1}(x) + C $</p>
+                <h4>Final Answer:</h4>
+<p>$$ \int \frac{dx}{1+x^2} = \tan^{-1}(x) + C $$</p>
             </div>
         </details>
 
         <h3>Example 4e</h3>
-        <p><strong>Evaluate</strong> \( \int \sin(5x)\,dx \)</p>
+        <p><strong>Evaluate</strong> $ \int \sin(5x)\,dx $</p>
         
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Let \( u = 5x \), then \( du = 5\,dx \), so \( dx = \frac{du}{5} \)<br>
-                    <strong>Step 2:</strong> Substitute:<br>
-                    \( \int \sin(u) \cdot \frac{du}{5} = \frac{1}{5}\int \sin(u)\,du \)<br>
-                    <strong>Step 3:</strong> Integrate:<br>
-                    \( = \frac{1}{5}(-\cos(u)) + C = -\frac{1}{5}\cos(5x) + C \)
-                </div>
-                <div class="final-answer">
-                    $$ \int \sin(5x)\,dx = -\frac{1}{5}\cos(5x) + C $$
-                </div>
+                <h4>Step 58:</h4>
+<p>Let $ u = 5x $, then $ du = 5\,dx $, so $ dx = \frac{du}{5} $</p>
+<h4>Step 59:</h4>
+<p>Substitute:</p>
+<h4>Step 60:</h4>
+<p>$ \int \sin(u) \cdot \frac{du}{5} = \frac{1}{5}\int \sin(u)\,du $</p>
+<h4>Step 61:</h4>
+<p>Integrate:</p>
+<h4>Step 62:</h4>
+<p>$ = \frac{1}{5}(-\cos(u)) + C = -\frac{1}{5}\cos(5x) + C $</p>
+                <h4>Final Answer:</h4>
+<p>$$ \int \sin(5x)\,dx = -\frac{1}{5}\cos(5x) + C $$</p>
             </div>
         </details>
 
         <h3>Example 4f</h3>
-        <p><strong>Evaluate</strong> \( \int \sqrt{x^5+1}\,x^4\,dx \)</p>
+        <p><strong>Evaluate</strong> $ \int \sqrt{x^5+1}\,x^4\,dx $</p>
         
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Let \( u = x^5 + 1 \), then \( du = 5x^4\,dx \), so \( x^4\,dx = \frac{du}{5} \)<br>
-                    <strong>Step 2:</strong> Substitute:<br>
-                    \( \int u^{1/2} \cdot \frac{du}{5} = \frac{1}{5}\int u^{1/2}\,du \)<br>
-                    <strong>Step 3:</strong> Integrate:<br>
-                    \( = \frac{1}{5} \cdot \frac{u^{3/2}}{3/2} + C = \frac{2}{15}u^{3/2} + C \)<br>
-                    <strong>Step 4:</strong> Back-substitute:<br>
-                    \( = \frac{2}{15}(x^5+1)^{3/2} + C \)
-                </div>
-                <div class="final-answer">
-                    $$ \int \sqrt{x^5+1}\,x^4\,dx = \frac{2}{15}(x^5+1)^{3/2} + C $$
-                </div>
+                <h4>Step 63:</h4>
+<p>Let $ u = x^5 + 1 $, then $ du = 5x^4\,dx $, so $ x^4\,dx = \frac{du}{5} $</p>
+<h4>Step 64:</h4>
+<p>Substitute:</p>
+<h4>Step 65:</h4>
+<p>$ \int u^{1/2} \cdot \frac{du}{5} = \frac{1}{5}\int u^{1/2}\,du $</p>
+<h4>Step 66:</h4>
+<p>Integrate:</p>
+<h4>Step 67:</h4>
+<p>$ = \frac{1}{5} \cdot \frac{u^{3/2}}{3/2} + C = \frac{2}{15}u^{3/2} + C $</p>
+<h4>Step 68:</h4>
+<p>Back-substitute:</p>
+<h4>Step 69:</h4>
+<p>$ = \frac{2}{15}(x^5+1)^{3/2} + C $</p>
+                <h4>Final Answer:</h4>
+<p>$$ \int \sqrt{x^5+1}\,x^4\,dx = \frac{2}{15}(x^5+1)^{3/2} + C $$</p>
             </div>
         </details>
 
         <h3>Example 4g</h3>
-        <p><strong>Evaluate</strong> \( \int \frac{x^4}{\sqrt{x^5+1}}\,dx \)</p>
+        <p><strong>Evaluate</strong> $ \int \frac{x^4}{\sqrt{x^5+1}}\,dx $</p>
         
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Let \( u = x^5 + 1 \), then \( du = 5x^4\,dx \), so \( x^4\,dx = \frac{du}{5} \)<br>
-                    <strong>Step 2:</strong> Substitute:<br>
-                    \( \int \frac{x^4}{\sqrt{x^5+1}}\,dx = \int \frac{1}{\sqrt{u}} \cdot \frac{du}{5} = \frac{1}{5}\int u^{-1/2}\,du \)<br>
-                    <strong>Step 3:</strong> Integrate:<br>
-                    \( = \frac{1}{5} \cdot 2u^{1/2} + C = \frac{2}{5}\sqrt{u} + C \)<br>
-                    <strong>Step 4:</strong> Back-substitute:<br>
-                    \( = \frac{2}{5}\sqrt{x^5+1} + C \)
-                </div>
-                <div class="final-answer">
-                    $$ \int \frac{x^4}{\sqrt{x^5+1}}\,dx = \frac{2}{5}\sqrt{x^5+1} + C $$
-                </div>
+                <h4>Step 70:</h4>
+<p>Let $ u = x^5 + 1 $, then $ du = 5x^4\,dx $, so $ x^4\,dx = \frac{du}{5} $</p>
+<h4>Step 71:</h4>
+<p>Substitute:</p>
+<h4>Step 72:</h4>
+<p>$ \int \frac{x^4}{\sqrt{x^5+1}}\,dx = \int \frac{1}{\sqrt{u}} \cdot \frac{du}{5} = \frac{1}{5}\int u^{-1/2}\,du $</p>
+<h4>Step 73:</h4>
+<p>Integrate:</p>
+<h4>Step 74:</h4>
+<p>$ = \frac{1}{5} \cdot 2u^{1/2} + C = \frac{2}{5}\sqrt{u} + C $</p>
+<h4>Step 75:</h4>
+<p>Back-substitute:</p>
+<h4>Step 76:</h4>
+<p>$ = \frac{2}{5}\sqrt{x^5+1} + C $</p>
+                <h4>Final Answer:</h4>
+<p>$$ \int \frac{x^4}{\sqrt{x^5+1}}\,dx = \frac{2}{5}\sqrt{x^5+1} + C $$</p>
             </div>
         </details>
     </div>
 
-    <div class="problem">
-        <div class="problem-title">Problem 5: Advanced Substitution Examples</div>
+    <div class="example">
+        <h4>Example 5.0</h4>
 
-        <h3>Example 5a</h3>
-        <p><strong>Evaluate</strong> \( \int \frac{dx}{\sqrt{x}(1+\sqrt[4]{x})} \)</p>
+        <h4>Example 5a</h4>
+        <p><strong>Evaluate</strong> $ \int \frac{dx}{\sqrt{x}(1+\sqrt[4]{x})} $</p>
         
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Let \( u = \sqrt[4]{x} = x^{1/4} \), then \( x = u^4 \), \( dx = 4u^3\,du \), and \( \sqrt{x} = u^2 \)<br>
-                    <strong>Step 2:</strong> Substitute:<br>
-                    \begin{aligned}
+                <h4>Step 77:</h4>
+<p>Let $ u = \sqrt[4]{x} = x^{1/4} $, then $ x = u^4 $, $ dx = 4u^3\,du $, and $ \sqrt{x} = u^2 $</p>
+<h4>Step 78:</h4>
+<p>Substitute:</p>
+<h4>Step 79:</h4>
+<p>\begin{aligned}
                     \int \frac{4u^3\,du}{u^2(1+u)} &= 4\int \frac{u}{1+u}\,du \\
                     &= 4\int \left(1 - \frac{1}{1+u}\right)\,du \\
                     &= 4\left[u - \ln|1+u|\right] + C
-                    \end{aligned}
-                </div>
-                <div class="final-answer">
-                    $$ \int \frac{dx}{\sqrt{x}(1+\sqrt[4]{x})} = 4\sqrt[4]{x} - 4\ln(1+\sqrt[4]{x}) + C $$
-                </div>
+                    \end{aligned}</p>
+                <h4>Final Answer:</h4>
+<p>$$ \int \frac{dx}{\sqrt{x}(1+\sqrt[4]{x})} = 4\sqrt[4]{x} - 4\ln(1+\sqrt[4]{x}) + C $$</p>
             </div>
         </details>
 
         <h3>Example 5b</h3>
-        <p><strong>Evaluate</strong> \( \int \frac{e^x}{1+e^x}\,dx \)</p>
+        <p><strong>Evaluate</strong> $ \int \frac{e^x}{1+e^x}\,dx $</p>
         
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Let \( u = 1 + e^x \), then \( du = e^x\,dx \)<br>
-                    <strong>Step 2:</strong> Substitute:<br>
-                    \( \int \frac{1}{u}\,du = \ln|u| + C = \ln(1+e^x) + C \)
-                </div>
-                <div class="final-answer">
-                    $$ \int \frac{e^x}{1+e^x}\,dx = \ln(1+e^x) + C $$
-                </div>
+                <h4>Step 80:</h4>
+<p>Let $ u = 1 + e^x $, then $ du = e^x\,dx $</p>
+<h4>Step 81:</h4>
+<p>Substitute:</p>
+<h4>Step 82:</h4>
+<p>$ \int \frac{1}{u}\,du = \ln|u| + C = \ln(1+e^x) + C $</p>
+                <h4>Final Answer:</h4>
+<p>$$ \int \frac{e^x}{1+e^x}\,dx = \ln(1+e^x) + C $$</p>
             </div>
         </details>
 
         <h3>Example 5c</h3>
-        <p><strong>Evaluate</strong> \( \int \frac{e^x}{1+e^{2x}}\,dx \)</p>
+        <p><strong>Evaluate</strong> $ \int \frac{e^x}{1+e^{2x}}\,dx $</p>
         
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Let \( u = e^x \), then \( du = e^x\,dx \)<br>
-                    <strong>Step 2:</strong> Substitute:<br>
-                    \( \int \frac{du}{1+u^2} = \tan^{-1}(u) + C = \tan^{-1}(e^x) + C \)
-                </div>
-                <div class="final-answer">
-                    $$ \int \frac{e^x}{1+e^{2x}}\,dx = \tan^{-1}(e^x) + C $$
-                </div>
+                <h4>Step 83:</h4>
+<p>Let $ u = e^x $, then $ du = e^x\,dx $</p>
+<h4>Step 84:</h4>
+<p>Substitute:</p>
+<h4>Step 85:</h4>
+<p>$ \int \frac{du}{1+u^2} = \tan^{-1}(u) + C = \tan^{-1}(e^x) + C $</p>
+                <h4>Final Answer:</h4>
+<p>$$ \int \frac{e^x}{1+e^{2x}}\,dx = \tan^{-1}(e^x) + C $$</p>
             </div>
         </details>
 
         <h3>Example 5d</h3>
-        <p><strong>Evaluate</strong> \( \int \sqrt{x+1}\,x\,dx \)</p>
+        <p><strong>Evaluate</strong> $ \int \sqrt{x+1}\,x\,dx $</p>
         
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Let \( u = x+1 \), so \( x = u-1 \), and \( dx = du \)<br>
-                    <strong>Step 2:</strong> Substitute:<br>
-                    \begin{aligned}
+                <h4>Step 86:</h4>
+<p>Let $ u = x+1 $, so $ x = u-1 $, and $ dx = du $</p>
+<h4>Step 87:</h4>
+<p>Substitute:</p>
+<h4>Step 88:</h4>
+<p>\begin{aligned}
                     \int \sqrt{u}(u-1)\,du &= \int (u^{3/2} - u^{1/2})\,du \\
                     &= \frac{u^{5/2}}{5/2} - \frac{u^{3/2}}{3/2} + C \\
                     &= \frac{2}{5}u^{5/2} - \frac{2}{3}u^{3/2} + C
-                    \end{aligned}
-                </div>
-                <div class="final-answer">
-                    $$ \int \sqrt{x+1}\,x\,dx = \frac{2}{5}(x+1)^{5/2} - \frac{2}{3}(x+1)^{3/2} + C $$
-                </div>
+                    \end{aligned}</p>
+                <h4>Final Answer:</h4>
+<p>$$ \int \sqrt{x+1}\,x\,dx = \frac{2}{5}(x+1)^{5/2} - \frac{2}{3}(x+1)^{3/2} + C $$</p>
             </div>
         </details>
     </div>
 
-    <div class="problem">
-        <div class="problem-title">Problem 6: Summary of Key Concepts</div>
+    <div class="example">
+        <h4>Example 6.0</h4>
         <p>This section provides a comprehensive review of the fundamental concepts introduced in Day 1.</p>
         
         <h3>Relationship Between Derivative and Integral</h3>
-        <div class="formula-box">
-            <strong>Derivative (Calculus I):</strong> \( f(x) = x^2 \implies f'(x) = 2x \) (Rate of change, slope of tangent)<br>
-            <strong>Anti-derivative (Calculus II):</strong> \( \int 2x\,dx = x^2 + C \) (Reverse process, accumulation)
-        </div>
+        <div class="notes">
+<h4>Derivative (Calculus I):</h4>
+<p>$ f(x) = x^2 \implies f'(x) = 2x $ (Rate of change, slope of tangent)<br>
+            <strong>Anti-derivative (Calculus II):</strong> $ \int 2x\,dx = x^2 + C $ (Reverse process, accumulation)</p>
+</div>
 
         <h3>Course Roadmap</h3>
         <ul>
@@ -614,15 +669,26 @@
             <li><strong>Parametric & Polar:</strong> Parametric equations, Polar coordinates, Conic sections</li>
         </ul>
 
-        <div class="final-answer">
-            <div class="final-answer-title">Day 1 Summary:</div>
-            <p>We reviewed derivative rules and anti-derivative rules. We learned that integration is the inverse process of differentiation, and we introduced u-substitution as our first integration technique. Key formula: \( \int f(g(x))g'(x)\,dx = \int f(u)\,du \) where \( u = g(x) \).</p>
+        <h4>Final Answer:</h4>
+<p><div class="final-answer-title">Day 1 Summary:</p>
+            <p>We reviewed derivative rules and anti-derivative rules. We learned that integration is the inverse process of differentiation, and we introduced u-substitution as our first integration technique. Key formula: $ \int f(g(x))g'(x)\,dx = \int f(u)\,du $ where $ u = g(x) $.</p>
         </div>
     </div>
+<div class="strategies">
+<h4>Study Tips</h4>
+<p><strong>1.</strong> Memorize the basic derivative and integration rules before moving on to advanced techniques.</p>
+<p><strong>2.</strong> Practice converting between rational exponents and radicals to simplify integration.</p>
+<p><strong>3.</strong> Always include the constant of integration <strong>C</strong> when computing indefinite integrals.</p>
+<p><strong>4.</strong> Check your answers by differentiating your result to see if you recover the original integrand.</p>
+</div>
+            </section>
 
-    <footer style="text-align: center; margin-top: 40px; padding: 20px; color: #666; border-top: 1px solid #ddd;">
-        <p>Calculus II Complete Notes &middot; Day 01: Review & Course Overview</p>
-        <p><a href="day-02.html">Next: Day 02 - Fundamental Theorem of Calculus &rarr;</a></p>
-    </footer>
+            <nav class="chapter-nav">
+
+<span class="nav-indicator" id="chapter-indicator"></span>
+<a href="day-02.html" class="nav-btn next" id="next-chapter">Next</a>
+</nav>
+
+    <script src="../js/app.js"></script>
 </body>
 </html>

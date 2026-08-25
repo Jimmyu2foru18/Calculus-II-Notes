@@ -23,87 +23,328 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 <body>
-<header>
-    <h1>Calculus II Notes</h1>
-    <p class="subtitle">Parametric Equations and Polar Areas</p>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../days/index.html">Days</a>
-        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-        <a href="../final-reviews/index.html">Final Reviews</a>
-        <a href="../final-samples/index.html">Final Samples</a>
-        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-</header>
-<div class="container">
-    <main>
-        <a href="day-17.html" class="back-button">&larr; Back</a>
-        <p class="lead">Browse through the Parametric Equations and Polar Areas pages. Use the arrow buttons or keyboard arrows to navigate.</p>
-        <section id="content">
+    <header>
+        <h1>Calculus II Notes</h1>
+        <p class="subtitle">Day 18: Parametric Equations and Polar Areas</p>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../days/index.html">Days</a>
+            <a href="../quiz-reviews/index.html">Quiz Reviews</a>
+            <a href="../final-reviews/index.html">Final Reviews</a>
+            <a href="../final-samples/index.html">Final Samples</a>
+            <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main class="chapter">
+            <h2>Day 18: Parametric Equations and Polar Areas</h2>
+            <p class="lead">Parametric curves, arc length, tangent lines, and area calculations in polar coordinates.</p>
+
+            <div class="video-section">
+                <h4>Core Lecture</h4>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Video Title</h5>
+                        <p>Description</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Video Title</h5>
+                        <p>Description</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Video Title</h5>
+                        <p>Description</p>
+                    </div>
+                </div>
+            </div>
+
             <h2>Parametric Equations and Polar Areas</h2>
+            <p><strong>Parametric equations</strong> describe curves using a parameter $t$. They are especially useful for curves that cannot be expressed as a single function $y = f(x)$.</p>
 
-            <h3>Problem 1: Parametric Equations</h3>
-            <p><strong>Task:</strong> Find the parametric equations for the parabola y = x^2 + 3x - 4.</p>
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Choose a parameter</h4>
-                    <p>Let x = t.</p>
-                    <h4>Step 2: Express y in terms of t</h4>
-                    <p>y = t^2 + 3t - 4</p>
-                    <h4>Final Answer:</h4>
-                    <p>x(t) = t, y(t) = t^2 + 3t - 4</p>
-                </div>
-            </details>
+            <div class="notes">
+                <h4>Key Formulas</h4>
+                <p><strong>Parametric Equations:</strong> $x = x(t)$, $y = y(t)$</p>
+                <p><strong>Arc Length of a Parametric Curve:</strong></p>
+                <p>$$L = \int_{a}^{b} \sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2} \, dt$$</p>
+                <p><strong>Area in Polar Coordinates:</strong></p>
+                <p>$$A = \frac{1}{2} \int_{\alpha}^{\beta} [r(\theta)]^2 \, d\theta$$</p>
+                <p><strong>Arc Length in Polar Coordinates:</strong></p>
+                <p>$$L = \int_{\alpha}^{\beta} \sqrt{r^2 + \left(\frac{dr}{d\theta}\right)^2} \, d\theta$$</p>
+                <p><strong>Tangent Slope for Parametric Curves:</strong></p>
+                <p>$$\frac{dy}{dx} = \frac{dy/dt}{dx/dt}$$</p>
+            </div>
 
-            <h3>Problem 2: Arc Length of a Parametric Curve</h3>
-            <p><strong>Task:</strong> Find the arc length of the curve x = t, y = t^2 from t = 0 to t = 1.</p>
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Use the arc length formula</h4>
-                    <p>L = integral from a to b of sqrt((dx/dt)^2 + (dy/dt)^2) dt</p>
-                    <h4>Step 2: Compute derivatives</h4>
-                    <p>dx/dt = 1, dy/dt = 2t</p>
-                    <h4>Step 3: Set up the integral</h4>
-                    <p>L = integral from 0 to 1 of sqrt(1 + (2t)^2) dt</p>
-                    <p>= integral from 0 to 1 of sqrt(1 + 4t^2) dt</p>
-                    <h4>Step 4: Use trigonometric substitution</h4>
-                    <p>Let 2t = tan(theta), then dt = (1/2)*sec^2(theta) d(theta)</p>
-                    <p>When t = 0, theta = 0. When t = 1, theta = arctan(2).</p>
-                    <p>sqrt(1 + 4t^2) = sqrt(1 + tan^2(theta)) = sec(theta)</p>
-                    <p>L = integral from 0 to arctan(2) of sec(theta) * (1/2)*sec^2(theta) d(theta)</p>
-                    <p>= (1/2) * integral from 0 to arctan(2) of sec^3(theta) d(theta)</p>
-                    <p>This requires integration by parts, giving:</p>
-                    <p>L = (1/2)[sec(theta)*tan(theta) + ln|sec(theta) + tan(theta)|] from 0 to arctan(2)</p>
-                    <h4>Final Answer:</h4>
-                    <p>L = (1/2)[2*sqrt(5) + ln(2 + sqrt(5))]</p>
+            <div class="example">
+                <h4>Example 18.1</h4>
+                <p><strong>Problem:</strong> Find the parametric equations for the parabola $y = x^2 + 3x - 4$.</p>
+                <div class="visual-aid">
+                    <h4>Figure — Parametric curve: parabola $y = x^2 + 3x - 4$</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="184" font-size="12" fill="#000">x</text>
+                        <text x="205" y="15" font-size="12" fill="#000">y</text>
+                        <path d="M 30,140 C 100,120 160,100 200,85 C 240,70 300,60 380,55" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <text x="35" y="175" font-size="10" fill="#555">-5</text>
+                        <text x="195" y="195" font-size="10" fill="#555">0</text>
+                        <text x="350" y="175" font-size="10" fill="#555">5</text>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">Parametric equations: $x(t) = t$, $y(t) = t^2 + 3t - 4$ trace this parabola.</p>
                 </div>
-            </details>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Choose a parameter</h4>
+                        <p>Let $x = t$.</p>
+                        <h4>Step 2: Express $y$ in terms of $t$</h4>
+                        <p>$$y = t^2 + 3t - 4$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>$x(t) = t$, $y(t) = t^2 + 3t - 4$</p>
+                    </div>
+                </details>
+            </div>
 
-            <h3>Problem 3: Area in Polar Coordinates</h3>
-            <p><strong>Task:</strong> Find the area inside the cardioid r = 1 + cos(theta).</p>
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Set up the area integral</h4>
-                    <p>A = (1/2) * integral from 0 to 2*pi of (1 + cos(theta))^2 d(theta)</p>
-                    <h4>Step 2: Expand the integrand</h4>
-                    <p>(1 + cos(theta))^2 = 1 + 2*cos(theta) + cos^2(theta)</p>
-                    <p>= 1 + 2*cos(theta) + (1 + cos(2*theta))/2</p>
-                    <p>= 3/2 + 2*cos(theta) + (1/2)*cos(2*theta)</p>
-                    <h4>Step 3: Integrate</h4>
-                    <p>A = (1/2) * integral from 0 to 2*pi of [3/2 + 2*cos(theta) + (1/2)*cos(2*theta)] d(theta)</p>
-                    <p>= (1/2) * [3*theta/2 + 2*sin(theta) + (1/4)*sin(2*theta)] from 0 to 2*pi</p>
-                    <p>= (1/2) * [(3*pi) + 0 + 0 - 0]</p>
-                    <p>= (1/2) * 3*pi = 3*pi/2</p>
-                    <h4>Final Answer:</h4>
-                    <p>The area is 3*pi/2.</p>
+            <div class="example">
+                <h4>Example 18.2</h4>
+                <p><strong>Problem:</strong> Find the arc length of the curve $x = t$, $y = t^2$ from $t = 0$ to $t = 1$.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Use the arc length formula</h4>
+                        <p>$$L = \int_{a}^{b} \sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2} \, dt$$</p>
+                        <h4>Step 2: Compute derivatives</h4>
+                        <p>$\frac{dx}{dt} = 1$, $\frac{dy}{dt} = 2t$</p>
+                        <h4>Step 3: Set up the integral</h4>
+                        <p>$$L = \int_{0}^{1} \sqrt{1 + (2t)^2} \, dt = \int_{0}^{1} \sqrt{1 + 4t^2} \, dt$$</p>
+                        <h4>Step 4: Use trigonometric substitution</h4>
+                        <p>Let $2t = \tan(\theta)$, then $dt = \frac{1}{2}\sec^2(\theta) \, d\theta$</p>
+                        <p>When $t = 0$, $\theta = 0$. When $t = 1$, $\theta = \arctan(2)$.</p>
+                        <p>$$\sqrt{1 + 4t^2} = \sqrt{1 + \tan^2(\theta)} = \sec(\theta)$$</p>
+                        <p>$$L = \int_{0}^{\arctan(2)} \sec(\theta) \cdot \frac{1}{2}\sec^2(\theta) \, d\theta$$</p>
+                        <p>$$= \frac{1}{2} \int_{0}^{\arctan(2)} \sec^3(\theta) \, d\theta$$</p>
+                        <p>This requires integration by parts, giving:</p>
+                        <p>$$L = \frac{1}{2}\left[\sec(\theta)\tan(\theta) + \ln|\sec(\theta) + \tan(\theta)|\right]_{0}^{\arctan(2)}$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>$$L = \frac{1}{2}\left[2\sqrt{5} + \ln(2 + \sqrt{5})\right]$$</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 18.3</h4>
+                <p><strong>Problem:</strong> Find the area inside the cardioid $r = 1 + \cos(\theta)$.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Set up the area integral</h4>
+                        <p>$$A = \frac{1}{2} \int_{0}^{2\pi} (1 + \cos(\theta))^2 \, d\theta$$</p>
+                        <h4>Step 2: Expand the integrand</h4>
+                        <p>$$(1 + \cos(\theta))^2 = 1 + 2\cos(\theta) + \cos^2(\theta)$$</p>
+                        <p>$$= 1 + 2\cos(\theta) + \frac{1 + \cos(2\theta)}{2}$$</p>
+                        <p>$$= \frac{3}{2} + 2\cos(\theta) + \frac{1}{2}\cos(2\theta)$$</p>
+                        <h4>Step 3: Integrate</h4>
+                        <p>$$A = \frac{1}{2} \int_{0}^{2\pi} \left[\frac{3}{2} + 2\cos(\theta) + \frac{1}{2}\cos(2\theta)\right] d\theta$$</p>
+                        <p>$$= \frac{1}{2} \left[\frac{3\theta}{2} + 2\sin(\theta) + \frac{1}{4}\sin(2\theta)\right]_{0}^{2\pi}$$</p>
+                        <p>$$= \frac{1}{2} \left[(3\pi) + 0 + 0 - 0\right]$$</p>
+                        <p>$$= \frac{3\pi}{2}$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>The area is $\frac{3\pi}{2}$.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 18.4</h4>
+                <p><strong>Problem:</strong> Find the slope of the tangent line to the curve $x = t^2$, $y = t^3$ at $t = 2$.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Compute derivatives</h4>
+                        <p>$$\frac{dx}{dt} = 2t, \quad \frac{dy}{dt} = 3t^2$$</p>
+                        <h4>Step 2: Use the chain rule</h4>
+                        <p>$$\frac{dy}{dx} = \frac{dy/dt}{dx/dt} = \frac{3t^2}{2t} = \frac{3t}{2}$$</p>
+                        <h4>Step 3: Evaluate at $t = 2$</h4>
+                        <p>$$\frac{dy}{dx}\bigg|_{t=2} = \frac{3(2)}{2} = 3$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>The slope of the tangent line at $t = 2$ is 3.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 18.5</h4>
+                <p><strong>Problem:</strong> Find the arc length of the curve $r = \theta$ from $\theta = 0$ to $\theta = 2\pi$ (spiral of Archimedes).</p>
+                <div class="visual-aid">
+                    <h4>Figure — Archimedean spiral $r = \theta$</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="110" x2="380" y2="110" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="114" font-size="12" fill="#000">x</text>
+                        <text x="205" y="15" font-size="12" fill="#000">y</text>
+                        <path d="M 200,110 C 210,100 220,90 230,85 C 240,80 250,78 260,80 C 270,82 280,88 290,98 C 300,110 310,125 320,140 C 330,155 340,170 350,185" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <circle cx="200" cy="110" r="3" fill="#000"/>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">The Archimedean spiral $r = \theta$ has arc length $L = \int_0^{2\pi} \sqrt{\theta^2 + 1}\,d\theta$.</p>
                 </div>
-            </details>
-        </section>
-    </main>
-</div>
-<script src="../js/app.js"></script>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Use the polar arc length formula</h4>
+                        <p>$$L = \int_{\alpha}^{\beta} \sqrt{r^2 + \left(\frac{dr}{d\theta}\right)^2} \, d\theta$$</p>
+                        <h4>Step 2: Compute $r$ and $\frac{dr}{d\theta}$</h4>
+                        <p>$r = \theta$, so $\frac{dr}{d\theta} = 1$</p>
+                        <h4>Step 3: Set up the integral</h4>
+                        <p>$$L = \int_{0}^{2\pi} \sqrt{\theta^2 + 1} \, d\theta$$</p>
+                        <p>Use the formula $\int \sqrt{x^2 + a^2} \, dx = \frac{x}{2}\sqrt{x^2+a^2} + \frac{a^2}{2}\ln(x + \sqrt{x^2+a^2})$:</p>
+                        <p>$$L = \left[\frac{\theta}{2}\sqrt{\theta^2+1} + \frac{1}{2}\ln(\theta + \sqrt{\theta^2+1})\right]_{0}^{2\pi}$$</p>
+                        <p>$$= \pi\sqrt{4\pi^2+1} + \frac{1}{2}\ln(2\pi + \sqrt{4\pi^2+1})$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>$$L = \pi\sqrt{4\pi^2+1} + \frac{1}{2}\ln(2\pi + \sqrt{4\pi^2+1})$$</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 18.6</h4>
+                <p><strong>Problem:</strong> Find the area inside the circle $r = 2$ and outside the cardioid $r = 1 + \cos(\theta)$.</p>
+                <div class="visual-aid">
+                    <h4>Figure — Area between polar curves</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="110" x2="380" y2="110" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="114" font-size="12" fill="#000">x</text>
+                        <text x="205" y="15" font-size="12" fill="#000">y</text>
+                        <circle cx="200" cy="110" r="80" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <path d="M 200,30 C 240,30 280,50 300,90 C 320,130 300,170 260,190 C 220,210 180,210 140,190 C 100,170 80,130 100,90 C 120,50 160,30 200,30" fill="none" stroke="#c0392b" stroke-width="2"/>
+                        <circle cx="200" cy="110" r="3" fill="#000"/>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">The shaded region between the circle $r=2$ and cardioid $r=1+\cos\theta$ has area $5\pi/2$.</p>
+                </div>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Find the points of intersection</h4>
+                        <p>$2 = 1 + \cos(\theta) \Rightarrow \cos(\theta) = 1 \Rightarrow \theta = 0$.</p>
+                        <p>By symmetry, the curves also meet at $\theta = 2\pi$.</p>
+                        <h4>Step 2: Set up the area integral</h4>
+                        <p>The area between two polar curves is:</p>
+                        <p>$$A = \frac{1}{2} \int_{\alpha}^{\beta} \left(r_{\text{outer}}^2 - r_{\text{inner}}^2\right) d\theta$$</p>
+                        <p>Here $r_{\text{outer}} = 2$ and $r_{\text{inner}} = 1 + \cos(\theta)$.</p>
+                        <h4>Step 3: Evaluate</h4>
+                        <p>$$A = \frac{1}{2} \int_{0}^{2\pi} \left[4 - (1 + \cos(\theta))^2\right] d\theta$$</p>
+                        <p>$$= \frac{1}{2} \int_{0}^{2\pi} \left[3 - 2\cos(\theta) - \cos^2(\theta)\right] d\theta$$</p>
+                        <p>$$= \frac{1}{2} \int_{0}^{2\pi} \left[\frac{5}{2} - 2\cos(\theta) - \frac{1}{2}\cos(2\theta)\right] d\theta$$</p>
+                        <p>$$= \frac{1}{2} \left[\frac{5\theta}{2} - 2\sin(\theta) - \frac{1}{4}\sin(2\theta)\right]_{0}^{2\pi}$$</p>
+                        <p>$$= \frac{1}{2} \cdot 5\pi = \frac{5\pi}{2}$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>The area is $\frac{5\pi}{2}$.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="questions">
+                <h4>Practice Problems</h4>
+                <details class="question">
+                    <summary>Problem 1 — Parametric Equations for a Circle</summary>
+                    <p>Find parametric equations for the circle $x^2 + y^2 = 9$.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>$x(t) = 3\cos(t)$, $y(t) = 3\sin(t)$ for $0 \leq t < 2\pi$.</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 2 — Arc Length of a Line Segment</summary>
+                    <p>Find the arc length of the line segment from $(1, 2)$ to $(4, 6)$ using parametric equations.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>Parametrize: $x(t) = 1 + 3t$, $y(t) = 2 + 4t$ for $0 \leq t \leq 1$.</p>
+                        <p>$\frac{dx}{dt} = 3$, $\frac{dy}{dt} = 4$</p>
+                        <p>$L = \int_{0}^{1} \sqrt{9 + 16} \, dt = \int_{0}^{1} 5 \, dt = 5$.</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 3 — Area of a Polar Region</summary>
+                    <p>Find the area of the region bounded by $r = 2(1 + \cos(\theta))$.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>$$A = \frac{1}{2} \int_{0}^{2\pi} [2(1+\cos(\theta))]^2 \, d\theta = 2 \int_{0}^{2\pi} (1 + 2\cos(\theta) + \cos^2(\theta)) \, d\theta$$</p>
+                        <p>$$= 2 \int_{0}^{2\pi} \left[\frac{3}{2} + 2\cos(\theta) + \frac{1}{2}\cos(2\theta)\right] d\theta = 2 \cdot 3\pi = 6\pi$$</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 4 — Tangent Line to a Parametric Curve</summary>
+                    <p>Find the equation of the tangent line to the curve $x = t^2$, $y = t^3$ at $t = 1$.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>At $t = 1$: $x = 1$, $y = 1$. Slope $\frac{dy}{dx} = \frac{3t^2}{2t} = \frac{3}{2}$ at $t = 1$.</p>
+                        <p>Equation: $y - 1 = \frac{3}{2}(x - 1)$, or $y = \frac{3}{2}x - \frac{1}{2}$.</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 5 — Area Inside One Loop of a Rose</summary>
+                    <p>Find the area of one loop of the four-leaved rose $r = 2\cos(2\theta)$.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>One loop is traced from $\theta = -\frac{\pi}{4}$ to $\theta = \frac{\pi}{4}$.</p>
+                        <p>$$A = \frac{1}{2} \int_{-\pi/4}^{\pi/4} (2\cos(2\theta))^2 \, d\theta = 2 \int_{-\pi/4}^{\pi/4} \cos^2(2\theta) \, d\theta$$</p>
+                        <p>$$= 2 \int_{-\pi/4}^{\pi/4} \frac{1 + \cos(4\theta)}{2} \, d\theta = \left[\theta + \frac{1}{4}\sin(4\theta)\right]_{-\pi/4}^{\pi/4} = \frac{\pi}{2}$$</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 6 — Arc Length of a Polar Curve</summary>
+                    <p>Find the arc length of the circle $r = 3$ from $\theta = 0$ to $\theta = \pi$ using the polar arc length formula.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>$r = 3$, $\frac{dr}{d\theta} = 0$</p>
+                        <p>$$L = \int_{0}^{\pi} \sqrt{9 + 0} \, d\theta = \int_{0}^{\pi} 3 \, d\theta = 3\pi$$</p>
+                        <p>(This is half the circumference of a circle with radius 3.)</p>
+                    </details>
+                </details>
+            </div>
+
+            <div class="strategies">
+                <h4>Study Tips</h4>
+                <p><strong>1.</strong> For parametric curves, always find $\frac{dx}{dt}$ and $\frac{dy}{dt}$ before setting up integrals.</p>
+                <p><strong>2.</strong> Sketch polar regions before integrating to determine correct limits.</p>
+                <p><strong>3.</strong> Use symmetry to simplify polar area calculations when possible.</p>
+                <p><strong>4.</strong> The polar arc length formula requires both $r$ and $\frac{dr}{d\theta}$.</p>
+                <p><strong>5.</strong> For tangent lines in parametric form, first find the point $(x(t), y(t))$ and the slope $\frac{dy}{dx}$.</p>
+            </div>
+
+            <nav class="chapter-nav">
+                <a href="day-17.html" class="nav-btn prev" id="prev-chapter">Previous</a>
+                <span class="nav-indicator" id="chapter-indicator"></span>
+                <a href="../quiz-reviews/index.html" class="nav-btn next" id="next-chapter">Next</a>
+            </nav>
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
 </body>
 </html>

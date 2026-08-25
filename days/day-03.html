@@ -4,305 +4,390 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 03 - Integration, Substitution, and Area | Calculus II Notes</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
     <script>
         window.MathJax = {
             tex: {
-                inlineMath: [['\\(', '\\)']],
+                inlineMath: [['$', '$']],
                 displayMath: [['$$', '$$'], ['\\[', '\\]']],
-                processEscapes: true
+                processEscapes: true,
+            tags: 'ams'
             },
             options: {
-                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            ignoreHtmlClass: 'no-mathjax'
             }
         };
     </script>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Georgia', serif; line-height: 1.8; color: #1a1a1a; background: #fafafa; max-width: 900px; margin: 0 auto; padding: 20px; }
-        header { background: #1a237e; color: white; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
-        header h1 { font-size: 1.8em; }
-        nav { background: #e8eaf6; padding: 12px; border-radius: 8px; margin-bottom: 25px; }
-        nav a { color: #1a237e; text-decoration: none; margin-right: 20px; font-weight: bold; }
-        nav a:hover { text-decoration: underline; }
-        .problem { background: white; border: 1px solid #ddd; border-radius: 8px; padding: 25px; margin-bottom: 25px; }
-        .problem-title { font-size: 1.3em; color: #1a237e; border-bottom: 2px solid #1a237e; padding-bottom: 8px; margin-bottom: 15px; }
-        .step { margin: 15px 0; padding: 10px; background: #f5f5f5; border-left: 4px solid #1a237e; }
-        .final-answer { background: #e8f5e9; border: 2px solid #2e7d32; padding: 15px; margin-top: 20px; border-radius: 8px; }
-        .final-answer-title { color: #2e7d32; font-weight: bold; margin-bottom: 8px; }
-        h2 { color: #1a237e; margin-top: 30px; }
-        h3 { color: #283593; margin-top: 20px; }
-        .formula-box { background: #fff3e0; border: 1px solid #ff9800; padding: 12px; margin: 10px 0; border-radius: 6px; }
-        details.question { margin-top: 15px; }
-        details.question summary { cursor: pointer; font-weight: bold; color: #1a237e; }
-        .solution { margin-top: 10px; }
-    </style>
-</head>
+    </head>
 <body>
     <header>
-        <h1>Day 03: Integration by Substitution and Area Between Curves</h1>
-        <p>Calculus II - Complete Step-by-Step Solutions</p>
+        <h1>Calculus II Notes</h1>
+        <p class="subtitle">Day 03: Integration, Substitution, and Area</p>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../days/index.html">Days</a>
+            <a href="../quiz-reviews/index.html">Quiz Reviews</a>
+            <a href="../final-reviews/index.html">Final Reviews</a>
+            <a href="../final-samples/index.html">Final Samples</a>
+            <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+        </nav>
     </header>
 
-    <nav>
-        <a href="day-02.html">&larr; Day 02</a>
-        <a href="day-03.html">Day 03</a>
-        <a href="day-04.html">Day 04 &rarr;</a>
-        <a href="day-05.html">Day 05</a>
-        <a href="quiz-01.html">Quiz 01</a>
-        <a href="quiz-02.html">Quiz 02</a>
-        <a href="quiz-03.html">Quiz 03</a>
-    </nav>
-
+    <div class="container">
+        <main class="chapter">
+            <section id="content">
     <h2>Integration by Substitution</h2>
+<p class="lead">We practice u-substitution, compute areas between curves, and apply the disk and washer methods for volumes of revolution.</p>
+<div class="video-section">
+<h4>Core Lecture</h4>
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+</div>
+</div>
+<div class="video-grid">
+<div class="video-card">
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+    </div>
+    <div class="video-card-caption">
+        <h5>Video Title</h5>
+        <p>Description</p>
+    </div>
+</div>
+<div class="video-card">
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+    </div>
+    <div class="video-card-caption">
+        <h5>Video Title</h5>
+        <p>Description</p>
+    </div>
+</div>
+<div class="video-card">
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+    </div>
+    <div class="video-card-caption">
+        <h5>Video Title</h5>
+        <p>Description</p>
+    </div>
+</div>
+</div>
     <p>u-Substitution is the integration counterpart to the chain rule for differentiation. The key formula is:<br>
     $$ \int f(g(x))g'(x)\,dx = \int f(u)\,du \quad \text{where } u = g(x), \, du = g'(x)\,dx $$</p>
 
-    <div class="problem">
-        <div class="problem-title">Problem 1: Basic u-Substitution</div>
-        <p><strong>Evaluate</strong> \( \int \frac{2x}{\sqrt{x^2+1}}\,dx \)</p>
+    <div class="example">
+        <h4>Example 1.0</h4>
+        <p><strong>Evaluate</strong> $ \int \frac{2x}{\sqrt{x^2+1}}\,dx $</p>
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Choose \( u = x^2 + 1 \), then \( du = 2x\,dx \)<br>
-                    <strong>Step 2:</strong> Substitute into the integral:<br>
-                    \begin{aligned}
+                <h4>Step 1:</h4>
+<p>Choose $ u = x^2 + 1 $, then $ du = 2x\,dx $</p>
+<h4>Step 2:</h4>
+<p>Substitute into the integral:</p>
+<h4>Step 3:</h4>
+<p>\begin{aligned}
                     \int \frac{2x}{\sqrt{x^2+1}}\,dx &= \int \frac{1}{\sqrt{u}}\,du \\
                     &= \int u^{-1/2}\,du
-                    \end{aligned}
-                </div>
-                <div class="step">
-                    <strong>Step 3:</strong> Integrate using the power rule:<br>
-                    \( \int u^{-1/2}\,du = \frac{u^{1/2}}{1/2} + C = 2\sqrt{u} + C \)<br>
-                    <strong>Step 4:</strong> Back-substitute \( u = x^2 + 1 \):<br>
-                    \( = 2\sqrt{x^2+1} + C \)
-                </div>
-                <div class="final-answer">
-                    $$ \int \frac{2x}{\sqrt{x^2+1}}\,dx = 2\sqrt{x^2+1} + C $$
-                </div>
+                    \end{aligned}</p>
+                <h4>Step 4:</h4>
+<p>Integrate using the power rule:</p>
+<h4>Step 5:</h4>
+<p>$ \int u^{-1/2}\,du = \frac{u^{1/2}}{1/2} + C = 2\sqrt{u} + C $</p>
+<h4>Step 6:</h4>
+<p>Back-substitute $ u = x^2 + 1 $:</p>
+<h4>Step 7:</h4>
+<p>$ = 2\sqrt{x^2+1} + C $</p>
+                <h4>Final Answer:</h4>
+<p>$$ \int \frac{2x}{\sqrt{x^2+1}}\,dx = 2\sqrt{x^2+1} + C $$</p>
             </div>
         </details>
     </div>
 
-    <div class="problem">
-        <div class="problem-title">Problem 2: Area Between Curves - Intersection Points</div>
-        <p><strong>Task:</strong> Find the area of the region bounded by \( y = x \) and \( y = x^3 \)</p>
+    <div class="example">
+        <h4>Example 2.0</h4>
+        <p><strong>Task:</strong> Find the area of the region bounded by $ y = x $ and $ y = x^3 $</p>
+        <div class="visual-aid">
+            <h4>Figure — Area between $y = x$ and $y = x^3$</h4>
+            <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                <text x="385" y="184" font-size="12" fill="#000">x</text>
+                <text x="205" y="15" font-size="12" fill="#000">y</text>
+                <path d="M 30,200 C 100,170 150,140 200,110 C 250,80 300,50 350,25" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                <path d="M 30,200 C 100,170 150,140 200,110 C 250,80 300,50 350,25" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="5,5"/>
+                <rect x="130" y="50" width="150" height="130" fill="#1a3a5c" opacity="0.15"/>
+                <text x="35" y="175" font-size="10" fill="#555">-1</text>
+                <text x="195" y="195" font-size="10" fill="#555">0</text>
+                <text x="320" y="175" font-size="10" fill="#555">1</text>
+            </svg>
+            <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">The line $y=x$ (blue) and curve $y=x^3$ (red dashed) intersect at $x=-1, 0, 1$. The bounded region has area $1/2$.</p>
+        </div>
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Find intersection points by solving \( x = x^3 \):<br>
-                    \begin{aligned}
+                <h4>Step 8:</h4>
+<p>Find intersection points by solving $ x = x^3 $:</p>
+<h4>Step 9:</h4>
+<p>\begin{aligned}
                     x &= x^3 \\
                     x - x^3 &= 0 \\
                     x(1-x^2) &= 0 \\
                     x(1-x)(1+x) &= 0
                     \end{aligned}
-                    So \( x = 0, 1, -1 \)
-                </div>
-                <div class="step">
-                    <strong>Step 2:</strong> Determine which function is on top on each interval:<br>
-                    On \([-1, 0]\): Test \( x = -0.5 \): \( -0.5 > (-0.5)^3 = -0.125 \), so \( x > x^3 \)<br>
-                    On \([0, 1]\): Test \( x = 0.5 \): \( 0.5 < (0.5)^3 = 0.125 \), wait, \( 0.5 > 0.125 \), so \( x > x^3 \)<br>
-                    Actually, \( x^3 \leq x \) on \([-1, 1]\), so \( x \) is on top.
-                </div>
-                <div class="step">
-                    <strong>Step 3:</strong> Set up the integral (use symmetry or split at 0):<br>
-                    \begin{aligned}
+                    So $ x = 0, 1, -1 $</p>
+                <h4>Step 10:</h4>
+<p>Determine which function is on top on each interval:</p>
+<h4>Step 11:</h4>
+<p>On $[-1, 0]$: Test $ x = -0.5 $: $ -0.5 > (-0.5)^3 = -0.125 $, so $ x > x^3 $</p>
+<h4>Step 12:</h4>
+<p>On $[0, 1]$: Test $ x = 0.5 $: $ 0.5 < (0.5)^3 = 0.125 $, wait, $ 0.5 > 0.125 $, so $ x > x^3 $</p>
+<h4>Step 13:</h4>
+<p>Actually, $ x^3 \leq x $ on $[-1, 1]$, so $ x $ is on top.</p>
+                <h4>Step 14:</h4>
+<p>Set up the integral (use symmetry or split at 0):</p>
+<h4>Step 15:</h4>
+<p>\begin{aligned}
                     A &= \int_{-1}^1 (x - x^3)\,dx \\
                     &= 2\int_0^1 (x - x^3)\,dx \quad \text{(by symmetry)} \\
                     &= 2\left[\frac{x^2}{2} - \frac{x^4}{4}\right]_0^1 \\
                     &= 2\left(\frac{1}{2} - \frac{1}{4}\right) \\
                     &= 2 \cdot \frac{1}{4} = \frac{1}{2}
-                    \end{aligned}
-                </div>
-                <div class="final-answer">
-                    $$ A = \frac{1}{2} $$
-                </div>
+                    \end{aligned}</p>
+                <h4>Final Answer:</h4>
+<p>$$ A = \frac{1}{2} $$</p>
             </div>
         </details>
     </div>
 
-    <div class="problem">
-        <div class="problem-title">Problem 3: Area Between Two Parabolas</div>
-        <p><strong>Task:</strong> Find the area bounded by \( y = x^2 \) and \( y = x + 2 \)</p>
+    <div class="example">
+        <h4>Example 3.0</h4>
+        <p><strong>Task:</strong> Find the area bounded by $ y = x^2 $ and $ y = x + 2 $</p>
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Find intersection points by solving \( x^2 = x + 2 \):<br>
-                    \begin{aligned}
+                <h4>Step 16:</h4>
+<p>Find intersection points by solving $ x^2 = x + 2 $:</p>
+<h4>Step 17:</h4>
+<p>\begin{aligned}
                     x^2 - x - 2 &= 0 \\
                     (x+1)(x-2) &= 0
                     \end{aligned}
-                    So \( x = -1, 2 \)
-                </div>
-                <div class="step">
-                    <strong>Step 2:</strong> On \([-1, 2]\), the line \( y = x+2 \) is above the parabola \( y = x^2 \):<br>
-                    \begin{aligned}
+                    So $ x = -1, 2 $</p>
+                <h4>Step 18:</h4>
+<p>On $[-1, 2]$, the line $ y = x+2 $ is above the parabola $ y = x^2 $:</p>
+<h4>Step 19:</h4>
+<p>\begin{aligned}
                     A &= \int_{-1}^2 [(x+2) - x^2]\,dx \\
                     &= \left[\frac{x^2}{2} + 2x - \frac{x^3}{3}\right]_{-1}^2
-                    \end{aligned}
-                </div>
-                <div class="step">
-                    <strong>Step 3:</strong> Evaluate at the bounds:<br>
-                    \begin{aligned}
+                    \end{aligned}</p>
+                <h4>Step 20:</h4>
+<p>Evaluate at the bounds:</p>
+<h4>Step 21:</h4>
+<p>\begin{aligned}
                     F(2) &= \frac{4}{2} + 4 - \frac{8}{3} = 2 + 4 - \frac{8}{3} = 6 - \frac{8}{3} = \frac{10}{3} \\
                     F(-1) &= \frac{1}{2} - 2 - \frac{-1}{3} = \frac{1}{2} - 2 + \frac{1}{3} = -\frac{7}{6} \\
                     A &= \frac{10}{3} - \left(-\frac{7}{6}\right) = \frac{20}{6} + \frac{7}{6} = \frac{27}{6} = \frac{9}{2}
-                    \end{aligned}
-                </div>
-                <div class="final-answer">
-                    $$ A = \frac{9}{2} $$
-                </div>
+                    \end{aligned}</p>
+                <h4>Final Answer:</h4>
+<p>$$ A = \frac{9}{2} $$</p>
             </div>
         </details>
     </div>
 
-    <div class="problem">
-        <div class="problem-title">Problem 4: Area of a Circle Segment</div>
-        <p><strong>Task:</strong> Find the area of the region inside the circle \( x^2 + y^2 = 1 \) and above the x-axis, bounded by \( x = -1 \) and \( x = 1 \)</p>
+    <div class="example">
+        <h4>Example 4.0</h4>
+        <p><strong>Task:</strong> Find the area of the region inside the circle $ x^2 + y^2 = 1 $ and above the x-axis, bounded by $ x = -1 $ and $ x = 1 $</p>
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> The circle has equation \( x^2 + y^2 = 1 \), so \( y = \sqrt{1-x^2} \) (top half)<br>
-                    <strong>Step 2:</strong> Set up the integral for the upper semicircle:<br>
-                    \begin{aligned}
+                <h4>Step 22:</h4>
+<p>The circle has equation $ x^2 + y^2 = 1 $, so $ y = \sqrt{1-x^2} $ (top half)</p>
+<h4>Step 23:</h4>
+<p>Set up the integral for the upper semicircle:</p>
+<h4>Step 24:</h4>
+<p>\begin{aligned}
                     A &= \int_{-1}^1 \sqrt{1-x^2}\,dx
-                    \end{aligned}
-                </div>
-                <div class="step">
-                    <strong>Step 3:</strong> Use the substitution \( x = \sin(\theta) \), \( dx = \cos(\theta)\,d\theta \):<br>
-                    When \( x = -1 \), \( \theta = -\pi/2 \). When \( x = 1 \), \( \theta = \pi/2 \).<br>
-                    \begin{aligned}
+                    \end{aligned}</p>
+                <h4>Step 25:</h4>
+<p>Use the substitution $ x = \sin(\theta) $, $ dx = \cos(\theta)\,d\theta $:</p>
+<h4>Step 26:</h4>
+<p>When $ x = -1 $, $ \theta = -\pi/2 $. When $ x = 1 $, $ \theta = \pi/2 $.</p>
+<h4>Step 27:</h4>
+<p>\begin{aligned}
                     A &= \int_{-\pi/2}^{\pi/2} \sqrt{1-\sin^2(\theta)} \cdot \cos(\theta)\,d\theta \\
                     &= \int_{-\pi/2}^{\pi/2} \cos^2(\theta)\,d\theta \\
                     &= \int_{-\pi/2}^{\pi/2} \frac{1+\cos(2\theta)}{2}\,d\theta \\
                     &= \frac{1}{2}\left[\theta + \frac{\sin(2\theta)}{2}\right]_{-\pi/2}^{\pi/2} \\
                     &= \frac{1}{2}\left(\frac{\pi}{2} - \left(-\frac{\pi}{2}\right)\right) = \frac{\pi}{2}
-                    \end{aligned}
-                </div>
-                <div class="final-answer">
-                    $$ A = \frac{\pi}{2} $$
-                </div>
+                    \end{aligned}</p>
+                <h4>Final Answer:</h4>
+<p>$$ A = \frac{\pi}{2} $$</p>
             </div>
         </details>
-        <p><em>Note:</em> The full circle area is \( \pi \), so the upper semicircle has area \( \pi/2 \).</p>
+        <p><em>Note:</em> The full circle area is $ \pi $, so the upper semicircle has area $ \pi/2 $.</p>
     </div>
 
-    <div class="problem">
-        <div class="problem-title">Problem 5: Area with Integration w.r.t. y</div>
-        <p><strong>Task:</strong> Find the area of the region bounded by \( x = y^2 - 4 \) and \( x = 0 \) (the y-axis)</p>
+    <div class="example">
+        <h4>Example 5.0</h4>
+        <p><strong>Task:</strong> Find the area of the region bounded by $ x = y^2 - 4 $ and $ x = 0 $ (the y-axis)</p>
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Find the y-intercepts of \( x = y^2 - 4 \):<br>
-                    Set \( x = 0 \): \( 0 = y^2 - 4 \implies y^2 = 4 \implies y = \pm 2 \)<br>
-                    So the region extends from \( y = -2 \) to \( y = 2 \)
-                </div>
-                <div class="step">
-                    <strong>Step 2:</strong> Set up the integral with respect to \( y \):<br>
-                    Right curve: \( x = 0 \), Left curve: \( x = y^2 - 4 \)<br>
-                    \begin{aligned}
+                <h4>Step 28:</h4>
+<p>Find the y-intercepts of $ x = y^2 - 4 $:</p>
+<h4>Step 29:</h4>
+<p>Set $ x = 0 $: $ 0 = y^2 - 4 \implies y^2 = 4 \implies y = \pm 2 $</p>
+<h4>Step 30:</h4>
+<p>So the region extends from $ y = -2 $ to $ y = 2 $</p>
+                <h4>Step 31:</h4>
+<p>Set up the integral with respect to $ y $:</p>
+<h4>Step 32:</h4>
+<p>Right curve: $ x = 0 $, Left curve: $ x = y^2 - 4 $</p>
+<h4>Step 33:</h4>
+<p>\begin{aligned}
                     A &= \int_{-2}^2 [0 - (y^2-4)]\,dy \\
                     &= \int_{-2}^2 (4-y^2)\,dy
-                    \end{aligned}
-                </div>
-                <div class="step">
-                    <strong>Step 3:</strong> Evaluate (using symmetry):<br>
-                    \begin{aligned}
+                    \end{aligned}</p>
+                <h4>Step 34:</h4>
+<p>Evaluate (using symmetry):</p>
+<h4>Step 35:</h4>
+<p>\begin{aligned}
                     A &= 2\int_0^2 (4-y^2)\,dy \\
                     &= 2\left[4y - \frac{y^3}{3}\right]_0^2 \\
                     &= 2\left(8 - \frac{8}{3}\right) \\
                     &= 2 \cdot \frac{16}{3} = \frac{32}{3}
-                    \end{aligned}
-                </div>
-                <div class="final-answer">
-                    $$ A = \frac{32}{3} $$
-                </div>
+                    \end{aligned}</p>
+                <h4>Final Answer:</h4>
+<p>$$ A = \frac{32}{3} $$</p>
             </div>
         </details>
     </div>
 
-    <div class="problem">
-        <div class="problem-title">Problem 6: Volume by Slicing (Disk Method)</div>
-        <p><strong>Task:</strong> Find the volume of the solid obtained by revolving \( y = \sqrt{x} \) about the x-axis from \( x = 0 \) to \( x = 4 \)</p>
+    <div class="example">
+        <h4>Example 6.0</h4>
+        <p><strong>Task:</strong> Find the volume of the solid obtained by revolving $ y = \sqrt{x} $ about the x-axis from $ x = 0 $ to $ x = 4 $</p>
+        <div class="visual-aid">
+            <h4>Figure — Disk method for $y = \sqrt{x}$ revolved about the x-axis</h4>
+            <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                <text x="385" y="184" font-size="12" fill="#000">x</text>
+                <text x="205" y="15" font-size="12" fill="#000">y</text>
+                <path d="M 30,180 C 80,140 140,100 200,80 C 260,60 320,45 380,35" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                <line x1="30" y1="180" x2="380" y2="35" stroke="#000" stroke-width="0.5" stroke-dasharray="3,3"/>
+                <ellipse cx="200" cy="80" rx="0" ry="0" fill="none" stroke="#000" stroke-width="1"/>
+                <text x="35" y="175" font-size="10" fill="#555">0</text>
+                <text x="195" y="195" font-size="10" fill="#555">0</text>
+                <text x="350" y="175" font-size="10" fill="#555">4</text>
+            </svg>
+            <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">Revolving $y = \sqrt{x}$ about the x-axis generates a solid whose volume is $V = \pi\int_0^4 x\,dx = 8\pi$.</p>
+        </div>
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> The disk method formula is:<br>
-                    \( V = \pi\int_a^b [f(x)]^2\,dx \)<br>
-                    <strong>Step 2:</strong> Here \( f(x) = \sqrt{x} \), \( a = 0 \), \( b = 4 \):<br>
-                    \begin{aligned}
+                <h4>Step 36:</h4>
+<p>The disk method formula is:</p>
+<h4>Step 37:</h4>
+<p>$ V = \pi\int_a^b [f(x)]^2\,dx $</p>
+<h4>Step 38:</h4>
+<p>Here $ f(x) = \sqrt{x} $, $ a = 0 $, $ b = 4 $:</p>
+<h4>Step 39:</h4>
+<p>\begin{aligned}
                     V &= \pi\int_0^4 (\sqrt{x})^2\,dx \\
                     &= \pi\int_0^4 x\,dx \\
                     &= \pi\left[\frac{x^2}{2}\right]_0^4 \\
                     &= \pi\left(\frac{16}{2} - 0\right) = 8\pi
-                    \end{aligned}
-                </div>
-                <div class="final-answer">
-                    $$ V = 8\pi $$
-                </div>
+                    \end{aligned}</p>
+                <h4>Final Answer:</h4>
+<p>$$ V = 8\pi $$</p>
             </div>
         </details>
     </div>
 
-    <div class="problem">
-        <div class="problem-title">Problem 7: Volume of Solid with Hole (Washer Method)</div>
-        <p><strong>Task:</strong> Find the volume of the solid obtained by revolving the region bounded by \( y = 2x \) and \( y = x^2 \) about the x-axis</p>
+    <div class="example">
+        <h4>Example 7.0</h4>
+        <p><strong>Task:</strong> Find the volume of the solid obtained by revolving the region bounded by $ y = 2x $ and $ y = x^2 $ about the x-axis</p>
+        <div class="visual-aid">
+            <h4>Figure — Washer method for region between $y = 2x$ and $y = x^2$</h4>
+            <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                <text x="385" y="184" font-size="12" fill="#000">x</text>
+                <text x="205" y="15" font-size="12" fill="#000">y</text>
+                <path d="M 30,180 C 80,160 140,120 200,80 C 260,40 320,20 380,10" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                <path d="M 30,180 C 80,175 140,160 200,140 C 260,120 320,100 380,80" fill="none" stroke="#c0392b" stroke-width="2"/>
+                <text x="35" y="175" font-size="10" fill="#555">0</text>
+                <text x="195" y="195" font-size="10" fill="#555">0</text>
+                <text x="350" y="175" font-size="10" fill="#555">2</text>
+            </svg>
+            <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">The outer radius is $R(x) = 2x$ and the inner radius is $r(x) = x^2$ on $[0, 2]$.</p>
+        </div>
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Find intersection points: \( 2x = x^2 \implies x^2 - 2x = 0 \implies x(x-2) = 0 \), so \( x = 0, 2 \)<br>
-                    <strong>Step 2:</strong> On \([0,2]\), \( 2x \geq x^2 \), so outer radius \( R(x) = 2x \), inner radius \( r(x) = x^2 \)<br>
-                    <strong>Step 3:</strong> Apply the washer method:<br>
-                    \begin{aligned}
+                <h4>Step 40:</h4>
+<p>Find intersection points: $ 2x = x^2 \implies x^2 - 2x = 0 \implies x(x-2) = 0 $, so $ x = 0, 2 $</p>
+<h4>Step 41:</h4>
+<p>On $[0,2]$, $ 2x \geq x^2 $, so outer radius $ R(x) = 2x $, inner radius $ r(x) = x^2 $</p>
+<h4>Step 42:</h4>
+<p>Apply the washer method:</p>
+<h4>Step 43:</h4>
+<p>\begin{aligned}
                     V &= \pi\int_0^2 [(2x)^2 - (x^2)^2]\,dx \\
                     &= \pi\int_0^2 (4x^2 - x^4)\,dx \\
                     &= \pi\left[\frac{4x^3}{3} - \frac{x^5}{5}\right]_0^2 \\
                     &= \pi\left(\frac{32}{3} - \frac{32}{5}\right) \\
                     &= \pi\left(\frac{160 - 96}{15}\right) = \frac{64\pi}{15}
-                    \end{aligned}
-                </div>
-                <div class="final-answer">
-                    $$ V = \frac{64\pi}{15} $$
-                </div>
+                    \end{aligned}</p>
+                <h4>Final Answer:</h4>
+<p>$$ V = \frac{64\pi}{15} $$</p>
             </div>
         </details>
     </div>
 
-    <div class="problem">
-        <div class="problem-title">Problem 8: Volume by Slicing about the y-axis</div>
-        <p><strong>Task:</strong> Find the volume of the solid obtained by revolving the region bounded by \( y = \sqrt{x} \), \( y = 0 \), \( x = 4 \) about the y-axis</p>
+    <div class="example">
+        <h4>Example 8.0</h4>
+        <p><strong>Task:</strong> Find the volume of the solid obtained by revolving the region bounded by $ y = \sqrt{x} $, $ y = 0 $, $ x = 4 $ about the y-axis</p>
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <div class="step">
-                    <strong>Step 1:</strong> Using the disk method with respect to \( y \):<br>
-                    \( x = y^2 \), and the limits are \( y = 0 \) to \( y = 2 \) (since \( y = \sqrt{4} = 2 \))<br>
-                    <strong>Step 2:</strong> Apply the formula \( V = \pi\int_c^d [g(y)]^2\,dy \):<br>
-                    \begin{aligned}
+                <h4>Step 44:</h4>
+<p>Using the disk method with respect to $ y $:</p>
+<h4>Step 45:</h4>
+<p>$ x = y^2 $, and the limits are $ y = 0 $ to $ y = 2 $ (since $ y = \sqrt{4} = 2 $)</p>
+<h4>Step 46:</h4>
+<p>Apply the formula $ V = \pi\int_c^d [g(y)]^2\,dy $:</p>
+<h4>Step 47:</h4>
+<p>\begin{aligned}
                     V &= \pi\int_0^2 (y^2)^2\,dy \\
                     &= \pi\int_0^2 y^4\,dy \\
                     &= \pi\left[\frac{y^5}{5}\right]_0^2 \\
                     &= \pi \cdot \frac{32}{5} = \frac{32\pi}{5}
-                    \end{aligned}
-                </div>
-                <div class="final-answer">
-                    $$ V = \frac{32\pi}{5} $$
-                </div>
+                    \end{aligned}</p>
+                <h4>Final Answer:</h4>
+<p>$$ V = \frac{32\pi}{5} $$</p>
             </div>
         </details>
     </div>
+<div class="strategies">
+<h4>Study Tips</h4>
+<p><strong>1.</strong> For u-substitution, always check that the derivative of your choice for <strong>u</strong> appears (up to a constant) in the integrand.</p>
+<p><strong>2.</strong> When finding area between curves, find intersection points first and test which function is on top.</p>
+<p><strong>3.</strong> For volumes, draw a representative washer or disk and label the outer and inner radii before setting up the integral.</p>
+<p><strong>4.</strong> Use symmetry to simplify integrals whenever possible.</p>
+</div>
+            </section>
 
-    <footer style="text-align: center; margin-top: 40px; padding: 20px; color: #666; border-top: 1px solid #ddd;">
-        <p><a href="day-02.html">&larr; Day 02</a> &nbsp;|&nbsp; <a href="day-04.html">Day 04 &rarr;</a></p>
-    </footer>
+            <nav class="chapter-nav">
+<a href="day-02.html" class="nav-btn prev" id="prev-chapter">Previous</a>
+<span class="nav-indicator" id="chapter-indicator"></span>
+<a href="day-04.html" class="nav-btn next" id="next-chapter">Next</a>
+</nav>
+
+    <script src="../js/app.js"></script>
 </body>
 </html>

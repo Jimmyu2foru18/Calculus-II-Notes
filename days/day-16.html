@@ -23,81 +23,339 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 <body>
-<header>
-    <h1>Calculus II Notes</h1>
-    <p class="subtitle">Taylor and Maclaurin Series</p>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../days/index.html">Days</a>
-        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-        <a href="../final-reviews/index.html">Final Reviews</a>
-        <a href="../final-samples/index.html">Final Samples</a>
-        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-</header>
-<div class="container">
-    <main>
-        <a href="day-15.html" class="back-button">&larr; Back</a>
-        <p class="lead">Browse through the Taylor and Maclaurin Series pages. Use the arrow buttons or keyboard arrows to navigate.</p>
-        <section id="content">
+    <header>
+        <h1>Calculus II Notes</h1>
+        <p class="subtitle">Day 16: Taylor and Maclaurin Series</p>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../days/index.html">Days</a>
+            <a href="../quiz-reviews/index.html">Quiz Reviews</a>
+            <a href="../final-reviews/index.html">Final Reviews</a>
+            <a href="../final-samples/index.html">Final Samples</a>
+            <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main class="chapter">
+            <h2>Day 16: Taylor and Maclaurin Series</h2>
+            <p class="lead">Derivation of common Maclaurin series, including trigonometric, exponential, logarithmic, and rational functions.</p>
+
+            <div class="video-section">
+                <h4>Core Lecture</h4>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Video Title</h5>
+                        <p>Description</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Video Title</h5>
+                        <p>Description</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Video Title</h5>
+                        <p>Description</p>
+                    </div>
+                </div>
+            </div>
+
             <h2>Taylor and Maclaurin Series</h2>
+            <p>A <strong>Taylor series</strong> represents a function as an infinite sum of terms calculated from its derivatives at a single point. When the center is $a = 0$, it is called a <strong>Maclaurin series</strong>.</p>
 
-            <h3>Problem 1: Maclaurin Series for sin(x)</h3>
-            <p><strong>Task:</strong> Find the Maclaurin series for f(x) = sin(x).</p>
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Compute derivatives at x = 0</h4>
-                    <p>f(x) = sin(x), f(0) = 0</p>
-                    <p>f'(x) = cos(x), f'(0) = 1</p>
-                    <p>f''(x) = -sin(x), f''(0) = 0</p>
-                    <p>f'''(x) = -cos(x), f'''(0) = -1</p>
-                    <p>f^(4)(x) = sin(x), f^(4)(0) = 0</p>
-                    <p>The pattern repeats every 4 derivatives.</p>
-                    <h4>Step 2: Write the series</h4>
-                    <p>f(x) = sum from n=0 to infinity of f^(n)(0)/n! * x^n</p>
-                    <p>= 0 + x - x^3/3! + x^5/5! - x^7/7! + ...</p>
-                    <h4>Final Answer:</h4>
-                    <p>sin(x) = sum from n=0 to infinity of (-1)^n * x^(2n+1)/(2n+1)!</p>
-                </div>
-            </details>
+            <div class="notes">
+                <h4>Key Formulas</h4>
+                <p><strong>Taylor Series at $a$:</strong></p>
+                <p>$$f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n$$</p>
+                <p><strong>Maclaurin Series ($a = 0$):</strong></p>
+                <p>$$f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!}x^n$$</p>
+                <p><strong>Common Maclaurin Series:</strong></p>
+                <p>$$e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!}$$</p>
+                <p>$$\sin(x) = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{(2n+1)!}$$</p>
+                <p>$$\cos(x) = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!}$$</p>
+                <p>$$\ln(1+x) = \sum_{n=1}^{\infty} \frac{(-1)^{n+1} x^n}{n}$$</p>
+                <p>$$\frac{1}{1-x} = \sum_{n=0}^{\infty} x^n$$</p>
+                <p>$$\arctan(x) = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{2n+1}$$</p>
+            </div>
 
-            <h3>Problem 2: Maclaurin Series for e^x</h3>
-            <p><strong>Task:</strong> Find the Maclaurin series for f(x) = e^x.</p>
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Compute derivatives</h4>
-                    <p>f(x) = e^x, f'(x) = e^x, f''(x) = e^x, ...</p>
-                    <p>All derivatives at x = 0: f^(n)(0) = e^0 = 1</p>
-                    <h4>Step 2: Write the series</h4>
-                    <p>e^x = sum from n=0 to infinity of x^n/n!</p>
-                    <p>= 1 + x + x^2/2! + x^3/3! + x^4/4! + ...</p>
-                    <h4>Final Answer:</h4>
-                    <p>e^x = sum from n=0 to infinity of x^n/n!</p>
+            <div class="example">
+                <h4>Example 16.1</h4>
+                <p><strong>Problem:</strong> Find the Maclaurin series for $f(x) = \sin(x)$.</p>
+                <div class="visual-aid">
+                    <h4>Figure — Maclaurin series for $\sin(x)$</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="184" font-size="12" fill="#000">x</text>
+                        <text x="205" y="15" font-size="12" fill="#000">y</text>
+                        <path d="M 30,180 C 60,100 90,20 120,180 C 150,100 180,20 210,180 C 240,100 270,20 300,180 C 330,100 360,20 380,180" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <text x="35" y="175" font-size="10" fill="#555">-π</text>
+                        <text x="195" y="195" font-size="10" fill="#555">0</text>
+                        <text x="350" y="175" font-size="10" fill="#555">π</text>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">$\sin(x)$ is represented by the alternating power series $\sum (-1)^n x^{2n+1}/(2n+1)!$ for all $x$.</p>
                 </div>
-            </details>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Compute derivatives at $x = 0$</h4>
+                        <p>$f(x) = \sin(x)$, $f(0) = 0$</p>
+                        <p>$f'(x) = \cos(x)$, $f'(0) = 1$</p>
+                        <p>$f''(x) = -\sin(x)$, $f''(0) = 0$</p>
+                        <p>$f'''(x) = -\cos(x)$, $f'''(0) = -1$</p>
+                        <p>$f^{(4)}(x) = \sin(x)$, $f^{(4)}(0) = 0$</p>
+                        <p>The pattern repeats every 4 derivatives.</p>
+                        <h4>Step 2: Write the series</h4>
+                        <p>$$f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!} x^n$$</p>
+                        <p>$$= 0 + x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>$$\sin(x) = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{(2n+1)!}$$</p>
+                    </div>
+                </details>
+            </div>
 
-            <h3>Problem 3: Maclaurin Series for cos(x)</h3>
-            <p><strong>Task:</strong> Find the Maclaurin series for f(x) = cos(x).</p>
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Compute derivatives at x = 0</h4>
-                    <p>f(x) = cos(x), f(0) = 1</p>
-                    <p>f'(x) = -sin(x), f'(0) = 0</p>
-                    <p>f''(x) = -cos(x), f''(0) = -1</p>
-                    <p>f'''(x) = sin(x), f'''(0) = 0</p>
-                    <p>f^(4)(x) = cos(x), f^(4)(0) = 1</p>
-                    <h4>Step 2: Write the series</h4>
-                    <p>cos(x) = 1 - x^2/2! + x^4/4! - x^6/6! + ...</p>
-                    <h4>Final Answer:</h4>
-                    <p>cos(x) = sum from n=0 to infinity of (-1)^n * x^(2n)/(2n)!</p>
+            <div class="example">
+                <h4>Example 16.2</h4>
+                <p><strong>Problem:</strong> Find the Maclaurin series for $f(x) = e^x$.</p>
+                <div class="visual-aid">
+                    <h4>Figure — Maclaurin series approximation for $e^x$</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="184" font-size="12" fill="#000">x</text>
+                        <text x="205" y="15" font-size="12" fill="#000">y</text>
+                        <path d="M 30,180 C 100,170 160,150 200,130 C 240,110 300,80 380,40" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <path d="M 30,180 C 100,170 160,150 200,130 C 240,110 300,80 380,40" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="4,3"/>
+                        <text x="35" y="175" font-size="10" fill="#555">0</text>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">$e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!}$ converges for all $x$.</p>
                 </div>
-            </details>
-        </section>
-    </main>
-</div>
-<script src="../js/app.js"></script>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Compute derivatives</h4>
+                        <p>$f(x) = e^x$, $f'(x) = e^x$, $f''(x) = e^x$, ...</p>
+                        <p>All derivatives at $x = 0$: $f^{(n)}(0) = e^0 = 1$</p>
+                        <h4>Step 2: Write the series</h4>
+                        <p>$$e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!}$$</p>
+                        <p>$$= 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \cdots$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>$$e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!}$$</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 16.3</h4>
+                <p><strong>Problem:</strong> Find the Maclaurin series for $f(x) = \cos(x)$.</p>
+                <div class="visual-aid">
+                    <h4>Figure — Maclaurin series for $\cos(x)$</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="184" font-size="12" fill="#000">x</text>
+                        <text x="205" y="15" font-size="12" fill="#000">y</text>
+                        <path d="M 30,80 C 60,20 90,20 120,80 C 150,140 180,140 210,80 C 240,20 270,20 300,80 C 330,140 360,140 380,80" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+                        <text x="35" y="175" font-size="10" fill="#555">-π</text>
+                        <text x="195" y="195" font-size="10" fill="#555">0</text>
+                        <text x="350" y="175" font-size="10" fill="#555">π</text>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">$\cos(x)$ is represented by the alternating power series $\sum (-1)^n x^{2n}/(2n)!$ for all $x$.</p>
+                </div>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Compute derivatives at $x = 0$</h4>
+                        <p>$f(x) = \cos(x)$, $f(0) = 1$</p>
+                        <p>$f'(x) = -\sin(x)$, $f'(0) = 0$</p>
+                        <p>$f''(x) = -\cos(x)$, $f''(0) = -1$</p>
+                        <p>$f'''(x) = \sin(x)$, $f'''(0) = 0$</p>
+                        <p>$f^{(4)}(x) = \cos(x)$, $f^{(4)}(0) = 1$</p>
+                        <h4>Step 2: Write the series</h4>
+                        <p>$$\cos(x) = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>$$\cos(x) = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!}$$</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 16.4</h4>
+                <p><strong>Problem:</strong> Find the Maclaurin series for $f(x) = \frac{1}{1-x}$.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Recognize the geometric series</h4>
+                        <p>The sum of a geometric series $\sum_{n=0}^{\infty} ar^n$ is $\frac{a}{1-r}$ when $|r| < 1$.</p>
+                        <p>Here, $a = 1$ and $r = x$.</p>
+                        <h4>Step 2: Write the series</h4>
+                        <p>$$\frac{1}{1-x} = \sum_{n=0}^{\infty} x^n = 1 + x + x^2 + x^3 + \cdots$$</p>
+                        <p>Converges for $|x| < 1$.</p>
+                        <h4>Final Answer:</h4>
+                        <p>$$\frac{1}{1-x} = \sum_{n=0}^{\infty} x^n, \quad |x| < 1$$</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 16.5</h4>
+                <p><strong>Problem:</strong> Find the Maclaurin series for $f(x) = \ln(1+x)$.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Integrate the geometric series</h4>
+                        <p>We know $\frac{1}{1-x} = \sum_{n=0}^{\infty} x^n$ for $|x| < 1$.</p>
+                        <p>Replace $x$ with $-x$:</p>
+                        <p>$$\frac{1}{1+x} = \sum_{n=0}^{\infty} (-1)^n x^n$$</p>
+                        <p>Integrate both sides from 0 to $x$:</p>
+                        <p>$$\int_0^x \frac{1}{1+t} \, dt = \int_0^x \sum_{n=0}^{\infty} (-1)^n t^n \, dt$$</p>
+                        <h4>Step 2: Evaluate</h4>
+                        <p>$$\ln(1+x) = \sum_{n=0}^{\infty} \frac{(-1)^n x^{n+1}}{n+1}$$</p>
+                        <p>$$= x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \cdots$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>$$\ln(1+x) = \sum_{n=1}^{\infty} \frac{(-1)^{n+1} x^n}{n}, \quad -1 < x \leq 1$$</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 16.6</h4>
+                <p><strong>Problem:</strong> Find the Maclaurin series for $f(x) = \arctan(x)$.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Integrate the geometric series for $\frac{1}{1+x^2}$</h4>
+                        <p>$$\frac{1}{1+x^2} = \sum_{n=0}^{\infty} (-1)^n x^{2n}, \quad |x| < 1$$</p>
+                        <p>Integrate both sides from 0 to $x$:</p>
+                        <p>$$\int_0^x \frac{1}{1+t^2} \, dt = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{2n+1}$$</p>
+                        <h4>Step 2: Evaluate</h4>
+                        <p>$$\arctan(x) = x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \cdots$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>$$\arctan(x) = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{2n+1}, \quad |x| \leq 1$$</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 16.7</h4>
+                <p><strong>Problem:</strong> Use the Maclaurin series for $e^x$ to evaluate $\lim_{x \to 0} \frac{e^x - 1 - x}{x^2}$.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Substitute the Maclaurin series</h4>
+                        <p>$$e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots$$</p>
+                        <p>So $e^x - 1 - x = \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots$</p>
+                        <h4>Step 2: Divide by $x^2$</h4>
+                        <p>$$\frac{e^x - 1 - x}{x^2} = \frac{1}{2!} + \frac{x}{3!} + \frac{x^2}{4!} + \cdots$$</p>
+                        <h4>Step 3: Take the limit</h4>
+                        <p>$$\lim_{x \to 0} \frac{e^x - 1 - x}{x^2} = \frac{1}{2}$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>The limit is $\frac{1}{2}$.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="questions">
+                <h4>Practice Problems</h4>
+                <details class="question">
+                    <summary>Problem 1 — Maclaurin Series for $\sin(x^2)$</summary>
+                    <p>Find the Maclaurin series for $f(x) = \sin(x^2)$.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>Substitute $x^2$ for $x$ in the series for $\sin(x)$:</p>
+                        <p>$$\sin(x^2) = \sum_{n=0}^{\infty} \frac{(-1)^n (x^2)^{2n+1}}{(2n+1)!} = \sum_{n=0}^{\infty} \frac{(-1)^n x^{4n+2}}{(2n+1)!}$$</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 2 — Maclaurin Series for $x e^x$</summary>
+                    <p>Find the Maclaurin series for $f(x) = x e^x$.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>Multiply $x$ by the series for $e^x$:</p>
+                        <p>$$x e^x = x \sum_{n=0}^{\infty} \frac{x^n}{n!} = \sum_{n=0}^{\infty} \frac{x^{n+1}}{n!}$$</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 3 — Maclaurin Series for $\cos(x^3)$</summary>
+                    <p>Find the Maclaurin series for $f(x) = \cos(x^3)$.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>Substitute $x^3$ for $x$ in the series for $\cos(x)$:</p>
+                        <p>$$\cos(x^3) = \sum_{n=0}^{\infty} \frac{(-1)^n (x^3)^{2n}}{(2n)!} = \sum_{n=0}^{\infty} \frac{(-1)^n x^{6n}}{(2n)!}$$</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 4 — Limit Using Series</summary>
+                    <p>Use the Maclaurin series for $\cos(x)$ to evaluate $\lim_{x \to 0} \frac{1 - \cos(x)}{x^2}$.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>$$\cos(x) = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots$$</p>
+                        <p>$$1 - \cos(x) = \frac{x^2}{2!} - \frac{x^4}{4!} + \cdots$$</p>
+                        <p>$$\frac{1 - \cos(x)}{x^2} = \frac{1}{2!} - \frac{x^2}{4!} + \cdots \to \frac{1}{2}$$</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 5 — Maclaurin Series for $e^{-x^2}$</summary>
+                    <p>Find the Maclaurin series for $f(x) = e^{-x^2}$.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>Substitute $-x^2$ for $x$ in the series for $e^x$:</p>
+                        <p>$$e^{-x^2} = \sum_{n=0}^{\infty} \frac{(-x^2)^n}{n!} = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{n!}$$</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 6 — Series for $\frac{1}{1+x^2}$</summary>
+                    <p>Find the Maclaurin series for $f(x) = \frac{1}{1+x^2}$ and its radius of convergence.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>Replace $x$ with $-x^2$ in the geometric series:</p>
+                        <p>$$\frac{1}{1+x^2} = \sum_{n=0}^{\infty} (-1)^n x^{2n}$$</p>
+                        <p>Converges when $|-x^2| < 1$, i.e., $|x| < 1$. Radius of convergence: $R = 1$.</p>
+                    </details>
+                </details>
+            </div>
+
+            <div class="strategies">
+                <h4>Study Tips</h4>
+                <p><strong>1.</strong> Memorize the seven common Maclaurin series listed in the notes.</p>
+                <p><strong>2.</strong> To find new series, use substitution, differentiation, integration, or algebraic manipulation of known series.</p>
+                <p><strong>3.</strong> The radius of convergence is preserved under differentiation and integration.</p>
+                <p><strong>4.</strong> Use power series to evaluate limits by substituting the series and canceling terms.</p>
+                <p><strong>5.</strong> Always check that the series representation is valid in the given interval.</p>
+            </div>
+
+            <nav class="chapter-nav">
+                <a href="day-15.html" class="nav-btn prev" id="prev-chapter">Previous</a>
+                <span class="nav-indicator" id="chapter-indicator"></span>
+                <a href="day-17.html" class="nav-btn next" id="next-chapter">Next</a>
+            </nav>
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
 </body>
 </html>

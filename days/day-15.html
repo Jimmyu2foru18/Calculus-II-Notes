@@ -23,63 +23,321 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 <body>
-<header>
-    <h1>Calculus II Notes</h1>
-    <p class="subtitle">Power Series and Convergence</p>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../days/index.html">Days</a>
-        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-        <a href="../final-reviews/index.html">Final Reviews</a>
-        <a href="../final-samples/index.html">Final Samples</a>
-        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-</header>
-<div class="container">
-    <main>
-        <a href="day-13.html" class="back-button">&larr; Back</a>
-        <p class="lead">Browse through the Power Series and Convergence pages. Use the arrow buttons or keyboard arrows to navigate.</p>
-        <section id="content">
+    <header>
+        <h1>Calculus II Notes</h1>
+        <p class="subtitle">Day 15: Power Series and Convergence</p>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../days/index.html">Days</a>
+            <a href="../quiz-reviews/index.html">Quiz Reviews</a>
+            <a href="../final-reviews/index.html">Final Reviews</a>
+            <a href="../final-samples/index.html">Final Samples</a>
+            <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main class="chapter">
+            <h2>Day 15: Power Series and Convergence</h2>
+            <p class="lead">Power series representations, intervals and radii of convergence, and operations on power series.</p>
+
+            <div class="video-section">
+                <h4>Core Lecture</h4>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Video Title</h5>
+                        <p>Description</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Video Title</h5>
+                        <p>Description</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PLACEHOLDER" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-caption">
+                        <h5>Video Title</h5>
+                        <p>Description</p>
+                    </div>
+                </div>
+            </div>
+
             <h2>Power Series and Convergence</h2>
+            <p>A <strong>power series</strong> centered at $a$ has the form $\sum_{n=0}^{\infty} c_n (x-a)^n$. The set of values for which the series converges is called the <strong>interval of convergence</strong>, and half its length is the <strong>radius of convergence</strong> $R$.</p>
 
-            <h3>Problem 1: Power Series - Interval of Convergence</h3>
-            <p><strong>Task:</strong> Find the interval and radius of convergence for sum from n=0 to infinity of x^n/n!</p>
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Apply the Ratio Test</h4>
-                    <p>rho = lim(n->infinity) |x^(n+1)/(n+1)!| / |x^n/n!|</p>
-                    <p>= lim(n->infinity) |x|/(n+1)</p>
-                    <h4>Step 2: Determine convergence</h4>
-                    <p>For any x, lim(n->infinity) |x|/(n+1) = 0 < 1</p>
-                    <p>So the series converges for all x.</p>
-                    <h4>Final Answer:</h4>
-                    <p>Interval of Convergence: (-infinity, infinity)</p>
-                    <p>Radius of Convergence: R = infinity</p>
-                </div>
-            </details>
+            <div class="notes">
+                <h4>Key Formulas</h4>
+                <p><strong>Power Series:</strong></p>
+                <p>$$\sum_{n=0}^{\infty} c_n (x-a)^n$$</p>
+                <p><strong>Ratio Test for Power Series:</strong></p>
+                <p>$$\rho = \lim_{n \to \infty} \left|\frac{c_{n+1}}{c_n}\right| |x-a|$$</p>
+                <p><strong>Radius of Convergence:</strong></p>
+                <p>$$R = \lim_{n \to \infty} \left|\frac{c_n}{c_{n+1}}\right|$$</p>
+                <p><strong>Interval of Convergence:</strong> $(a-R, a+R)$, possibly including one or both endpoints.</p>
+            </div>
 
-            <h3>Problem 2: Power Series - Finite Radius</h3>
-            <p><strong>Task:</strong> Find the interval of convergence for sum from n=1 to infinity of x^n/n</p>
-            <details class="question">
-                <summary><strong>Click to see the solution</strong></summary>
-                <div class="solution">
-                    <h4>Step 1: Apply the Ratio Test</h4>
-                    <p>rho = lim(n->infinity) |x^(n+1)/(n+1)| / |x^n/n|</p>
-                    <p>= lim(n->infinity) |x| * n/(n+1) = |x|</p>
-                    <h4>Step 2: Find where rho < 1</h4>
-                    <p>|x| < 1, so -1 < x < 1</p>
-                    <h4>Step 3: Test endpoints</h4>
-                    <p>At x = 1: sum of 1/n (harmonic series) diverges.</p>
-                    <p>At x = -1: sum of (-1)^n/n converges (alternating harmonic series).</p>
-                    <h4>Final Answer:</h4>
-                    <p>Interval of Convergence: [-1, 1)</p>
-                    <p>Radius of Convergence: R = 1</p>
+            <div class="example">
+                <h4>Example 15.1</h4>
+                <p><strong>Problem:</strong> Find the interval and radius of convergence for $\sum_{n=0}^{\infty} \frac{x^n}{n!}$.</p>
+                <div class="visual-aid">
+                    <h4>Figure — Power series convergence interval</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="184" font-size="12" fill="#000">x</text>
+                        <text x="205" y="15" font-size="12" fill="#000">y</text>
+                        <rect x="30" y="20" width="350" height="160" fill="#1a3a5c" opacity="0.1"/>
+                        <text x="35" y="175" font-size="10" fill="#555">-∞</text>
+                        <text x="340" y="175" font-size="10" fill="#555">+∞</text>
+                        <text x="180" y="210" font-size="10" fill="#555">Converges for all $x$</text>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">The series $\sum x^n/n!$ converges for all real $x$, so the interval is $(-\infty, \infty)$ and $R = \infty$.</p>
                 </div>
-            </details>
-        </section>
-    </main>
-</div>
-<script src="../js/app.js"></script>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Apply the Ratio Test</h4>
+                        <p>$$\rho = \lim_{n \to \infty} \left|\frac{x^{n+1}/(n+1)!}{x^n/n!}\right| = \lim_{n \to \infty} \frac{|x|}{n+1}$$</p>
+                        <h4>Step 2: Determine convergence</h4>
+                        <p>For any $x$, $\lim_{n \to \infty} \frac{|x|}{n+1} = 0 < 1$.</p>
+                        <p>So the series converges for all $x$.</p>
+                        <h4>Final Answer:</h4>
+                        <p>Interval of Convergence: $(-\infty, \infty)$</p>
+                        <p>Radius of Convergence: $R = \infty$</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 15.2</h4>
+                <p><strong>Problem:</strong> Find the interval of convergence for $\sum_{n=1}^{\infty} \frac{x^n}{n}$.</p>
+                <div class="visual-aid">
+                    <h4>Figure — Radius of convergence $R = 1$</h4>
+                    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;border:1px solid #ccc;background:#fafafa;">
+                        <line x1="30" y1="180" x2="380" y2="180" stroke="#000" stroke-width="1.5"/>
+                        <line x1="200" y1="20" x2="200" y2="200" stroke="#000" stroke-width="1.5"/>
+                        <text x="385" y="184" font-size="12" fill="#000">x</text>
+                        <text x="205" y="15" font-size="12" fill="#000">y</text>
+                        <rect x="130" y="20" width="140" height="160" fill="#1a3a5c" opacity="0.1"/>
+                        <line x1="130" y1="20" x2="130" y2="200" stroke="#c0392b" stroke-width="1.5"/>
+                        <line x1="270" y1="20" x2="270" y2="200" stroke="#c0392b" stroke-width="1.5"/>
+                        <circle cx="130" cy="180" r="3" fill="#000"/>
+                        <circle cx="270" cy="180" r="3" fill="#000"/>
+                        <text x="125" y="215" font-size="10" fill="#c0392b">$x=-1$</text>
+                        <text x="265" y="215" font-size="10" fill="#c0392b">$x=1$</text>
+                        <text x="35" y="175" font-size="10" fill="#555">0</text>
+                    </svg>
+                    <p style="font-size:0.85rem;color:#555;margin-top:0.5rem;">The interval of convergence is $[-1, 1)$ with radius $R = 1$. The left endpoint is included, the right is not.</p>
+                </div>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Apply the Ratio Test</h4>
+                        <p>$$\rho = \lim_{n \to \infty} \left|\frac{x^{n+1}/(n+1)}{x^n/n}\right| = \lim_{n \to \infty} |x| \frac{n}{n+1} = |x|$$</p>
+                        <h4>Step 2: Find where $\rho < 1$</h4>
+                        <p>$|x| < 1$, so $-1 < x < 1$</p>
+                        <h4>Step 3: Test endpoints</h4>
+                        <p>At $x = 1$: $\sum_{n=1}^{\infty} \frac{1}{n}$ (harmonic series) diverges.</p>
+                        <p>At $x = -1$: $\sum_{n=1}^{\infty} \frac{(-1)^n}{n}$ converges (alternating harmonic series).</p>
+                        <h4>Final Answer:</h4>
+                        <p>Interval of Convergence: $[-1, 1)$</p>
+                        <p>Radius of Convergence: $R = 1$</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 15.3</h4>
+                <p><strong>Problem:</strong> Find the interval and radius of convergence for $\sum_{n=1}^{\infty} n x^n$.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Apply the Ratio Test</h4>
+                        <p>$$\rho = \lim_{n \to \infty} \left|\frac{(n+1)x^{n+1}}{n x^n}\right| = \lim_{n \to \infty} \left|\frac{n+1}{n}\right||x| = |x|$$</p>
+                        <h4>Step 2: Find where $\rho < 1$</h4>
+                        <p>$|x| < 1$, so $-1 < x < 1$</p>
+                        <h4>Step 3: Test endpoints</h4>
+                        <p>At $x = 1$: $\sum_{n=1}^{\infty} n$ diverges (terms do not approach 0).</p>
+                        <p>At $x = -1$: $\sum_{n=1}^{\infty} n(-1)^n$ diverges (terms do not approach 0).</p>
+                        <h4>Final Answer:</h4>
+                        <p>Interval of Convergence: $(-1, 1)$</p>
+                        <p>Radius of Convergence: $R = 1$</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 15.4</h4>
+                <p><strong>Problem:</strong> Find the interval of convergence for $\sum_{n=1}^{\infty} \frac{(x-2)^n}{n}$.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Apply the Ratio Test</h4>
+                        <p>$$\rho = \lim_{n \to \infty} \left|\frac{(x-2)^{n+1}/(n+1)}{(x-2)^n/n}\right| = \lim_{n \to \infty} |x-2| \frac{n}{n+1} = |x-2|$$</p>
+                        <h4>Step 2: Find where $\rho < 1$</h4>
+                        <p>$|x-2| < 1$, so $1 < x < 3$</p>
+                        <h4>Step 3: Test endpoints</h4>
+                        <p>At $x = 1$: $\sum_{n=1}^{\infty} \frac{(-1)^n}{n}$ converges (alternating harmonic series).</p>
+                        <p>At $x = 3$: $\sum_{n=1}^{\infty} \frac{1}{n}$ diverges (harmonic series).</p>
+                        <h4>Final Answer:</h4>
+                        <p>Interval of Convergence: $[1, 3)$</p>
+                        <p>Radius of Convergence: $R = 1$</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 15.5</h4>
+                <p><strong>Problem:</strong> Find the interval and radius of convergence for $\sum_{n=0}^{\infty} \frac{(2x)^n}{n^2}$.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Apply the Ratio Test</h4>
+                        <p>$$\rho = \lim_{n \to \infty} \left|\frac{(2x)^{n+1}/(n+1)^2}{(2x)^n/n^2}\right| = \lim_{n \to \infty} 2|x| \frac{n^2}{(n+1)^2} = 2|x|$$</p>
+                        <h4>Step 2: Find where $\rho < 1$</h4>
+                        <p>$2|x| < 1$, so $|x| < \frac{1}{2}$, i.e., $-\frac{1}{2} < x < \frac{1}{2}$</p>
+                        <h4>Step 3: Test endpoints</h4>
+                        <p>At $x = \frac{1}{2}$: $\sum_{n=0}^{\infty} \frac{1}{n^2}$ converges ($p$-series with $p = 2$).</p>
+                        <p>At $x = -\frac{1}{2}$: $\sum_{n=0}^{\infty} \frac{(-1)^n}{n^2}$ converges absolutely.</p>
+                        <h4>Final Answer:</h4>
+                        <p>Interval of Convergence: $[-\frac{1}{2}, \frac{1}{2}]$</p>
+                        <p>Radius of Convergence: $R = \frac{1}{2}$</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example">
+                <h4>Example 15.6</h4>
+                <p><strong>Problem:</strong> Differentiate the power series $\sum_{n=0}^{\infty} x^n$ term by term and find the interval of convergence of the result.</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1: Differentiate term by term</h4>
+                        <p>$$\frac{d}{dx}\left(\sum_{n=0}^{\infty} x^n\right) = \sum_{n=1}^{\infty} n x^{n-1}$$</p>
+                        <h4>Step 2: Apply the Ratio Test to the new series</h4>
+                        <p>$$\rho = \lim_{n \to \infty} \left|\frac{(n+1)x^n}{n x^{n-1}}\right| = \lim_{n \to \infty} \left|\frac{n+1}{n}\right||x| = |x|$$</p>
+                        <h4>Step 3: Determine convergence</h4>
+                        <p>The series converges when $|x| < 1$.</p>
+                        <p>At $x = 1$: $\sum_{n=1}^{\infty} n$ diverges.</p>
+                        <p>At $x = -1$: $\sum_{n=1}^{\infty} n(-1)^{n-1}$ diverges.</p>
+                        <h4>Final Answer:</h4>
+                        <p>Interval of Convergence: $(-1, 1)$</p>
+                        <p>Radius of Convergence: $R = 1$</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="questions">
+                <h4>Practice Problems</h4>
+                <details class="question">
+                    <summary>Problem 1 — Interval of Convergence with Factorial</summary>
+                    <p>Find the interval and radius of convergence for $\sum_{n=0}^{\infty} \frac{(x-1)^n}{n!}$.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>Apply the Ratio Test:</p>
+                        <p>$$\rho = \lim_{n \to \infty} \frac{|x-1|}{n+1} = 0 < 1$$</p>
+                        <p>The series converges for all $x$. Interval: $(-\infty, \infty)$, $R = \infty$.</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 2 — Alternating Power Series</summary>
+                    <p>Find the interval of convergence for $\sum_{n=1}^{\infty} \frac{(-1)^n x^n}{n}$.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>Apply the Ratio Test: $\rho = |x|$. Converges for $|x| < 1$.</p>
+                        <p>At $x = 1$: $\sum \frac{(-1)^n}{n}$ converges (alternating harmonic).</p>
+                        <p>At $x = -1$: $\sum \frac{(-1)^{2n}}{n} = \sum \frac{1}{n}$ diverges.</p>
+                        <p>Interval: $(-1, 1]$, $R = 1$.</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 3 — Power Series with $n^2$ in Denominator</summary>
+                    <p>Find the interval of convergence for $\sum_{n=1}^{\infty} \frac{(3x)^n}{n^2}$.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>Apply the Ratio Test: $\rho = 3|x|$. Converges when $|x| < \frac{1}{3}$.</p>
+                        <p>At $x = \frac{1}{3}$: $\sum \frac{1}{n^2}$ converges ($p$-series, $p=2$).</p>
+                        <p>At $x = -\frac{1}{3}$: $\sum \frac{(-1)^n}{n^2}$ converges absolutely.</p>
+                        <p>Interval: $[-\frac{1}{3}, \frac{1}{3}]$, $R = \frac{1}{3}$.</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 4 — Integrating a Power Series</summary>
+                    <p>Integrate the series $\sum_{n=0}^{\infty} x^n$ term by term and find the interval of convergence.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>$$\int \sum_{n=0}^{\infty} x^n \, dx = \sum_{n=0}^{\infty} \frac{x^{n+1}}{n+1} = \sum_{n=1}^{\infty} \frac{x^n}{n}$$</p>
+                        <p>Apply the Ratio Test: $\rho = |x|$. Converges for $|x| < 1$.</p>
+                        <p>At $x = 1$: $\sum \frac{1}{n}$ diverges. At $x = -1$: $\sum \frac{(-1)^n}{n}$ converges.</p>
+                        <p>Interval: $[-1, 1)$, $R = 1$.</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 5 — Power Series with Even Powers</summary>
+                    <p>Find the interval of convergence for $\sum_{n=0}^{\infty} \frac{x^{2n}}{2^n}$.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>Apply the Ratio Test:</p>
+                        <p>$$\rho = \lim_{n \to \infty} \left|\frac{x^{2(n+1)}/2^{n+1}}{x^{2n}/2^n}\right| = \lim_{n \to \infty} \frac{|x|^2}{2} = \frac{x^2}{2}$$</p>
+                        <p>Converges when $\frac{x^2}{2} < 1$, i.e., $|x| < \sqrt{2}$.</p>
+                        <p>At $x = \pm\sqrt{2}$: series becomes $\sum \frac{2^n}{2^n} = \sum 1$, which diverges.</p>
+                        <p>Interval: $(-\sqrt{2}, \sqrt{2})$, $R = \sqrt{2}$.</p>
+                    </details>
+                </details>
+                <details class="question">
+                    <summary>Problem 6 — Centered at $a = -2$</summary>
+                    <p>Find the interval of convergence for $\sum_{n=1}^{\infty} \frac{(x+2)^n}{n \cdot 3^n}$.</p>
+                    <details>
+                        <summary>Show Answer</summary>
+                        <p><strong>Answer:</strong></p>
+                        <p>Apply the Ratio Test:</p>
+                        <p>$$\rho = \lim_{n \to \infty} \left|\frac{(x+2)^{n+1}/((n+1)3^{n+1})}{(x+2)^n/(n \cdot 3^n)}\right| = \frac{|x+2|}{3}$$</p>
+                        <p>Converges when $\frac{|x+2|}{3} < 1$, i.e., $|x+2| < 3$, so $-5 < x < 1$.</p>
+                        <p>At $x = -5$: $\sum \frac{(-1)^n}{n}$ converges.</p>
+                        <p>At $x = 1$: $\sum \frac{1}{n}$ diverges.</p>
+                        <p>Interval: $[-5, 1)$, $R = 3$.</p>
+                    </details>
+                </details>
+            </div>
+
+            <div class="strategies">
+                <h4>Study Tips</h4>
+                <p><strong>1.</strong> Use the Ratio Test first; it works for most power series.</p>
+                <p><strong>2.</strong> Always check endpoints separately after finding the open interval.</p>
+                <p><strong>3.</strong> If the Ratio Test gives $\rho = |x-a|/R$, then $R$ is the radius of convergence.</p>
+                <p><strong>4.</strong> For power series centered at $a$, the interval is $(a-R, a+R)$.</p>
+                <p><strong>5.</strong> Differentiation and integration preserve the radius of convergence but may change endpoint behavior.</p>
+            </div>
+
+            <nav class="chapter-nav">
+                <a href="day-14.html" class="nav-btn prev" id="prev-chapter">Previous</a>
+                <span class="nav-indicator" id="chapter-indicator"></span>
+                <a href="day-16.html" class="nav-btn next" id="next-chapter">Next</a>
+            </nav>
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
 </body>
 </html>

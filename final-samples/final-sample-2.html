@@ -22,59 +22,211 @@
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
-<body>
-<header>
-    <h1>Calculus II Notes</h1>
-    <p class="subtitle">Comprehensive Sample Exam 2</p>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../days/index.html">Days</a>
-        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-        <a href="../final-reviews/index.html">Final Reviews</a>
-        <a href="../final-samples/index.html">Final Samples</a>
-        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-</header>
-<div class="container">
-    <main>
-        <p class="lead">Use this sample exam to test your understanding of the full course. Try each problem without looking at your notes, then check the worked solutions below.</p>
+<body class="review-page">
+<div class="review-container">
+    <div class="review-header">
+        <h1>Final Sample 2: Comprehensive Sample Exam 2</h1>
+        <nav>
+            <a href="../index.html">← All Reviews</a>
+            <span>Full Course Coverage</span>
+        </nav>
+    </div>
 
-        <h2>Problems</h2>
+    <div class="review-hero">
+        <h2>Final Sample 2: Comprehensive Sample Exam 2</h2>
+        <p>Use this sample exam to test your understanding of the full course. Try each problem without looking at your notes, then check the worked solutions below.</p>
+        <div class="review-meta">
+            <span>3 Problems</span>
+            <span>Full Course Coverage</span>
+        </div>
+    </div>
 
-        <h3>Problem 1: Partial Fractions</h3>
-        <p><strong>Evaluate:</strong> $\int \frac{3x+5}{x^2-4}\,dx$</p>
-        <details class="question">
-            <summary>Click to see the solution</summary>
-            <p>Decompose: $\frac{3x+5}{(x-2)(x+2)} = \frac{A}{x-2} + \frac{B}{x+2}$</p>
-            <p>$3x+5 = A(x+2) + B(x-2)$</p>
-            <p>Set $x = 2$: $11 = 4B \implies B = \frac{11}{4}$</p>
-            <p>Set $x = -2$: $-1 = -4A \implies A = \frac{1}{4}$</p>
-            $$= \int\left(\frac{1/4}{x-2} + \frac{11/4}{x+2}\right)dx$$
-            $$= \frac{1}{4}\ln|x-2| + \frac{11}{4}\ln|x+2| + C$$
-        </details>
+    <div class="review-tabs" role="tablist">
+        <button class="review-tab active" data-tab="tab-basics" role="tab">Key Concepts</button>
+        <button class="review-tab" data-tab="tab-formulas" role="tab">Formulas</button>
+        <button class="review-tab" data-tab="tab-examples" role="tab">Worked Solutions</button>
+        <button class="review-tab" data-tab="tab-practice" role="tab">Exam Problems</button>
+    </div>
 
-        <h3>Problem 2: Taylor Series</h3>
-        <p><strong>Task:</strong> Find the Maclaurin series for $f(x) = \frac{1}{1-x}$</p>
-        <details class="question">
-            <summary>Click to see the solution</summary>
-            <p>This is a geometric series with first term $a = 1$ and ratio $r = x$:</p>
-            $$\frac{1}{1-x} = \sum_{n=0}^{\infty} x^n = 1 + x + x^2 + x^3 + \cdots$$
-            <p>Converges for $|x| < 1$</p>
-        </details>
+    <div class="review-section active" id="tab-basics">
+        <div class="review-card">
+            <h3>Partial Fractions</h3>
+            <p>Partial fractions decompose rational functions into simpler terms that can be integrated using logarithmic antiderivatives. The decomposition depends on the factorization of the denominator.</p>
+            <div class="review-formula">
+                \[ \frac{3x+5}{(x-2)(x+2)} = \frac{A}{x-2} + \frac{B}{x+2} \]
+                <div class="formula-label">Partial Fraction Decomposition</div>
+            </div>
+            <div class="review-callout info">
+                <p><strong>Key insight:</strong> Use the cover-up method or solve the system $3x+5 = A(x+2) + B(x-2)$ by substituting convenient values of $x$.</p>
+            </div>
+        </div>
+        <div class="review-card">
+            <h3>Geometric Series</h3>
+            <p>The geometric series $\sum_{n=0}^{\infty} x^n$ is the foundational power series. Many other series can be derived from it by substitution or differentiation.</p>
+            <div class="review-formula">
+                \[ \frac{1}{1-x} = \sum_{n=0}^{\infty} x^n = 1 + x + x^2 + x^3 + \cdots \quad \text{for } |x| < 1 \]
+                <div class="formula-label">Geometric Series</div>
+            </div>
+            <div class="review-callout warning">
+                <p><strong>Warning:</strong> Always state the interval of convergence. A power series representation is only valid within its radius of convergence.</p>
+            </div>
+        </div>
+        <div class="review-card">
+            <h3>Polar Area</h3>
+            <p>The area enclosed by a polar curve is found by integrating the area of infinitesimal circular sectors, not rectangular strips.</p>
+            <div class="review-formula">
+                \[ A = \frac{1}{2}\int_0^{2\pi} (1+\cos(\theta))^2\,d\theta \]
+                <div class="formula-label">Polar Area for a Cardioid</div>
+            </div>
+        </div>
+    </div>
 
-        <h3>Problem 3: Polar Area</h3>
-        <p><strong>Task:</strong> Find the area enclosed by the cardioid $r = 1 + \cos(\theta)$</p>
-        <details class="question">
-            <summary>Click to see the solution</summary>
-            $$A = \frac{1}{2}\int_0^{2\pi} (1+\cos(\theta))^2\,d\theta$$
-            <p>Expand: $(1+\cos(\theta))^2 = 1 + 2\cos(\theta) + \cos^2(\theta)$</p>
-            <p>$$= 1 + 2\cos(\theta) + \frac{1+\cos(2\theta)}{2}$$</p>
-            <p>$$= \frac{3}{2} + 2\cos(\theta) + \frac{1}{2}\cos(2\theta)$$</p>
-            $$A = \frac{1}{2}\left[\frac{3\theta}{2} + 2\sin(\theta) + \frac{\sin(2\theta)}{4}\right]_0^{2\pi}$$
-            <p>$$= \frac{1}{2}(3\pi) = \frac{3\pi}{2}$$</p>
-        </details>
-    </main>
+    <div class="review-section" id="tab-formulas">
+        <div class="review-card">
+            <h3>Formula Sheet</h3>
+            <div class="review-table">
+                <table>
+                    <thead>
+                        <tr><th>Formula</th><th>Use</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>$\frac{1}{1-x} = \sum_{n=0}^{\infty} x^n$</td>
+                            <td>Geometric Series ($|x| < 1$)</td>
+                        </tr>
+                        <tr>
+                            <td>$A = \frac{1}{2}\int_{\alpha}^{\beta} [r(\theta)]^2\,d\theta$</td>
+                            <td>Polar Area</td>
+                        </tr>
+                        <tr>
+                            <td>$r = \sqrt{x^2+y^2}$, $\theta = \tan^{-1}(y/x)$</td>
+                            <td>Rectangular to Polar</td>
+                        </tr>
+                        <tr>
+                            <td>$\int \tan(\theta)\,d\theta = \ln|\sec(\theta)| + C$</td>
+                            <td>Standard Integral</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="review-section" id="tab-examples">
+        <div class="review-card">
+            <h3>Worked Solutions</h3>
+            <div class="example">
+                <h4>Problem 1: Partial Fractions</h4>
+                <p><strong>Evaluate:</strong> $\int \frac{3x+5}{x^2-4}\,dx$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Decompose the rational function:</p>
+                        <p>$$\frac{3x+5}{(x-2)(x+2)} = \frac{A}{x-2} + \frac{B}{x+2}$$</p>
+                        <p>$$3x+5 = A(x+2) + B(x-2)$$</p>
+                        <p>Set $x = 2$: $11 = 4B \implies B = \frac{11}{4}$</p>
+                        <p>Set $x = -2$: $-1 = -4A \implies A = \frac{1}{4}$</p>
+                        <h4>Step 2:</h4>
+                        <p>Integrate term by term:</p>
+                        <p>$$= \int\left(\frac{1/4}{x-2} + \frac{11/4}{x+2}\right)dx$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>$$= \frac{1}{4}\ln|x-2| + \frac{11}{4}\ln|x+2| + C$$</p>
+                    </div>
+                </details>
+            </div>
+            <div class="example">
+                <h4>Problem 2: Taylor Series</h4>
+                <p><strong>Task:</strong> Find the Maclaurin series for $f(x) = \frac{1}{1-x}$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Recognize this as a geometric series with first term $a = 1$ and ratio $r = x$:</p>
+                        <p>$$\frac{1}{1-x} = \sum_{n=0}^{\infty} x^n = 1 + x + x^2 + x^3 + \cdots$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>Converges for $|x| < 1$.</p>
+                    </div>
+                </details>
+            </div>
+            <div class="example">
+                <h4>Problem 3: Polar Area</h4>
+                <p><strong>Task:</strong> Find the area enclosed by the cardioid $r = 1 + \cos(\theta)$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Set up the area integral over $[0, 2\pi]$:</p>
+                        <p>$$A = \frac{1}{2}\int_0^{2\pi} (1+\cos(\theta))^2\,d\theta$$</p>
+                        <h4>Step 2:</h4>
+                        <p>Expand the integrand:</p>
+                        <p>$$(1+\cos(\theta))^2 = 1 + 2\cos(\theta) + \cos^2(\theta) = 1 + 2\cos(\theta) + \frac{1+\cos(2\theta)}{2}$$</p>
+                        <p>$$= \frac{3}{2} + 2\cos(\theta) + \frac{1}{2}\cos(2\theta)$$</p>
+                        <h4>Step 3:</h4>
+                        <p>Integrate term by term:</p>
+                        <p>$$A = \frac{1}{2}\left[\frac{3\theta}{2} + 2\sin(\theta) + \frac{\sin(2\theta)}{4}\right]_0^{2\pi}$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>$$= \frac{1}{2}(3\pi) = \frac{3\pi}{2}$$</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+
+    <div class="review-section" id="tab-practice">
+        <div class="review-card">
+            <h3>Exam Problems</h3>
+            <details class="question">
+                <summary>Problem 1 — Partial Fractions</summary>
+                <p>Evaluate $\int \frac{3x+5}{x^2-4}\,dx$</p>
+                <details>
+                <summary>Show Answer</summary>
+                <p><strong>Answer:</strong></p>
+                <p>$$= \frac{1}{4}\ln|x-2| + \frac{11}{4}\ln|x+2| + C$$</p>
+                </details>
+            </details>
+            <details class="question">
+                <summary>Problem 2 — Taylor Series</summary>
+                <p>Find the Maclaurin series for $f(x) = \frac{1}{1-x}$.</p>
+                <details>
+                <summary>Show Answer</summary>
+                <p><strong>Answer:</strong></p>
+                <p>$$\frac{1}{1-x} = \sum_{n=0}^{\infty} x^n, \quad |x| < 1$$</p>
+                </details>
+            </details>
+            <details class="question">
+                <summary>Problem 3 — Polar Area</summary>
+                <p>Find the area enclosed by the cardioid $r = 1 + \cos(\theta)$.</p>
+                <details>
+                <summary>Show Answer</summary>
+                <p><strong>Answer:</strong></p>
+                <p>$$A = \frac{3\pi}{2}$$</p>
+                </details>
+            </details>
+        </div>
+    </div>
+
+    <div class="review-nav">
+        <a href="final-sample-1.html" class="review-nav-btn">← Previous Sample</a>
+        <span class="review-nav-indicator">Self-Check</span>
+        <a href="final-sample-3.html" class="review-nav-btn">Next Sample →</a>
+    </div>
 </div>
+
 <script src="../js/app.js"></script>
+<script>
+document.querySelectorAll('.review-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = tab.dataset.tab;
+        document.querySelectorAll('.review-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.review-section').forEach(s => s.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(target).classList.add('active');
+        if (window.MathJax && MathJax.typesetPromise) {
+            MathJax.typesetPromise();
+        }
+    });
+});
+</script>
 </body>
 </html>

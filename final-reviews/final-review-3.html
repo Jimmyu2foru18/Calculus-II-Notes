@@ -22,73 +22,216 @@
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
-<body>
-<header>
-    <h1>Calculus II Notes</h1>
-    <p class="subtitle">Series Convergence and Power Series</p>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../days/index.html">Days</a>
-        <a href="../quiz-reviews/index.html">Quiz Reviews</a>
-        <a href="../final-reviews/index.html">Final Reviews</a>
-        <a href="../final-samples/index.html">Final Samples</a>
-        <a href="https://github.com/Jimmyu2foru18/Calculus-Notes" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-</header>
-<div class="container">
-    <main>
-        <p class="lead">Use this review sheet to test your understanding. Try each problem without looking at your notes, then check the formulas and worked examples below.</p>
+<body class="review-page">
+<div class="review-container">
+    <div class="review-header">
+        <h1>Final Review 3: Series Convergence and Power Series</h1>
+        <nav>
+            <a href="../index.html">← All Reviews</a>
+            <span>Sections Ratio Test, Root Test, Alternating Series</span>
+        </nav>
+    </div>
 
-        <h2>Key Formulas at a Glance</h2>
-        <ul>
-            <li>Ratio Test: $\rho = \lim_{n\to\infty} \left|\frac{a_{n+1}}{a_n}\right|$</li>
-            <li>Root Test: $\rho = \lim_{n\to\infty} \sqrt[n]{|a_n|}$</li>
-            <li>p-Series: $\sum \frac{1}{n^p}$ converges if $p > 1$</li>
-            <li>Geometric Series: $\sum ar^n = \frac{a}{1-r}$ for $|r| < 1$</li>
-            <li>Alternating Series: $\sum (-1)^{n+1}a_n$ converges if $a_n$ decreasing and $\lim a_n = 0$</li>
-        </ul>
+    <div class="review-hero">
+        <h2>Final Review 3: Series Convergence and Power Series</h2>
+        <p>Use this review sheet to test your understanding. Try each problem without looking at your notes, then check the formulas and worked examples below.</p>
+        <div class="review-meta">
+            <span>3 Worked Examples</span>
+            <span>Comprehensive</span>
+        </div>
+    </div>
 
-        <h2>Worked Examples</h2>
+    <div class="review-tabs" role="tablist">
+        <button class="review-tab active" data-tab="tab-basics" role="tab">Key Concepts</button>
+        <button class="review-tab" data-tab="tab-formulas" role="tab">Formulas</button>
+        <button class="review-tab" data-tab="tab-examples" role="tab">Worked Examples</button>
+        <button class="review-tab" data-tab="tab-practice" role="tab">Practice Problems</button>
+    </div>
 
-        <h3>Example 1: Ratio Test</h3>
-        <p><strong>Task:</strong> Test $\sum_{n=1}^{\infty} \frac{n!}{n^2}$</p>
-        <details class="question">
-            <summary>Click to see the solution</summary>
-            $$\rho = \lim_{n\to\infty} \frac{(n+1)!/(n+1)^2}{n!/n^2}$$
-            $$= \lim_{n\to\infty} \frac{(n+1)n!}{(n+1)^2} \cdot \frac{n^2}{n!}$$
-            $$= \lim_{n\to\infty} \frac{n^2}{n+1} = \infty$$
-            <p>Since $\rho = \infty > 1$, the series diverges.</p>
-        </details>
+    <div class="review-section active" id="tab-basics">
+        <div class="review-card">
+            <h3>Ratio Test</h3>
+            <p>The Ratio Test examines the limit of the ratio of consecutive terms. It is particularly effective for series involving factorials or exponential terms.</p>
+            <div class="review-formula">
+                \[ \rho = \lim_{n\to\infty} \left|\frac{a_{n+1}}{a_n}\right| \]
+                <div class="formula-label">Ratio Test</div>
+            </div>
+            <div class="review-callout info">
+                <p><strong>Key insight:</strong> If $\rho < 1$, the series converges absolutely. If $\rho > 1$ (including $\infty$), the series diverges. If $\rho = 1$, the test is inconclusive.</p>
+            </div>
+        </div>
+        <div class="review-card">
+            <h3>Root Test</h3>
+            <p>The Root Test examines the $n$-th root of the absolute value of the terms. It is most useful when every term is raised to the $n$-th power.</p>
+            <div class="review-formula">
+                \[ \rho = \lim_{n\to\infty} \sqrt[n]{|a_n|} \]
+                <div class="formula-label">Root Test</div>
+            </div>
+        </div>
+        <div class="review-card">
+            <h3>Alternating Series Test</h3>
+            <p>An alternating series $\sum (-1)^{n+1}a_n$ converges if three conditions are met: the terms are positive, decreasing, and approach zero.</p>
+            <div class="review-formula">
+                \[ \sum_{n=1}^{\infty} (-1)^{n+1}a_n \text{ converges if } a_n > 0,\ a_{n+1} \le a_n,\ \text{and } \lim_{n\to\infty} a_n = 0 \]
+                <div class="formula-label">Alternating Series Test (Leibniz Criterion)</div>
+            </div>
+            <div class="review-callout warning">
+                <p><strong>Warning:</strong> The Alternating Series Test only proves conditional convergence. Always check absolute convergence separately if required.</p>
+            </div>
+        </div>
+    </div>
 
-        <h3>Example 2: Power Series Interval of Convergence</h3>
-        <p><strong>Task:</strong> Find the interval of convergence for $\sum_{n=0}^{\infty} \frac{x^n}{n!}$</p>
-        <details class="question">
-            <summary>Click to see the solution</summary>
-            $$\rho = \lim_{n\to\infty} \frac{|x|^{n+1}/(n+1)!}{|x|^n/n!}$$
-            $$= \lim_{n\to\infty} \frac{|x|}{n+1} = 0$$
-            <p>Since $\rho = 0 < 1$ for all $x$, the series converges for all $x$.</p>
-            <p>Interval of Convergence: $(-\infty, \infty)$</p>
-            <p>Radius of Convergence: $R = \infty$</p>
-        </details>
+    <div class="review-section" id="tab-formulas">
+        <div class="review-card">
+            <h3>Formula Sheet</h3>
+            <div class="review-table">
+                <table>
+                    <thead>
+                        <tr><th>Formula</th><th>Use</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>$\rho = \lim_{n\to\infty} \left|\frac{a_{n+1}}{a_n}\right|$</td>
+                            <td>Ratio Test</td>
+                        </tr>
+                        <tr>
+                            <td>$\rho = \lim_{n\to\infty} \sqrt[n]{|a_n|}$</td>
+                            <td>Root Test</td>
+                        </tr>
+                        <tr>
+                            <td>$\sum \frac{1}{n^p}$ converges if $p > 1$</td>
+                            <td>p-Series Test</td>
+                        </tr>
+                        <tr>
+                            <td>$\sum ar^n = \frac{a}{1-r}$ for $|r| < 1$</td>
+                            <td>Geometric Series</td>
+                        </tr>
+                        <tr>
+                            <td>$\sum (-1)^{n+1}a_n$ converges if $a_n$ decreasing and $\lim a_n = 0$</td>
+                            <td>Alternating Series Test</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
-        <h3>Example 3: Alternating Series Test</h3>
-        <p><strong>Task:</strong> Test $\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n}$</p>
-        <details class="question">
-            <summary>Click to see the solution</summary>
-            <p>$a_n = \frac{1}{n} > 0$ (TRUE)</p>
-            <p>$a_n$ is decreasing (TRUE)</p>
-            <p>$\lim_{n\to\infty} a_n = 0$ (TRUE)</p>
-            <p>All conditions satisfied. The series converges by the Alternating Series Test.</p>
-        </details>
+    <div class="review-section" id="tab-examples">
+        <div class="review-card">
+            <h3>Worked Examples</h3>
+            <div class="example">
+                <h4>Example 1: Ratio Test</h4>
+                <p><strong>Task:</strong> Test $\sum_{n=1}^{\infty} \frac{n!}{n^2}$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Compute the ratio of consecutive terms:</p>
+                        $$\rho = \lim_{n\to\infty} \frac{(n+1)!/(n+1)^2}{n!/n^2}$$
+                        <h4>Step 2:</h4>
+                        <p>Simplify:</p>
+                        <p>$$= \lim_{n\to\infty} \frac{(n+1)n!}{(n+1)^2} \cdot \frac{n^2}{n!} = \lim_{n\to\infty} \frac{n^2}{n+1}$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>$$= \infty$$ Since $\rho = \infty > 1$, the series diverges.</p>
+                    </div>
+                </details>
+            </div>
+            <div class="example">
+                <h4>Example 2: Power Series Interval of Convergence</h4>
+                <p><strong>Task:</strong> Find the interval of convergence for $\sum_{n=0}^{\infty} \frac{x^n}{n!}$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Apply the Ratio Test:</p>
+                        $$\rho = \lim_{n\to\infty} \frac{|x|^{n+1}/(n+1)!}{|x|^n/n!}$$
+                        <h4>Step 2:</h4>
+                        <p>Simplify:</p>
+                        <p>$$= \lim_{n\to\infty} \frac{|x|}{n+1} = 0$$</p>
+                        <h4>Final Answer:</h4>
+                        <p>Since $\rho = 0 < 1$ for all $x$, the series converges for all $x$.</p>
+                        <p>Interval of Convergence: $(-\infty, \infty)$</p>
+                        <p>Radius of Convergence: $R = \infty$</p>
+                    </div>
+                </details>
+            </div>
+            <div class="example">
+                <h4>Example 3: Alternating Series Test</h4>
+                <p><strong>Task:</strong> Test $\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n}$</p>
+                <details class="question">
+                    <summary><strong>Click to see the solution</strong></summary>
+                    <div class="solution">
+                        <h4>Step 1:</h4>
+                        <p>Check the three conditions with $a_n = \frac{1}{n}$:</p>
+                        <p>$a_n = \frac{1}{n} > 0$ (TRUE)</p>
+                        <p>$a_n$ is decreasing (TRUE)</p>
+                        <p>$\lim_{n\to\infty} a_n = 0$ (TRUE)</p>
+                        <h4>Final Answer:</h4>
+                        <p>All conditions satisfied. The series converges by the Alternating Series Test.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
 
-        <h2>Practice Problems</h2>
-        <ol>
-            <li>Test $\sum_{n=1}^{\infty} \frac{5^n}{n!}$ for convergence</li>
-            <li>Find the interval of convergence for $\sum_{n=1}^{\infty} \frac{x^n}{n}$</li>
-            <li>Test $\sum_{n=1}^{\infty} \frac{(-1)^n}{\sqrt{n}}$ for convergence</li>
-        </ol>
-    </main>
+    <div class="review-section" id="tab-practice">
+        <div class="review-card">
+            <h3>Practice Problems</h3>
+            <details class="question">
+                <summary>Problem 1 — Ratio Test</summary>
+                <p>Test $\sum_{n=1}^{\infty} \frac{5^n}{n!}$ for convergence.</p>
+                <details>
+                <summary>Show Answer</summary>
+                <p><strong>Answer:</strong></p>
+                <p>Apply the Ratio Test: $\rho = \lim_{n\to\infty} \frac{5^{n+1}/(n+1)!}{5^n/n!} = \lim_{n\to\infty} \frac{5}{n+1} = 0$.</p>
+                <p>Since $\rho = 0 < 1$, the series converges.</p>
+                </details>
+            </details>
+            <details class="question">
+                <summary>Problem 2 — Interval of Convergence</summary>
+                <p>Find the interval of convergence for $\sum_{n=1}^{\infty} \frac{x^n}{n}$.</p>
+                <details>
+                <summary>Show Answer</summary>
+                <p><strong>Answer:</strong></p>
+                <p>Apply the Ratio Test: $\rho = \lim_{n\to\infty} \frac{|x|^{n+1}/(n+1)}{|x|^n/n} = |x|$.</p>
+                <p>Converges for $|x| < 1$. At $x = 1$, the harmonic series diverges. At $x = -1$, the alternating harmonic series converges.</p>
+                <p>Interval of Convergence: $[-1, 1)$.</p>
+                </details>
+            </details>
+            <details class="question">
+                <summary>Problem 3 — Alternating Series Test</summary>
+                <p>Test $\sum_{n=1}^{\infty} \frac{(-1)^n}{\sqrt{n}}$ for convergence.</p>
+                <details>
+                <summary>Show Answer</summary>
+                <p><strong>Answer:</strong></p>
+                <p>$a_n = \frac{1}{\sqrt{n}} > 0$, $a_n$ is decreasing, and $\lim_{n\to\infty} a_n = 0$.</p>
+                <p>The series converges by the Alternating Series Test.</p>
+                </details>
+            </details>
+        </div>
+    </div>
+
+    <div class="review-nav">
+        <a href="final-review-2.html" class="review-nav-btn">← Previous Review</a>
+        <span class="review-nav-indicator">Self-Check</span>
+        <a href="final-review-4.html" class="review-nav-btn">Next Review →</a>
+    </div>
 </div>
+
 <script src="../js/app.js"></script>
+<script>
+document.querySelectorAll('.review-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = tab.dataset.tab;
+        document.querySelectorAll('.review-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.review-section').forEach(s => s.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(target).classList.add('active');
+        if (window.MathJax && MathJax.typesetPromise) {
+            MathJax.typesetPromise();
+        }
+    });
+});
+</script>
 </body>
 </html>
