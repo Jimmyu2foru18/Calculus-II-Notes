@@ -40,6 +40,20 @@
             <section id="content">
     <h2>Fundamental Theorem of Calculus (FTC)</h2>
 <p class="lead">The Fundamental Theorem of Calculus connects differentiation and integration, providing the foundation for evaluating definite integrals.</p>
+<div class="study-box start-here">
+<h4>Start here</h4>
+<h4>Learning goals</h4>
+<ul>
+<li>Evaluate a definite integral with the Fundamental Theorem of Calculus, Part II: $\int_a^b f(x)\,dx = F(b) - F(a)$.</li>
+<li>Differentiate an accumulation function $\int_a^{g(x)} f(t)\,dt$ using FTC Part I and the chain rule.</li>
+<li>Interpret a definite integral as signed area or net accumulated change.</li>
+</ul>
+<h4>Before you start</h4>
+<p>Day 01 (antiderivatives and u-substitution).</p>
+<h4>The big idea</h4>
+<p>A definite integral adds up $f(x)\,dx$ between $a$ and $b$. FTC says this total equals the change in any antiderivative, $F(b) - F(a)$. The same theorem says the derivative of an accumulation function returns the original integrand.</p>
+</div>
+
 <div class="video-section">
 <h4>Core Lecture</h4>
 <div class="video-container">
@@ -77,7 +91,17 @@
 </div>
     <p>The FTC connects differentiation and integration, showing they are inverse operations.</p>
 
-    <div class="example">
+    <div class="study-box method-box">
+<h4>How to evaluate a definite integral</h4>
+<ol>
+<li>Find an antiderivative $F$ with $F' = f$. You can leave out $+C$, because it cancels.</li>
+<li>Compute $F(b)$ and $F(a)$.</li>
+<li>Subtract: $F(b) - F(a)$. Check the sign against a sketch: area below the axis counts as negative.</li>
+<li>If the upper limit is a function $g(x)$, use $\frac{d}{dx}\int_a^{g(x)} f(t)\,dt = f(g(x))\,g'(x)$.</li>
+</ol>
+</div>
+
+<div class="example">
         <h4>Example 1.0</h4>
 
         <h4>Example 1a</h4>
@@ -90,12 +114,12 @@
 <h4>Step 2:</h4>
 <p>Substitute:</p>
 <h4>Step 3:</h4>
-<p>\begin{aligned}
+<p>$$\begin{aligned}
                     \int \frac{x^3}{\sqrt{x^4+7}}\,dx &= \int \frac{1}{\sqrt{u}} \cdot \frac{du}{4} \\
                     &= \frac{1}{4}\int u^{-1/2}\,du \\
                     &= \frac{1}{4} \cdot 2u^{1/2} + C \\
                     &= \frac{1}{2}\sqrt{x^4+7} + C
-                    \end{aligned}</p>
+                    \end{aligned}$$</p>
                 <h4>Final Answer:</h4>
 <p>$$ \int \frac{x^3}{\sqrt{x^4+7}}\,dx = \frac{1}{2}\sqrt{x^4+7} + C $$</p>
             </div>
@@ -106,17 +130,17 @@
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <h4>Step 4:</h4>
+                <h4>Step 1:</h4>
 <p>Let $ u = \cos(x) $, then $ du = -\sin(x)\,dx $, so $ \sin(x)\,dx = -du $</p>
-<h4>Step 5:</h4>
+<h4>Step 2:</h4>
 <p>Substitute:</p>
-<h4>Step 6:</h4>
-<p>\begin{aligned}
+<h4>Step 3:</h4>
+<p>$$\begin{aligned}
                     \int 3\sin(x)\cos(x)\,dx &= 3\int u \cdot (-du) \\
                     &= -3\int u\,du \\
                     &= -3 \cdot \frac{u^2}{2} + C \\
                     &= -\frac{3}{2}\cos^2(x) + C
-                    \end{aligned}</p>
+                    \end{aligned}$$</p>
                 <h4>Final Answer:</h4>
 <p>$$ \int 3\sin(x)\cos(x)\,dx = -\frac{3}{2}\cos^2(x) + C $$</p>
             </div>
@@ -135,36 +159,36 @@
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <h4>Step 7:</h4>
+                <h4>Step 1:</h4>
 <p>Set up the Riemann sum:</p>
-<h4>Step 8:</h4>
+<h4>Step 2:</h4>
 <p>$ a = 0, b = 2, \Delta x = \frac{2-0}{n} = \frac{2}{n} $</p>
-<h4>Step 9:</h4>
+<h4>Step 3:</h4>
 <p>$ x_i = 0 + i\Delta x = \frac{2i}{n} $</p>
-                <h4>Step 10:</h4>
+                <h4>Step 4:</h4>
 <p>Evaluate $ f(x_i) = x_i^2 = \left(\frac{2i}{n}\right)^2 = \frac{4i^2}{n^2} $</p>
-<h4>Step 11:</h4>
+<h4>Step 5:</h4>
 <p>Form the Riemann sum:</p>
-<h4>Step 12:</h4>
-<p>\begin{aligned}
+<h4>Step 6:</h4>
+<p>$$\begin{aligned}
                     \sum_{i=1}^n f(x_i)\Delta x &= \sum_{i=1}^n \frac{4i^2}{n^2} \cdot \frac{2}{n} \\
                     &= \frac{8}{n^3}\sum_{i=1}^n i^2
-                    \end{aligned}</p>
-                <h4>Step 13:</h4>
+                    \end{aligned}$$</p>
+                <h4>Step 7:</h4>
 <p>Use the formula $ \sum_{i=1}^n i^2 = \frac{n(n+1)(2n+1)}{6} $:</p>
-<h4>Step 14:</h4>
-<p>\begin{aligned}
+<h4>Step 8:</h4>
+<p>$$\begin{aligned}
                     \frac{8}{n^3} \cdot \frac{n(n+1)(2n+1)}{6} &= \frac{8}{6n^3} \cdot n(n+1)(2n+1) \\
                     &= \frac{4}{3n^3} \cdot n(n+1)(2n+1) \\
                     &= \frac{4}{3} \cdot \frac{n(n+1)(2n+1)}{n^3}
-                    \end{aligned}</p>
-                <h4>Step 15:</h4>
+                    \end{aligned}$$</p>
+                <h4>Step 9:</h4>
 <p>Take the limit as $ n \to \infty $:</p>
-<h4>Step 16:</h4>
-<p>\begin{aligned}
+<h4>Step 10:</h4>
+<p>$$\begin{aligned}
                     \lim_{n\to\infty} \frac{4}{3} \cdot \frac{n(n+1)(2n+1)}{n^3} &= \frac{4}{3} \lim_{n\to\infty} \frac{2n^3 + 3n^2 + n}{n^3} \\
                     &= \frac{4}{3} \cdot 2 = \frac{8}{3}
-                    \end{aligned}</p>
+                    \end{aligned}$$</p>
                 <h4>Final Answer:</h4>
 <p>$$ \int_0^2 x^2\,dx = \frac{8}{3} $$</p>
             </div>
@@ -201,38 +225,38 @@
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <h4>Step 17:</h4>
+                <h4>Step 1:</h4>
 <p>Find the anti-derivative:</p>
-<h4>Step 18:</h4>
+<h4>Step 2:</h4>
 <p>$ F(x) = 2x^2 - \frac{x^4}{4} $</p>
-<h4>Step 19:</h4>
+<h4>Step 3:</h4>
 <p>Apply FTC Part II:</p>
-<h4>Step 20:</h4>
-<p>\begin{aligned}
+<h4>Step 4:</h4>
+<p>$$\begin{aligned}
                     \int_0^2 (4x - x^3)\,dx &= \left[2x^2 - \frac{x^4}{4}\right]_0^2 \\
                     &= \left(2(2)^2 - \frac{(2)^4}{4}\right) - (0 - 0) \\
                     &= (8 - 4) - 0 = 4
-                    \end{aligned}</p>
+                    \end{aligned}$$</p>
                 <h4>Final Answer:</h4>
 <p>$$ \int_0^2 (4x - x^3)\,dx = 4 $$</p>
             </div>
         </details>
 
         <h3>Example 3b</h3>
-        <p><strong>Evaluate</strong> $ \int_0^1 e^{u^2}\,du $ where $ u = 3x $</p>
+        <p><strong>Evaluate</strong> $ \int_0^1 e^{3x}\,dx $ using $ u = 3x $</p>
+        
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <h4>Step 21:</h4>
-<p><strong>Note:</strong> This is a substitution within the integral. Let $ u = 3x $, $ du = 3\,dx $, so $ dx = \frac{du}{3} $.</p>
-<h4>Step 22:</h4>
-<p>When $ x = 0 $, $ u = 0 $. When $ x = 1 $, $ u = 3 $.</p>
-<h4>Step 23:</h4>
-<p>\begin{aligned}
-                    \int_0^1 e^{u^2}\,du &= \int_0^3 e^{u^2} \cdot \frac{du}{3} \\
-                    &= \frac{1}{3}\int_0^3 e^{u^2}\,du
-                    \end{aligned}
-                    <strong>Note:</strong> $ \int e^{u^2}\,du $ has no elementary anti-derivative. This is likely a notation issue in the original notes. The intended problem is probably $ \int_0^1 e^{3x}\,dx $.</p>
+                <h4>Step 1:</h4>
+<p>Let $ u = 3x $, so $ du = 3\,dx $ and $ dx = \frac{du}{3} $.</p>
+<h4>Step 2:</h4>
+<p>Change the limits: when $ x = 0 $, $ u = 0 $; when $ x = 1 $, $ u = 3 $.</p>
+<h4>Step 3:</h4>
+<p>$$\begin{aligned}
+                    \int_0^1 e^{3x}\,dx &= \int_0^3 e^{u} \cdot \frac{du}{3} \\
+                    &= \frac{1}{3}\left[e^u\right]_0^3 = \frac{1}{3}(e^3 - 1)
+                    \end{aligned}$$</p>
                 <h4>Final Answer:</h4>
 <p>$$ \int_0^1 e^{3x}\,dx = \frac{1}{3}(e^3 - 1) $$</p>
             </div>
@@ -243,16 +267,16 @@
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <h4>Step 24:</h4>
+                <h4>Step 1:</h4>
 <p>Identify the upper limit $ g(x) = x^2 $, so $ g'(x) = 2x $</p>
-<h4>Step 25:</h4>
+<h4>Step 2:</h4>
 <p>Apply the chain rule version of FTC:</p>
-<h4>Step 26:</h4>
-<p>\begin{aligned}
+<h4>Step 3:</h4>
+<p>$$\begin{aligned}
                     \frac{d}{dx}\int_0^{x^2} \sin(t^2)\,dt &= \sin((x^2)^2) \cdot \frac{d}{dx}(x^2) \\
                     &= \sin(x^4) \cdot 2x \\
                     &= 2x\sin(x^4)
-                    \end{aligned}</p>
+                    \end{aligned}$$</p>
                 <h4>Final Answer:</h4>
 <p>$$ \frac{d}{dx}\int_0^{x^2} \sin(t^2)\,dt = 2x\sin(x^4) $$</p>
             </div>
@@ -270,12 +294,12 @@
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <h4>Step 27:</h4>
-<p>\begin{aligned}
+                <h4>Step 1:</h4>
+<p>$$\begin{aligned}
                     \frac{d}{dx}\int_0^{x^2} e^{u^2}\,du &= e^{(x^2)^2} \cdot \frac{d}{dx}(x^2) \\
                     &= e^{x^4} \cdot 2x \\
                     &= 2xe^{x^4}
-                    \end{aligned}</p>
+                    \end{aligned}$$</p>
                 <h4>Final Answer:</h4>
 <p>$$ \frac{d}{dx}\int_0^{x^2} e^{u^2}\,du = 2xe^{x^4} $$</p>
             </div>
@@ -286,15 +310,15 @@
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <h4>Step 28:</h4>
+                <h4>Step 1:</h4>
 <p>Identify $ g(x) = x^2 $, $ g'(x) = 2x $, $ h(x) = x $, $ h'(x) = 1 $</p>
-<h4>Step 29:</h4>
+<h4>Step 2:</h4>
 <p>Apply the formula:</p>
-<h4>Step 30:</h4>
-<p>\begin{aligned}
+<h4>Step 3:</h4>
+<p>$$\begin{aligned}
                     \frac{d}{dx}\int_x^{x^2} \sin(t)\,dt &= \sin(x^2) \cdot 2x - \sin(x) \cdot 1 \\
                     &= 2x\sin(x^2) - \sin(x)
-                    \end{aligned}</p>
+                    \end{aligned}$$</p>
                 <h4>Final Answer:</h4>
 <p>$$ \frac{d}{dx}\int_x^{x^2} \sin(t)\,dt = 2x\sin(x^2) - \sin(x) $$</p>
             </div>
@@ -327,24 +351,24 @@
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <h4>Step 31:</h4>
+                <h4>Step 1:</h4>
 <p>Find intersection points by setting $ x^2 + 1 = 2x + 1 $:</p>
-<h4>Step 32:</h4>
+<h4>Step 2:</h4>
 <p>$ x^2 - 2x = 0 \implies x(x-2) = 0 \implies x = 0, 2 $</p>
-<h4>Step 33:</h4>
+<h4>Step 3:</h4>
 <p>Determine which function is on top on $[0,2]$:</p>
-<h4>Step 34:</h4>
+<h4>Step 4:</h4>
 <p>Test $ x = 1 $: $ 1^2+1 = 2 $, $ 2(1)+1 = 3 $. So $ 2x+1 > x^2+1 $.</p>
-<h4>Step 35:</h4>
+<h4>Step 5:</h4>
 <p>Set up and evaluate the integral:</p>
-<h4>Step 36:</h4>
-<p>\begin{aligned}
+<h4>Step 6:</h4>
+<p>$$\begin{aligned}
                     A &= \int_0^2 [(2x+1) - (x^2+1)]\,dx \\
                     &= \int_0^2 (2x - x^2)\,dx \\
                     &= \left[x^2 - \frac{x^3}{3}\right]_0^2 \\
                     &= \left(4 - \frac{8}{3}\right) - 0 \\
                     &= \frac{12-8}{3} = \frac{4}{3}
-                    \end{aligned}</p>
+                    \end{aligned}$$</p>
                 <h4>Final Answer:</h4>
 <p>$$ A = \frac{4}{3} $$</p>
             </div>
@@ -355,18 +379,18 @@
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <h4>Step 37:</h4>
+                <h4>Step 1:</h4>
 <p>Note that $ \cos(x) \geq 0 $ on $[0, \pi/2]$ and $ \cos(x) \leq 0 $ on $[\pi/2, \pi]$</p>
-<h4>Step 38:</h4>
+<h4>Step 2:</h4>
 <p>Split the integral at $ x = \pi/2 $:</p>
-<h4>Step 39:</h4>
-<p>\begin{aligned}
+<h4>Step 3:</h4>
+<p>$$\begin{aligned}
                     A &= \int_0^{\pi/2} (\cos(x) - 0)\,dx + \int_{\pi/2}^{\pi} (0 - \cos(x))\,dx \\
                     &= \int_0^{\pi/2} \cos(x)\,dx + \int_{\pi/2}^{\pi} (-\cos(x))\,dx \\
                     &= [\sin(x)]_0^{\pi/2} + [-\sin(x)]_{\pi/2}^{\pi} \\
                     &= (1 - 0) + (-(0 - 1)) \\
                     &= 1 + 1 = 2
-                    \end{aligned}</p>
+                    \end{aligned}$$</p>
                 <h4>Final Answer:</h4>
 <p>$$ A = 2 $$</p>
             </div>
@@ -380,26 +404,26 @@
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <h4>Step 40:</h4>
+                <h4>Step 1:</h4>
 <p>Compute $ \Delta x = \frac{b-a}{n} = \frac{4-1}{3} = 1 $</p>
-<h4>Step 41:</h4>
+<h4>Step 2:</h4>
 <p>Find the right endpoints: $ x_1 = 1+1 = 2 $, $ x_2 = 1+2 = 3 $, $ x_3 = 1+3 = 4 $</p>
-<h4>Step 42:</h4>
+<h4>Step 3:</h4>
 <p>Evaluate $ f(x) = x^2+1 $ at each endpoint:</p>
-<h4>Step 43:</h4>
-<p>\begin{aligned}
+<h4>Step 4:</h4>
+<p>$$\begin{aligned}
                     f(2) &= 2^2 + 1 = 5 \\
                     f(3) &= 3^2 + 1 = 10 \\
                     f(4) &= 4^2 + 1 = 17
-                    \end{aligned}</p>
-                <h4>Step 44:</h4>
+                    \end{aligned}$$</p>
+                <h4>Step 5:</h4>
 <p>Compute the Riemann sum:</p>
-<h4>Step 45:</h4>
-<p>\begin{aligned}
+<h4>Step 6:</h4>
+<p>$$\begin{aligned}
                     R_3 &= \Delta x [f(2) + f(3) + f(4)] \\
                     &= 1 \cdot (5 + 10 + 17) \\
                     &= 32
-                    \end{aligned}</p>
+                    \end{aligned}$$</p>
                 <h4>Final Answer:</h4>
 <p>$$ R_3 = 32 $$</p>
             </div>
@@ -413,33 +437,33 @@
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <h4>Step 46:</h4>
+                <h4>Step 1:</h4>
 <p>Set up parameters: $ a = 0, b = 2, \Delta x = \frac{2}{n} $, $ x_i = \frac{2i}{n} $</p>
-<h4>Step 47:</h4>
+<h4>Step 2:</h4>
 <p>Evaluate $ f(x_i) = 4 - \left(\frac{2i}{n}\right)^2 = 4 - \frac{4i^2}{n^2} $</p>
-<h4>Step 48:</h4>
+<h4>Step 3:</h4>
 <p>Form the Riemann sum:</p>
-<h4>Step 49:</h4>
-<p>\begin{aligned}
+<h4>Step 4:</h4>
+<p>$$\begin{aligned}
                     \sum_{i=1}^n f(x_i)\Delta x &= \sum_{i=1}^n \left(4 - \frac{4i^2}{n^2}\right) \cdot \frac{2}{n} \\
                     &= \frac{8}{n}\sum_{i=1}^n 1 - \frac{8}{n^3}\sum_{i=1}^n i^2 \\
                     &= \frac{8}{n} \cdot n - \frac{8}{n^3} \cdot \frac{n(n+1)(2n+1)}{6}
-                    \end{aligned}</p>
-                <h4>Step 50:</h4>
+                    \end{aligned}$$</p>
+                <h4>Step 5:</h4>
 <p>Simplify and take the limit:</p>
-<h4>Step 51:</h4>
-<p>\begin{aligned}
+<h4>Step 6:</h4>
+<p>$$\begin{aligned}
                     &= 8 - \frac{8}{6n^3} \cdot n(n+1)(2n+1) \\
                     &= 8 - \frac{4}{3n^3}(2n^3 + 3n^2 + n) \\
                     &= 8 - \frac{8}{3} - \frac{4}{n} - \frac{4}{3n^2}
-                    \end{aligned}</p>
-                <h4>Step 52:</h4>
+                    \end{aligned}$$</p>
+                <h4>Step 7:</h4>
 <p>As $ n \to \infty $:</p>
-<h4>Step 53:</h4>
-<p>\begin{aligned}
+<h4>Step 8:</h4>
+<p>$$\begin{aligned}
                     \lim_{n\to\infty} \left(8 - \frac{8}{3} - \frac{4}{n} - \frac{4}{3n^2}\right) &= 8 - \frac{8}{3} \\
                     &= \frac{24-8}{3} = \frac{16}{3}
-                    \end{aligned}</p>
+                    \end{aligned}$$</p>
                 <h4>Final Answer:</h4>
 <p>$$ \int_0^2 (4-x^2)\,dx = \frac{16}{3} $$</p>
             </div>
@@ -475,12 +499,12 @@
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <h4>Step 54:</h4>
-<p>\begin{aligned}
+                <h4>Step 1:</h4>
+<p>$$\begin{aligned}
                     \int_{-1}^2 2x\,dx &= [x^2]_{-1}^2 \\
                     &= (2)^2 - (-1)^2 \\
                     &= 4 - 1 = 3
-                    \end{aligned}</p>
+                    \end{aligned}$$</p>
                 <h4>Final Answer:</h4>
 <p>$$ \int_{-1}^2 2x\,dx = 3 $$</p>
             </div>
@@ -492,22 +516,22 @@
         <p><strong>Key Limits:</strong></p>
         <div class="notes">
 <h4>Key Formula</h4>
-<p>\begin{aligned}
+<p>$$\begin{aligned}
             &\lim_{n\to\infty} \frac{1}{n} = 0 \\
             &\lim_{n\to\infty} \frac{n+1}{n} = \lim_{n\to\infty} \left(1 + \frac{1}{n}\right) = 1 \\
             &\lim_{n\to\infty} \frac{2n+1}{n} = \lim_{n\to\infty} \left(2 + \frac{1}{n}\right) = 2
-            \end{aligned}</p>
+            \end{aligned}$$</p>
 </div>
 
         <p><strong>Example:</strong> Evaluate $ \lim_{n\to\infty} \frac{4n^2+3n+1}{3n^2} $</p>
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <h4>Step 55:</h4>
-<p>\begin{aligned}
+                <h4>Step 1:</h4>
+<p>$$\begin{aligned}
                     \lim_{n\to\infty} \frac{4n^2+3n+1}{3n^2} &= \lim_{n\to\infty} \frac{4 + \frac{3}{n} + \frac{1}{n^2}}{3} \\
                     &= \frac{4}{3}
-                    \end{aligned}</p>
+                    \end{aligned}$$</p>
                 <h4>Final Answer:</h4>
 <p>$$ \lim_{n\to\infty} \frac{4n^2+3n+1}{3n^2} = \frac{4}{3} $$</p>
             </div>
@@ -523,12 +547,44 @@
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
                 <h4>Final Answer:</h4>
-<p><div class="final-answer-title">Day 2 Summary:</p>
+<div class="final-answer-block"><div class="final-answer-title">Day 2 Summary:</div>
                     <p>We learned the Fundamental Theorem of Calculus, which connects integration and differentiation. We practiced u-substitution, computed definite integrals using Riemann sums and FTC, found areas between curves, and applied differentiation to integrals with variable limits.</p>
                 </div>
             </div>
         </details>
     </div>
+<div class="study-box practice-box">
+<h4>Common mistakes</h4>
+<ul>
+<li>Forgetting to subtract $F(a)$, or subtracting in the wrong order.</li>
+<li>Forgetting the $g'(x)$ factor when the upper limit is $g(x)$, as in $\frac{d}{dx}\int_0^{x^3}$.</li>
+<li>Converting limits during a substitution and then substituting back as well (do one or the other).</li>
+</ul>
+<h4>Try it yourself</h4>
+<p><strong>Problem 1.</strong> $\int_1^3 (2x + 1)\,dx$</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>$F(x) = x^2 + x$, so $F(3) - F(1) = 12 - 2 = 10$.</p></div></details>
+<p><strong>Problem 2.</strong> $\int_0^{\pi/2} \cos x\,dx$</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>$\sin(\pi/2) - \sin 0 = 1$.</p></div></details>
+<p><strong>Problem 3.</strong> $\dfrac{d}{dx}\displaystyle\int_0^{x^3}\sqrt{1+t^2}\,dt$</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>$\sqrt{1+(x^3)^2}\cdot 3x^2 = 3x^2\sqrt{1+x^6}$.</p></div></details>
+<h4>Check yourself</h4>
+<details class="question"><summary><strong>Q:</strong> Why can $+C$ be dropped in a definite integral?</summary><div class="solution"><p>It appears as $(F(b)+C) - (F(a)+C)$, and the $C$ cancels.</p></div></details>
+<details class="question"><summary><strong>Q:</strong> If $f \ge 0$ on $[0,1]$ and $f < 0$ on $[1,2]$, what does $\int_0^2 f\,dx$ measure?</summary><div class="solution"><p>The net total: the positive area minus the area below the axis. It is not the total area.</p></div></details>
+<h4>Key takeaways</h4>
+<ul>
+<li>$\int_a^b f\,dx = F(b) - F(a)$, where $F' = f$.</li>
+<li>$\frac{d}{dx}\int_a^x f(t)\,dt = f(x)$. With a function $g(x)$ as the limit, multiply by $g'(x)$.</li>
+<li>A definite integral gives signed area or net change, so sketch the function to check the sign.</li>
+</ul>
+<h4>Go further: external resources</h4>
+<ul>
+<li><a href="https://www.khanacademy.org/math/ap-calculus-bc/bc-integration-new" target="_blank" rel="noopener">Khan Academy: Integration and accumulation of change (AP Calculus BC)</a>: Accumulation and the Fundamental Theorem, with video explanations.</li>
+<li><a href="https://courses.lumenlearning.com/calculus2/" target="_blank" rel="noopener">Lumen Learning: Calculus II (full course outline)</a>: The course outline places FTC at the start of the integration modules.</li>
+<li><a href="https://tutorial.math.lamar.edu/classes/calcii/inttechintro.aspx" target="_blank" rel="noopener">Paul's Online Notes: Integration Techniques (intro)</a>: Paul's introduction to integration techniques, for what comes next.</li>
+<li><a href="https://www.desmos.com/calculator" target="_blank" rel="noopener">Desmos graphing calculator (tool, for graphing curves)</a>: Shade the area under $f$ on $[a,b]$ and compare it with $F(b)-F(a)$.</li>
+</ul>
+</div>
+
 <div class="strategies">
 <h4>Study Tips</h4>
 <p><strong>1.</strong> For Riemann sums, label your endpoints carefully and double-check your arithmetic.</p>
@@ -539,10 +595,13 @@
             </section>
 
             <nav class="chapter-nav">
-<a href="day-01.html" class="nav-btn prev" id="prev-chapter">Previous</a>
-<span class="nav-indicator" id="chapter-indicator"></span>
-<a href="day-03.html" class="nav-btn next" id="next-chapter">Next</a>
+    <a href="day-01.html" class="nav-btn prev" id="prev-chapter">Previous</a>
+    <span class="nav-indicator" id="chapter-indicator"></span>
+    <a href="day-03.html" class="nav-btn next" id="next-chapter">Next</a>
 </nav>
+
+    </main>
+    </div>
 
     <script src="../js/app.js"></script>
 </body>

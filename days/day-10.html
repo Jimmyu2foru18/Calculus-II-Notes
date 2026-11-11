@@ -40,6 +40,20 @@
         <main class="chapter">
             <h2>Day 10: Partial Fractions and Improper Integrals</h2>
             <p class="lead">Expand partial fractions to handle repeated and quadratic factors, then learn to evaluate integrals with infinite limits or discontinuities.</p>
+<div class="study-box start-here">
+<h4>Start here</h4>
+<h4>Learning goals</h4>
+<ul>
+<li>Evaluate improper integrals with infinite limits or infinite discontinuities, as limits.</li>
+<li>Decide whether an improper integral converges or diverges.</li>
+<li>Use the p-test for $\int_1^\infty \frac{dx}{x^p}$ and $\int_0^1 \frac{dx}{x^p}$.</li>
+</ul>
+<h4>Before you start</h4>
+<p>Day 02 (definite integrals and the FTC) and Day 09 (partial fractions, when needed).</p>
+<h4>The big idea</h4>
+<p>An improper integral is a limit of ordinary definite integrals. If the limit is a finite number, the integral converges. If not, it diverges.</p>
+</div>
+
 
             <div class="video-section">
                 <h4>Core Lecture</h4>
@@ -87,7 +101,18 @@
                 $$\frac{P(x)}{(x - r)^k} = \frac{A_1}{x - r} + \frac{A_2}{(x - r)^2} + \cdots + \frac{A_k}{(x - r)^k}$$
             </div>
 
-            <div class="example">
+            <div class="study-box method-box">
+<h4>Improper integrals, step by step</h4>
+<ol>
+<li>Identify the problem: an infinite limit of integration, or an integrand that blows up at a point in or at the end of the interval.</li>
+<li>Replace the problem endpoint with a variable $t$ and take a limit, for example $\int_1^\infty f\,dx = \lim_{t \to \infty}\int_1^t f\,dx$.</li>
+<li>If the blow-up point is inside the interval, split the integral at that point.</li>
+<li>Compute the definite integral in $t$, then take the limit.</li>
+<li>p-test: $\int_1^\infty \frac{dx}{x^p}$ converges if and only if $p > 1$; $\int_0^1 \frac{dx}{x^p}$ converges if and only if $p < 1$.</li>
+</ol>
+</div>
+
+<div class="example">
                 <h4>Example 1.1</h4>
                 <p><strong>Problem:</strong> Decompose $\displaystyle \frac{x^2 + 3x + 2}{(x + 1)^3}$.</p>
                 <details class="question">
@@ -260,7 +285,7 @@
                     <summary>Show Answer</summary>
                     <p><strong>Answer:</strong></p>
                     <p>Factor: $x^2 - 5x + 6 = (x - 2)(x - 3)$. The decomposition is:</p>
-                    $$\frac{2x - 1}{x^2 - 5x + 6} = \frac{3}{x - 2} - \frac{1}{x - 3}$$
+                    $$\frac{2x - 1}{x^2 - 5x + 6} = \frac{-3}{x - 2} + \frac{5}{x - 3}$$
                     </details>
                 </details>
                 <details class="question">
@@ -319,7 +344,38 @@
                 </details>
             </div>
 
-            <div class="strategies">
+            <div class="study-box practice-box">
+<h4>Common mistakes</h4>
+<ul>
+<li>Treating $\infty$ as a number and plugging it in.</li>
+<li>Applying the FTC directly to an integral with a discontinuity inside the interval.</li>
+<li>Declaring convergence without computing the limit.</li>
+</ul>
+<h4>Try it yourself</h4>
+<p><strong>Problem 1.</strong> $\int_1^\infty \frac{dx}{x^3}$</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>$p = 3 > 1$, so it converges to $\tfrac12$.</p></div></details>
+<p><strong>Problem 2.</strong> $\int_0^1 \frac{dx}{\sqrt{x}}$</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>$p = \tfrac12 < 1$, so it converges to $2$.</p></div></details>
+<p><strong>Problem 3.</strong> $\int_0^1 \frac{dx}{x^2}$</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>$p = 2 > 1$ at the endpoint $0$, so it diverges.</p></div></details>
+<h4>Check yourself</h4>
+<details class="question"><summary><strong>Q:</strong> Does $\int_1^\infty \frac{dx}{x}$ converge?</summary><div class="solution"><p>No. $\lim_{t\to\infty}\ln t = \infty$, so it diverges; $p = 1$ is not greater than $1$.</p></div></details>
+<details class="question"><summary><strong>Q:</strong> Why can't you just use FTC on $\int_0^1 \frac{dx}{x^2}$?</summary><div class="solution"><p>The integrand is unbounded at $0$, so $-\frac1x$ is not defined there. You need the limit.</p></div></details>
+<h4>Key takeaways</h4>
+<ul>
+<li>Improper integrals are limits of definite integrals.</li>
+<li>p-test: $\int_1^\infty x^{-p}\,dx$ converges when $p>1$; $\int_0^1 x^{-p}\,dx$ converges when $p<1$.</li>
+<li>Split at any interior blow-up point.</li>
+</ul>
+<h4>Go further: external resources</h4>
+<ul>
+<li><a href="https://www.khanacademy.org/math/integral-calculus" target="_blank" rel="noopener">Khan Academy: Integral Calculus</a>: Video review of improper integrals and convergence.</li>
+<li><a href="https://www.khanacademy.org/math/ap-calculus-bc/bc-integration-new" target="_blank" rel="noopener">Khan Academy: Integration and accumulation of change (AP Calculus BC)</a>: Integration and accumulation of change, for the AP Calculus BC course.</li>
+<li><a href="https://courses.lumenlearning.com/calculus2/" target="_blank" rel="noopener">Lumen Learning: Calculus II (full course outline)</a>: Lumen's outline places improper integrals in the integration module.</li>
+</ul>
+</div>
+
+<div class="strategies">
                 <h4>Study Tips</h4>
                 <p><strong>1.</strong> For Type I improper integrals, always write the limit explicitly before evaluating.</p>
                 <p><strong>2.</strong> For Type II improper integrals with a single discontinuity, split the integral at the discontinuity and evaluate each limit separately.</p>
@@ -329,10 +385,10 @@
             </div>
 
             <nav class="chapter-nav">
-                <a href="day-09.html" class="nav-btn prev" id="prev-chapter">Previous</a>
-                <span class="nav-indicator" id="chapter-indicator"></span>
-                <a href="day-11.html" class="nav-btn next" id="next-chapter">Next</a>
-            </nav>
+    <a href="day-09.html" class="nav-btn prev" id="prev-chapter">Previous</a>
+    <span class="nav-indicator" id="chapter-indicator"></span>
+    <a href="day-11.html" class="nav-btn next" id="next-chapter">Next</a>
+</nav>
         </main>
     </div>
 

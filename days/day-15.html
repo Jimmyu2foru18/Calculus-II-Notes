@@ -40,6 +40,20 @@
         <main class="chapter">
             <h2>Day 15: Power Series and Convergence</h2>
             <p class="lead">Power series representations, intervals and radii of convergence, and operations on power series.</p>
+<div class="study-box start-here">
+<h4>Start here</h4>
+<h4>Learning goals</h4>
+<ul>
+<li>Use the ratio test on a power series to find its radius of convergence $R$.</li>
+<li>Check the endpoints of the interval separately.</li>
+<li>Differentiate and integrate a power series term by term inside its interval.</li>
+</ul>
+<h4>Before you start</h4>
+<p>Day 13 (the ratio test) and Day 14 (Taylor series).</p>
+<h4>The big idea</h4>
+<p>A power series $\sum c_n (x-a)^n$ behaves like an infinite polynomial. It converges for $|x-a| < R$, diverges for $|x-a| > R$, and must be checked separately at the endpoints.</p>
+</div>
+
 
             <div class="video-section">
                 <h4>Core Lecture</h4>
@@ -92,7 +106,17 @@
                 <p><strong>Interval of Convergence:</strong> $(a-R, a+R)$, possibly including one or both endpoints.</p>
             </div>
 
-            <div class="example">
+            <div class="study-box method-box">
+<h4>Interval of convergence, step by step</h4>
+<ol>
+<li>Apply the ratio test to $\left|\frac{c_{n+1}(x-a)^{n+1}}{c_n(x-a)^n}\right|$. Solve $L < 1$ for $|x-a|$ to get $R$.</li>
+<li>Write the open interval $a - R < x < a + R$.</li>
+<li>Test each endpoint separately with a number-series test (alternating, p-series, or the divergence test).</li>
+<li>Write the final interval with the correct brackets.</li>
+</ol>
+</div>
+
+<div class="example">
                 <h4>Example 15.1</h4>
                 <p><strong>Problem:</strong> Find the interval and radius of convergence for $\sum_{n=0}^{\infty} \frac{x^n}{n!}$.</p>
                 <div class="visual-aid">
@@ -321,7 +345,37 @@
                 </details>
             </div>
 
-            <div class="strategies">
+            <div class="study-box practice-box">
+<h4>Common mistakes</h4>
+<ul>
+<li>Forgetting to test the endpoints, or assuming both endpoints behave the same way.</li>
+<li>Getting the ratio-test factors wrong when $n$ appears in an exponent or denominator.</li>
+<li>Mixing up the radius $R$ with the interval of convergence.</li>
+</ul>
+<h4>Try it yourself</h4>
+<p><strong>Problem 1.</strong> $\sum_{n=1}^\infty \frac{x^n}{n}$</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>Radius $1$. At $x = 1$, harmonic series (diverges). At $x = -1$, alternating series (converges). Interval: $[-1, 1)$.</p></div></details>
+<p><strong>Problem 2.</strong> $\sum_{n=0}^\infty \frac{(x-2)^n}{3^n}$</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>Radius $3$. At $x = 5$, $\sum 1$ diverges; at $x = -1$, $\sum (-1)^n$ diverges. Interval: $(-1, 5)$.</p></div></details>
+<p><strong>Problem 3.</strong> $\sum_{n=0}^\infty n!\,x^n$</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>Radius $0$: it converges only at $x = 0$.</p></div></details>
+<h4>Check yourself</h4>
+<details class="question"><summary><strong>Q:</strong> What is the difference between the radius and the interval?</summary><div class="solution"><p>The radius is the distance from the center. The interval is the set of $x$ where the series converges, which may include endpoints.</p></div></details>
+<details class="question"><summary><strong>Q:</strong> Why check endpoints separately?</summary><div class="solution"><p>At an endpoint the ratio test gives $L = 1$, which decides nothing.</p></div></details>
+<h4>Key takeaways</h4>
+<ul>
+<li>Ratio test gives the radius; the endpoints need separate tests.</li>
+<li>Inside the interval, a power series can be differentiated and integrated term by term.</li>
+</ul>
+<h4>Go further: external resources</h4>
+<ul>
+<li><a href="https://tutorial.math.lamar.edu/classes/calcII/powerseries.aspx" target="_blank" rel="noopener">Paul's Online Notes: Power Series</a>: Paul's power series notes, with interval-of-convergence examples.</li>
+<li><a href="https://openstax.org/books/calculus-volume-2/pages/6-1-power-series-and-functions" target="_blank" rel="noopener">OpenStax Calculus Volume 2: 6.1 Power Series and Functions</a>: OpenStax Calculus Volume 2, section 6.1: power series and functions.</li>
+<li><a href="https://openstax.org/books/calculus-volume-2/pages/6-2-properties-of-power-series" target="_blank" rel="noopener">OpenStax Calculus Volume 2: 6.2 Properties of Power Series</a>: OpenStax Calculus Volume 2, section 6.2: differentiating and integrating power series.</li>
+</ul>
+</div>
+
+<div class="strategies">
                 <h4>Study Tips</h4>
                 <p><strong>1.</strong> Use the Ratio Test first; it works for most power series.</p>
                 <p><strong>2.</strong> Always check endpoints separately after finding the open interval.</p>
@@ -331,10 +385,10 @@
             </div>
 
             <nav class="chapter-nav">
-                <a href="day-14.html" class="nav-btn prev" id="prev-chapter">Previous</a>
-                <span class="nav-indicator" id="chapter-indicator"></span>
-                <a href="day-16.html" class="nav-btn next" id="next-chapter">Next</a>
-            </nav>
+    <a href="day-14.html" class="nav-btn prev" id="prev-chapter">Previous</a>
+    <span class="nav-indicator" id="chapter-indicator"></span>
+    <a href="day-16.html" class="nav-btn next" id="next-chapter">Next</a>
+</nav>
         </main>
     </div>
 

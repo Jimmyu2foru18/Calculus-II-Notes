@@ -40,6 +40,20 @@
         <main class="chapter">
             <h2>Day 09: Partial Fractions and Advanced Integration</h2>
             <p class="lead">Master partial fractions decomposition, trigonometric substitution, and learn how to select the best integration technique for a given problem.</p>
+<div class="study-box start-here">
+<h4>Start here</h4>
+<h4>Learning goals</h4>
+<ul>
+<li>Decompose a rational function into partial fractions with distinct linear, repeated linear, and irreducible quadratic factors.</li>
+<li>Divide first when the numerator's degree is at least the denominator's.</li>
+<li>Integrate the resulting simple fractions to logarithms and arctangents.</li>
+</ul>
+<h4>Before you start</h4>
+<p>Day 08 (choosing a method) and Day 01 (the basic logarithm integral).</p>
+<h4>The big idea</h4>
+<p>A rational function that is hard to integrate can be rewritten as a sum of simpler fractions. Each simple fraction integrates to a logarithm, a power, or an arctangent.</p>
+</div>
+
 
             <div class="video-section">
                 <h4>Core Lecture</h4>
@@ -89,7 +103,18 @@
                 <p><strong>Repeated irreducible quadratics:</strong> Include terms with numerators linear in $x$ for each power.</p>
             </div>
 
-            <div class="example">
+            <div class="study-box method-box">
+<h4>Partial fractions, step by step</h4>
+<ol>
+<li>If the numerator's degree is at least the denominator's, divide first.</li>
+<li>Factor the denominator completely.</li>
+<li>Write one term per factor: for $(x - r)^k$ use $\frac{A_1}{x - r} + \cdots + \frac{A_k}{(x - r)^k}$; for an irreducible quadratic use $\frac{Bx + C}{x^2 + \cdots}$.</li>
+<li>Multiply through by the denominator. Solve for the constants by plugging in roots, or by comparing coefficients.</li>
+<li>Integrate each piece: $\int \frac{dx}{x - r} = \ln|x - r| + C$, and powers of $(x - r)$ use the power rule.</li>
+</ol>
+</div>
+
+<div class="example">
                 <h4>Example 1.1</h4>
                 <p><strong>Problem:</strong> Decompose $\displaystyle \frac{3x + 5}{x^2 - 4}$ into partial fractions.</p>
                 <div class="visual-aid">
@@ -268,7 +293,7 @@
                     <summary>Show Answer</summary>
                     <p><strong>Answer:</strong></p>
                     <p>Factor: $x^2 - 5x + 6 = (x - 2)(x - 3)$. The decomposition is:</p>
-                    $$\frac{2x - 1}{x^2 - 5x + 6} = \frac{3}{x - 2} - \frac{1}{x - 3}$$
+                    $$\frac{2x - 1}{x^2 - 5x + 6} = \frac{-3}{x - 2} + \frac{5}{x - 3}$$
                     </details>
                 </details>
                 <details class="question">
@@ -298,7 +323,7 @@
                     <summary>Show Answer</summary>
                     <p><strong>Answer:</strong></p>
                     <p>The decomposition takes the form:</p>
-                    $$\frac{x^2}{(x - 1)(x^2 + 4)} = \frac{1}{5(x - 1)} + \frac{-x + 4}{5(x^2 + 4)}$$
+                    $$\frac{x^2}{(x - 1)(x^2 + 4)} = \frac{1}{5(x - 1)} + \frac{4x + 4}{5(x^2 + 4)}$$
                     </details>
                 </details>
                 <details class="question">
@@ -313,7 +338,38 @@
                 </details>
             </div>
 
-            <div class="strategies">
+            <div class="study-box practice-box">
+<h4>Common mistakes</h4>
+<ul>
+<li>Forgetting a term for a repeated factor. $(x+1)^3$ needs three terms.</li>
+<li>Skipping the division step for an improper fraction.</li>
+<li>Sign errors when solving for the constants.</li>
+</ul>
+<h4>Try it yourself</h4>
+<p><strong>Problem 1.</strong> $\int \frac{5x + 1}{(x-1)(x+2)}\,dx$</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>$\frac{5x+1}{(x-1)(x+2)} = \frac{2}{x-1} + \frac{3}{x+2}$, so the integral is $2\ln|x-1| + 3\ln|x+2| + C$. Check: at $x=1$, $A = \frac{6}{3} = 2$; at $x=-2$, $B = \frac{-9}{-3} = 3$.</p></div></details>
+<p><strong>Problem 2.</strong> $\int \frac{2x + 1}{(x-1)^2}\,dx$</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>$\frac{2x+1}{(x-1)^2} = \frac{2}{x-1} + \frac{3}{(x-1)^2}$, so the integral is $2\ln|x-1| - \frac{3}{x-1} + C$.</p></div></details>
+<p><strong>Problem 3.</strong> $\int \frac{x^2}{x^2 - 1}\,dx$</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>Divide first: $\frac{x^2}{x^2-1} = 1 + \frac{1}{x^2-1}$. The integral is $x + \frac{1}{2}\ln\left|\frac{x-1}{x+1}\right| + C$.</p></div></details>
+<h4>Check yourself</h4>
+<details class="question"><summary><strong>Q:</strong> Why do $(x-1)^2$ denominators need two terms?</summary><div class="solution"><p>Both $\frac{A}{x-1}$ and $\frac{B}{(x-1)^2}$ are needed to capture the repeated factor.</p></div></details>
+<details class="question"><summary><strong>Q:</strong> Why divide $\frac{x^2}{x^2-1}$ first?</summary><div class="solution"><p>The numerator's degree equals the denominator's, so the fraction is improper and cannot be split directly.</p></div></details>
+<h4>Key takeaways</h4>
+<ul>
+<li>Divide first if the fraction is improper.</li>
+<li>One term per factor; repeated factors need one term per power.</li>
+<li>Each simple term integrates to a logarithm or a power.</li>
+</ul>
+<h4>Go further: external resources</h4>
+<ul>
+<li><a href="https://tutorial.math.lamar.edu/classes/calcii/PartialFractions.aspx" target="_blank" rel="noopener">Paul's Online Notes: Partial Fractions</a>: Paul's partial fractions notes, with the repeated and quadratic cases.</li>
+<li><a href="https://tutorial.math.lamar.edu/classes/calcii/IntegrationStrategy.aspx" target="_blank" rel="noopener">Paul's Online Notes: Integration Strategy</a>: When partial fractions is the right tool.</li>
+<li><a href="https://www.khanacademy.org/math/integral-calculus" target="_blank" rel="noopener">Khan Academy: Integral Calculus</a>: Video practice on rational functions and integration.</li>
+</ul>
+</div>
+
+<div class="strategies">
                 <h4>Study Tips</h4>
                 <p><strong>1.</strong> Always simplify the integrand algebraically before selecting a method.</p>
                 <p><strong>2.</strong> For rational functions, long division must come first if the numerator degree is greater than or equal to the denominator degree.</p>
@@ -323,10 +379,10 @@
             </div>
 
             <nav class="chapter-nav">
-                <a href="day-08.html" class="nav-btn prev" id="prev-chapter">Previous</a>
-                <span class="nav-indicator" id="chapter-indicator"></span>
-                <a href="day-10.html" class="nav-btn next" id="next-chapter">Next</a>
-            </nav>
+    <a href="day-08.html" class="nav-btn prev" id="prev-chapter">Previous</a>
+    <span class="nav-indicator" id="chapter-indicator"></span>
+    <a href="day-10.html" class="nav-btn next" id="next-chapter">Next</a>
+</nav>
         </main>
     </div>
 

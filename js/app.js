@@ -5,6 +5,8 @@
 (function() {
     'use strict';
 
+    const SITE_ROOT = new URL('../', document.currentScript ? document.currentScript.src : window.location.href);
+
     const CONFIG = {
         notesKey: 'calculus2_notes',
         storagePrefix: 'calc2_notes_'
@@ -254,9 +256,9 @@ Notes are saved per chapter and persist across sessions.">${escapeHtml(currentNo
         if (!currentSection) return;
 
         const currentIndex = ALL_SECTIONS.findIndex(s => s.id === currentSection.id);
-        const prevBtn = document.getElementById('prev-section');
-        const nextBtn = document.getElementById('next-section');
-        const indicator = document.getElementById('section-indicator');
+        const prevBtn = document.getElementById('prev-chapter');
+        const nextBtn = document.getElementById('next-chapter');
+        const indicator = document.getElementById('chapter-indicator');
 
         if (indicator) {
             indicator.textContent = `${currentSection.num} / ${ALL_SECTIONS.length}`;
@@ -264,7 +266,7 @@ Notes are saved per chapter and persist across sessions.">${escapeHtml(currentNo
 
         if (prevBtn) {
             if (currentIndex > 0) {
-                prevBtn.href = ALL_SECTIONS[currentIndex - 1].file;
+                prevBtn.href = new URL(ALL_SECTIONS[currentIndex - 1].file, SITE_ROOT).href;
                 prevBtn.classList.remove('disabled');
                 prevBtn.style.display = '';
             } else {
@@ -275,7 +277,7 @@ Notes are saved per chapter and persist across sessions.">${escapeHtml(currentNo
 
         if (nextBtn) {
             if (currentIndex < ALL_SECTIONS.length - 1) {
-                nextBtn.href = ALL_SECTIONS[currentIndex + 1].file;
+                nextBtn.href = new URL(ALL_SECTIONS[currentIndex + 1].file, SITE_ROOT).href;
                 nextBtn.classList.remove('disabled');
                 nextBtn.style.display = '';
             } else {
@@ -351,18 +353,24 @@ Notes are saved per chapter and persist across sessions.">${escapeHtml(currentNo
         });
     }
 
+    function isPlainKey(e, key) {
+        const t = e.target;
+        const typing = t && (t.tagName === 'TEXTAREA' || t.tagName === 'INPUT' || t.isContentEditable);
+        return !typing && !e.ctrlKey && !e.metaKey && !e.altKey && e.key === key;
+    }
+
     function initKeyboardShortcuts() {
         document.addEventListener('keydown', (e) => {
-            if (e.ctrlKey && e.key === 'n') {
+            if (isPlainKey(e, ']')) {
                 e.preventDefault();
-                const nextBtn = document.getElementById('next-section');
+                const nextBtn = document.getElementById('next-chapter');
                 if (nextBtn && !nextBtn.classList.contains('disabled')) {
                     window.location.href = nextBtn.href;
                 }
             }
-            if (e.ctrlKey && e.key === 'p') {
+            if (isPlainKey(e, '[')) {
                 e.preventDefault();
-                const prevBtn = document.getElementById('prev-section');
+                const prevBtn = document.getElementById('prev-chapter');
                 if (prevBtn && !prevBtn.classList.contains('disabled')) {
                     window.location.href = prevBtn.href;
                 }

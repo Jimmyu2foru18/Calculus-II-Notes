@@ -40,6 +40,20 @@
         <main class="chapter">
             <h2>Day 11: Sequences, Series, and L'Hopital's Rule</h2>
             <p class="lead">Understand limits of sequences, the basics of infinite series, and apply L'Hopital's Rule to tricky indeterminate forms.</p>
+<div class="study-box start-here">
+<h4>Start here</h4>
+<h4>Learning goals</h4>
+<ul>
+<li>Find the limit of a sequence as $n \to \infty$.</li>
+<li>Apply L'Hôpital's rule to $\frac{0}{0}$ and $\frac{\infty}{\infty}$ forms.</li>
+<li>Sum a geometric series when $|r| < 1$.</li>
+</ul>
+<h4>Before you start</h4>
+<p>Calculus I limits and derivatives; Day 01 (derivative rules).</p>
+<h4>The big idea</h4>
+<p>A sequence is an ordered list $a_1, a_2, \dots$. Its limit tells you where the terms settle. L'Hôpital's rule turns some indeterminate limits into easier ones by differentiating the top and bottom.</p>
+</div>
+
 
             <div class="video-section">
                 <h4>Core Lecture</h4>
@@ -88,7 +102,17 @@
                 <p><strong>Squeeze Theorem:</strong> If $a_n \leq b_n \leq c_n$ and $\lim a_n = \lim c_n = L$, then $\lim b_n = L$.</p>
             </div>
 
-            <div class="example">
+            <div class="study-box method-box">
+<h4>Limits of sequences and L'Hôpital, step by step</h4>
+<ol>
+<li>Sequence limits: divide the top and bottom by the highest power of $n$.</li>
+<li>If the limit has the form $\frac{0}{0}$ or $\frac{\infty}{\infty}$, differentiate the numerator and the denominator separately, then take the limit again.</li>
+<li>For $0\cdot\infty$, $1^\infty$, or $\infty^0$, rewrite with a logarithm, then use L'Hôpital.</li>
+<li>Geometric series: $\sum_{n=0}^\infty a r^n = \frac{a}{1 - r}$ when $|r| < 1$.</li>
+</ol>
+</div>
+
+<div class="example">
                 <h4>Example 1.1</h4>
                 <p><strong>Problem:</strong> Find $\displaystyle \lim_{n \to \infty} \frac{2n + 7}{3n + 5}$.</p>
                 <div class="visual-aid">
@@ -298,7 +322,37 @@
                 </details>
             </div>
 
-            <div class="strategies">
+            <div class="study-box practice-box">
+<h4>Common mistakes</h4>
+<ul>
+<li>Applying L'Hôpital's rule when the limit is not indeterminate.</li>
+<li>Using the quotient rule on the whole fraction instead of differentiating top and bottom separately.</li>
+<li>Using the geometric formula when $|r| \ge 1$, or starting the sum at the wrong index.</li>
+</ul>
+<h4>Try it yourself</h4>
+<p><strong>Problem 1.</strong> $\lim_{n\to\infty}\frac{3n^2 + 1}{n^2 - 5}$</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>Divide by $n^2$: the limit is $3$.</p></div></details>
+<p><strong>Problem 2.</strong> $\lim_{x\to 0}\frac{\sin 3x}{x}$</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>L'Hôpital: $\frac{3\cos 3x}{1} \to 3$.</p></div></details>
+<p><strong>Problem 3.</strong> $\sum_{n=0}^\infty \left(\tfrac12\right)^n$</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>$\frac{1}{1 - 1/2} = 2$.</p></div></details>
+<h4>Check yourself</h4>
+<details class="question"><summary><strong>Q:</strong> When is L'Hôpital's rule allowed?</summary><div class="solution"><p>Only for $\frac{0}{0}$ or $\frac{\pm\infty}{\pm\infty}$ forms.</p></div></details>
+<details class="question"><summary><strong>Q:</strong> What is $\sum_{n=0}^\infty 2(0.1)^n$?</summary><div class="solution"><p>$\frac{2}{1 - 0.1} = \frac{20}{9}$.</p></div></details>
+<h4>Key takeaways</h4>
+<ul>
+<li>Sequences: divide by the highest power, or use L'Hôpital on the function behind the sequence.</li>
+<li>Geometric series converge only when $|r| < 1$.</li>
+</ul>
+<h4>Go further: external resources</h4>
+<ul>
+<li><a href="https://tutorial.math.lamar.edu/classes/calcii/seriesintro.aspx" target="_blank" rel="noopener">Paul's Online Notes: Series and Sequences (intro)</a>: Paul's introduction to sequences and series.</li>
+<li><a href="https://courses.lumenlearning.com/calculus2/" target="_blank" rel="noopener">Lumen Learning: Calculus II (full course outline)</a>: The sequences and series module in the course outline.</li>
+<li><a href="https://tutorial.math.lamar.edu/classes/calcii/calcii.aspx" target="_blank" rel="noopener">Paul's Online Notes: Calculus II (course index)</a>: Paul's full Calculus II notes; see the sequences and L'Hôpital sections.</li>
+</ul>
+</div>
+
+<div class="strategies">
                 <h4>Study Tips</h4>
                 <p><strong>1.</strong> For sequence limits, divide numerator and denominator by the highest power of $n$ when dealing with rational functions.</p>
                 <p><strong>2.</strong> Geometric series are the easiest series to evaluate. Memorize the formula and the convergence condition $|r| < 1$.</p>
@@ -308,10 +362,10 @@
             </div>
 
             <nav class="chapter-nav">
-                <a href="day-10.html" class="nav-btn prev" id="prev-chapter">Previous</a>
-                <span class="nav-indicator" id="chapter-indicator"></span>
-                <a href="day-12.html" class="nav-btn next" id="next-chapter">Next</a>
-            </nav>
+    <a href="day-10.html" class="nav-btn prev" id="prev-chapter">Previous</a>
+    <span class="nav-indicator" id="chapter-indicator"></span>
+    <a href="day-12.html" class="nav-btn next" id="next-chapter">Next</a>
+</nav>
         </main>
     </div>
 

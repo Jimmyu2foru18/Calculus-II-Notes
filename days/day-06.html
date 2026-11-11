@@ -40,6 +40,20 @@
         <main class="chapter">
             <h2>Day 06: Volumes by Shells and Motion</h2>
             <p class="lead">Browse through the Volumes by Shells and Motion pages. Use the arrow buttons or keyboard arrows to navigate.</p>
+<div class="study-box start-here">
+<h4>Start here</h4>
+<h4>Learning goals</h4>
+<ul>
+<li>Choose between disks and shells, and set up the shell integral $V = 2\pi\int r\,h\,dx$.</li>
+<li>Find velocity and position from acceleration, using initial conditions.</li>
+<li>Recognize that each integration adds a constant that the starting values determine.</li>
+</ul>
+<h4>Before you start</h4>
+<p>Days 01 (antiderivatives), 02 (FTC), and 03 (disks).</p>
+<h4>The big idea</h4>
+<p>Shells are thin cylinders that wrap around the axis: volume = circumference $\times$ height $\times$ thickness. For motion, integrating acceleration gives velocity and integrating velocity gives position; each integration adds a constant fixed by the starting values.</p>
+</div>
+
 
             <div class="video-section">
                 <h4>Core Lecture</h4>
@@ -91,7 +105,16 @@
                 </ul>
             </div>
 
-            <div class="example">
+            <div class="study-box method-box">
+<h4>Shell method and motion, step by step</h4>
+<ol>
+<li>Shells about the y-axis: radius $r = x$, height $h$ = top minus bottom, and $V = 2\pi\int_a^b x\,h(x)\,dx$. For a horizontal axis, swap the roles of $x$ and $y$.</li>
+<li>Velocity: $v(t) = \int a(t)\,dt$. Use $v(0)$ to find the constant.</li>
+<li>Position: $s(t) = \int v(t)\,dt$. Use $s(0)$ to find the second constant.</li>
+</ol>
+</div>
+
+<div class="example">
                 <h4>Example 1.1</h4>
                 <p><strong>Problem:</strong> Region bounded by $y = x^2$, $y = 4$, and $x = 0$, revolved about the y-axis.</p>
                 <div class="visual-aid">
@@ -346,7 +369,37 @@
                 </details>
             </div>
 
-            <div class="strategies">
+            <div class="study-box practice-box">
+<h4>Common mistakes</h4>
+<ul>
+<li>Measuring the radius from the origin instead of from the axis of revolution.</li>
+<li>Forgetting the $2\pi$ or the height.</li>
+<li>Forgetting the second constant when integrating velocity.</li>
+</ul>
+<h4>Try it yourself</h4>
+<p><strong>Problem 1.</strong> Region between $y = x^2$ and $y = 0$ on $[0, 1]$, revolved about the y-axis.</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>$V = 2\pi\int_0^1 x\cdot x^2\,dx = \tfrac{\pi}{2}$.</p></div></details>
+<p><strong>Problem 2.</strong> $a(t) = 2$, $v(0) = 3$, $s(0) = 0$.</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>$v(t) = 2t + 3$ and $s(t) = t^2 + 3t$.</p></div></details>
+<p><strong>Problem 3.</strong> $a(t) = \cos t$, $v(0) = 0$, $s(0) = 0$.</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>$v(t) = \sin t$ and $s(t) = 1 - \cos t$.</p></div></details>
+<h4>Check yourself</h4>
+<details class="question"><summary><strong>Q:</strong> For a shell about the y-axis, what is the radius?</summary><div class="solution"><p>The horizontal distance $x$ from the curve to the y-axis.</p></div></details>
+<details class="question"><summary><strong>Q:</strong> Why does a position function need two starting conditions?</summary><div class="solution"><p>Each antiderivative adds a constant. The velocity condition fixes one; the position condition fixes the other.</p></div></details>
+<h4>Key takeaways</h4>
+<ul>
+<li>Shells: $V = 2\pi\int (\text{radius})(\text{height})\,dx$.</li>
+<li>Motion: integrate $a \to v \to s$, fixing each constant with a starting value.</li>
+</ul>
+<h4>Go further: external resources</h4>
+<ul>
+<li><a href="https://www.khanacademy.org/math/integral-calculus" target="_blank" rel="noopener">Khan Academy: Integral Calculus</a>: Video review of volumes by shells and motion applications.</li>
+<li><a href="https://courses.lumenlearning.com/calculus2/" target="_blank" rel="noopener">Lumen Learning: Calculus II (full course outline)</a>: The applications module covers volumes and motion in more depth.</li>
+<li><a href="https://www.desmos.com/calculator" target="_blank" rel="noopener">Desmos graphing calculator (tool, for graphing curves)</a>: Graph $v(t)$ and $s(t)$ to check that $s' = v$ and $v' = a$.</li>
+</ul>
+</div>
+
+<div class="strategies">
                 <h4>Study Tips</h4>
                 <p><strong>1.</strong> When using the shell method, visualize the cylindrical shells being formed. The radius is the distance from the axis of rotation to the shell, and the height is the function value (or difference of functions).</p>
                 <p><strong>2.</strong> For motion problems, always integrate acceleration to get velocity, then integrate velocity to get position. Don't forget the constants of integration!</p>
@@ -354,10 +407,10 @@
             </div>
 
             <nav class="chapter-nav">
-                <a href="day-04.html" class="nav-btn prev" id="prev-chapter">Previous</a>
-                <span class="nav-indicator" id="chapter-indicator"></span>
-                <a href="day-07.html" class="nav-btn next" id="next-chapter">Next</a>
-            </nav>
+    <a href="day-05.html" class="nav-btn prev" id="prev-chapter">Previous</a>
+    <span class="nav-indicator" id="chapter-indicator"></span>
+    <a href="day-07.html" class="nav-btn next" id="next-chapter">Next</a>
+</nav>
         </main>
     </div>
 

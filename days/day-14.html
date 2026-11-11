@@ -40,6 +40,20 @@
         <main class="chapter">
             <h2>Day 14: Taylor Polynomial Approximations</h2>
             <p class="lead">Taylor polynomial approximations, remainder term, error bounds, and applications of Taylor series.</p>
+<div class="study-box start-here">
+<h4>Start here</h4>
+<h4>Learning goals</h4>
+<ul>
+<li>Build the Taylor polynomial $T_n(x)$ centered at $a$.</li>
+<li>Use $T_n$ to approximate function values.</li>
+<li>Bound the error with the remainder estimate $|R_n(x)| \le \frac{M}{(n+1)!}|x-a|^{n+1}$.</li>
+</ul>
+<h4>Before you start</h4>
+<p>Day 01 (derivatives) and Day 02 (the FTC, for the connection to accumulation).</p>
+<h4>The big idea</h4>
+<p>$T_n$ matches $f$ and its first $n$ derivatives at $a$. The next term tells you how far off the approximation can be.</p>
+</div>
+
 
             <div class="video-section">
                 <h4>Core Lecture</h4>
@@ -94,7 +108,17 @@
                 <p>where $|f^{(n+1)}(x)| \leq M$ for all $x$ between $a$ and $x$.</p>
             </div>
 
-            <div class="example">
+            <div class="study-box method-box">
+<h4>Building and checking a Taylor polynomial</h4>
+<ol>
+<li>Compute $f(a), f'(a), f''(a), \dots, f^{(n)}(a)$.</li>
+<li>Form $T_n(x) = \sum_{k=0}^{n} \frac{f^{(k)}(a)}{k!}(x-a)^k$.</li>
+<li>Evaluate $T_n$ at the point you want.</li>
+<li>To bound the error on an interval, find $M \ge |f^{(n+1)}|$ on the interval between $a$ and $x$, then use $|R_n| \le \frac{M}{(n+1)!}|x-a|^{n+1}$.</li>
+</ol>
+</div>
+
+<div class="example">
                 <h4>Example 14.1</h4>
                 <p><strong>Problem:</strong> Find the Taylor polynomial $T_3(x)$ for $f(x) = e^x$ at $a = 0$ and use it to approximate $e^{0.1}$.</p>
                 <div class="visual-aid">
@@ -287,7 +311,37 @@
                 </details>
             </div>
 
-            <div class="strategies">
+            <div class="study-box practice-box">
+<h4>Common mistakes</h4>
+<ul>
+<li>Forgetting the $k!$ in the denominators.</li>
+<li>Using $|x|$ instead of $|x - a|$ in the error bound.</li>
+<li>Choosing $M$ at a single point instead of the maximum over the whole interval.</li>
+</ul>
+<h4>Try it yourself</h4>
+<p><strong>Problem 1.</strong> $T_2$ for $e^x$ at $a = 0$.</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>$1 + x + \frac{x^2}{2}$.</p></div></details>
+<p><strong>Problem 2.</strong> $T_2$ for $\ln x$ at $a = 1$.</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>$(x-1) - \frac{(x-1)^2}{2}$, since $f' = 1$ and $f'' = -1$ at $x = 1$.</p></div></details>
+<p><strong>Problem 3.</strong> $T_3$ for $\cos x$ at $a = 0$.</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>$1 - \frac{x^2}{2}$. The $x^3$ coefficient is $0$.</p></div></details>
+<h4>Check yourself</h4>
+<details class="question"><summary><strong>Q:</strong> Why the $k!$ in the Taylor formula?</summary><div class="solution"><p>Differentiating $(x-a)^k$ a total of $k$ times produces $k!$, so dividing by $k!$ cancels it.</p></div></details>
+<details class="question"><summary><strong>Q:</strong> What does a larger $n$ usually do?</summary><div class="solution"><p>It improves the approximation near $a$, because the error bound shrinks like $\frac{1}{(n+1)!}$.</p></div></details>
+<h4>Key takeaways</h4>
+<ul>
+<li>Taylor polynomial: $T_n(x) = \sum \frac{f^{(k)}(a)}{k!}(x-a)^k$.</li>
+<li>Error bound: $|R_n| \le \frac{M}{(n+1)!}|x-a|^{n+1}$, with $M$ the max of $|f^{(n+1)}|$ on the interval.</li>
+</ul>
+<h4>Go further: external resources</h4>
+<ul>
+<li><a href="https://en.khanacademy.org/math/ap-calculus-bc/bc-series/bc-maclaurin-series/v/visualizing-taylor-series-approximations" target="_blank" rel="noopener">Khan Academy video: Visualizing Taylor series approximations</a>: A video that shows Taylor polynomials getting closer to the function.</li>
+<li><a href="https://openstax.org/books/calculus-volume-2/pages/6-4-working-with-taylor-series" target="_blank" rel="noopener">OpenStax Calculus Volume 2: 6.4 Working with Taylor Series</a>: OpenStax Calculus Volume 2, section 6.4: working with Taylor series.</li>
+<li><a href="https://www.desmos.com/calculator" target="_blank" rel="noopener">Desmos graphing calculator (tool, for graphing curves)</a>: Graph $f(x)$ and $T_n(x)$ on the same axes to see where they agree.</li>
+</ul>
+</div>
+
+<div class="strategies">
                 <h4>Study Tips</h4>
                 <p><strong>1.</strong> Always write out the Taylor polynomial formula before computing derivatives.</p>
                 <p><strong>2.</strong> For error bounds, find $M$ by maximizing $|f^{(n+1)}(x)|$ on the interval containing $a$ and $x$.</p>
@@ -296,10 +350,10 @@
             </div>
 
             <nav class="chapter-nav">
-                <a href="day-13.html" class="nav-btn prev" id="prev-chapter">Previous</a>
-                <span class="nav-indicator" id="chapter-indicator"></span>
-                <a href="day-15.html" class="nav-btn next" id="next-chapter">Next</a>
-            </nav>
+    <a href="day-13.html" class="nav-btn prev" id="prev-chapter">Previous</a>
+    <span class="nav-indicator" id="chapter-indicator"></span>
+    <a href="day-15.html" class="nav-btn next" id="next-chapter">Next</a>
+</nav>
         </main>
     </div>
 

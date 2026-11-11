@@ -40,6 +40,20 @@
         <main class="chapter">
             <h2>Day 12: Series Convergence Tests</h2>
             <p class="lead">Apply the Divergence Test, Integral Test, p-Series Test, and Limit Comparison Test to determine whether infinite series converge or diverge.</p>
+<div class="study-box start-here">
+<h4>Start here</h4>
+<h4>Learning goals</h4>
+<ul>
+<li>Apply the divergence (nth-term) test.</li>
+<li>Use the integral test for positive, decreasing functions.</li>
+<li>Use comparison and limit comparison with p-series and geometric series.</li>
+</ul>
+<h4>Before you start</h4>
+<p>Day 10 (p-integrals and improper integrals) and Day 11 (limits and geometric series).</p>
+<h4>The big idea</h4>
+<p>A series converges when its partial sums approach a finite number. Most tests compare a series with a known one: the p-series $\sum 1/n^p$ converges exactly when $p > 1$, and geometric series converge exactly when $|r| < 1$.</p>
+</div>
+
 
             <div class="video-section">
                 <h4>Core Lecture</h4>
@@ -91,7 +105,18 @@
 
             <h2>Problems</h2>
 
-            <div class="example">
+            <div class="study-box method-box">
+<h4>Choosing a convergence test</h4>
+<ol>
+<li>First check: if $a_n \not\to 0$, the series diverges. Warning: $a_n \to 0$ does not guarantee convergence.</li>
+<li>If the series looks like $\sum 1/n^p$ or $\sum r^n$, use the p-series or geometric test.</li>
+<li>If $a_n = f(n)$ with $f$ positive, continuous, and decreasing, use the integral test on $\int f(x)\,dx$.</li>
+<li>Comparison: if $0 \le a_n \le b_n$ and $\sum b_n$ converges, then $\sum a_n$ converges. If $a_n \ge b_n \ge 0$ and $\sum b_n$ diverges, then $\sum a_n$ diverges.</li>
+<li>Limit comparison: if $\lim a_n / b_n = L$ with $0 < L < \infty$, the two series behave the same way.</li>
+</ol>
+</div>
+
+<div class="example">
                 <h4>Example 1.1</h4>
                 <p><strong>Problem:</strong> Test the series $\displaystyle \sum_{n=1}^{\infty} \frac{1}{n + 1}$ for convergence.</p>
                 <details class="question">
@@ -254,7 +279,38 @@
                 </details>
             </div>
 
-            <div class="strategies">
+            <div class="study-box practice-box">
+<h4>Common mistakes</h4>
+<ul>
+<li>Concluding convergence from $a_n \to 0$. The harmonic series $\sum 1/n$ diverges even though $1/n \to 0$.</li>
+<li>Comparing in the wrong direction.</li>
+<li>Using the integral test without checking that the function is positive, continuous, and decreasing.</li>
+</ul>
+<h4>Try it yourself</h4>
+<p><strong>Problem 1.</strong> $\sum_{n=1}^\infty \frac{1}{n^2}$</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>Converges: p-series with $p = 2 > 1$.</p></div></details>
+<p><strong>Problem 2.</strong> $\sum_{n=1}^\infty \frac{1}{n}$</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>Diverges: harmonic series, $p = 1$.</p></div></details>
+<p><strong>Problem 3.</strong> $\sum_{n=1}^\infty \frac{1}{n^2 + 1}$</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>Converges: $0 < \frac{1}{n^2+1} \le \frac{1}{n^2}$, and $\sum \frac{1}{n^2}$ converges. Limit comparison with $\frac{1}{n^2}$ gives $L = 1$ as well.</p></div></details>
+<h4>Check yourself</h4>
+<details class="question"><summary><strong>Q:</strong> If $a_n \to 0$, does $\sum a_n$ converge?</summary><div class="solution"><p>Not necessarily. $\sum 1/n$ diverges even though $1/n \to 0$.</p></div></details>
+<details class="question"><summary><strong>Q:</strong> Why compare $\sum \frac{1}{n^2+1}$ with $\sum \frac{1}{n^2}$?</summary><div class="solution"><p>For large $n$ both behave like $1/n^2$, and the larger one is convergent.</p></div></details>
+<h4>Key takeaways</h4>
+<ul>
+<li>Divergence test first; it can only prove divergence.</li>
+<li>Compare with $\sum 1/n^p$ (converges iff $p>1$) and geometric series (converges iff $|r|<1$).</li>
+<li>Limit comparison is often easier than direct comparison.</li>
+</ul>
+<h4>Go further: external resources</h4>
+<ul>
+<li><a href="https://tutorial.math.lamar.edu/classes/calcii/seriescomptest.aspx" target="_blank" rel="noopener">Paul's Online Notes: Comparison and Limit Comparison Tests</a>: Paul's comparison and limit comparison tests, with examples.</li>
+<li><a href="https://tutorial.math.lamar.edu/problems/calcii/integraltest.aspx" target="_blank" rel="noopener">Paul's Online Notes: Integral Test (practice problems)</a>: Practice problems for the integral test.</li>
+<li><a href="https://tutorial.math.lamar.edu/classes/calcii/seriesstrategy.aspx" target="_blank" rel="noopener">Paul's Online Notes: Strategy for Series</a>: A decision guide for choosing a series test.</li>
+</ul>
+</div>
+
+<div class="strategies">
                 <h4>Study Tips</h4>
                 <p><strong>1.</strong> Always start with the Divergence Test. It is quick and can immediately rule out convergence.</p>
                 <p><strong>2.</strong> For series involving $n^p$, $\ln(n)$, or $n!\n$, the Integral Test or Ratio Test are usually the most effective.</p>
@@ -264,10 +320,10 @@
             </div>
 
             <nav class="chapter-nav">
-                <a href="day-11.html" class="nav-btn prev" id="prev-chapter">Previous</a>
-                <span class="nav-indicator" id="chapter-indicator"></span>
-                <a href="day-13.html" class="nav-btn next" id="next-chapter">Next</a>
-            </nav>
+    <a href="day-11.html" class="nav-btn prev" id="prev-chapter">Previous</a>
+    <span class="nav-indicator" id="chapter-indicator"></span>
+    <a href="day-13.html" class="nav-btn next" id="next-chapter">Next</a>
+</nav>
         </main>
     </div>
 

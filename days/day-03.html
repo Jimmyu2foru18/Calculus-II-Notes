@@ -40,6 +40,20 @@
             <section id="content">
     <h2>Integration by Substitution</h2>
 <p class="lead">We practice u-substitution, compute areas between curves, and apply the disk and washer methods for volumes of revolution.</p>
+<div class="study-box start-here">
+<h4>Start here</h4>
+<h4>Learning goals</h4>
+<ul>
+<li>Change the limits when you use u-substitution inside a definite integral.</li>
+<li>Find the area between two curves by integrating top minus bottom over the correct interval.</li>
+<li>Find a volume of revolution by the disk method.</li>
+</ul>
+<h4>Before you start</h4>
+<p>Days 01 and 02 (u-substitution, definite integrals, and the FTC).</p>
+<h4>The big idea</h4>
+<p>Area between curves is a stack of thin vertical strips: height = top minus bottom, width $dx$. A solid of revolution is a stack of thin disks: radius = the curve's distance from the axis, volume $\pi r^2\,dx$.</p>
+</div>
+
 <div class="video-section">
 <h4>Core Lecture</h4>
 <div class="video-container">
@@ -78,7 +92,17 @@
     <p>u-Substitution is the integration counterpart to the chain rule for differentiation. The key formula is:<br>
     $$ \int f(g(x))g'(x)\,dx = \int f(u)\,du \quad \text{where } u = g(x), \, du = g'(x)\,dx $$</p>
 
-    <div class="example">
+    <div class="study-box method-box">
+<h4>Area and disk problems, step by step</h4>
+<ol>
+<li>Sketch the region. Set the functions equal to find intersection points; these become your limits.</li>
+<li>Area: $A = \int_a^b (\text{top} - \text{bottom})\,dx$. If one slice direction is simpler, integrate in $y$ instead.</li>
+<li>Disk method about the x-axis: $V = \pi\int_a^b [f(x)]^2\,dx$, where $f(x)$ is the radius.</li>
+<li>For a definite $u$-substitution, convert the limits to $u$ and integrate in $u$ with those limits.</li>
+</ol>
+</div>
+
+<div class="example">
         <h4>Example 1.0</h4>
         <p><strong>Evaluate</strong> $ \int \frac{2x}{\sqrt{x^2+1}}\,dx $</p>
         <details class="question">
@@ -89,10 +113,10 @@
 <h4>Step 2:</h4>
 <p>Substitute into the integral:</p>
 <h4>Step 3:</h4>
-<p>\begin{aligned}
+<p>$$\begin{aligned}
                     \int \frac{2x}{\sqrt{x^2+1}}\,dx &= \int \frac{1}{\sqrt{u}}\,du \\
                     &= \int u^{-1/2}\,du
-                    \end{aligned}</p>
+                    \end{aligned}$$</p>
                 <h4>Step 4:</h4>
 <p>Integrate using the power rule:</p>
 <h4>Step 5:</h4>
@@ -129,34 +153,34 @@
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <h4>Step 8:</h4>
+                <h4>Step 1:</h4>
 <p>Find intersection points by solving $ x = x^3 $:</p>
-<h4>Step 9:</h4>
-<p>\begin{aligned}
+<h4>Step 2:</h4>
+<p>$$\begin{aligned}
                     x &= x^3 \\
                     x - x^3 &= 0 \\
                     x(1-x^2) &= 0 \\
                     x(1-x)(1+x) &= 0
-                    \end{aligned}
+                    \end{aligned}$$
                     So $ x = 0, 1, -1 $</p>
-                <h4>Step 10:</h4>
+                <h4>Step 3:</h4>
 <p>Determine which function is on top on each interval:</p>
-<h4>Step 11:</h4>
+<h4>Step 4:</h4>
 <p>On $[-1, 0]$: Test $ x = -0.5 $: $ -0.5 > (-0.5)^3 = -0.125 $, so $ x > x^3 $</p>
-<h4>Step 12:</h4>
+<h4>Step 5:</h4>
 <p>On $[0, 1]$: Test $ x = 0.5 $: $ 0.5 < (0.5)^3 = 0.125 $, wait, $ 0.5 > 0.125 $, so $ x > x^3 $</p>
-<h4>Step 13:</h4>
+<h4>Step 6:</h4>
 <p>Actually, $ x^3 \leq x $ on $[-1, 1]$, so $ x $ is on top.</p>
-                <h4>Step 14:</h4>
+                <h4>Step 7:</h4>
 <p>Set up the integral (use symmetry or split at 0):</p>
-<h4>Step 15:</h4>
-<p>\begin{aligned}
+<h4>Step 8:</h4>
+<p>$$\begin{aligned}
                     A &= \int_{-1}^1 (x - x^3)\,dx \\
                     &= 2\int_0^1 (x - x^3)\,dx \quad \text{(by symmetry)} \\
                     &= 2\left[\frac{x^2}{2} - \frac{x^4}{4}\right]_0^1 \\
                     &= 2\left(\frac{1}{2} - \frac{1}{4}\right) \\
                     &= 2 \cdot \frac{1}{4} = \frac{1}{2}
-                    \end{aligned}</p>
+                    \end{aligned}$$</p>
                 <h4>Final Answer:</h4>
 <p>$$ A = \frac{1}{2} $$</p>
             </div>
@@ -169,29 +193,29 @@
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <h4>Step 16:</h4>
+                <h4>Step 1:</h4>
 <p>Find intersection points by solving $ x^2 = x + 2 $:</p>
-<h4>Step 17:</h4>
-<p>\begin{aligned}
+<h4>Step 2:</h4>
+<p>$$\begin{aligned}
                     x^2 - x - 2 &= 0 \\
                     (x+1)(x-2) &= 0
-                    \end{aligned}
+                    \end{aligned}$$
                     So $ x = -1, 2 $</p>
-                <h4>Step 18:</h4>
+                <h4>Step 3:</h4>
 <p>On $[-1, 2]$, the line $ y = x+2 $ is above the parabola $ y = x^2 $:</p>
-<h4>Step 19:</h4>
-<p>\begin{aligned}
+<h4>Step 4:</h4>
+<p>$$\begin{aligned}
                     A &= \int_{-1}^2 [(x+2) - x^2]\,dx \\
                     &= \left[\frac{x^2}{2} + 2x - \frac{x^3}{3}\right]_{-1}^2
-                    \end{aligned}</p>
-                <h4>Step 20:</h4>
+                    \end{aligned}$$</p>
+                <h4>Step 5:</h4>
 <p>Evaluate at the bounds:</p>
-<h4>Step 21:</h4>
-<p>\begin{aligned}
+<h4>Step 6:</h4>
+<p>$$\begin{aligned}
                     F(2) &= \frac{4}{2} + 4 - \frac{8}{3} = 2 + 4 - \frac{8}{3} = 6 - \frac{8}{3} = \frac{10}{3} \\
                     F(-1) &= \frac{1}{2} - 2 - \frac{-1}{3} = \frac{1}{2} - 2 + \frac{1}{3} = -\frac{7}{6} \\
                     A &= \frac{10}{3} - \left(-\frac{7}{6}\right) = \frac{20}{6} + \frac{7}{6} = \frac{27}{6} = \frac{9}{2}
-                    \end{aligned}</p>
+                    \end{aligned}$$</p>
                 <h4>Final Answer:</h4>
 <p>$$ A = \frac{9}{2} $$</p>
             </div>
@@ -204,26 +228,26 @@
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <h4>Step 22:</h4>
+                <h4>Step 1:</h4>
 <p>The circle has equation $ x^2 + y^2 = 1 $, so $ y = \sqrt{1-x^2} $ (top half)</p>
-<h4>Step 23:</h4>
+<h4>Step 2:</h4>
 <p>Set up the integral for the upper semicircle:</p>
-<h4>Step 24:</h4>
-<p>\begin{aligned}
+<h4>Step 3:</h4>
+<p>$$\begin{aligned}
                     A &= \int_{-1}^1 \sqrt{1-x^2}\,dx
-                    \end{aligned}</p>
-                <h4>Step 25:</h4>
+                    \end{aligned}$$</p>
+                <h4>Step 4:</h4>
 <p>Use the substitution $ x = \sin(\theta) $, $ dx = \cos(\theta)\,d\theta $:</p>
-<h4>Step 26:</h4>
+<h4>Step 5:</h4>
 <p>When $ x = -1 $, $ \theta = -\pi/2 $. When $ x = 1 $, $ \theta = \pi/2 $.</p>
-<h4>Step 27:</h4>
-<p>\begin{aligned}
+<h4>Step 6:</h4>
+<p>$$\begin{aligned}
                     A &= \int_{-\pi/2}^{\pi/2} \sqrt{1-\sin^2(\theta)} \cdot \cos(\theta)\,d\theta \\
                     &= \int_{-\pi/2}^{\pi/2} \cos^2(\theta)\,d\theta \\
                     &= \int_{-\pi/2}^{\pi/2} \frac{1+\cos(2\theta)}{2}\,d\theta \\
                     &= \frac{1}{2}\left[\theta + \frac{\sin(2\theta)}{2}\right]_{-\pi/2}^{\pi/2} \\
                     &= \frac{1}{2}\left(\frac{\pi}{2} - \left(-\frac{\pi}{2}\right)\right) = \frac{\pi}{2}
-                    \end{aligned}</p>
+                    \end{aligned}$$</p>
                 <h4>Final Answer:</h4>
 <p>$$ A = \frac{\pi}{2} $$</p>
             </div>
@@ -237,30 +261,30 @@
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <h4>Step 28:</h4>
+                <h4>Step 1:</h4>
 <p>Find the y-intercepts of $ x = y^2 - 4 $:</p>
-<h4>Step 29:</h4>
+<h4>Step 2:</h4>
 <p>Set $ x = 0 $: $ 0 = y^2 - 4 \implies y^2 = 4 \implies y = \pm 2 $</p>
-<h4>Step 30:</h4>
+<h4>Step 3:</h4>
 <p>So the region extends from $ y = -2 $ to $ y = 2 $</p>
-                <h4>Step 31:</h4>
+                <h4>Step 4:</h4>
 <p>Set up the integral with respect to $ y $:</p>
-<h4>Step 32:</h4>
+<h4>Step 5:</h4>
 <p>Right curve: $ x = 0 $, Left curve: $ x = y^2 - 4 $</p>
-<h4>Step 33:</h4>
-<p>\begin{aligned}
+<h4>Step 6:</h4>
+<p>$$\begin{aligned}
                     A &= \int_{-2}^2 [0 - (y^2-4)]\,dy \\
                     &= \int_{-2}^2 (4-y^2)\,dy
-                    \end{aligned}</p>
-                <h4>Step 34:</h4>
+                    \end{aligned}$$</p>
+                <h4>Step 7:</h4>
 <p>Evaluate (using symmetry):</p>
-<h4>Step 35:</h4>
-<p>\begin{aligned}
+<h4>Step 8:</h4>
+<p>$$\begin{aligned}
                     A &= 2\int_0^2 (4-y^2)\,dy \\
                     &= 2\left[4y - \frac{y^3}{3}\right]_0^2 \\
                     &= 2\left(8 - \frac{8}{3}\right) \\
                     &= 2 \cdot \frac{16}{3} = \frac{32}{3}
-                    \end{aligned}</p>
+                    \end{aligned}$$</p>
                 <h4>Final Answer:</h4>
 <p>$$ A = \frac{32}{3} $$</p>
             </div>
@@ -289,19 +313,19 @@
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <h4>Step 36:</h4>
+                <h4>Step 1:</h4>
 <p>The disk method formula is:</p>
-<h4>Step 37:</h4>
+<h4>Step 2:</h4>
 <p>$ V = \pi\int_a^b [f(x)]^2\,dx $</p>
-<h4>Step 38:</h4>
+<h4>Step 3:</h4>
 <p>Here $ f(x) = \sqrt{x} $, $ a = 0 $, $ b = 4 $:</p>
-<h4>Step 39:</h4>
-<p>\begin{aligned}
+<h4>Step 4:</h4>
+<p>$$\begin{aligned}
                     V &= \pi\int_0^4 (\sqrt{x})^2\,dx \\
                     &= \pi\int_0^4 x\,dx \\
                     &= \pi\left[\frac{x^2}{2}\right]_0^4 \\
                     &= \pi\left(\frac{16}{2} - 0\right) = 8\pi
-                    \end{aligned}</p>
+                    \end{aligned}$$</p>
                 <h4>Final Answer:</h4>
 <p>$$ V = 8\pi $$</p>
             </div>
@@ -329,20 +353,20 @@
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <h4>Step 40:</h4>
+                <h4>Step 1:</h4>
 <p>Find intersection points: $ 2x = x^2 \implies x^2 - 2x = 0 \implies x(x-2) = 0 $, so $ x = 0, 2 $</p>
-<h4>Step 41:</h4>
+<h4>Step 2:</h4>
 <p>On $[0,2]$, $ 2x \geq x^2 $, so outer radius $ R(x) = 2x $, inner radius $ r(x) = x^2 $</p>
-<h4>Step 42:</h4>
+<h4>Step 3:</h4>
 <p>Apply the washer method:</p>
-<h4>Step 43:</h4>
-<p>\begin{aligned}
+<h4>Step 4:</h4>
+<p>$$\begin{aligned}
                     V &= \pi\int_0^2 [(2x)^2 - (x^2)^2]\,dx \\
                     &= \pi\int_0^2 (4x^2 - x^4)\,dx \\
                     &= \pi\left[\frac{4x^3}{3} - \frac{x^5}{5}\right]_0^2 \\
                     &= \pi\left(\frac{32}{3} - \frac{32}{5}\right) \\
                     &= \pi\left(\frac{160 - 96}{15}\right) = \frac{64\pi}{15}
-                    \end{aligned}</p>
+                    \end{aligned}$$</p>
                 <h4>Final Answer:</h4>
 <p>$$ V = \frac{64\pi}{15} $$</p>
             </div>
@@ -355,24 +379,56 @@
         <details class="question">
             <summary><strong>Click to see the solution</strong></summary>
             <div class="solution">
-                <h4>Step 44:</h4>
-<p>Using the disk method with respect to $ y $:</p>
-<h4>Step 45:</h4>
+                <h4>Step 1:</h4>
+<p>Use the washer method with respect to $y$. At height $y$ the region runs from the curve $x = y^2$ out to $x = 4$, so the outer radius is $4$ and the inner radius is $y^2$:</p>
+<h4>Step 2:</h4>
 <p>$ x = y^2 $, and the limits are $ y = 0 $ to $ y = 2 $ (since $ y = \sqrt{4} = 2 $)</p>
-<h4>Step 46:</h4>
-<p>Apply the formula $ V = \pi\int_c^d [g(y)]^2\,dy $:</p>
-<h4>Step 47:</h4>
-<p>\begin{aligned}
-                    V &= \pi\int_0^2 (y^2)^2\,dy \\
-                    &= \pi\int_0^2 y^4\,dy \\
-                    &= \pi\left[\frac{y^5}{5}\right]_0^2 \\
-                    &= \pi \cdot \frac{32}{5} = \frac{32\pi}{5}
-                    \end{aligned}</p>
+<h4>Step 3:</h4>
+<p>Apply the washer formula $ V = \pi\int_c^d \left([R(y)]^2 - [r(y)]^2\right)\,dy $:</p>
+<h4>Step 4:</h4>
+<p>$$\begin{aligned}
+                    V &= \pi\int_0^2 \left(4^2 - (y^2)^2\right)\,dy \\
+                    &= \pi\int_0^2 (16 - y^4)\,dy \\
+                    &= \pi\left[16y - \frac{y^5}{5}\right]_0^2 \\
+                    &= \pi\left(32 - \frac{32}{5}\right) = \frac{128\pi}{5}
+                    \end{aligned}$$</p>
                 <h4>Final Answer:</h4>
-<p>$$ V = \frac{32\pi}{5} $$</p>
+<p>$$ V = \frac{128\pi}{5} $$</p>
             </div>
         </details>
     </div>
+<div class="study-box practice-box">
+<h4>Common mistakes</h4>
+<ul>
+<li>Using bottom minus top, which gives a negative area.</li>
+<li>Forgetting to square the radius, or writing $\pi r$ instead of $\pi r^2$.</li>
+<li>Missing an intersection point, so the limits are wrong.</li>
+<li>Changing the $x$-limits in a substitution and then using the old limits in $u$.</li>
+</ul>
+<h4>Try it yourself</h4>
+<p><strong>Problem 1.</strong> Area between $y = x + 2$ and $y = x^2$.</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>Intersections at $x = -1$ and $x = 2$. $A = \int_{-1}^{2}(x + 2 - x^2)\,dx = \tfrac{9}{2}$.</p></div></details>
+<p><strong>Problem 2.</strong> Volume from revolving $y = \sqrt{x}$ on $0 \le x \le 4$ about the x-axis.</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>$V = \pi\int_0^4 x\,dx = 8\pi$.</p></div></details>
+<p><strong>Problem 3.</strong> $\int_0^1 x e^{x^2}\,dx$</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>Let $u = x^2$, $du = 2x\,dx$; the limits become $0$ to $1$. So $\tfrac12\int_0^1 e^u\,du = \tfrac{e-1}{2}$.</p></div></details>
+<h4>Check yourself</h4>
+<details class="question"><summary><strong>Q:</strong> Why is the area integrand top minus bottom?</summary><div class="solution"><p>Each strip runs from the lower curve up to the upper curve. Top minus bottom keeps the height positive.</p></div></details>
+<details class="question"><summary><strong>Q:</strong> In a disk volume about the x-axis, what is the radius?</summary><div class="solution"><p>The vertical distance from the curve to the x-axis, which is $|f(x)|$.</p></div></details>
+<h4>Key takeaways</h4>
+<ul>
+<li>Area between curves is $\int (\text{top} - \text{bottom})$; intersection points give the limits.</li>
+<li>Disk method: $V = \pi\int R^2$, where $R$ is the distance from the curve to the axis.</li>
+<li>Convert the limits whenever you change variables.</li>
+</ul>
+<h4>Go further: external resources</h4>
+<ul>
+<li><a href="https://tutorial.math.lamar.edu/classes/calcii/IntegrationStrategy.aspx" target="_blank" rel="noopener">Paul's Online Notes: Integration Strategy</a>: Paul's guide to choosing an integration method, useful for substitution practice.</li>
+<li><a href="https://www.khanacademy.org/math/integral-calculus" target="_blank" rel="noopener">Khan Academy: Integral Calculus</a>: Video practice on areas and volumes of revolution.</li>
+<li><a href="https://www.desmos.com/calculator" target="_blank" rel="noopener">Desmos graphing calculator (tool, for graphing curves)</a>: Shade the region between two curves and check your intersection points.</li>
+</ul>
+</div>
+
 <div class="strategies">
 <h4>Study Tips</h4>
 <p><strong>1.</strong> For u-substitution, always check that the derivative of your choice for <strong>u</strong> appears (up to a constant) in the integrand.</p>
@@ -383,10 +439,13 @@
             </section>
 
             <nav class="chapter-nav">
-<a href="day-02.html" class="nav-btn prev" id="prev-chapter">Previous</a>
-<span class="nav-indicator" id="chapter-indicator"></span>
-<a href="day-04.html" class="nav-btn next" id="next-chapter">Next</a>
+    <a href="day-02.html" class="nav-btn prev" id="prev-chapter">Previous</a>
+    <span class="nav-indicator" id="chapter-indicator"></span>
+    <a href="day-04.html" class="nav-btn next" id="next-chapter">Next</a>
 </nav>
+
+    </main>
+    </div>
 
     <script src="../js/app.js"></script>
 </body>

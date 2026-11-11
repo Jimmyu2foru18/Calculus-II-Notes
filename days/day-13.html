@@ -40,6 +40,20 @@
         <main class="chapter">
             <h2>Day 13: Advanced Series Tests</h2>
             <p class="lead">Detailed exploration of the Ratio Test, Root Test, and Alternating Series Test for determining series convergence.</p>
+<div class="study-box start-here">
+<h4>Start here</h4>
+<h4>Learning goals</h4>
+<ul>
+<li>Apply the ratio test and the root test.</li>
+<li>Apply the alternating series test to series with alternating signs.</li>
+<li>Decide whether a convergent series converges absolutely or conditionally.</li>
+</ul>
+<h4>Before you start</h4>
+<p>Day 12 (comparison and integral tests).</p>
+<h4>The big idea</h4>
+<p>The ratio and root tests judge how fast terms grow or shrink. The alternating series test handles terms that flip sign. If $\sum |a_n|$ converges, the series converges absolutely, the strongest kind of convergence.</p>
+</div>
+
 
             <div class="video-section">
                 <h4>Core Lecture</h4>
@@ -88,7 +102,17 @@
                 <p><strong>Alternating Series Test:</strong> The series $\sum (-1)^n a_n$ converges if $a_n > 0$, $a_{n+1} \leq a_n$ for all $n$, and $\lim_{n \to \infty} a_n = 0$.</p>
             </div>
 
-            <div class="example">
+            <div class="study-box method-box">
+<h4>Choosing a test</h4>
+<ol>
+<li>Factorials or powers of $n$: try the ratio test, $L = \lim |a_{n+1}/a_n|$. $L < 1$ converges, $L > 1$ diverges, $L = 1$ is inconclusive.</li>
+<li>$n$th powers such as $(\dots)^n$: try the root test, $L = \lim |a_n|^{1/n}$, with the same rules.</li>
+<li>Alternating signs $(-1)^n b_n$: the alternating series test needs $b_n > 0$, decreasing, and $b_n \to 0$.</li>
+<li>If the series converges but $\sum |a_n|$ diverges, the convergence is conditional.</li>
+</ol>
+</div>
+
+<div class="example">
                 <h4>Example 13.1</h4>
                 <p><strong>Problem:</strong> Test the series $\sum_{n=1}^{\infty} \frac{n!}{n^2}$ for convergence.</p>
                 <div class="visual-aid">
@@ -181,7 +205,7 @@
                         <summary>Show Answer</summary>
                         <p><strong>Answer:</strong></p>
                         <p>Apply the Ratio Test:</p>
-                        <p>$$\rho = \lim_{n \to \infty} \frac{(n+1)!/(n+1)^3}{n!/n^3} = \lim_{n \to \infty} \frac{n^3}{n+1} = \infty$$</p>
+                        <p>$$\rho = \lim_{n \to \infty} \frac{(n+1)!/(n+1)^3}{n!/n^3} = \lim_{n \to \infty} \frac{n^3}{(n+1)^2} = \infty$$</p>
                         <p>The series diverges by the Ratio Test.</p>
                     </details>
                 </details>
@@ -208,7 +232,38 @@
                 </details>
             </div>
 
-            <div class="strategies">
+            <div class="study-box practice-box">
+<h4>Common mistakes</h4>
+<ul>
+<li>Using the ratio test when $L = 1$ and drawing a conclusion. It says nothing; try another test.</li>
+<li>Forgetting that the alternating series test requires $b_n$ to be decreasing.</li>
+<li>Confusing convergence with absolute convergence.</li>
+</ul>
+<h4>Try it yourself</h4>
+<p><strong>Problem 1.</strong> $\sum_{n=1}^\infty \frac{n!}{3^n}$</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>Diverges. The ratio is $\frac{(n+1)!/3^{n+1}}{n!/3^n} = \frac{n+1}{3} \to \infty$.</p></div></details>
+<p><strong>Problem 2.</strong> $\sum_{n=1}^\infty \frac{(-1)^n}{n}$</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>Converges by the alternating test, but $\sum \frac{1}{n}$ diverges, so the convergence is conditional.</p></div></details>
+<p><strong>Problem 3.</strong> $\sum_{n=1}^\infty \frac{(-1)^n}{n^2}$</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>Converges absolutely, because $\sum \frac{1}{n^2}$ converges.</p></div></details>
+<h4>Check yourself</h4>
+<details class="question"><summary><strong>Q:</strong> What does the ratio test say when $L = 1$?</summary><div class="solution"><p>Nothing. Use a different test.</p></div></details>
+<details class="question"><summary><strong>Q:</strong> Why is $\sum (-1)^n/n^2$ called absolutely convergent?</summary><div class="solution"><p>Its absolute-value series $\sum 1/n^2$ converges.</p></div></details>
+<h4>Key takeaways</h4>
+<ul>
+<li>Ratio test for factorials and powers; root test for $n$th powers.</li>
+<li>Alternating series test: decreasing, tending to $0$.</li>
+<li>Absolute convergence implies convergence.</li>
+</ul>
+<h4>Go further: external resources</h4>
+<ul>
+<li><a href="https://tutorial.math.lamar.edu/classes/calcii/AlternatingSeries.aspx" target="_blank" rel="noopener">Paul's Online Notes: Alternating Series Test</a>: Paul's alternating series test, with examples.</li>
+<li><a href="https://tutorial.math.lamar.edu/classes/calcii/seriesstrategy.aspx" target="_blank" rel="noopener">Paul's Online Notes: Strategy for Series</a>: A decision guide for choosing among the series tests.</li>
+<li><a href="https://tutorial.math.lamar.edu/Classes/CalcII/EstimatingSeries.aspx" target="_blank" rel="noopener">Paul's Online Notes: Estimating the Value of a Series</a>: How to estimate a series' value using the alternating error bound.</li>
+</ul>
+</div>
+
+<div class="strategies">
                 <h4>Study Tips</h4>
                 <p><strong>1.</strong> Start with the simplest test (divergence test, geometric, $p$-series) before trying advanced tests.</p>
                 <p><strong>2.</strong> The Ratio Test is especially useful for series with factorials or exponentials.</p>
@@ -217,10 +272,10 @@
             </div>
 
             <nav class="chapter-nav">
-                <a href="day-12.html" class="nav-btn prev" id="prev-chapter">Previous</a>
-                <span class="nav-indicator" id="chapter-indicator"></span>
-                <a href="day-14.html" class="nav-btn next" id="next-chapter">Next</a>
-            </nav>
+    <a href="day-12.html" class="nav-btn prev" id="prev-chapter">Previous</a>
+    <span class="nav-indicator" id="chapter-indicator"></span>
+    <a href="day-14.html" class="nav-btn next" id="next-chapter">Next</a>
+</nav>
         </main>
     </div>
 

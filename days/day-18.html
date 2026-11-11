@@ -40,6 +40,20 @@
         <main class="chapter">
             <h2>Day 18: Parametric Equations and Polar Areas</h2>
             <p class="lead">Parametric curves, arc length, tangent lines, and area calculations in polar coordinates.</p>
+<div class="study-box start-here">
+<h4>Start here</h4>
+<h4>Learning goals</h4>
+<ul>
+<li>Compute $\frac{dy}{dx}$ for a parametric curve: $\frac{dy/dt}{dx/dt}$.</li>
+<li>Find the arc length of a parametric curve or a polar curve.</li>
+<li>Find the area inside a polar curve, or between two polar curves.</li>
+</ul>
+<h4>Before you start</h4>
+<p>Day 04 (arc length) and Day 17 (polar coordinates and area).</p>
+<h4>The big idea</h4>
+<p>A parametric curve traces a path as the parameter $t$ changes. Its speed is $\sqrt{(dx/dt)^2 + (dy/dt)^2}$, and arc length is the integral of speed.</p>
+</div>
+
 
             <div class="video-section">
                 <h4>Core Lecture</h4>
@@ -94,7 +108,17 @@
                 <p>$$\frac{dy}{dx} = \frac{dy/dt}{dx/dt}$$</p>
             </div>
 
-            <div class="example">
+            <div class="study-box method-box">
+<h4>Parametric and polar, step by step</h4>
+<ol>
+<li>Find $\frac{dx}{dt}$ and $\frac{dy}{dt}$. Then $\frac{dy}{dx} = \frac{dy/dt}{dx/dt}$.</li>
+<li>Parametric arc length: $L = \int_a^b \sqrt{(dx/dt)^2 + (dy/dt)^2}\,dt$.</li>
+<li>Polar arc length: $L = \int_\alpha^\beta \sqrt{r^2 + (dr/d\theta)^2}\,d\theta$.</li>
+<li>Polar area: $\frac12\int r^2\,d\theta$ (from Day 17).</li>
+</ol>
+</div>
+
+<div class="example">
                 <h4>Example 18.1</h4>
                 <p><strong>Problem:</strong> Find the parametric equations for the parabola $y = x^2 + 3x - 4$.</p>
                 <div class="visual-aid">
@@ -143,9 +167,9 @@
                         <p>$$L = \int_{0}^{\arctan(2)} \sec(\theta) \cdot \frac{1}{2}\sec^2(\theta) \, d\theta$$</p>
                         <p>$$= \frac{1}{2} \int_{0}^{\arctan(2)} \sec^3(\theta) \, d\theta$$</p>
                         <p>This requires integration by parts, giving:</p>
-                        <p>$$L = \frac{1}{2}\left[\sec(\theta)\tan(\theta) + \ln|\sec(\theta) + \tan(\theta)|\right]_{0}^{\arctan(2)}$$</p>
+                        <p>$$L = \frac{1}{4}\left[\sec(\theta)\tan(\theta) + \ln|\sec(\theta) + \tan(\theta)|\right]_{0}^{\arctan(2)}$$</p>
                         <h4>Final Answer:</h4>
-                        <p>$$L = \frac{1}{2}\left[2\sqrt{5} + \ln(2 + \sqrt{5})\right]$$</p>
+                        <p>$$L = \frac{1}{4}\left[2\sqrt{5} + \ln(2 + \sqrt{5})\right] \approx 1.479$$</p>
                     </div>
                 </details>
             </div>
@@ -328,7 +352,37 @@
                 </details>
             </div>
 
-            <div class="strategies">
+            <div class="study-box practice-box">
+<h4>Common mistakes</h4>
+<ul>
+<li>Inverting $dy/dx$ (writing $dx/dy$).</li>
+<li>Forgetting to square $dr/d\theta$ in the polar arc length formula.</li>
+<li>Using the polar area formula on a parametric curve, or using the wrong interval for $t$.</li>
+</ul>
+<h4>Try it yourself</h4>
+<p><strong>Problem 1.</strong> $x = t^2$, $y = t^3$. Find $\frac{dy}{dx}$ at $t = 2$.</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>$\frac{3t^2}{2t} = \frac{3t}{2}$, which equals $3$ at $t = 2$.</p></div></details>
+<p><strong>Problem 2.</strong> Arc length of $x = \cos t$, $y = \sin t$ on $[0, 2\pi]$.</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>The speed is $\sqrt{\sin^2 t + \cos^2 t} = 1$, so $L = 2\pi$.</p></div></details>
+<p><strong>Problem 3.</strong> Arc length of the polar curve $r = 2$ on $[0, \pi]$.</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>$L = \int_0^\pi \sqrt{4 + 0}\,d\theta = 2\pi$.</p></div></details>
+<h4>Check yourself</h4>
+<details class="question"><summary><strong>Q:</strong> Why does parametric speed use both squared derivatives?</summary><div class="solution"><p>The horizontal and vertical motions are perpendicular, like the legs of a right triangle.</p></div></details>
+<details class="question"><summary><strong>Q:</strong> Why is $\frac{dy}{dx} = 3$ at $t = 2$ in the first problem?</summary><div class="solution"><p>$\frac{3(2)}{2} = 3$.</p></div></details>
+<h4>Key takeaways</h4>
+<ul>
+<li>Parametric slope: $\frac{dy}{dx} = \frac{dy/dt}{dx/dt}$.</li>
+<li>Arc length is always the integral of speed: $\sqrt{(dx/dt)^2 + (dy/dt)^2}$ for parametric, $\sqrt{r^2 + (dr/d\theta)^2}$ for polar.</li>
+</ul>
+<h4>Go further: external resources</h4>
+<ul>
+<li><a href="https://tutorial.math.lamar.edu/classes/CalcII/ParaArcLength.aspx" target="_blank" rel="noopener">Paul's Online Notes: Arc Length with Parametric Equations</a>: Paul's notes on arc length for parametric curves.</li>
+<li><a href="https://tutorial.math.lamar.edu/problems/CalcII/ParametricIntro.aspx" target="_blank" rel="noopener">Paul's Online Notes: Parametric Equations and Polar Coordinates (practice)</a>: Practice problems for parametric equations and polar coordinates.</li>
+<li><a href="https://tutorial.math.lamar.edu/classes/calcii/PolarSurfaceArea.aspx" target="_blank" rel="noopener">Paul's Online Notes: Surface Area with Polar Coordinates</a>: Paul's notes on surface area with polar coordinates.</li>
+</ul>
+</div>
+
+<div class="strategies">
                 <h4>Study Tips</h4>
                 <p><strong>1.</strong> For parametric curves, always find $\frac{dx}{dt}$ and $\frac{dy}{dt}$ before setting up integrals.</p>
                 <p><strong>2.</strong> Sketch polar regions before integrating to determine correct limits.</p>
@@ -338,10 +392,10 @@
             </div>
 
             <nav class="chapter-nav">
-                <a href="day-17.html" class="nav-btn prev" id="prev-chapter">Previous</a>
-                <span class="nav-indicator" id="chapter-indicator"></span>
-                <a href="../quiz-reviews/index.html" class="nav-btn next" id="next-chapter">Next</a>
-            </nav>
+    <a href="day-17.html" class="nav-btn prev" id="prev-chapter">Previous</a>
+    <span class="nav-indicator" id="chapter-indicator"></span>
+    <a href="../quiz-reviews/quiz-01.html" class="nav-btn next" id="next-chapter">Next</a>
+</nav>
         </main>
     </div>
 

@@ -40,6 +40,20 @@
         <main class="chapter">
             <h2>Day 08: Integration Techniques Review</h2>
             <p class="lead">Comprehensive review of integration techniques: trigonometric substitution, integration by parts, and a preview of partial fractions.</p>
+<div class="study-box start-here">
+<h4>Start here</h4>
+<h4>Learning goals</h4>
+<ul>
+<li>Choose an integration method by matching the pattern of the integrand.</li>
+<li>Use the tangent substitution for $\sqrt{a^2 + x^2}$, and the sine substitution for $\sqrt{a^2 - x^2}$.</li>
+<li>Apply integration by parts twice, and use partial fractions for $\frac{1}{x^2-1}$.</li>
+</ul>
+<h4>Before you start</h4>
+<p>Day 07 (integration by parts and trig substitution).</p>
+<h4>The big idea</h4>
+<p>Most integrals are a pattern match. A square root of a sum suggests trig substitution, a rational function suggests partial fractions, and a polynomial times $\ln x$, $e^x$, or a trig function suggests integration by parts.</p>
+</div>
+
 
             <div class="video-section">
                 <h4>Core Lecture</h4>
@@ -91,7 +105,18 @@
                 <p>After substitution, draw a right triangle to express trigonometric functions back in terms of $x$.</p>
             </div>
 
-            <div class="example">
+            <div class="study-box method-box">
+<h4>Pattern guide: which method to try first</h4>
+<ol>
+<li>$\sqrt{a^2 + x^2}$ (for example $\sqrt{9 + 4x^2}$): use $x = \tfrac{3}{2}\tan\theta$.</li>
+<li>$\sqrt{a^2 - x^2}$ (for example $\sqrt{4 - x^2}$): use $x = 2\sin\theta$.</li>
+<li>A rational function with a factorable denominator: partial fractions (divide first if the numerator's degree is at least the denominator's).</li>
+<li>A polynomial times $\ln x$, $e^x$, or a trig function: integration by parts.</li>
+<li>Check your final answer by differentiating it.</li>
+</ol>
+</div>
+
+<div class="example">
                 <h4>Example 1.1</h4>
                 <p><strong>Problem:</strong> Evaluate $\int \frac{dx}{\sqrt{9+4x^2}}$</p>
                 <div class="visual-aid">
@@ -437,7 +462,38 @@
                 </details>
             </div>
 
-            <div class="strategies">
+            <div class="study-box practice-box">
+<h4>Common mistakes</h4>
+<ul>
+<li>Forgetting to return to $x$ after a trig substitution.</li>
+<li>Using the wrong trig identity for the square-root pattern.</li>
+<li>Stopping at an expression in $\theta$ without converting it back.</li>
+</ul>
+<h4>Try it yourself</h4>
+<p><strong>Problem 1.</strong> $\int \frac{dx}{x^2 + 4}$</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>$\frac{1}{2}\arctan\left(\frac{x}{2}\right) + C$. Check: $\frac{d}{dx}\arctan\frac{x}{2} = \frac{2}{x^2+4}$.</p></div></details>
+<p><strong>Problem 2.</strong> $\int x^2 e^x\,dx$</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>$e^x(x^2 - 2x + 2) + C$, using integration by parts twice.</p></div></details>
+<p><strong>Problem 3.</strong> $\int \frac{dx}{x(x+1)}$</p>
+<details class="question"><summary><strong>Show the answer</strong></summary><div class="solution"><p>$\ln\left|\frac{x}{x+1}\right| + C$, using partial fractions.</p></div></details>
+<h4>Check yourself</h4>
+<details class="question"><summary><strong>Q:</strong> What substitution fits $\sqrt{4 - x^2}$?</summary><div class="solution"><p>$x = 2\sin\theta$.</p></div></details>
+<details class="question"><summary><strong>Q:</strong> Why is there a $\tfrac12$ in $\int \frac{dx}{x^2+4}$?</summary><div class="solution"><p>The derivative of $\arctan(x/2)$ is $\frac{2}{x^2+4}$, so the constant needed is $\tfrac12$.</p></div></details>
+<h4>Key takeaways</h4>
+<ul>
+<li>Match the pattern first, then choose the method.</li>
+<li>Trig substitution needs a conversion back to $x$.</li>
+<li>Differentiate your answer to check it.</li>
+</ul>
+<h4>Go further: external resources</h4>
+<ul>
+<li><a href="https://tutorial.math.lamar.edu/classes/calcii/IntegrationStrategy.aspx" target="_blank" rel="noopener">Paul's Online Notes: Integration Strategy</a>: Paul's integration strategy guide, a good companion for this review.</li>
+<li><a href="https://tutorial.math.lamar.edu/classes/calcii/inttechintro.aspx" target="_blank" rel="noopener">Paul's Online Notes: Integration Techniques (intro)</a>: An overview of all the integration techniques in order.</li>
+<li><a href="https://www.khanacademy.org/math/integral-calculus" target="_blank" rel="noopener">Khan Academy: Integral Calculus</a>: Video practice on mixed integration problems.</li>
+</ul>
+</div>
+
+<div class="strategies">
                 <h4>Study Tips</h4>
                 <p><strong>1.</strong> When choosing a trigonometric substitution, first rewrite the integral to match one of the three standard forms: $\sqrt{a^2-x^2}$, $\sqrt{a^2+x^2}$, or $\sqrt{x^2-a^2}$.</p>
                 <p><strong>2.</strong> Always draw a right triangle after making a trig substitution. It is the fastest way to back-substitute and express the answer in terms of $x$.</p>
@@ -446,10 +502,10 @@
             </div>
 
             <nav class="chapter-nav">
-                <a href="day-07.html" class="nav-btn prev" id="prev-chapter">Previous</a>
-                <span class="nav-indicator" id="chapter-indicator"></span>
-                <a href="day-10.html" class="nav-btn next" id="next-chapter">Next</a>
-            </nav>
+    <a href="day-07.html" class="nav-btn prev" id="prev-chapter">Previous</a>
+    <span class="nav-indicator" id="chapter-indicator"></span>
+    <a href="day-09.html" class="nav-btn next" id="next-chapter">Next</a>
+</nav>
         </main>
     </div>
 

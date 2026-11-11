@@ -1175,3 +1175,86 @@ body.review-page {
         border: 1px solid #ccc;
     }
 }
+
+
+/* ============================================
+   STUDY AIDS (start here, method, practice, resources)
+   ============================================ */
+.study-box {
+    border: 1px solid var(--border-light);
+    border-left: 3px solid var(--accent);
+    background: var(--surface);
+    padding: var(--space-lg) var(--space-xl);
+    margin: var(--space-2xl) 0;
+}
+
+.study-box h4 {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin: var(--space-lg) 0 var(--space-sm);
+}
+
+.study-box h4:first-child {
+    margin-top: 0;
+}
+
+.study-box ol,
+.study-box ul {
+    margin: var(--space-sm) 0;
+}
+
+.study-box li {
+    margin-bottom: var(--space-sm);
+}
+
+.study-box .resource-note {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Final answer blocks (solutions) */
+.final-answer-block {
+    border-left: 3px solid var(--text-primary);
+    padding: var(--space-sm) var(--space-md);
+    margin: var(--space-md) 0;
+    background: var(--background);
+}
+
+.final-answer-title {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    margin-bottom: var(--space-xs);
+}
+
+/* Figures scale down to fit narrow screens */
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* MathJax 3 emits <mjx-container>; long display equations scroll inside themselves */
+mjx-container[display="true"] {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* Keep MathJax screen-reader copies visually hidden without widening the page */
+mjx-container mjx-assistive-mml {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+}
